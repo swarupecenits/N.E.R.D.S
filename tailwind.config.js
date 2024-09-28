@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        spaced: ['Spaced', 'sans-serif'], // Custom Spaced font
+        ethenocentric: ['Ethenocentric', 'sans-serif'], // Custom Ethenocentric font
+      },
+    },
   },
   plugins: [],
 }
