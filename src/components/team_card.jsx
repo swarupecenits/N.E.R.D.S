@@ -25,10 +25,6 @@ const TeamCard = ({ member }) => {
           // Maintain the corner cut shape on hover
           clipPath: "polygon(92px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 93px)",
 
-          // Apply box-shadow for the glow effect on hover
-          boxShadow: hovered
-            ? "0px 0px 60px 15px rgba(255, 0, 229, 0.7)" // Glow effect when hovered
-            : "none", // No shadow when not hovered
         }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
