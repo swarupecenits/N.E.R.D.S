@@ -1,0 +1,38 @@
+/* .gradient-1{
+    top: 0px;
+} */
+.main-heading{
+    font-size: 96px;
+    line-height: 115px;
+}
+.heading-subsection{
+    font-size: 29px;
+    line-height: 27.69px;
+    width: 699px;
+    top: 515px; 
+    left: 112px;
+    z-index: 99;
+}
+.meet-heading{
+    width: 520px;
+    height: 133px;
+    top: 282px;
+    left: 112px;
+    z-index: 99;
+}
+.team-heading{
+    width: 1001px;
+    height: 323px;
+    top: 395px;
+    left: 99px;
+    z-index: 99;
+}
+.main-image-img{
+    z-index: 99;
+    top: -26px;
+    left: 375px;
+}
+/* .animate-gradient{
+    width: 1001px;
+    height: 323px;
+} */
