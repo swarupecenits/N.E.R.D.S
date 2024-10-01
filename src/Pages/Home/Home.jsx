@@ -2,7 +2,7 @@
 const Home = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">
+      <h1 className="font-ethenocentric text-3xl font-bold underline">
       Hello NERDS!
     </h1>
     </div>
