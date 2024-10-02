@@ -6,6 +6,7 @@ import About from './Pages/About/About';
 import Team from './Pages/Team/Team';
 import Gallery from './Pages/Gallery/Gallery';
 import Contact from './Pages/Contact/Contact';
+import Navbar from './Pages/Navbar/navbar';
 
 function App() {
   
@@ -14,13 +15,7 @@ function App() {
       <Router>
       <div>
         <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/team">Team</Link></li>
-          </ul>
+          <Navbar/>
         </nav>
 
         {/* Define Routes */}
