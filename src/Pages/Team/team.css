@@ -2,37 +2,37 @@
     top: 0px;
 } */
 .main-heading{
-    font-size: 96px;
+    font-size: 90px;
     line-height: 115px;
 }
 .heading-subsection{
     font-size: 29px;
     line-height: 27.69px;
     width: 699px;
-    top: 515px; 
+    top: 450px; 
     left: 112px;
-    z-index: 99;
+    z-index: 5;
 }
 .meet-heading{
     width: 520px;
-    height: 133px;
-    top: 282px;
+    height: 100px;
+    top: 210px;
     left: 112px;
-    z-index: 99;
+    z-index: 9;
 }
 .team-heading{
     width: 1001px;
-    height: 323px;
-    top: 395px;
+    height: 111px;
+    top: 330px;
     left: 99px;
-    z-index: 99;
+    z-index: 1;
 }
 .main-image-img{
     z-index: 99;
-    top: -26px;
-    left: 375px;
+    top: -50px;
+    left: 450px;
+    height: 650px;
+    
 }
-/* .animate-gradient{
-    width: 1001px;
-    height: 323px;
-} */
+
+
