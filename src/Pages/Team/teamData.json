@@ -1,0 +1,25 @@
+[
+    {
+      "name": "Bishal Sarma",
+      "batch": "2024",
+      "designation": "Member",
+      "email": "bishal@example.com",
+      "social": {
+        "instagram": "https://instagram.com/bishal",
+        "linkedin": "https://linkedin.com/in/bishal",
+        "github": "https://github.com/bishal"
+      }
+    },
+    {
+      "name": "aali Fleck",
+      "batch": "2024",
+      "designation": "Design Team",
+      "email": "authur@example.com",
+      "social": {
+        "instagram": "https://instagram.com/authur",
+        "linkedin": "https://linkedin.com/in/authur",
+        "github": "https://github.com/authur"
+      }
+    }
+  ]
+  
