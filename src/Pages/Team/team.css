@@ -30,8 +30,11 @@
 .main-image-img{
     z-index: 99;
     top: -50px;
-    left: 450px;
+    left: 575px;
     height: 650px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
     
 }
 
