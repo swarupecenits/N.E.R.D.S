@@ -41,13 +41,13 @@ const Navbar = () => {
 
   return (
     <nav className="bg-black text-white">
-      <div className="lg:px-10 sm:px-7 max-w-9xl mx-auto max-h-24 flex justify-between items-center p-6 "> {/* Adjusted max width */}
+      <div className="lg:px-12 sm:px-7 max-w-9xl mx-auto max-h-24 flex justify-between items-center p-6 "> {/* Adjusted max width */}
         
         {/* Logo and Title */}
         <div className="flex items-center">
           <img  src={Logo} alt="NERDS Logo" className="h-16 mr-8" />
           
-          <span className="hidden md:block text-3xl font-ethenocentric font-semibold">
+          <span className="hidden md:block text-2xl font-ethenocentric font-semibold">
           <span
   className="hover:[text-shadow:_0_5px_100px_rgba(0,255,255,0.9),_0_0_15px_rgba(0,255,255,1),_0_0_200px_rgba(0,255,255,1),_0_0_100px_rgba(99,102,241,0.8);] hover:text-[#00FFFF]"
 >
@@ -59,7 +59,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Links (Hidden on Mobile) */}
-        <div className="hidden md:flex space-x-6 text-2xl font-spaced font-extrabold ">
+        <div className="hidden md:flex space-x-6 text-xl font-spaced font-extrabold ">
           {links.map((link, index) => (
             <button
               key={index}
