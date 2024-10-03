@@ -41,6 +41,179 @@ const Team = () => {
       </div>
     </div>
     </div>
+    <div className="text-center"
+    style={{
+      marginTop: "250px"
+    }}>
+      <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent "
+      style={{
+        fontSize: "64px",
+        fontWeight: "400",
+        lineHeight: "76.8px",
+
+      }}>MEET OUR</h1>
+      <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent"
+      style={{
+        fontSize: "48px",
+        fontWeight: "400",
+        lineHeight: "57.6px",
+      }}>FOURTH YEAR MEMBER</h1>
+      
+    </div>
+    <div className="grid place-items-center"
+    style={{
+      marginTop: "84px",
+      marginBottom: "30px"
+    }}>
+    <hr style={{
+      width: "758px",
+      backgroundColor: "#E807B7",
+      marginBottom: "20px",
+      height: "3px",
+    }}/>
+    <hr style={{
+      width: "1030px",
+      backgroundColor: "#FFFFFF",
+      marginBottom: "20px",
+      height: "3px",
+    }}/>
+    <hr style={{
+      width: "758px",
+      backgroundColor: "#E807B7",
+      marginBottom: "20px",
+      height: "3px"
+    }}/>
+    </div>
+    <div className="text-center"
+    style={{
+      marginTop: "250px"
+    }}>
+      <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent "
+      style={{
+        fontSize: "64px",
+        fontWeight: "400",
+        lineHeight: "76.8px",
+
+      }}>MEET OUR</h1>
+      <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent"
+      style={{
+        fontSize: "48px",
+        fontWeight: "400",
+        lineHeight: "57.6px",
+      }}>THIRD YEAR MEMBER</h1>
+      
+    </div>
+    <div className="grid place-items-center"
+    style={{
+      marginTop: "84px",
+      marginBottom: "30px"
+    }}>
+    <hr style={{
+      width: "758px",
+      backgroundColor: "#E807B7",
+      marginBottom: "20px",
+      height: "3px",
+    }}/>
+    <hr style={{
+      width: "1030px",
+      backgroundColor: "#FFFFFF",
+      marginBottom: "20px",
+      height: "3px",
+    }}/>
+    <hr style={{
+      width: "758px",
+      backgroundColor: "#E807B7",
+      marginBottom: "20px",
+      height: "3px"
+    }}/>
+    </div>
+    <div className="text-center"
+    style={{
+      marginTop: "250px"
+    }}>
+      <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent "
+      style={{
+        fontSize: "64px",
+        fontWeight: "400",
+        lineHeight: "76.8px",
+
+      }}>MEET OUR</h1>
+      <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent"
+      style={{
+        fontSize: "48px",
+        fontWeight: "400",
+        lineHeight: "57.6px",
+      }}>SECOND YEAR MEMBER</h1>
+      
+    </div>
+    <div className="grid place-items-center"
+    style={{
+      marginTop: "84px",
+      marginBottom: "30px"
+    }}>
+    <hr style={{
+      width: "758px",
+      backgroundColor: "#E807B7",
+      marginBottom: "20px",
+      height: "3px",
+    }}/>
+    <hr style={{
+      width: "1030px",
+      backgroundColor: "#FFFFFF",
+      marginBottom: "20px",
+      height: "3px",
+    }}/>
+    <hr style={{
+      width: "758px",
+      backgroundColor: "#E807B7",
+      marginBottom: "20px",
+      height: "3px"
+    }}/>
+    </div>
+    <div className="text-center"
+    style={{
+      marginTop: "250px"
+    }}>
+      <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent "
+      style={{
+        fontSize: "64px",
+        fontWeight: "400",
+        lineHeight: "76.8px",
+
+      }}>MEET OUR</h1>
+      <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent"
+      style={{
+        fontSize: "48px",
+        fontWeight: "400",
+        lineHeight: "57.6px",
+      }}>DEVELOPERS</h1>
+      
+    </div>
+    <div className="grid place-items-center"
+    style={{
+      marginTop: "84px",
+      marginBottom: "30px"
+    }}>
+    <hr style={{
+      width: "758px",
+      backgroundColor: "#E807B7",
+      marginBottom: "20px",
+      height: "3px",
+    }}/>
+    <hr style={{
+      width: "1030px",
+      backgroundColor: "#FFFFFF",
+      marginBottom: "20px",
+      height: "3px",
+    }}/>
+    <hr style={{
+      width: "758px",
+      backgroundColor: "#E807B7",
+      marginBottom: "20px",
+      height: "3px"
+    }}/>
+    </div>
+  
     </>
   )
 }
