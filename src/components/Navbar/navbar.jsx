@@ -40,13 +40,8 @@ const Navbar = () => {
   };
 
   return (
-<<<<<<< HEAD:src/Pages/Navbar/navbar.jsx
-    <nav className="bg-black text-white navbar">
-      <div className="container mx-auto flex justify-between items-center p-6">
-=======
     <nav className="bg-black text-white">
       <div className="lg:px-12 sm:px-7 max-w-9xl mx-auto max-h-24 flex justify-between items-center p-6 "> {/* Adjusted max width */}
->>>>>>> c39b2d58972891786cde62b98a740407829a8769:src/components/Navbar/navbar.jsx
         
         {/* Logo and Title */}
         <div className="flex items-center">
