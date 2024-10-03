@@ -6,7 +6,7 @@ import About from './Pages/About/About';
 import Team from './Pages/Team/Team';
 import Gallery from './Pages/Gallery/Gallery';
 import Contact from './Pages/Contact/Contact';
-import Navbar from './Pages/Navbar/navbar';
+import Navbar from './components/Navbar/navbar';
 
 function App() {
   

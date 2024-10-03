@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Logo from "../Navbar/logo.png"; 
+import Logo from "./logo.png"; 
 
 const links = [
   { name: 'Home', path: '/' },
@@ -96,11 +96,11 @@ const Navbar = () => {
         {/* Mobile Header */}
         <div className="flex items-center justify-between p-4">
           <Link to="/" onClick={toggleMenu}>
-            <img src={Logo} alt="NERDS Logo" className="h-10" />
+            <img src={Logo} alt="NERDS Logo" className="h-10 ml-0" /> {/* Shifted logo to the leftmost corner */}
           </Link>
           
           <button className="text-2xl text-white" onClick={toggleMenu}>
-            &#10005; 
+            &#10005;
           </button>
         </div>
 
