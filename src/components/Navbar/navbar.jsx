@@ -4,7 +4,7 @@ import Logo from "./logo.png";
 
 const links = [
   { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
+  { name: 'Event', path: '/event' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Team', path: '/team' },
   { name: 'Contact', path: '/contact' },
