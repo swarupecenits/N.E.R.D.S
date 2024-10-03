@@ -47,15 +47,14 @@ const Navbar = () => {
         <div className="flex items-center">
           <img  src={Logo} alt="NERDS Logo" className="h-16 mr-8" />
           
-          <span className="hidden md:block text-3xl font-semibold cursor-pointer">
-            {Array.from("N.E.R.D.S").map((letter, index) => (
-              <span
-                key={index}
-                className="text-white transition duration-300 ease-in-out hover:shadow-[0_0_7px_#fff,0_0_10px_#fff,0_0_21px_#fff,0_0_42px_#0fa,0_0_82px_#0fa,0_0_92px_#0fa,0_0_102px_#0fa,0_0_151px_#0fa]"
-              >
-                {letter}
-              </span>
-            ))}
+          <span className="hidden md:block text-3xl font-ethenocentric font-semibold">
+          <span
+  className="hover:[text-shadow:_0_5px_100px_rgba(0,255,255,0.9),_0_0_15px_rgba(0,255,255,1),_0_0_200px_rgba(0,255,255,1),_0_0_100px_rgba(99,102,241,0.8);] hover:text-[#00FFFF]"
+>
+  N.E.R.D.S
+</span>
+
+
           </span>
         </div>
 
