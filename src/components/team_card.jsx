@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 const TeamCard = ({ member }) => {
-  const { name, designation, social, github, linkedin } = member;
+  const { name, designation, social, github, linkedin, image_id } = member;
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -44,7 +44,7 @@ const TeamCard = ({ member }) => {
 
         {/* Profile Image */}
         <img
-  src={`https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/edtrt1vujoq7mwla4mrz.webp`}
+  src={image_id}
   alt={name}
   className={`mx-auto object-cover transition-opacity duration-500 ${hovered ? "opacity-20" : "opacity-100"}`} // Added transition classes here
   style={{

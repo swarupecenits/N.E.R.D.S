@@ -57,7 +57,7 @@ const Team = () => {
     </div>
     <div className="text-center"
     style={{
-      marginTop: "180px"
+      marginTop: "50px"
     }}>
       <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent "
       style={{
