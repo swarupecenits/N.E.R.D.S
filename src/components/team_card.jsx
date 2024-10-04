@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 const TeamCard = ({ member }) => {
@@ -65,7 +65,7 @@ const TeamCard = ({ member }) => {
           }`}
           
           style={{
-            fontSize: "36px",
+            fontSize: "1.8rem",
             fontWeight: 400,
             lineHeight: "35.97px",
             textAlign: "center",
@@ -79,8 +79,7 @@ const TeamCard = ({ member }) => {
             hovered ? "opacity-0" : "opacity-100"
           }`}
           style={{
-            fontFamily: "'Inria Serif', serif",
-            fontSize: "30px",
+            fontSize: "1.5rem",
             fontWeight: 400,
             lineHeight: "35.97px",
             textAlign: "center",

@@ -24,6 +24,30 @@
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/nt46itz1mt9pnophgkwc"
   },
   {
+    "id": 32,    
+    "name": "Dev Vidit",
+    "team": "4th Year",
+    "designation": "Board Member",
+    "developer_team": "No",
+    "email": "ayushmaurya7868@gmail.com",
+    "social": "https://www.instagram.com/ayushmaurya12?igsh=MW9ud20yM2NoeDN4bA==",
+    "github": "https://github.com/Rocii12",
+    "linkedin": "https://www.linkedin.com/in/ayushmaurya7868",
+    "image_id": ""
+  },
+  {
+    "id": 5,
+    "name": "Swarup Chanda",
+    "team": "3rd Year",
+    "designation": "General Secretary",
+    "developer_team": "Yes",
+    "email": "swarupchanda1963@gmail.com",
+    "social": "https://www.instagram.com/this_is_swarup_?igsh=MXA4MzE4bnJ3YWs0Mg==",
+    "github": "https://github.com/swarupecenits",
+    "linkedin": "https://www.linkedin.com/in/swarup-chanda",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/ucr0cfbfdfdytnm9hhrh"
+  },
+  {
     "id": 3,
     "name": "Hraday Sadrani",
     "team": "3rd Year",
@@ -48,16 +72,16 @@
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/fl7s9efn5nrfilh30rrl.webp"
   },
   {
-    "id": 5,
-    "name": "Swarup Chanda",
+    "id": 33,
+    "name": "Kunal Hazarika",
     "team": "3rd Year",
-    "designation": "General Secretary",
-    "developer_team": "Yes",
-    "email": "swarupchanda1963@gmail.com",
-    "social": "https://www.instagram.com/this_is_swarup_?igsh=MXA4MzE4bnJ3YWs0Mg==",
-    "github": "https://github.com/swarupecenits",
-    "linkedin": "https://www.linkedin.com/in/swarup-chanda",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/ucr0cfbfdfdytnm9hhrh"
+    "designation": "IOT Head",
+    "developer_team": "No",
+    "email": "kunalhazarika2739@gmail.com",
+    "social": "https://www.instagram.com/kunal__hazarika/?next=%2F",
+    "github": "https://github.com/Kunal-Hazarika",
+    "linkedin": "https://www.linkedin.com/in/kunalhazarika/",
+    "image_id": ""
   },
   {
     "id": 6,
@@ -70,6 +94,18 @@
     "github": "https://github.com/AD20047",
     "linkedin": "https://www.linkedin.com/in/anneshadey",
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726866/wph7vxisqn4tqcmk2isr.webp"
+  },
+  {
+    "id": 34,
+    "name": "MD Rakibul Islam Midul",
+    "team": "3rd Year",
+    "designation": "ML Head",
+    "developer_team": "No",
+    "email": "",
+    "social": "",
+    "github": "",
+    "linkedin": "",
+    "image_id": ""
   },
   {
     "id": 7,
@@ -94,6 +130,18 @@
       "github": "https://github.com/abhi31an",
       "linkedin": "https://www.linkedin.com/in/abhishek-kumar",
       "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726866/jwabhaur1wszlv9vjx5h.webp"
+    },
+    {
+      "id": 39,
+      "name": "Anwesha Duara",
+      "team": "3rd Year",
+      "designation": "Core Team",
+      "developer_team": "No",
+      "email": "anweshad_ug_22@ece.nits.ac.in",
+      "social": "https://www.instagram.com/_anwesha.9_?igsh=ZmRrcWlzM3RxNjFl   Facebook:https://www.facebook.com/share/ZM2LqeYqS1P74eMx/?mibextid=qi2Omg",
+      "github": "https://github.com/Anwesha06",
+      "linkedin": "https://www.linkedin.com/in/anwesha-duara-694aa6256",
+      "image_id": ""
     },
     {
       "id": 9,
@@ -347,43 +395,6 @@
       "linkedin": "https://www.linkedin.com/in/yashraj-mishra",
       "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/vqspobrke3cq1704filx"
     },
-    
-    {
-      "id": 32,    
-      "name": "Dev Vidit",
-      "team": "4th Year",
-      "designation": "Board Member",
-      "developer_team": "No",
-      "email": "ayushmaurya7868@gmail.com",
-      "social": "https://www.instagram.com/ayushmaurya12?igsh=MW9ud20yM2NoeDN4bA==",
-      "github": "https://github.com/Rocii12",
-      "linkedin": "https://www.linkedin.com/in/ayushmaurya7868",
-      "image_id": ""
-    },
-    {
-      "id": 33,
-      "name": "Kunal Hazarika",
-      "team": "3rd Year",
-      "designation": "IOT Head",
-      "developer_team": "No",
-      "email": "kunalhazarika2739@gmail.com",
-      "social": "https://www.instagram.com/kunal__hazarika/?next=%2F",
-      "github": "https://github.com/Kunal-Hazarika",
-      "linkedin": "https://www.linkedin.com/in/kunalhazarika/",
-      "image_id": ""
-    },
-    {
-      "id": 34,
-      "name": "MD Rakibul Islam Midul",
-      "team": "3rd Year",
-      "designation": "ML Head",
-      "developer_team": "No",
-      "email": "",
-      "social": "",
-      "github": "",
-      "linkedin": "",
-      "image_id": ""
-    },
     {
       "id": 35,
       "name": "Abhishek Kumar Gupta",
@@ -432,21 +443,10 @@
       "linkedin": "",
       "image_id": ""
     },
-    {
-      "id": 39,
-      "name": "Anwesha Duara",
-      "team": "3rd Year",
-      "designation": "Core Team",
-      "developer_team": "No",
-      "email": "anweshad_ug_22@ece.nits.ac.in",
-      "social": "https://www.instagram.com/_anwesha.9_?igsh=ZmRrcWlzM3RxNjFl   Facebook:https://www.facebook.com/share/ZM2LqeYqS1P74eMx/?mibextid=qi2Omg",
-      "github": "https://github.com/Anwesha06",
-      "linkedin": "https://www.linkedin.com/in/anwesha-duara-694aa6256",
-      "image_id": ""
-    },
+    
     {
       "id": 40,
-      "name": "Priyanuj Kumar Gupta",
+      "name": "Priyangshu Kumar Gupta",
       "team": "3rd Year",
       "designation": "Core Team",
       "developer_team": "No",
