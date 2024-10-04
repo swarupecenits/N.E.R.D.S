@@ -26,24 +26,25 @@ function Footer() {
 <div 
   className='w-full h-[68%] opacity-1 flex flex-row relative justify-between' 
   style={{
-    backdropFilter: 'blur(14px)', 
+    backdropFilter: 'blur(40px)', 
     backgroundColor: 'rgba(255, 255, 255, 0.1)', 
     boxShadow: '0 4px px rgba(0, 0, 0, 0.1)',
-    WebkitBackdropFilter: 'blur(14px)'
+    WebkitBackdropFilter: 'blur(18px)'
 
   }}
 >
   <div id='logo'>
     <img 
       src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/npansp6k2ntw7qeoqoms" 
-      className="w-32 h-32 ml-12 mt-14 z-50 absolute top-0 left-0" 
+      className="w-28 h-28 ml-12 mt-14 z-50 cursor-pointer absolute top-0 left-0" 
+      href="/"
     />
   </div>
 
   <div id='wanna' className='ml-32 mt-14 flex flex-col'>
     <p 
       className=' font-ethenocentric' 
-      style={{ fontSize: '16.2px', width: '260px', height: '29px', fontWeight: '300',color:'#FFFFFF' }}
+      style={{ fontSize: '16.2px', width: 'auto', height: '29px', fontWeight: '300',color:'#FFFFFF' }}
     >
       Wanna know more?
     </p>
@@ -54,24 +55,26 @@ function Footer() {
       style={{ 
 
         backgroundColor: '#3E3E3E', 
-        marginTop: '36px', 
+        marginTop: '20px', 
         fontSize: '14.12px', 
-        width: '352px', 
-        padding: '8px', 
-        color: 'white',
-        border: 'none',         
-        outline: 'none',       
+        width: '20rem', 
+        padding: '8px',
+        border:'2px',
+        borderColor:'grey', 
+        color: 'white',        
+        outline: 'none',  
+        fontFamily:'spaced',     
         clipPath: 'polygon(15px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 15px)' 
 
       }}
     />
 
-    <p className='text-base text-white font-serif mt-3'>
-      Or contact us <a className='text-blue-500 underline' href='#'>here</a>
+    <p className='text-base text-white font-spaced mt-3'>
+      Or contact us <a className='text-blue-500 underline' href='/contact'>here</a>
     </p>
   </div>
 
-  <div style={{ width: '360px', height: '140px' }} className='mt-14'>
+  <div style={{ width: 'auto', height: '140px' }} className='mt-14'>
     <p 
       className='text-white font-ethenocentric' 
       style={{ fontSize: '16.2px', width: '120px', height: '29px', fontWeight: 'bold' }}
@@ -79,22 +82,25 @@ function Footer() {
       Visit Us
     </p>
     <p 
-      className='text-white mt-8' 
-      style={{ fontSize: '14px', width: '270px', height: '29px', fontWeight: 'bold', fontFamily: 'serif' }}
+      className='text-white mt-5 font-spaced' 
+      style={{ fontSize: '14px', width: 'auto', height: '29px', fontWeight: 'bold'}}
     >
-      NIT Silchar, Silchar, Assam, India- 788010
+      <a href="https://www.google.com/maps?q=1600+Amphitheatre+Parkway,+Mountain+View,+CA" target="_blank">NIT Silchar, Silchar, Assam, India- 788010</a>
+
+      
     </p>
     <p 
-      className='text-white mt-0' 
-      style={{ fontSize: '14px', width: '270px', height: '29px', fontWeight: 'bold', fontFamily: 'serif' }}
+      className='text-white mt-0 font-spaced' 
+      style={{ fontSize: '14px', width: 'auto', height: '29px', fontWeight: 'bold'}}
     >
-      Email- nerds@gmail.com
+      <a href="mailto:nerds.nitsilchar@gmail.com?subject=Hello%20N.E.R.D.S TEAM">Email- nerds.nitsilchar@gmail.com</a>
+
     </p>
     <p 
-      className='text-white mt-0' 
-      style={{ fontSize: '14px', width: '270px', height: '29px', fontWeight: 'bold', fontFamily: 'serif' }}
+      className='text-white mt-0 font-spaced' 
+      style={{ fontSize: '14px', width: 'auto', height: '29px', fontWeight: 'bold'}}
     >
-      +91 9090909090
+      +91-6003147277
     </p>
   </div>
 
@@ -109,8 +115,12 @@ function Footer() {
 </div>
         <div className=' w-full h-[25%] flex flex-row justify-center'>
 
-            <div className='mt-20'><h1 style={{fontWeight:'bolder'}} className='text-white text'>All Rights Reserved @ N.E.R.D.S. NIT Silchar</h1>
-            </div>
+        <div className="mt-20 font-spaced text-center">
+  <h1 style={{ fontWeight: 'bold', fontSize: '1rem' }} className="text-white">
+    © 2024 N.E.R.D.S. NIT Silchar. All Rights Reserved.
+  </h1>
+</div>
+
 
         </div>
 
