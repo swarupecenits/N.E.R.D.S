@@ -34,11 +34,13 @@ function Footer() {
   }}
 >
   <div id='logo'>
+  <a href="/" target="_blank">
     <img 
       src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/npansp6k2ntw7qeoqoms" 
       className="w-28 h-28 ml-12 mt-14 z-50 cursor-pointer absolute top-0 left-0" 
-      href="/"
+      
     />
+ </a>
   </div>
 
   <div id='wanna' className='ml-32 mt-14 flex flex-col'>
