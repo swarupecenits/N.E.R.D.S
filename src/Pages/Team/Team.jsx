@@ -72,9 +72,9 @@ const Team = () => {
       }}>FOURTH YEAR MEMBER</h1>
       
     </div>
-    <div className="grid grid-cols-1 mt-8 p-4  md:grid-cols-2 lg:grid-cols-3 gap-0">
+    <div className="grid grid-cols-1 mt-8 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {fourthYearMembers.map((member, index) => (
-          <TeamCard key={index} member={member} />
+          <TeamCard key={index} member={member}/>
         ))}
       </div>
     <div className="grid place-items-center"
