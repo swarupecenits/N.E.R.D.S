@@ -6,7 +6,7 @@ import { PiInstagramLogoFill } from "react-icons/pi";
 function Footer() {
   return (
     <>
-    <div className='relative flex items-center justify-center'>
+    <div className='mt-20 relative flex items-center justify-center'>
       <div
         style={{
 
