@@ -28,10 +28,10 @@ const Team = () => {
     <>
     <div className="overflow-hidden">
     <div className="bg-black main-section relative">
-    <div className="content-section">
-      <h1 className=" font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading absolute">MEET</h1>
-      <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading team-heading absolute">OUR TEAM</h1>
-      <p className="font-spaced text-white font-normal heading-subsection absolute">Our team is the backbone of our club. We have got some of the coolest minds of this college</p>
+    <div className="content-section ">
+      <h1 className="mt-[-2.5rem] font-ethenocentric font-xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading absolute">MEET</h1>
+      <h1 className="font-ethenocentric mt-[-4.8rem] font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading team-heading absolute">OUR TEAM</h1>
+      <p className="font-spaced mt-[-5.5rem] text-white font-normal heading-subsection absolute">Our team is the backbone of our club. We have got some of the coolest minds of this college</p>
     </div>
     <div className="main-image">
       <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/txdg7c0ofspqdw5qajni" alt="robot-image" className="mix-blend-whiten absolute main-image-img"/>
