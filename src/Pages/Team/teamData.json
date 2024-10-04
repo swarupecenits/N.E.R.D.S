@@ -228,18 +228,6 @@
       "image_id": ""
     },
     {
-      "id": 20,
-      "name": "Misbah Rahman",
-      "team": "2nd Year",
-      "designation": "Core Member",
-      "developer_team": "No",
-      "email": "rophile_misbah?igsh=ZWNhaXpyZXR2Ymth",
-      "social": "https://www.instagram.com/rophile_misbah?igsh=ZWNhaXpyZXR2Ymth",
-      "github": "https://github.com/TheAstrophile-KingK",
-      "linkedin": "https://www.linkedin.com/in/misbah-rahman",
-      "image_id": ""
-    },
-    {
       "id": 21,
       "name": "Misbahul Karim",
       "team": "2nd Year",
@@ -261,18 +249,6 @@
       "social": "https://www.instagram.com/nishit._9?igsh=Z3FyYnUxb3ZobTJk&utm_source=qr",
       "github": "https://github.com/Ezed9",
       "linkedin": "https://www.linkedin.com/in/nishit-baishya",
-      "image_id": ""
-    },
-    {
-      "id": 23,
-      "name": "Rahul Kumar Gupta",
-      "team": "2nd Year",
-      "designation": "Core Member",
-      "developer_team": "No",
-      "email": "rahulkumarguptassm12345@gmail.com",
-      "social": "https://www.instagram.com/rahulkmrgupta9504?igsh=eDluMjk0eTJ4a2hj",
-      "github": "https://github.com/RKGSSM",
-      "linkedin": "https://www.linkedin.com/in/rahul-kumar-gupta",
       "image_id": ""
     },
     {
@@ -340,7 +316,7 @@
       "name": "Tanmoy Talukdar",
       "team": "2nd Year",
       "designation": "Junior Member",
-      "developer_team": "Yes",
+      "developer_team": "No",
       "email": "talukdartanmay116@gmail.com",
       "social": "https://www.instagram.com/dunclaimed_chest/",
       "github": "https://github.com/buggytanmoy77",
@@ -350,7 +326,7 @@
     {
       "id": 30,
       "name": "Uddhav Saikia",
-      "team": "2nd Year",
+      "team": "1st Year",
       "designation": "Junior Member",
       "developer_team": "Yes",
       "email": "uddhav_ug_23@ece.nits.ac.in",

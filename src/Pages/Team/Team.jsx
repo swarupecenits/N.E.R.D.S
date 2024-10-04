@@ -22,6 +22,7 @@ const Team = () => {
   const fourthYearMembers = teamData.filter(member => member.team === "4th Year");
   const thirdYearMembers = teamData.filter(member => member.team === "3rd Year");
   const secondYearMembers = teamData.filter(member => member.team === "2nd Year");
+  const developers = teamData.filter(member => member.developer_team === "Yes");
 
 
   return (
@@ -57,7 +58,7 @@ const Team = () => {
     </div>
     <div className="text-center"
     style={{
-      marginTop: "250px"
+      marginTop: "180px"
     }}>
       <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent "
       style={{
@@ -74,7 +75,7 @@ const Team = () => {
       }}>FOURTH YEAR MEMBER</h1>
       
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
         {fourthYearMembers.map((member, index) => (
           <TeamCard key={index} member={member} />
         ))}
@@ -122,10 +123,10 @@ const Team = () => {
       }}>THIRD YEAR MEMBER</h1>
       
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0"
     style={{
       marginTop: "64px",
-      marginLeft: "64px",
+      marginLeft: "0px",
     }}>
         {thirdYearMembers.map((member, index) => (
           <TeamCard key={index} member={member} className="my-16"/>
@@ -174,6 +175,15 @@ const Team = () => {
       }}>SECOND YEAR MEMBER</h1>
       
     </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0"
+    style={{
+      marginTop: "64px",
+      marginLeft: "0px",
+    }}>
+        {secondYearMembers.map((member, index) => (
+          <TeamCard key={index} member={member} className="my-16"/>
+        ))}
+      </div>
     <div className="grid place-items-center"
     style={{
       marginTop: "84px",
@@ -217,6 +227,15 @@ const Team = () => {
       }}>DEVELOPERS</h1>
       
     </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0"
+    style={{
+      marginTop: "64px",
+      marginLeft: "0px",
+    }}>
+        {developers.map((member, index) => (
+          <TeamCard key={index} member={member} className="my-16"/>
+        ))}
+      </div>
     <div className="grid place-items-center"
     style={{
       marginTop: "84px",
