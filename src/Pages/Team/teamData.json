@@ -48,18 +48,6 @@
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/ucr0cfbfdfdytnm9hhrh"
   },
   {
-    "id": 3,
-    "name": "Hraday Sadrani",
-    "team": "3rd Year",
-    "designation": "Technical Head",
-    "developer_team": "No",
-    "email": "sadranih_ug_22@ee.nits.ac.in",
-    "social": "https://www.instagram.com/hraday_sadrani/",
-    "github": "https://github.com/hradaysadrani",
-    "linkedin": "https://www.linkedin.com/in/hraday-sadrani",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726869/tlwygilatnshkvci3ygf.webp"
-  },
-  {
     "id": 4,
     "name": "Md Fayjan",
     "team": "3rd Year",
@@ -71,6 +59,19 @@
     "linkedin": "https://www.linkedin.com/in/md-fayjan",
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/fl7s9efn5nrfilh30rrl.webp"
   },
+  {
+    "id": 3,
+    "name": "Hraday Sadrani",
+    "team": "3rd Year",
+    "designation": "Technical Head",
+    "developer_team": "No",
+    "email": "sadranih_ug_22@ee.nits.ac.in",
+    "social": "https://www.instagram.com/hraday_sadrani/",
+    "github": "https://github.com/hradaysadrani",
+    "linkedin": "https://www.linkedin.com/in/hraday-sadrani",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726869/tlwygilatnshkvci3ygf.webp"
+  },
+  
   {
     "id": 33,
     "name": "Kunal Hazarika",
