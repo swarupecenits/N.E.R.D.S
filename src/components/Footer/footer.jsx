@@ -1,6 +1,3 @@
-
-import React from 'react';
-
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { PiInstagramLogoFill } from "react-icons/pi";
@@ -103,9 +100,9 @@ function Footer() {
 
   <div style={{ width: '16px', height: '140px', marginRight: '110px' }} className='mt-14 flex flex-col'>
 
-    <div><a href='https://www.facebook.com/roboticsclub.nits?mibextid=ZbWKwL'><FaFacebook color='white' size="30px" /></a></div>
-    <div className='mt-6'><a href='https://www.instagram.com/nerds.nitsilchar?igsh=MTM0MjFpZjF6M3Zucg=='><PiInstagramLogoFill color='white' size="30px" /></a></div>
-    <div className='mt-6'><a href='https://www.linkedin.com/company/n-e-r-d-s-nits/'><FaLinkedin color='white' size="30px" /></a></div>
+    <div><a target="_blank" href='https://www.facebook.com/roboticsclub.nits?mibextid=ZbWKwL'><FaFacebook color='white' size="30px" /></a></div>
+    <div className='mt-6'><a target="_blank" href='https://www.instagram.com/nerds.nitsilchar?igsh=MTM0MjFpZjF6M3Zucg=='><PiInstagramLogoFill color='white' size="30px" /></a></div>
+    <div className='mt-6'><a target="_blank" href='https://www.linkedin.com/company/n-e-r-d-s-nits/'><FaLinkedin color='white' size="30px" /></a></div>
 
   </div>
 
