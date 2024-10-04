@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import './gradient.css';
 import './team.css'
+import TeamCard from "../../components/team_card";
+import data from "./teamData.json";
 const Team = () => {
   const [rotation, setRotation] = useState(-37.96);
   useEffect(() => {
@@ -10,6 +12,18 @@ const Team = () => {
       setRotation(prevRotation => prevRotation + 1); // Slowly increase the rotation angle
     }, 50); return () => clearInterval(interval); 
   }, []);
+  
+  const [teamData, setTeamData] = useState([]);
+
+  useEffect(() => {
+    setTeamData(data); 
+  }, []);
+
+  const fourthYearMembers = teamData.filter(member => member.team === "4th Year");
+  const thirdYearMembers = teamData.filter(member => member.team === "3rd Year");
+  const secondYearMembers = teamData.filter(member => member.team === "2nd Year");
+
+
   return (
     <>
     <div className="overflow-hidden">
@@ -60,6 +74,11 @@ const Team = () => {
       }}>FOURTH YEAR MEMBER</h1>
       
     </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 m-16">
+        {fourthYearMembers.map((member, index) => (
+          <TeamCard key={index} member={member} />
+        ))}
+      </div>
     <div className="grid place-items-center"
     style={{
       marginTop: "84px",
@@ -103,6 +122,15 @@ const Team = () => {
       }}>THIRD YEAR MEMBER</h1>
       
     </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+    style={{
+      marginTop: "64px",
+      marginLeft: "64px",
+    }}>
+        {thirdYearMembers.map((member, index) => (
+          <TeamCard key={index} member={member} className="my-16"/>
+        ))}
+      </div>
     <div className="grid place-items-center"
     style={{
       marginTop: "84px",
