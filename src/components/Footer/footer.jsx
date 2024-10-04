@@ -100,7 +100,7 @@ function Footer() {
       className='text-white mt-0 font-spaced' 
       style={{ fontSize: '14px', width: 'auto', height: '29px', fontWeight: 'bold'}}
     >
-      +91-6003147277
+      +91-60031 XXXXX
     </p>
   </div>
 
