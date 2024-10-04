@@ -1,4 +1,3 @@
-import React from "react"; 
 import { useEffect } from "react";
 import { useState } from "react";
 import './gradient.css';
@@ -35,7 +34,7 @@ const Team = () => {
       <p className="font-spaced text-white font-normal heading-subsection absolute">Our team is the backbone of our club. We have got some of the coolest minds of this college</p>
     </div>
     <div className="main-image">
-      <img src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/xoe3euiczzbuzhyxf63b" alt="robot-image" className="mix-blend-whiten absolute main-image-img"/>
+      <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/txdg7c0ofspqdw5qajni" alt="robot-image" className="mix-blend-whiten absolute main-image-img"/>
     </div>
     </div>
     <div className="min-h-screen flex items-center justify-center bg-black">
