@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Logo from "./logo.png"; 
+import Logo from "./logo.png";
 
 const links = [
   { name: 'Home', path: '/' },
@@ -40,13 +40,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black text-white">
-      <div className="max-w-9xl mx-auto max-h-24 flex justify-between items-center p-6 pr-7"> {/* Adjusted max width */}
-        
+    <nav className="sticky top-0 bg-black text-white z-50"> {/* Added sticky, top-0, and z-50 */}
+      <div className="max-w-9xl mx-auto max-h-24 flex justify-between items-center p-6 pr-7">
         {/* Logo and Title */}
         <div className="flex items-center pl-10">
           <img src={Logo} alt="NERDS Logo" className="h-16 mr-8 ml-9" />
-          
           <span className="hidden md:block text-3xl font-semibold cursor-pointer">
             {Array.from("N.E.R.D.S").map((letter, index) => (
               <span
@@ -65,8 +63,7 @@ const Navbar = () => {
             <button
               key={index}
               onClick={() => handleLinkClick(link.path)}
-              className={`relative group transition duration-300 
-                ${location.pathname === link.path ? "text-gray-300" : ""}`}
+              className={`relative group transition duration-300 ${location.pathname === link.path ? "text-gray-300" : ""}`}
             >
               <span className="relative z-10 px-4 py-2">
                 {link.name}
@@ -77,10 +74,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Toggle (Always Visible on Mobile) */}
-        <button
-          className="menu-toggle flex justify-center items-center p-2 md:hidden"
-          onClick={toggleMenu}
-        >
+        <button className="menu-toggle flex justify-center items-center p-2 md:hidden" onClick={toggleMenu}>
           <div className="hamburger-icon text-[32px] text-accent">
             &#9776;
           </div>
@@ -96,9 +90,8 @@ const Navbar = () => {
         {/* Mobile Header */}
         <div className="flex items-center justify-between p-4">
           <Link to="/" onClick={toggleMenu}>
-            <img src={Logo} alt="NERDS Logo" className="h-10 ml-0" /> {/* Shifted logo to the leftmost corner */}
+            <img src={Logo} alt="NERDS Logo" className="h-10 ml-0" />
           </Link>
-          
           <button className="text-2xl text-white" onClick={toggleMenu}>
             &#10005;
           </button>
@@ -112,9 +105,7 @@ const Navbar = () => {
               onClick={() => handleLinkClick(link.path)}
               className={`relative group w-full py-2 text-lg capitalize text-white transition-all font-spaced`}
             >
-              <span className="relative z-10 px-5 py-4"> 
-                {link.name}
-              </span>
+              <span className="relative z-10 px-5 py-4">{link.name}</span>
               <span className="absolute inset-0 rounded-full border-2 border-purple-500 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition duration-300 shadow-lg group-hover:shadow-[0_0_20px_6px_rgba(128,0,128,0.5)]"></span>
             </button>
           ))}
