@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { FaFacebook } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { PiInstagramLogoFill } from 'react-icons/pi';
@@ -7,15 +7,15 @@ function Footer() {
   return (
     <>
       {/* Mobile Footer */}
-      <footer className="md:hidden pl-3 pr-3 flex flex-col items-center mt-20">
+      <footer className="md:hidden  pl-3 pr-3 flex flex-col items-center">
         <div
-          className="w-[100vw] h-[45rem] bg-cover absolute top-0 left-0  bg-no-repeat"
+          className="w-[100vw] h-[45rem] bg-cover absolute  bg-no-repeat"
           style={{
             backgroundImage: 'url("https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tuchgn9xdbqwiesi3ywk")',
           }}
         >
           <div className="w-full pb-8 h-50rem flex flex-col items-center justify-start backdrop-blur-[9px] bg-white/10 shadow-md">
-            <div id="logo" className="w-full pl-6 pt-20 flex justify-start mt-12 md:mt-4">
+            <div id="logo" className="w-full pl-6 flex justify-start mt-12 md:mt-4">
               <a href="/">
                 <img
                   src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/npansp6k2ntw7qeoqoms"
