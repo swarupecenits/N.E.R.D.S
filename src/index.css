@@ -7,3 +7,13 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   
 }
+
+@font-face {
+  font-family: 'Spaced';
+  src: url('/src/assets/Fonts/Spaced OTF.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Ethenocentric';
+  src: url('/src/assets/Fonts/ethnocentric rg.otf') format('opentype');
+}
