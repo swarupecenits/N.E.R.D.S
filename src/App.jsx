@@ -2,7 +2,7 @@ import './App.css'
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './Pages/Home/Home';
-import About from './Pages/About/About';
+import Event from './Pages/Event/Event';
 import Team from './Pages/Team/Team';
 import Gallery from './Pages/Gallery/Gallery';
 import Contact from './Pages/Contact/Contact';
@@ -21,7 +21,7 @@ function App() {
         {/* Define Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/event" element={<Event />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/team" element={<Team />} />
           <Route path="/gallery" element={<Gallery />} />
