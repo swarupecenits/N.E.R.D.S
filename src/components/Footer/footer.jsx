@@ -1,4 +1,5 @@
 // import React from 'react';
+import { FaFacebook } from 'react-icons/fa';
 import { FaLinkedin } from 'react-icons/fa';
 import { PiInstagramLogoFill } from 'react-icons/pi';
 
@@ -60,18 +61,17 @@ function Footer() {
                   Email- nerds.nitsilchar@gmail.com
                 </a>
               </p>
-              <p className="text-white font-extralight font-spaced text-[14px] font-bold">+91-60031 XXXXX</p>
+              <p className="text-white font-extralight font-spaced text-[14px] ">+91-60031 XXXXX</p>
             </div>
 
             <div className="flex flex-col gap-6 justify-end mr-[-20rem] mt-[-6rem] items-end">
-            <a
-  target="_blank"
-  rel="noopener noreferrer"
-  href="https://www.facebook.com/roboticsclub.nits?mibextid=ZbWKwL"
->
-  <img src="src/assets/fb.svg" alt="Facebook" className="w-6 h-6" />
-</a>
-
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/roboticsclub.nits?mibextid=ZbWKwL"
+              >
+                <FaFacebook color="white" size="25px" />
+              </a>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -162,10 +162,10 @@ function Footer() {
               </p>
             </div>
 
-            <div id="icons" className='mt-14 flex flex-col  mr-[110px]'>
+            <div id="icons" className='mt-14 flex flex-col w-[16px] h-[140px] mr-[110px]'>
               <div>
                 <a target="_blank" href='https://www.facebook.com/roboticsclub.nits?mibextid=ZbWKwL'>
-                <img src="src/assets/fb.svg" alt="Facebook" className='w-7'/>
+                  <FaFacebook color='white' size="30px" />
                 </a>
               </div>
               <div className='mt-6'>
