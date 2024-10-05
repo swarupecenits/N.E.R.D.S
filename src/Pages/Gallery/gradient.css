@@ -1,0 +1,22 @@
+body{
+    position: relative;
+  }
+  .gradient-text {
+    background: linear-gradient(90deg, #FFFFFF 0.44%, #F7D5FF 38.63%, #36B7FF 95.18%);
+       
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari */
+    color: transparent; /* Make the text color transparent */
+  }
+  .hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+  }
+
+  .show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
