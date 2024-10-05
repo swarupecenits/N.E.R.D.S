@@ -29,20 +29,20 @@ function Footer() {
             </div>
 
             <div className="flex pl-4 pr-4 flex-col justify-start items-start ml-[-5rem] mt-4">
-              <p className="font-ethenocentric text-white text-md font-light">Wanna know more?</p>
+              <p className="font-ethenocentric text-white text-md font-extralight">Wanna know more?</p>
               <input
                 type="email"
                 placeholder="Email us here"
                 className="mt-4 bg-[#3E3E3E] text-white text-sm w-[80%] max-w-xs p-2 border-2 border-gray-600 outline-none rounded-lg"
               />
-              <p className="text-base text-white font-spaced mt-3">
+              <p className="text-base text-white font-spaced font-extralight mt-3">
                 Or contact us <a className="text-blue-500 underline" href="/contact">here</a>
               </p>
             </div>
 
-            <div className="flex flex-col items-start mt-10 ml-[-2rem] ">
-              <p className="text-white font-ethenocentric text-md font-bold">Visit Us</p>
-              <p className="text-white font-spaced text-sm font-bold">
+            <div className="flex flex-col items-start mt-10 ml-[-2.8rem] ">
+              <p className="text-white font-ethenocentric leading-3 font-extralight text-md ">Visit Us</p>
+              <p className="text-white leading-7 font-spaced text-sm font-extralight">
                 <a
                   href="https://www.google.com/maps?q=1600+Amphitheatre+Parkway,+Mountain+View,+CA"
                   target="_blank"
@@ -51,14 +51,14 @@ function Footer() {
                   NIT Silchar, Silchar, Assam, India- 788010
                 </a>
               </p>
-              <p className="text-white flex-wrap font-spaced text-sm font-bold">
+              <p className="text-white  font-extralight flex-wrap font-spaced text-sm ">
                 <a
                   href="mailto:nerds.nitsilchar@gmail.com?subject=Hello%20N.E.R.D.S TEAM"
                 >
                   Email- nerds.nitsilchar@gmail.com
                 </a>
               </p>
-              <p className="text-white font-spaced text-[14px] font-bold">+91-60031 XXXXX</p>
+              <p className="text-white font-extralight font-spaced text-[14px] font-bold">+91-60031 XXXXX</p>
             </div>
 
             <div className="flex flex-col gap-6 justify-end mr-[-20rem] mt-[-6rem] items-end">
