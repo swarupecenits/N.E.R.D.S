@@ -35,7 +35,7 @@ function Footer() {
                 placeholder="Email us here"
                 className="mt-4 bg-[#3E3E3E] text-white text-sm w-[100%] max-w-xs p-2 border-2 border-gray-600 outline-none rounded-none"
                 style={{
-                  clipPath: 'polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 38%)',
+                  clipPath: 'polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%)',
                 }}
               />
               <p className="text-base text-white font-spaced font-extralight mt-3">
