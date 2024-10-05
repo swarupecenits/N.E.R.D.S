@@ -7,15 +7,15 @@ function Footer() {
   return (
     <>
       {/* Mobile Footer */}
-      <footer className="md:hidden flex flex-col items-center mt-20">
+      <footer className="md:hidden pl-3 pr-3 flex flex-col items-center mt-20">
         <div
-          className="w-screen h-[371px] absolute top-0 left-0 bg-cover bg-no-repeat"
+          className="w-[100vw] h-[45rem] bg-cover absolute top-0 left-0  bg-no-repeat"
           style={{
             backgroundImage: 'url("https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tuchgn9xdbqwiesi3ywk")',
           }}
         >
-          <div className="w-full h-full flex flex-col items-center justify-start backdrop-blur-[40px] bg-white/10 shadow-md">
-            <div id="logo" className="w-full flex justify-center mt-8 md:mt-4">
+          <div className="w-full pb-8 h-50rem flex flex-col items-center justify-start backdrop-blur-[9px] bg-white/10 shadow-md">
+            <div id="logo" className="w-full pl-6 pt-20 flex justify-start mt-12 md:mt-4">
               <a href="/">
                 <img
                   src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/npansp6k2ntw7qeoqoms"
@@ -24,9 +24,12 @@ function Footer() {
                 />
               </a>
             </div>
+            <div className='font-spaced pl-8 flex-wrap text-xl mt-[-5rem] ml-20 mb-20 justify-end sm:mt-[-4] text-white font-semibold'>
+              N.E.R.D.S NIT Silchar
+            </div>
 
-            <div className="flex flex-col items-center mt-4">
-              <p className="font-ethenocentric text-white text-[16.2px] font-light">Wanna know more?</p>
+            <div className="flex pl-4 pr-4 flex-col justify-start items-start ml-[-5rem] mt-4">
+              <p className="font-ethenocentric text-white text-md font-light">Wanna know more?</p>
               <input
                 type="email"
                 placeholder="Email us here"
@@ -37,9 +40,9 @@ function Footer() {
               </p>
             </div>
 
-            <div className="flex flex-col items-center mt-4">
-              <p className="text-white font-ethenocentric text-[16.2px] font-bold">Visit Us</p>
-              <p className="text-white font-spaced text-[14px] font-bold">
+            <div className="flex flex-col items-start mt-10 ml-[-2rem] ">
+              <p className="text-white font-ethenocentric text-md font-bold">Visit Us</p>
+              <p className="text-white font-spaced text-sm font-bold">
                 <a
                   href="https://www.google.com/maps?q=1600+Amphitheatre+Parkway,+Mountain+View,+CA"
                   target="_blank"
@@ -48,7 +51,7 @@ function Footer() {
                   NIT Silchar, Silchar, Assam, India- 788010
                 </a>
               </p>
-              <p className="text-white font-spaced text-[14px] font-bold">
+              <p className="text-white flex-wrap font-spaced text-sm font-bold">
                 <a
                   href="mailto:nerds.nitsilchar@gmail.com?subject=Hello%20N.E.R.D.S TEAM"
                 >
@@ -58,39 +61,39 @@ function Footer() {
               <p className="text-white font-spaced text-[14px] font-bold">+91-60031 XXXXX</p>
             </div>
 
-            <div className="flex justify-center mt-4">
+            <div className="flex flex-col gap-6 justify-end mr-[-20rem] mt-[-6rem] items-end">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.facebook.com/roboticsclub.nits?mibextid=ZbWKwL"
-                className="mr-4"
               >
-                <FaFacebook color="white" size="30px" />
+                <FaFacebook color="white" size="25px" />
               </a>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.instagram.com/nerds.nitsilchar?igsh=MTM0MjFpZjF6M3Zucg=="
-                className="mr-4"
+                
               >
-                <PiInstagramLogoFill color="white" size="30px" />
+                <PiInstagramLogoFill color="white" size="25px" />
               </a>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/company/n-e-r-d-s-nits/"
               >
-                <FaLinkedin color="white" size="30px" />
+                <FaLinkedin color="white" size="25px" />
               </a>
             </div>
           </div>
-        </div>
-
-        <div className="mt-20 font-spaced text-center">
-          <h1 className="text-white font-bold text-[1rem]">
+          <div className="mt-10 font-spaced text-center">
+          <h1 className="text-white flex-wrap p-4 font-spaced font-bold text-[1rem]">
             © 2024 N.E.R.D.S. NIT Silchar. All Rights Reserved.
           </h1>
         </div>
+        </div>
+
+        
       </footer>
 
       {/* Laptop Footer */}
@@ -106,7 +109,7 @@ function Footer() {
               <a href="/">
                 <img
                   src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/npansp6k2ntw7qeoqoms"
-                  className="w-28 h-28 z-50 cursor-pointer absolute top-0 left-0"
+                  className="w-28 h-28 z-50 cursor-pointer absolute "
                 />
               </a>
             </div>
