@@ -9,9 +9,9 @@ function Footer() {
       {/* Mobile Footer */}
       <footer className="md:hidden   flex flex-col items-center">
         <div
-          className="w-[100vw] h-[45rem]  bg-cover absolute  bg-no-repeat"
+          className="w-[100vw] h-[40rem] bg-cover absolute  bg-no-repeat"
           style={{
-            backgroundImage: 'url("https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tuchgn9xdbqwiesi3ywk")',
+            backgroundImage: 'url("https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/snbxytf8s0dtah96wnlo")',
           }}
         >
           <div className="w-full pl-2 pr-2 pb-8 h-50rem flex flex-col items-center justify-start backdrop-blur-[9px] bg-white/10 shadow-md">
@@ -65,13 +65,14 @@ function Footer() {
             </div>
 
             <div className="flex flex-col gap-6 justify-end mr-[-20rem] mt-[-6rem] items-end">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.facebook.com/roboticsclub.nits?mibextid=ZbWKwL"
-              >
-                <FaFacebook color="white" size="25px" />
-              </a>
+            <a
+  target="_blank"
+  rel="noopener noreferrer"
+  href="https://www.facebook.com/roboticsclub.nits?mibextid=ZbWKwL"
+>
+  <img src="src/assets/fb.svg" alt="Facebook" className="w-6 h-6" />
+</a>
+
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -162,10 +163,10 @@ function Footer() {
               </p>
             </div>
 
-            <div id="icons" className='mt-14 flex flex-col w-[16px] h-[140px] mr-[110px]'>
+            <div id="icons" className='mt-14 flex flex-col  mr-[110px]'>
               <div>
                 <a target="_blank" href='https://www.facebook.com/roboticsclub.nits?mibextid=ZbWKwL'>
-                  <FaFacebook color='white' size="30px" />
+                <img src="src/assets/fb.svg" alt="Facebook" className='w-7'/>
                 </a>
               </div>
               <div className='mt-6'>
