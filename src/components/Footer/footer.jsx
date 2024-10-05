@@ -7,14 +7,14 @@ function Footer() {
   return (
     <>
       {/* Mobile Footer */}
-      <footer className="md:hidden  pl-3 pr-3 flex flex-col items-center">
+      <footer className="md:hidden   flex flex-col items-center">
         <div
-          className="w-[100vw] h-[45rem] bg-cover absolute  bg-no-repeat"
+          className="w-[100vw] h-[45rem]  bg-cover absolute  bg-no-repeat"
           style={{
             backgroundImage: 'url("https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tuchgn9xdbqwiesi3ywk")',
           }}
         >
-          <div className="w-full pb-8 h-50rem flex flex-col items-center justify-start backdrop-blur-[9px] bg-white/10 shadow-md">
+          <div className="w-full pl-2 pr-2 pb-8 h-50rem flex flex-col items-center justify-start backdrop-blur-[9px] bg-white/10 shadow-md">
             <div id="logo" className="w-full pl-6 flex justify-start mt-12 md:mt-4">
               <a href="/">
                 <img
@@ -28,12 +28,15 @@ function Footer() {
               N.E.R.D.S NIT Silchar
             </div>
 
-            <div className="flex pl-4 pr-4 flex-col justify-start items-start ml-[-5rem] mt-4">
+            <div className="flex pl-2 pr-2 flex-col justify-start items-start ml-[-5rem] mt-4">
               <p className="font-ethenocentric text-white text-md font-extralight">Wanna know more?</p>
               <input
                 type="email"
                 placeholder="Email us here"
-                className="mt-4 bg-[#3E3E3E] text-white text-sm w-[80%] max-w-xs p-2 border-2 border-gray-600 outline-none rounded-lg"
+                className="mt-4 bg-[#3E3E3E] text-white text-sm w-[100%] max-w-xs p-2 border-2 border-gray-600 outline-none rounded-none"
+                style={{
+                  clipPath: 'polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 38%)',
+                }}
               />
               <p className="text-base text-white font-spaced font-extralight mt-3">
                 Or contact us <a className="text-blue-500 underline" href="/contact">here</a>
