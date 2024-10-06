@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React from 'react';
 // import EventCard from '../../components/Upcoming-events/Card';
 
@@ -73,6 +74,9 @@ const events = [
   },
 ];
 
+=======
+import React from 'react';
+>>>>>>> 80fca993a7292804eb7539d76b847978e32e623d
 const Home = () => {
   return (
     <div className="w-full mx-auto p-4"> {/* Ensure the container spans the full width */}
@@ -93,7 +97,14 @@ const Home = () => {
         ))}
       </Swiper>
     </div>
+<<<<<<< HEAD
   );
 };
+=======
+  )
+
+
+}
+>>>>>>> 80fca993a7292804eb7539d76b847978e32e623d
 
 export default Home;
