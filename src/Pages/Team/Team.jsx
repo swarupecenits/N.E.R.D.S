@@ -3,9 +3,21 @@ import { useState } from "react";
 import './gradient.css';
 import './team.css'
 import TeamCard from "../../components/team_card";
+import 'swiper/swiper-bundle.css'; 
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 import data from "./teamData.json";
+import Footer from "../../components/Footer/footer";
 const Team = () => {
   const [rotation, setRotation] = useState(-37.96);
+  const [isLaptopView, setIsLaptopView] = useState(window.innerWidth >= 1024);
   useEffect(() => {
     const interval = setInterval(() => {
       setRotation(prevRotation => prevRotation + 1); // Slowly increase the rotation angle
@@ -16,6 +28,18 @@ const Team = () => {
 
   useEffect(() => {
     setTeamData(data); 
+  }, []);
+  const checkScreenSize = () => {
+    setIsLaptopView(window.matchMedia("(min-width: 1024px)").matches);
+  };
+
+  useEffect(() => {
+    checkScreenSize(); 
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
   }, []);
 
   const fourthYearMembers = teamData.filter(member => member.team === "4th Year");
@@ -72,11 +96,49 @@ const Team = () => {
       }}>FOURTH YEAR MEMBER</h1>
       
     </div>
-    <div className="grid grid-cols-1 mt-8 md:grid-cols-2 lg:grid-cols-3 gap-0">
-        {fourthYearMembers.map((member, index) => (
-          <TeamCard key={index} member={member}/>
-        ))}
-      </div>
+    {isLaptopView ? (
+          <div className="grid grid-cols-1 mt-8 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-6">
+            {fourthYearMembers.map((member, index) => (
+              <TeamCard key={index} member={member} />
+            ))}
+          </div>
+        ) : (
+          <Swiper
+            navigation
+            pagination
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            spaceBetween={30}
+            slidesPerView={3}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            modules={[Navigation, Pagination, EffectCoverflow]}
+          >
+            {fourthYearMembers.map((member, index) => (
+              <SwiperSlide key={index}>
+                <TeamCard member={member} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
+
     <div className="grid place-items-center"
     style={{
       marginTop: "84px",
@@ -122,15 +184,48 @@ const Team = () => {
       }}>THIRD YEAR MEMBER</h1>
       
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0"
-    style={{
-      marginTop: "64px",
-      marginLeft: "0px",
-    }}>
-        {thirdYearMembers.map((member, index) => (
-          <TeamCard key={index} member={member} className="my-16"/>
-        ))}
-      </div>
+    {isLaptopView ? (
+          <div className="grid grid-cols-1 mt-8 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-6">
+            {thirdYearMembers.map((member, index) => (
+              <TeamCard key={index} member={member} />
+            ))}
+          </div>
+        ) : (
+          <Swiper
+            navigation
+            pagination
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            spaceBetween={30}
+            slidesPerView={3}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            modules={[Navigation, Pagination, EffectCoverflow]}
+          >
+            {thirdYearMembers.map((member, index) => (
+              <SwiperSlide key={index}>
+                <TeamCard member={member} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
     <div className="grid place-items-center"
     style={{
       marginTop: "84px",
@@ -176,20 +271,56 @@ const Team = () => {
       }}>SECOND YEAR MEMBER</h1>
       
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0"
-    style={{
-      marginTop: "64px",
-      marginLeft: "0px",
-    }}>
-        {secondYearMembers.map((member, index) => (
-          <TeamCard key={index} member={member} className="my-16"/>
-        ))}
+    <div className="flex justify-center">
+    {isLaptopView ? (
+          <div className="grid grid-cols-1 mt-8 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-6">
+            {secondYearMembers.map((member, index) => (
+              <TeamCard key={index} member={member} />
+            ))}
+          </div>
+        ) : (
+          <Swiper
+            navigation
+            pagination
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            spaceBetween={30}
+            slidesPerView={3}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            modules={[Navigation, Pagination, EffectCoverflow]}
+          >
+            {secondYearMembers.map((member, index) => (
+              <SwiperSlide key={index}>
+                <TeamCard member={member} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
       </div>
     <div className="grid place-items-center"
     style={{
       marginTop: "84px",
       marginBottom: "30px"
     }}>
+      
     <hr style={{
       width: "758px",
       backgroundColor: "#E807B7",
@@ -230,15 +361,48 @@ const Team = () => {
       }}>DEVELOPERS</h1>
       
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0"
-    style={{
-      marginTop: "64px",
-      marginLeft: "0px",
-    }}>
-        {developers.map((member, index) => (
-          <TeamCard key={index} member={member} className="my-16"/>
-        ))}
-      </div>
+    {isLaptopView ? (
+          <div className="grid grid-cols-1 mt-8 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-6">
+            {developers.map((member, index) => (
+              <TeamCard key={index} member={member} />
+            ))}
+          </div>
+        ) : (
+          <Swiper
+            navigation
+            pagination
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            spaceBetween={30}
+            slidesPerView={3}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+            modules={[Navigation, Pagination, EffectCoverflow]}
+          >
+            {developers.map((member, index) => (
+              <SwiperSlide key={index}>
+                <TeamCard member={member} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
     <div className="grid place-items-center"
     style={{
       marginTop: "84px",
@@ -263,7 +427,7 @@ const Team = () => {
       height: "3px"
     }}/>
     </div>
-  
+
     </>
   )
 }
