@@ -27,7 +27,8 @@ const projects = [
     title: "Project Four",
     description:
       "This is the description for project four. It has an amazing UI and offers a seamless user experience.",
-    imageUrl: "/path-to-image4.jpg",
+    imageUrl:
+      "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/m3pjelslrtrcdkqtv2uk",
   },
 ];
 
@@ -48,13 +49,21 @@ const Projects = () => {
                 : "md:flex-row-reverse"
             }`}
           >
-            {/* Project Image */}
+            {/* Project Image with Clipped Diagonal Corners */}
             <div className="md:w-1/2 p-4">
-              <img
-                src={project.imageUrl}
-                alt={project.title}
-                className="rounded-lg shadow-lg w-full"
-              />
+              <div
+                className="relative w-full h-full overflow-hidden transition-transform duration-300 border border-gray-300 hover:border-gray-50 rounded-lg shadow-md hover:shadow-2xl hover:scale-105"
+                style={{
+                  clipPath:
+                    "polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)", // Clip top-left and bottom-right corners
+                }}
+              >
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
             {/* Project Description */}
             <div className="md:w-1/2 p-4 text-white">
