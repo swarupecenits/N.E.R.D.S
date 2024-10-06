@@ -23,8 +23,8 @@ function Hero() {
     return (
         <div className="hero_container">
             <div className="hero flex">
-                <div className="left">
-                    <img src={robot} alt="the robot" className="ml-12" />
+                <div className="left mx-auto">
+                    <img src={robot} alt="the robot" className="ml-16" />
                     </div>
 
                     <div className="right flex flex-col items-center justify-center">
@@ -34,7 +34,7 @@ function Hero() {
             </div>
 
             
-            <p className="mx-auto font-spaced text-white font-normal heading-subsection">A playful way to emphasize your inner competitive spirit and determination</p>
+            <p className="mx-auto pl-9 font-spaced text-white font-normal heading-subsection">A playful way to emphasize your inner competitive spirit and determination</p>
 
 
         </div>
