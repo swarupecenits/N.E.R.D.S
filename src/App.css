@@ -17,3 +17,6 @@ nav ul {
     text-decoration: underline;
   }
   
+  * {
+    box-sizing: border-box;
+  }
