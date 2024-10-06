@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TestimonialCard from "./testimonial_card"; // Assuming you have this component
-import "./testimonial_styles.css"; // Import your custom styles
+import "./testimonial_styles.css"; // Import additional styles if necessary
 
 const testimonials = [
   {
@@ -29,6 +29,9 @@ const testimonials = [
 const App = () => {
   // Reference for the card slider
   const cardSliderRef = useRef(null);
+  
+  // State for current testimonial index
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
 
   // Slider settings
   const settings = {
@@ -37,31 +40,43 @@ const App = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    nextArrow: <div className="slick-next">➜</div>, // Custom next arrow
+    prevArrow: <div className="slick-prev">➜</div>, // Custom previous arrow
+    beforeChange: (current, next) => setCurrentTestimonialIndex(next), // Update index before change
   };
 
   return (
-    <div
-      className="container"
-      style={{
-        display: "flex", // Flexbox to center content
-        justifyContent: "center", // Center horizontally
-        alignItems: "center", // Center vertically
-        height: "100vh", // Full screen height
-        backgroundColor: "transparent", // Optional: Background color for better visibility
-      }}
-    >
-      <div
-        className="slider-container"
-        style={{ maxWidth: "450px", width: "100%", margin: "0 auto" }} // Ensures responsiveness
-      >
-        <h1 className="heading" style={{ textAlign: "center", marginBottom: "20px" }}>
-          Testimonials
-        </h1>
+    <div className="container flex justify-center items-center h-screen bg-transparent">
+      <div className="slider-container max-w-lg w-full mx-auto font-ethnocentric">
+        {/* Heading */}
+        <div className="mb-5 font-ethenocentric">
+          <h1
+            className="
+              text-center                        
+              font-normal               
+              text-[50px]                
+              leading-[76.8px]          
+              text-gray-400            
+            "
+          >
+            TESTIMONIAL
+          </h1>
+        </div>
+
+        {/* Message from role */}
+        <div className="text-center mb-4 font-spaced">
+          <h2 className="text-gray-500 text-xl">
+            Message from{" "}
+            <span className="text-yellow-500 text-2xl tracking-wide">
+              {testimonials[currentTestimonialIndex].role}
+            </span>
+          </h2>
+        </div>
 
         {/* Slider for Testimonial Cards */}
         <Slider ref={cardSliderRef} {...settings}>
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="testimonial-slide">
+            <div key={index} className="flex justify-center">
               <TestimonialCard testimonial={testimonial} />
             </div>
           ))}
