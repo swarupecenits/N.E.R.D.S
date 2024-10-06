@@ -8,28 +8,31 @@ import Gallery from './Pages/Gallery/Gallery';
 import Contact from './Pages/Contact/Contact';
 import Navbar from './components/Navbar/navbar';
 
+
 function App() {
-  
   return (
     <div>
       <Router>
-      <div>
-        <nav>
-          <Navbar/>
-        </nav>
+        
+        <div className="sticky top-0 z-50">
+          <nav>
+            <Navbar />
+          </nav>
+        </div>
 
-        {/* Define Routes */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/event" element={<Event />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/gallery" element={<Gallery />} />
-        </Routes>
-      </div>
-    </Router>
+        
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/event" element={<Event />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/gallery" element={<Gallery />} />
+          </Routes>
+        </div>
+      </Router>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
