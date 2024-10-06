@@ -13,13 +13,15 @@ const projects = [
     title: "Project Two",
     description:
       "This is the description for project two. It's built with modern design principles and performs very efficiently.",
-    imageUrl: "/path-to-image2.jpg",
+    imageUrl:
+      "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/mwaszrp83seimayoqbl6",
   },
   {
     title: "Project Three",
     description:
       "This is the description for project three. It's highly customizable and easy to integrate into any system.",
-    imageUrl: "/path-to-image3.jpg",
+    imageUrl:
+      "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/eqzyb9vnhsqbprc89xij",
   },
   {
     title: "Project Four",
