@@ -67,10 +67,12 @@ const Projects = () => {
             </div>
             {/* Project Description */}
             <div className="md:w-1/2 p-6 px-10 text-white">
-              <h2 className="text-2xl font-ethenocentric mb-4 text-justify">
+              <h2 className="text-2xl font-ethenocentric mb-4 ">
                 {project.title}
               </h2>
-              <p className="font-spaced text-white">{project.description}</p>
+              <p className="font-spaced text-white text-justify">
+                {project.description}
+              </p>
               {/* Glowing Know More Button */}
               <button className="mt-8 px-3 py-1 bg-black text-white border-2 border-blue-800 font-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-sm">
                 Know More
