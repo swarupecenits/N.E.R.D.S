@@ -1,0 +1,40 @@
+/* .gradient-1{
+    top: 0px;
+} */
+.main-heading{
+    font-size: 90px;
+    line-height: 115px;
+}
+.heading-subsection{
+    font-size: 29px;
+    line-height: 27.69px;
+    width: 699px;
+    top: 450px; 
+    left: 112px;
+    z-index: 5;
+}
+.meet-heading{
+    width: 520px;
+    height: 100px;
+    top: 210px;
+    left: 112px;
+    z-index: 9;
+}
+.team-heading{
+    width: 1001px;
+    height: 111px;
+    top: 330px;
+    left: 99px;
+    z-index: 1;
+}
+.main-image-img{
+    z-index: 100;
+    top: -50px;
+    left: 575px;
+    height: 650px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    mask-size: 100% 100%;
+    mask-repeat: no-repeat;
+    
+}
+
