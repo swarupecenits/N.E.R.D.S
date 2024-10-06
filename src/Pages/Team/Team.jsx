@@ -1,3 +1,4 @@
+import React from "react"; 
 import { useEffect } from "react";
 import { useState } from "react";
 import './gradient.css';
@@ -28,13 +29,13 @@ const Team = () => {
     <>
     <div className="overflow-hidden">
     <div className="bg-black main-section relative">
-    <div className="content-section ">
-      <h1 className="mt-[-2.5rem] font-ethenocentric font-xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading absolute">MEET</h1>
-      <h1 className="font-ethenocentric mt-[-4.8rem] font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading team-heading absolute">OUR TEAM</h1>
-      <p className="font-spaced mt-[-5.5rem] text-white font-normal heading-subsection absolute">Our team is the backbone of our club. We have got some of the coolest minds of this college</p>
+    <div className="content-section">
+      <h1 className=" font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading absolute">MEET</h1>
+      <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading team-heading absolute">OUR TEAM</h1>
+      <p className="font-spaced text-white font-normal heading-subsection absolute">Our team is the backbone of our club. We have got some of the coolest minds of this college</p>
     </div>
     <div className="main-image">
-      <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/txdg7c0ofspqdw5qajni" alt="robot-image" className="mix-blend-whiten absolute main-image-img"/>
+      <img src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/xoe3euiczzbuzhyxf63b" alt="robot-image" className="mix-blend-whiten absolute main-image-img"/>
     </div>
     </div>
     <div className="min-h-screen flex items-center justify-center bg-black">
@@ -44,7 +45,7 @@ const Team = () => {
         height: '766px', 
         top: '151px',
         left: '1033.16px',
-        // transform: 'rotate(-37.96deg)',
+        transform: 'rotate(-37.96deg)',
         opacity: '31%',
         backdropFilter: 'blur(195px)',
         transform: `rotate(${rotation}deg)`, 
@@ -55,26 +56,28 @@ const Team = () => {
       </div>
     </div>
     </div>
-    <div className="text-center mt-[-2.5rem]">
+    <div className="text-center"
+    style={{
+      marginTop: "180px"
+    }}>
       <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent "
       style={{
-        fontSize: "2.2rem",
+        fontSize: "64px",
         fontWeight: "400",
         lineHeight: "76.8px",
 
       }}>MEET OUR</h1>
       <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent"
       style={{
-        fontSize: "2rem",
+        fontSize: "48px",
         fontWeight: "400",
-        marginTop:"-1rem",
         lineHeight: "57.6px",
       }}>FOURTH YEAR MEMBER</h1>
       
     </div>
-    <div className="grid grid-cols-1 mt-8 md:grid-cols-2 lg:grid-cols-3 gap-0">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0">
         {fourthYearMembers.map((member, index) => (
-          <TeamCard key={index} member={member}/>
+          <TeamCard key={index} member={member} />
         ))}
       </div>
     <div className="grid place-items-center"
@@ -107,17 +110,15 @@ const Team = () => {
     }}>
       <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent "
       style={{
-        fontSize: "2.2rem",
-        marginTop:"-14rem",
+        fontSize: "64px",
         fontWeight: "400",
         lineHeight: "76.8px",
 
       }}>MEET OUR</h1>
       <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent"
       style={{
-        fontSize: "2rem",
+        fontSize: "48px",
         fontWeight: "400",
-        marginTop:"-1rem",
         lineHeight: "57.6px",
       }}>THIRD YEAR MEMBER</h1>
       
@@ -161,17 +162,15 @@ const Team = () => {
     }}>
       <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent "
       style={{
-        fontSize: "2.2rem",
+        fontSize: "64px",
         fontWeight: "400",
-        marginTop:"-14rem",
         lineHeight: "76.8px",
 
       }}>MEET OUR</h1>
       <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent"
       style={{
-        fontSize: "2rem",
+        fontSize: "48px",
         fontWeight: "400",
-        marginTop:"-1rem",
         lineHeight: "57.6px",
       }}>SECOND YEAR MEMBER</h1>
       
@@ -215,18 +214,16 @@ const Team = () => {
     }}>
       <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent "
       style={{
-        fontSize: "2.2rem",
+        fontSize: "64px",
         fontWeight: "400",
-        marginTop:"-14rem",
         lineHeight: "76.8px",
 
       }}>MEET OUR</h1>
       <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent"
       style={{
-        fontSize: "2rem",
+        fontSize: "48px",
         fontWeight: "400",
         lineHeight: "57.6px",
-        marginTop:"-1rem",
       }}>DEVELOPERS</h1>
       
     </div>
