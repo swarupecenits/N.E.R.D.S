@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const TestimonialCard = ({ testimonial }) => {
-  const { name, role, image } = testimonial;
+  const { name, role, image, text } = testimonial; // Include 'text' (description) in destructuring
   const [hovered, setHovered] = useState(false);
 
   // SVG converted to a data URL
@@ -42,7 +42,7 @@ const TestimonialCard = ({ testimonial }) => {
         backgroundPosition: "center",
         width: "430px",
         height: "552px",
-        transform: "scale(0.8)",
+        transform: "scale(0.9)",
         transformOrigin: "top", // Adjust transform origin to keep the card centered
       }}
     >
@@ -96,6 +96,20 @@ const TestimonialCard = ({ testimonial }) => {
       >
         {role}
       </p>
+
+      {/* Description */}
+      <div className="text-center text-white mt-4 px-6">
+        <p
+          className="font-spaced"
+          style={{
+            fontSize: "16px",
+            fontWeight: 300,
+            lineHeight: "22px",
+          }}
+        >
+          {text}
+        </p>
+      </div>
     </div>
   );
 };

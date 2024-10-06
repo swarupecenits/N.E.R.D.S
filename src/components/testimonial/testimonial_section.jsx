@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TestimonialCard from "./testimonial_card"; // Assuming you have this component
-import TestimonialText from "./testimonial_text"; // Your testimonial text component
+import "./testimonial_styles.css"; // Import your custom styles
 
 const testimonials = [
   {
@@ -27,9 +27,8 @@ const testimonials = [
 ];
 
 const App = () => {
-  // References for both sliders
+  // Reference for the card slider
   const cardSliderRef = useRef(null);
-  const textSliderRef = useRef(null);
 
   // Slider settings
   const settings = {
@@ -38,45 +37,35 @@ const App = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    beforeChange: (current, next) => {
-      // Sync both sliders
-      if (textSliderRef.current) {
-        textSliderRef.current.slickGoTo(next);
-      }
-    },
   };
 
   return (
-    <div className="container">
-      <h1 className="heading">Testimonials</h1>
+    <div
+      className="container"
+      style={{
+        display: "flex", // Flexbox to center content
+        justifyContent: "center", // Center horizontally
+        alignItems: "center", // Center vertically
+        height: "100vh", // Full screen height
+        backgroundColor: "transparent", // Optional: Background color for better visibility
+      }}
+    >
+      <div
+        className="slider-container"
+        style={{ maxWidth: "450px", width: "100%", margin: "0 auto" }} // Ensures responsiveness
+      >
+        <h1 className="heading" style={{ textAlign: "center", marginBottom: "20px" }}>
+          Testimonials
+        </h1>
 
-      {/* Flexbox container to hold both sliders side by side */}
-      <div className="flex justify-center items-start space-x-8">
         {/* Slider for Testimonial Cards */}
-        <div className="slider-container" style={{ maxWidth: "450px", margin: "0 auto" }}>
-          <Slider ref={cardSliderRef} {...settings}>
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-slide">
-                <TestimonialCard testimonial={testimonial} />
-              </div>
-            ))}
-          </Slider>
-        </div>
-
-        {/* Slider for Testimonial Texts */}
-        <div className="slider-container" style={{ maxWidth: "450px", margin: "0 auto" }}>
-          <Slider ref={textSliderRef} {...settings}>
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-slide">
-                <TestimonialText
-                  testimonial={testimonial}
-                  onPrev={() => textSliderRef.current.slickPrev()}
-                  onNext={() => textSliderRef.current.slickNext()}
-                />
-              </div>
-            ))}
-          </Slider>
-        </div>
+        <Slider ref={cardSliderRef} {...settings}>
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="testimonial-slide">
+              <TestimonialCard testimonial={testimonial} />
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );
