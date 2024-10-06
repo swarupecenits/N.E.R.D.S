@@ -1,9 +1,14 @@
-
-
-const Event = () => {
-  return (
-    <div>Event</div>
-  )
+export default function Event() {
+    return (
+        <div>
+            {/* content goes here */}
+        </div>
+    )
 }
 
-export default Event
+function Page(){
+
+    return(
+            
+    )
+}
