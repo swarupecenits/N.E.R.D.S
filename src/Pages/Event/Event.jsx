@@ -61,16 +61,16 @@ function Timeline(){
                 <img src={time} alt="" className="pt-24 z-0 hidden md:inline" />
                 <div className="absolute cards z-10 h-[100%] w-[100%] flex flex-col items-center justify-between pt-40">
                     <div className="cards">
-                        <img src={card} alt="" />
+                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244036/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m.jpg" alt="" />
                     </div>
                     <div className="cards">
-                        <img src={card2} alt="" />
+                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_1_rwqeqj.jpg" alt="" />
                     </div>
                     <div className="cards mt-4">
-                        <img src={card} alt="" />
+                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.51_AM_w3r231.jpg" alt="" />
                     </div>
                     <div className="cards mb-[-2rem]">
-                        <img src={card2} alt="" />
+                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_set08m.jpg" alt="" />
                     </div>
                 </div>
             </div>
