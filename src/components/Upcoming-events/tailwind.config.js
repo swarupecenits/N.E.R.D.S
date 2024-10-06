@@ -6,9 +6,9 @@ module.exports = {
   theme: {
     extend: {
       clipPath: {
-        'top-right-cut': 'polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 0% 100%)',
+        'top-right-cut': 'polygon(0 0, 100% 40px, 100% 40px, 0 100%)',
       },
     },
   },
   plugins: [],
-}
+};
