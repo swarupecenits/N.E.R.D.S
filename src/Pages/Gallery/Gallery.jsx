@@ -8,6 +8,7 @@ import Header from './header.jsx';
 // import App from './app.jsx'
 import './section.css';
 
+<<<<<<< HEAD
 function Gallery(){
   return(
     <>
@@ -88,6 +89,12 @@ function Gallery(){
        
      </div>
     </section>
+=======
+const Gallery = () => {
+  return (
+    <>
+    <div className="text-white">Gallery it is</div>
+>>>>>>> 9631b06a10fbbf5228270c129d70eb1cb761f439
     </>
   )
 }
