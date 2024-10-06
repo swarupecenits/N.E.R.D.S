@@ -3,7 +3,6 @@ import React from 'react';
 const AboutUs = () => {
   return (
     <div className="relative min-h-screen bg-black flex flex-col justify-start">
-      Background Image with Blend Effect
       <div
         className="absolute inset-0 bg-no-repeat bg-cover bg-blend-normal"
         style={{
@@ -47,7 +46,7 @@ const AboutUs = () => {
             marginLeft: '2%', // Shift left slightly
           }}
         >
-          <h4 className="text-lg font-semibold text-gray-100 "
+          <h4 className="text-lg font-semibold text-gray-100 font-spaced"
           style={{
             fontSize: '210%',
           }}
@@ -69,6 +68,7 @@ const AboutUs = () => {
         <div
           className="relative z-10 mt-8 mx-auto p-6 shadow-lg w-full md:w-2/3 hover:shadow-[0_0_25px_10px_#ff00e8] bg-black bg-opacity-80 hover:bg-opacity-60 transition-all duration-100"
           style={{
+            textAlign: 'right',
             border: '4px solid #8a8787',
             borderRadius: '5%',
             padding: '16px',
@@ -76,7 +76,7 @@ const AboutUs = () => {
             marginTop: '4%',
           }}
         >
-          <h2 className="text-lg font-semibold text-gray-100"
+          <h2 className="text-lg font-semibold text-gray-100 font-spaced"
           style={{
             fontSize: '210%',
           }}
@@ -106,7 +106,7 @@ const AboutUs = () => {
             marginTop: '4%',
           }}
         >
-          <h2 className="text-lg font-semibold text-gray-100 "
+          <h2 className="text-lg font-semibold text-gray-100  font-spaced"
           style={{
             fontSize: '210%',
           }}
