@@ -52,7 +52,7 @@ const Projects = () => {
             {/* Project Image with Clipped Diagonal Corners */}
             <div className="md:w-1/2 p-4 relative transition-transform duration-300 ease-in-out transform hover:scale-105">
               <div
-                className="relative w-full h-full overflow-hidden border border-white border-opacity-50 hover:border-opacity-100  transition-all duration-300 ease-in-out rounded-lg"
+                className="relative w-full h-full overflow-hidden border border-white border-opacity-100 hover:border-opacity-100 transition-all duration-300 ease-in-out rounded-lg"
                 style={{
                   clipPath:
                     "polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)", // Clip top-left and bottom-right corners
@@ -61,19 +61,18 @@ const Projects = () => {
                 <img
                   src={project.imageUrl}
                   alt={project.title}
-                  className="w-full h-80 md:h-40 lg:h-80 object-cover  border-4 border-transparent hover:ring-4 hover:ring-white hover:ring-opacity-50 hover:shadow-lg hover:shadow-white transition-all duration-300 ease-in-out
-                    "
+                  className="w-full h-80 md:h-60 lg:h-80 object-cover"
                 />
               </div>
             </div>
             {/* Project Description */}
-            <div className="md:w-1/2 p-4 text-white">
-              <h2 className="text-2xl font-ethenocentric mb-4">
+            <div className="md:w-1/2 p-6 px-10 text-white">
+              <h2 className="text-2xl font-ethenocentric mb-4 text-justify">
                 {project.title}
               </h2>
               <p className="font-spaced text-white">{project.description}</p>
               {/* Glowing Know More Button */}
-              <button className="mt-3 px-3 py-1 bg-purple-600 font-ethenocentric text-white rounded-md hover:bg-purple-700 hover:ring-2 hover:ring-purple-300 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-sm">
+              <button className="mt-8 px-3 py-1 bg-black text-white border-2 border-blue-800 font-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-sm">
                 Know More
               </button>
             </div>

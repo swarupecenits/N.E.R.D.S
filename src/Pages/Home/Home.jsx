@@ -1,10 +1,12 @@
 import React from "react";
+import Projects from "../../components/Projects/Projects";
 const Home = () => {
   return (
     <div>
-      <h1 className="font-ethenocentric text-3xl font-bold underline">
+      <h1 className="font-ethenocentric text-3xl font-bold underline text-white">
         Hello NERDS!
       </h1>
+      <Projects></Projects>
     </div>
   );
 };
