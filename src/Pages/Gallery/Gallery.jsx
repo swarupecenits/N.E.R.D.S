@@ -1,8 +1,12 @@
 import React from "react"; 
+import { Link, Element, animateScroll as scroll } from 'react-scroll';
 import { useEffect } from "react";
 import { useState } from "react";
 import './gradient.css';
 import './gallery.css';
+import Header from './header.jsx';
+// import App from './app.jsx'
+import './section.css';
 
 function Gallery(){
   return(
@@ -11,6 +15,7 @@ function Gallery(){
       <div className="img relative">
      <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/buvdzppkwtr8jxfklb1v" alt="bg-image" className="mix-blend-whiten absolute bg-image-img"/>
       <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5" alt="robot-image" className="mix-blend-whiten absolute main-image-img"/>
+      <img src="src/Pages/Gallery/Rectangle 189.svg" alt="robot-image" className="mix-blend-whiten absolute gradient-img"/>
       
     <div className="content-section">
       <h1 className=" font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading absolute" id="first">PHOTO GALLERY</h1>
@@ -19,9 +24,70 @@ function Gallery(){
      
      </div>
      </div>
+     <hr />
     </section>
-    <section className="second bg-black"></section>
-    <section className="third bg-black"></section>
+    <section className="second bg-black">
+{/* <App /> */}
+    </section>
+    <section className="third1 bg-black">
+      <Header />
+      <div className="container   ">
+        <div className="items  item1"> </div>
+        <div className="items  item2 "> </div>
+        <div className="items  item3"> </div>
+        <div className="items text-white flex-col item4 font-spaced"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae corrupti cum recusandae ab ipsam nemo reprehenderit enim aliquam, voluptatum, fugiat deleniti. Minima, ipsum distinctio. Sapiente nulla aspernatur odio, quaerat facere praesentium, ut earum autem repellendus ullam doloribus quidem reiciendis, saepe voluptatem dolor eos dolorum. Iste perferendis inventore ipsum exercitationem ex neque facere at! Ea quia cupiditate dolore distinctio expedita incidunt velit eveniet earum fugit! Quo non eum, inventore harum quas alias sed ullam ipsam illo, quidem ducimus, ea perspiciatis voluptatum voluptatem? Repudiandae laboriosam provident nam omnis? Aperiam commodi quod illo? hudu jhfdsjh jfjdsh</p> </div>
+        <div className="items  item5"> </div>
+        <div className="items  item6"> </div>
+        <div className="items  item7"> </div>
+        <div className="items bg-yellow-400"> </div>
+         
+      </div>
+      <hr className="border" />
+    </section>
+    <section className="third2 bg-black relative font-spaced">
+    <Header />
+       <div className="container1  absolute">
+       <div className="items text-white flex-col mx-5 box1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores atque deserunt labore iusto nisi architecto, cumque voluptatibus iste quasi nostrum soluta. Dolore, animi voluptas sapiente perferendis doloribus aspernatur possimus deserunt laudantium consectetur dicta beatae amet natus voluptatem, non corrupti veniam odio ducimus dolorem. Sunt nam beatae at eveniet explicabo ipsum nobis possimus odio temporibus earum quam sequi esse doloribus, quaerat illum quo id necessitatibus ratione, natus unde, provident expedita laborum consequatur. Recusandae unde, numquam officia nulla minus perferendis quam ab voluptate! Omnis dolores tenetur aliquam optio maxime! </p> </div>
+        <div className="items   box2"> </div>
+        <div className="items box3"> </div>
+        <div className="items   box4"></div>
+        <div className="items   box5"> </div>
+        <div className="items   box6"> </div>
+        <div className="items   box7"> </div>
+        
+       
+     </div>
+     
+    </section>
+    <hr className="border"/>
+    <section className="third3 bg-black relative font-spaced">
+    <Header />
+       <div className="container1 ">
+       <div className="items  item1"> </div>
+        <div className="items  item2 "> </div>
+        <div className="items  item3"> </div>
+        <div className="items text-white flex-col item4"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae corrupti cum recusandae ab ipsam nemo reprehenderit enim aliquam, voluptatum, fugiat deleniti. Minima, ipsum distinctio. Sapiente nulla aspernatur odio, quaerat facere praesentium, ut earum autem repellendus ullam doloribus quidem reiciendis, saepe voluptatem dolor eos dolorum. Iste perferendis inventore ipsum exercitationem ex neque facere at! Ea quia cupiditate dolore distinctio expedita incidunt velit eveniet earum fugit! Quo non eum, inventore harum quas alias sed ullam ipsam illo, quidem ducimus, ea perspiciatis voluptatum voluptatem? Repudiandae laboriosam provident nam omnis?  jhjuhh njnj jiji njijijiimk njnkjkijj njjjjnkj</p> </div>
+        <div className="items  item5"> </div>
+        <div className="items  item6"> </div>
+        <div className="items  item7"> </div>
+        <div className="items bg-yellow-400"> </div>
+     </div>
+     <hr className="border" />
+    </section>
+    <section className="third4 bg-black relative font-spaced">
+    <Header />
+       <div className="container1  absolute">
+       <div className="items text-white flex-col  mx-5 box1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores atque deserunt labore iusto nisi architecto, cumque voluptatibus iste quasi nostrum soluta. Dolore, animi voluptas sapiente perferendis doloribus aspernatur possimus deserunt laudantium consectetur dicta beatae amet natus voluptatem, non corrupti veniam odio ducimus dolorem. Sunt nam beatae at eveniet explicabo ipsum nobis possimus odio temporibus earum quam sequi esse doloribus, quaerat illum quo id necessitatibus ratione, natus unde, provident expedita laborum consequatur. Recusandae unde, numquam officia nulla minus perferendis quam ab voluptate! Omnis dolores tenetur aliquam optio maxime! </p> </div>
+        <div className="items   box2"> </div>
+        <div className="items box3"> </div>
+        <div className="items   box4"></div>
+        <div className="items   box5"> </div>
+        <div className="items   box6"> </div>
+        <div className="items   box7"> </div>
+        
+       
+     </div>
+    </section>
     </>
   )
 }

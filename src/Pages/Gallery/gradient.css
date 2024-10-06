@@ -8,3 +8,72 @@ body{
     -webkit-background-clip: text; /* For Safari */
     color: transparent; /* Make the text color transparent */
   }
+  .a {
+    
+    text-decoration: none;
+  }
+  
+  .a:hover {
+    color: white;  
+    cursor: pointer;
+  }
+  .container{
+height: 85vh;
+width: 100vw;
+display: grid;
+grid-template-columns: repeat(5,1fr);
+grid-template-rows: repeat(2,1fr);
+row-gap: 5px;
+column-gap: 15px;
+font-size: 14px;
+  }
+  
+.items{
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+  .item1{
+grid-column-start: 1;
+grid-column-end: 3;
+margin-left: 2rem;
+background-image: url('image.svg');
+  background-size: cover;
+  /* background-position: center; */
+  
+  }
+  .item4, .item3{
+    grid-row: span 2;
+
+  }
+  .item4{
+    margin-right: 2rem;
+   
+  }
+  .item5{
+    margin-left: 2rem;
+    background-image: url('k.svg');
+    background-size: cover;
+  }
+  .container img{
+    object-fit: cover;
+    z-index: ;
+  }
+  .item3{
+    background-image: url('i.svg');
+  background-size: cover;
+  }
+  .item2{
+    margin-left: 2rem;
+    background-image: url('k.svg');
+    background-size: cover;}
+    .item6{
+      margin-left: 2rem;
+      background-image: url('j.svg');
+      background-size: cover;}
+      .item7{
+        margin-left: 2rem;
+        background-image: url('image.svg');
+        background-size: cover;}
+
+      

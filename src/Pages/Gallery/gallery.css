@@ -40,11 +40,23 @@ z-index: 0}
   width: 85vw; 
   height:97vh; 
 }
+.gradient-img{
+
+  transform: translate(95%, 75%);
+  z-index: 1;
+ margin-left: 26%;
+  
+}
 
 .image{
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
-
-
+.item4{
+  text-align: justify;  /* Align the text evenly across the width */
+  display: flex;        /* Use Flexbox for vertical centering */
+  justify-content: center;
+ /* Vertically center the text */
+  box-sizing: border-box;
+}
