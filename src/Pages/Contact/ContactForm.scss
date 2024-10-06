@@ -1,0 +1,67 @@
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  background-color: rgba(0, 0, 0, 0.8); /* Optional background for the whole section */
+}
+
+.contact-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity */
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px; /* Adjust width */
+  color: white;
+  text-align: center;
+}
+
+/* Title styles */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00bfff; /* Light blue shade */
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  input,
+  textarea {
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+
+  /* Button styles */
+  button {
+    background-color: #b43cf9; /* Matching button color */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: rgb(112, 0, 182); /* Darken on hover */
+    }
+  }
+}
