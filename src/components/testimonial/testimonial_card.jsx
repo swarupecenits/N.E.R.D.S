@@ -31,7 +31,9 @@ const TestimonialCard = ({ testimonial }) => {
 
   return (
     <div
-      className="relative"
+      className={`relative flex flex-col items-center justify-start transition-transform duration-300 ${
+        hovered ? "scale-105" : "scale-100"
+      }`}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
@@ -40,33 +42,43 @@ const TestimonialCard = ({ testimonial }) => {
         backgroundPosition: "center",
         width: "430px",
         height: "552px",
+        transform: "scale(0.8)",
+        transformOrigin: "top", // Adjust transform origin to keep the card centered
       }}
     >
-      {/* Profile Image */}
-      <img
-        src={image}
-        alt={name}
-        className="mx-auto object-cover" // Removed transition classes
+      {/* Profile Image Container */}
+      <div
+        className="flex justify-center items-center"
         style={{
+          marginTop: "67px",
           width: "243px",
           height: "243px",
-          borderRadius: "50%", // Keep the circular shape
-          marginTop: "67px",
-          border: "3px solid #0093D1", // Set solid blue border
-          backgroundColor: "#0093D1", // Set background color to blue
-          opacity: hovered ? "1" : "1", // Keep opacity always at full
+          borderRadius: "50%",
+          border: "3px solid #0093D1",
+          backgroundColor: "#0093D1",
+          overflow: "hidden",
         }}
-      />
+      >
+        {/* Profile Image */}
+        <img
+          src={image}
+          alt={name}
+          className="object-cover"
+          style={{
+            width: "100%",
+            height: "100%",
+          }}
+        />
+      </div>
 
       {/* Name */}
       <h2
-        className="text-2xl mt-4 text-white" // Keep class for margin and color
+        className="text-2xl mt-4 text-white font-spaced"
         style={{
-          fontFamily: "Spaced", // Update font-family
-          fontSize: "30.76px", // Update font-size
-          fontWeight: 400, // Update font-weight
-          lineHeight: "29.38px", // Update line-height
-          textAlign: "center", // Keep text-align
+          fontSize: "30.76px",
+          fontWeight: 400,
+          lineHeight: "29.38px",
+          textAlign: "center",
           marginTop: "30px",
         }}
       >
@@ -75,18 +87,15 @@ const TestimonialCard = ({ testimonial }) => {
 
       {/* Role */}
       <p
-  className="mt-2" // Removed text color class for custom color
-  style={{
-    fontFamily: "Spaced", // Keep font-family
-    fontSize: "25.64px", // Keep font-size
-    fontWeight: 400, // Keep font-weight
-    lineHeight: "24.48px", // Keep line-height
-    textAlign: "center", // Keep text-align
-    color: "rgba(159, 134, 0, 1)", // Update text color
-  }}
->
-  {role}
-</p>
+        className="mt-2 text-center text-[#9F8600] font-spaced"
+        style={{
+          fontSize: "25.64px",
+          fontWeight: 400,
+          lineHeight: "24.48px",
+        }}
+      >
+        {role}
+      </p>
     </div>
   );
 };
