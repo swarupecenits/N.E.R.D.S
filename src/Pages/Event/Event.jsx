@@ -1,5 +1,8 @@
 import stuff from "./stuff.svg"
 import robot from "./robot.svg"
+import time from "./timeline.svg"
+import card from "./card.svg"
+import card2 from "./card2.svg"
 
 // function Hero() {
 //     return(
@@ -41,12 +44,37 @@ function Hero() {
     )
 }
 
+function Timeline(){
+    return(
+        <div className="timeline_container">
+            <div className="timeline flex flex-col items-center relative">
+                <img src={time} alt="" className="pt-24 z-0" />
+                <div className="absolute cards z-10 h-[100%] w-[100%] flex flex-col items-center justify-between pt-40">
+                    <div className="cards">
+                        <img src={card} alt="" />
+                    </div>
+                    <div className="cards">
+                        <img src={card2} alt="" />
+                    </div>
+                    <div className="cards mt-4">
+                        <img src={card} alt="" />
+                    </div>
+                    <div className="cards mb-[-2rem]">
+                        <img src={card2} alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 
 
 export default function Event(){
     return (
         <div className="bg-black">
             <Hero />
+            <Timeline />
         </div>
     )
 }
