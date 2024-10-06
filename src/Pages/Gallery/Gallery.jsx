@@ -1,7 +1,9 @@
 
 const Gallery = () => {
   return (
-    <div>Gallery it is</div>
+    <>
+    <div className="text-white">Gallery it is</div>
+    </>
   )
 }
 
