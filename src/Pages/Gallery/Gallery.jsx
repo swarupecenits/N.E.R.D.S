@@ -8,24 +8,24 @@ import Header from './header.jsx';
 // import App from './app.jsx'
 import './section.css';
 
-<<<<<<< HEAD
+// <<<<<<< HEAD
 function Gallery(){
   return(
     <>
     <section className="first">
-      <div className="img relative">
+      <div className="img ">
      <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/buvdzppkwtr8jxfklb1v" alt="bg-image" className="mix-blend-whiten absolute bg-image-img"/>
-      <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5" alt="robot-image" className="mix-blend-whiten absolute main-image-img"/>
+      <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5" alt="robot-image" className="mix-blend-whiten  main-image-img"/>
       <img src="src/Pages/Gallery/Rectangle 189.svg" alt="robot-image" className="mix-blend-whiten absolute gradient-img"/>
       
-    <div className="content-section">
+    <div className="content-section ">
       <h1 className=" font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading absolute" id="first">PHOTO GALLERY</h1>
      <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading team-heading absolute"></h1>
      <p className="font-spaced font-bold heading-subsection absolute gradient-text" id="second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil id magnam incidunt commodi iste! Voluptates saepe praesentium, unde nostrum quam beatae esse eveniet.</p>
      
      </div>
      </div>
-     <hr />
+     {/* <hr /> */}
     </section>
     <section className="second bg-black">
 {/* <App /> */}
@@ -89,12 +89,7 @@ function Gallery(){
        
      </div>
     </section>
-=======
-const Gallery = () => {
-  return (
-    <>
-    <div className="text-white">Gallery it is</div>
->>>>>>> 9631b06a10fbbf5228270c129d70eb1cb761f439
+
     </>
   )
 }
