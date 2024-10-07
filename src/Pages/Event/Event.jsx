@@ -71,7 +71,7 @@ function Timeline(){
     const [isHovered, setIsHovered] = useState(false);
 
     return(
-        <div className="timeline_container hidden md:block">
+        <div className="timeline_container hidden mb-32 md:block">
             <div className="timeline flex flex-col items-center relative">
                 <img src={time} alt="" className="pt-24 z-0 hidden md:inline" />
                 <div className="absolute cards z-10 h-[100%] overflow-visible w-[100%] flex flex-col items-center justify-between pt-40">
@@ -85,13 +85,13 @@ function Timeline(){
                         initial={{ x: 100, opacity: 0 }} 
                         animate={isHovered ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
                         transition={{ duration: 0.3, ease: "easeInOut" }} >
-                            <p className="absolute font-ethenocentric text-4xl min-w-96 left-[-10rem] top-24">Rat in a maze was good ngl. learnt a lot of stuff. </p>
+                            <p className="absolute font-ethenocentric text-4xl min-w-96 left-[-10rem] top-24">bhjjdnvdskvkkn</p>
                         </motion.div>
 
                         <motion.img src={links.card1} alt="" 
                         initial={{ x: 0, opacity: 1 }} 
                         whileHover={{ x: 300, opacity: 1 }} 
-                        onHoverStart={() => setIsHovered(true)} 
+                        onHoverStart={() => {setIsHovered(true); setId(1);}}
                         onHoverEnd={() => setIsHovered(false)} 
                         transition={{duration: 0.3, ease: "easeInOut"}} />
 
@@ -102,14 +102,44 @@ function Timeline(){
                     {/* cards */}
 
                     <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(2);}}>
-                        <img src={links.card2} alt="" />
+                        <motion.img src={links.card2} alt="" initial={{ x: 0, opacity: 1 }} 
+                        whileHover={{ x: -300, opacity: 1 }} 
+                        onHoverStart={() => {setIsHovered(true); setId(2);}} 
+                        onHoverEnd={() => setIsHovered(false)} 
+                        transition={{duration: 0.3, ease: "easeInOut"}} className="" />
+                        <motion.div
+                         className="text text-slate-200 relative text-center text"
+                         initial={{ x: 100, opacity: 0 }} 
+                         animate={(isHovered && id==2)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
+                         transition={{ duration: 0.3, ease: "easeInOut" }} >
+                             <p className="absolute font-ethenocentric text-4xl min-w-96 left-[-10rem] top-24">Rat in a maze was good ngl. learnt a lot of stuff. </p>
+                        </motion.div>
                     </motion.div>
                     <motion.div className="cards mt-4 flex"  onClick={() => { setIsOpen(true);setId(3);}}>
-                        <img src={links.card3} alt="" />
+                        <motion.div  className="text text-slate-200 relative text-center text"
+                        initial={{ x: 100, opacity: 0 }} 
+                        animate={(isHovered && id==3) ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
+                        transition={{ duration: 0.3, ease: "easeInOut" }} >
+                            <p className="absolute font-ethenocentric text-4xl min-w-96 left-[-10rem] top-24">Rat in a maze was good ngl. learnt a lot of stuff. </p></motion.div>
+                        <motion.img src={links.card3} alt="" initial={{ x: 0, opacity: 1 }} 
+                        whileHover={{ x: 300, opacity: 1 }} 
+                        onHoverStart={() => {setIsHovered(true); setId(3);}} 
+                        onHoverEnd={() => setIsHovered(false)} 
+                        transition={{duration: 0.3, ease: "easeInOut"}} />
                     </motion.div>
                     <motion.div className="cards mb-10 flex"  onClick={() =>{ setIsOpen(true);setId(4);}}>
-                        <img src={links.card4} alt="" />
+                        <motion.img src={links.card4} alt="" initial={{ x: 0, opacity: 1 }} 
+                        whileHover={{ x: -300, opacity: 1 }} 
+                        onHoverStart={() => {setIsHovered(true); setId(4);}} 
+                        onHoverEnd={() => setIsHovered(false)} 
+                        transition={{duration: 0.3, ease: "easeInOut"}} />
+                        <motion.div  className="text text-slate-200 relative text-center text"
+                        initial={{ x: 100, opacity: 0 }} 
+                        animate={(isHovered && id==4) ? { x: -40, opacity: 1 } : { x: -100, opacity: 0 }} 
+                        transition={{ duration: 0.3, ease: "easeInOut" }} >
+                            <p className="absolute font-ethenocentric text-4xl min-w-96 left-[-10rem] top-24">Rat in a maze was good ngl. learnt a lot of stuff. </p></motion.div>
                     </motion.div>
+
                     <AnimatePresence>
                         {isOpen && <Modal isOpen={isOpen} id={id} onClose={() => setIsOpen(false)} />}
                     </AnimatePresence>

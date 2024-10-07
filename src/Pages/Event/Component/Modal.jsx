@@ -56,7 +56,7 @@ const Modal = ({ isOpen, onClose, id }) => {
         animate={{ opacity: 1, y: "0" }}
         exit={{ opacity: 0, y: "-100vh" }}
         transition={{ duration: 0.35 }}
-        className="relative w-[60rem] z-[10]"
+        className="relative w-[60rem]"
       >
         <Content id={id}/>
         {/* <button onClick={onClose}>Close</button> */}
