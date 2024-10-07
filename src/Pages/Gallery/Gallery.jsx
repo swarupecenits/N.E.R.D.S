@@ -1,5 +1,5 @@
 import React from "react"; 
-import {motion} from "framer-motion";
+import {motion} from 'framer-motion';
 import { Link, Element, animateScroll as scroll } from 'react-scroll';
 
 import  { useEffect, useState, useRef } from 'react';
@@ -44,7 +44,7 @@ function Gallery(){
     <section className="second bg-black">
           <motion.h1 
           initial={{opacity:0, translateX: "-100%"}}
-          whileInView={{opacity:1, translateX:"90%"}}
+          whileInView={{opacity:1, translateX:"100%"}}
           transition={{duration: 1}} className=" font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading text-slide " id="font">GLIMPSE
           </motion.h1>
     </section>
@@ -55,8 +55,8 @@ function Gallery(){
       
       
       <motion.div
-      initial={{opacity:0, translateX: "100%"}}
-      whileInView={{opacity:1, translateX:"0%"}}
+      initial={{opacity:0, translateX: "100%", translateY: "9%"}}
+      whileInView={{opacity:1, translateX:"0%", translateY: "9%"}}
       transition={{duration: 1}}
       className="container   ">
         <div className="items  item1"> </div>
@@ -66,7 +66,7 @@ function Gallery(){
         <div className="items  item5"> </div>
         <div className="items  item6"> </div>
         <div className="items  item7"> </div>
-        <div className="items bg-yellow-400"> </div>
+        {/* <div className="items bg-yellow-400"> </div> */}
          
       </motion.div>
      
@@ -74,8 +74,8 @@ function Gallery(){
     <section name="third2" className={`third2 section bg-black ${activeSection === "third2" ? "" : "hidden"}`}>
     {/* <Header /> */}
        <motion.div
-       initial={{opacity:0, translateX: "-100%"}}
-       whileInView={{opacity:1, translateX:"0%"}}
+       initial={{opacity:0, translateX: "100%", translateY: "12%"}}
+       whileInView={{opacity:1, translateX:"0%", translateY: "12%"}}
        transition={{duration: 1}} className="container1  ">
        <div className="items text-white flex-col mx-5 box1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores atque deserunt labore iusto nisi architecto, cumque voluptatibus iste quasi nostrum soluta. Dolore, animi voluptas sapiente perferendis doloribus aspernatur possimus deserunt laudantium consectetur dicta beatae amet natus voluptatem, non corrupti     [SESSION]     veniam odio ducimus dolorem. Sunt nam beatae at eveniet explicabo ipsum nobis possimus odio temporibus earum quam sequi esse doloribus, quaerat illum quo id necessitatibus ratione, natus unde, provident expedita laborum consequatur. Recusandae unde, numquam officia nulla minus perferendis quam ab voluptate! Omnis dolores tenetur aliquam optio maxime! </p> </div>
         <div className="items   box2"> </div>
@@ -93,8 +93,8 @@ function Gallery(){
     <section name="third3" className={`third3 section bg-black ${activeSection === "third3" ? "" : "hidden"}`}>
     {/* <Header /> */}
        <motion.div 
-       initial={{opacity:0, translateX: "100%"}}
-       whileInView={{opacity:1, translateX:"0%"}}
+       initial={{opacity:0, translateX: "100%", translateY: "12%"}}
+       whileInView={{opacity:1, translateX:"0%", translateY: "12%"}}
        transition={{duration: 1}}
        className="container1 ">
        <div className="items  item1"> </div>
@@ -111,8 +111,8 @@ function Gallery(){
     <section name="third4" className={`third4 section bg-black ${activeSection === "third4" ? "" : "hidden"}`}>
     {/* <Header /> */}
        <motion.div
-       initial={{opacity:0, translateX: "-100%",}}
-       whileInView={{opacity:1, translateX:"0%"}}
+       initial={{opacity:0, translateX: "100%", translateY: "12%"}}
+       whileInView={{opacity:1, translateX:"0%", translateY: "12%"}}
        transition={{duration: 1}} className="container1  absolute">
        <div className="items text-white flex-col  mx-5 box1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores atque deserunt labore iusto nisi architecto, cumque voluptatibus iste quasi nostrum soluta. Dolore, animi voluptas sapiente perferendis doloribus aspernatur possimus deserunt laudantium consectetur dicta beatae amet natus voluptatem, non corrupti   [TECNOESIS]    veniam odio ducimus dolorem. Sunt nam beatae at eveniet explicabo ipsum nobis possimus odio temporibus earum quam sequi esse doloribus, quaerat illum quo id necessitatibus ratione, natus unde, provident expedita laborum consequatur. Recusandae unde, numquam officia nulla minus perferendis quam ab voluptate! Omnis dolores tenetur aliquam optio maxime! </p> </div>
         <div className="items   box2"> </div>

@@ -1,7 +1,7 @@
 .container1{
     height: 85vh;
     width: 98vw;
-    transform: translate(0%,-2%);
+    transform: translate(0%,40%);
     display: grid;
 grid-template-columns: repeat(5,1fr);
 grid-template-rows: repeat(2,1fr);
@@ -63,8 +63,9 @@ font-size: 14px;
           background-image: url('j.svg');
           background-size: cover;}
  .active{
-    color: white;
- } 
+    color: rgb(59, 130, 246);
+    ;
+  } 
  .hidden {
     display: none; 
   }
