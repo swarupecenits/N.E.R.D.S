@@ -8,8 +8,8 @@ const Content = () => {
     return(
         <>
             <img src={modalbg} alt="" className=" absolute top-[-15rem]"/>            
-            <h1 className="text-center text-black text-4xl absolute top-[-8rem] left-14 font-ethenocentric text-slate-300 ">rat in a maze</h1>
-            <p className="font-ethnocentric text-2xl absolute top-8 left-14 text-black text-wrap max-w-[30rem] text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the </p>
+            <h1 className="text-center  text-4xl absolute top-[-8rem] left-14 font-ethenocentric text-slate-300 ">rat in a maze</h1>
+            <p className="font-ethnocentric text-2xl absolute top-8 left-14  text-wrap max-w-[30rem] text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the </p>
             <img src={icon} alt="" className="absolute top-[-2.8rem] left-12" />
             <img src={modalpic} alt="" className="absolute top-[-8rem] left-[33rem] max-w-96" />
         </>
@@ -17,12 +17,12 @@ const Content = () => {
 }
 
 const Modal = ({ isOpen, onClose }) => {
-  if (!isOpen) return null; // Make sure the modal isn't rendering when closed
+  if (!isOpen) return null; 
 
   return (
     <div style={backdropStyle} onClick={onClose}>
       <motion.div
-        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal
+        onClick={(e) => e.stopPropagation()} 
         initial={{ opacity: 0, y: "-100vh" }}
         animate={{ opacity: 1, y: "0" }}
         exit={{ opacity: 0, y: "-100vh" }}
@@ -42,11 +42,11 @@ const backdropStyle = {
   left: 0,
   right: 0,
   bottom: 0,
-  backgroundColor: "rgba(0, 0, 0, 0.5)", // Transparent black for backdrop
+  backgroundColor: "rgba(0, 0, 0, 0.5)", 
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  zIndex: 1, // Ensure it's behind the modal
+  zIndex: 1, 
 };
 
 
