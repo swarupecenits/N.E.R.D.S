@@ -1,7 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const WhatDoWeProvide = ({ heading, text }) => {
   const [hovered, setHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if screen is mobile-sized
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // SVG as a data URL
   const svgDataUrl = encodeURIComponent(`
@@ -30,27 +39,28 @@ const WhatDoWeProvide = ({ heading, text }) => {
 
   return (
     <div
-      className={`relative flex flex-col items-center justify-center transition-transform duration-300 backdrop-blur-lg bg-black/30 rounded-xl shadow-lg ${
-        hovered ? "scale-85" : "scale-90"
-      } p-8`}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      className={`relative flex flex-col items-center justify-center transition-transform duration-300 backdrop-blur-lg bg-black/30 rounded-xl shadow-lg 
+        ${hovered && !isMobile ? "scale-100" : "scale-90"} p-8 w-full max-w-[90vw] md:max-w-[430px]`}  // Adjust width for mobile
+      onMouseEnter={() => !isMobile && setHovered(true)} // Only trigger hover effect on non-mobile screens
+      onMouseLeave={() => !isMobile && setHovered(false)}
       style={{
         backgroundImage: `url("data:image/svg+xml,${svgDataUrl}")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        width: "430px",
-        height: "552px",
-        clipPath: "polygon(15% 0%, 100% 0%, 100% 90.6%, 88% 100%, 0% 100%, 0% 12.1%)"
+        height: isMobile ? "auto" : "552px",  // Set height to auto on mobile for better responsiveness
+        aspectRatio: isMobile ? "383/492" : "auto",  // Maintain aspect ratio on mobile
+        clipPath: isMobile
+          ? "none"
+          : "polygon(15% 0%, 100% 0%, 100% 90.6%, 88% 100%, 0% 100%, 0% 12.1%)", // Remove clip-path on mobile
       }}
     >
       {/* Heading */}
-      <h2 className="text-white font-spaced text-[51.08px] font-normal leading-[48.79px] text-left p-4 -mt-28">
+      <h2 className="text-white font-spaced text-[32px] md:text-[51.08px] font-normal leading-[48.79px] text-left p-4 -mt-28">
         {heading}
       </h2>
 
       {/* Text */}
-      <p className="text-[#FFF0F0] font-spaced text-[18.22px] font-normal leading-[17.4px] text-center p-4 mt-16">
+      <p className="text-[#FFF0F0] font-spaced text-[14px] md:text-[18.22px] font-normal leading-[17.4px] text-center p-4 mt-16">
         {text}
       </p>
     </div>
