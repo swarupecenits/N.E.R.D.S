@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TestimonialCard from "./testimonial_card"; // Assuming you have this component
 import TestimonialText from "./testimonial_text"; // Assuming you have this component
+import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import "./testimonial_styles.css"; // Import additional styles if necessary
 
 const testimonials = [
@@ -37,23 +38,33 @@ const TestimonialSection = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <div className="slick-next">➜</div>,
-    prevArrow: <div className="slick-prev">➜</div>,
     beforeChange: (current, next) => setCurrentTestimonialIndex(next),
   };
 
+  const handleNext = () => {
+    if (cardSliderRef.current) {
+      cardSliderRef.current.slickNext();
+    }
+  };
+
+  const handlePrev = () => {
+    if (cardSliderRef.current) {
+      cardSliderRef.current.slickPrev();
+    }
+  };
+
   return (
-    <div className="w-full h-screen flex justify-center items-center bg-transparent">
+    <div className="w-full h-screen flex justify-center items-center bg-transparent relative">
       <div className="slider-container w-full h-full flex flex-col justify-start items-center font-ethenocentric overflow-hidden">
         {/* Heading */}
-        <div className="mb-0" style={{ marginBottom: '0px', marginTop: '10px' }}> {/* Reduced marginBottom */}
+        <div className="mb-0" style={{ marginBottom: '0px', marginTop: '10px' }}>
           <h1 className="text-center font-normal text-3xl md:text-5xl leading-tight text-gray-400">
             TESTIMONIAL
           </h1>
         </div>
 
         {/* Mobile View: Role and Message from testimonial */}
-        <div className="block lg:hidden text-center mb-1"> {/* Further reduced marginBottom */}
+        <div className="block lg:hidden text-center mb-1">
           <h2 className="text-gray-500 text-lg md:text-xl">
             Message from{" "}
             <span className="text-yellow-500 text-xl md:text-2xl tracking-wide">
@@ -63,13 +74,12 @@ const TestimonialSection = () => {
         </div>
 
         {/* Testimonial Content */}
-        <div className="w-full h-full flex flex-col justify-center items-center pt-1 lg:mt-0 -mt-48"> {/* Increased negative margin-top */}
+        <div className="w-full h-full flex flex-col justify-center items-center pt-1 lg:mt-0 -mt-48 relative">
           <Slider ref={cardSliderRef} {...settings} className="w-full">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="flex justify-center w-full h-full">
                 {/* Flex container for card and text */}
                 <div className="flex flex-col lg:flex-row w-full justify-around items-center h-full space-y-4 lg:space-y-0 lg:space-x-4">
-                  
                   {/* TestimonialCard with scaling */}
                   <div className="flex-1 mx-1 max-w-md">
                     <div className="transform scale-75 lg:scale-100 transition-transform duration-300">
@@ -98,6 +108,22 @@ const TestimonialSection = () => {
               </div>
             ))}
           </Slider>
+
+          {/* Custom navigation buttons using IoIosArrowBack and IoIosArrowForward */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full focus:outline-none transition"
+            style={{ background: 'transparent' }}
+          >
+            <IoIosArrowBack size={40} />
+          </button>
+          <button
+            onClick={handleNext}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full focus:outline-none transition"
+            style={{ background: 'transparent' }}
+          >
+            <IoIosArrowForward size={40} />
+          </button>
         </div>
       </div>
     </div>
