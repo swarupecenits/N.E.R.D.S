@@ -115,7 +115,7 @@ function Timeline(){
                         initial={{ x: 100, opacity: 0 }} 
                         animate={isHovered ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
                         transition={{ duration: 0.3, ease: "easeInOut" }} >
-                            <p className="absolute font-ethenocentric text-4xl min-w-96 left-[-10rem] top-24">bhjjdnvdskvkkn</p>
+                            <p className="absolute font-ethenocentric text-4xl min-w-96 left-[-10rem] top-24">Rat in a maze, pretty interesting thing ngl. learnt and had a lot of fun too</p>
                         </motion.div>
 
                         <motion.img src={links.card1} alt="" 
