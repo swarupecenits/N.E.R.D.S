@@ -21,5 +21,6 @@ nav ul {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8Y2lyY2xlIGN4PSI2IiBjeT0iNiIgcj0iNiIgZmlsbD0iI2IxMDNmYyIgLz4KPC9zdmc+'), auto;
   }
   
