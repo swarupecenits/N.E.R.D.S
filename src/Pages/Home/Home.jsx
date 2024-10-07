@@ -1,10 +1,16 @@
 import React from "react";
 import TestimonialSection from "../../components/testimonial/testimonial_section"; // Adjust the path if needed
+import WhatDoWeProvide from "../../components/what_do_we_provide/what_do_we_provide_card"; // Adjust the import name
+import WhatDoWeProvideSlider from "../../components/what_do_we_provide/what_do_we_provide_section";
 
 const Home = () => {
   return (
     <div>
       {/* Other sections of the home page */}
+      
+      {/* What Do We Provide Section */}
+      <WhatDoWeProvideSlider/>
+
       {/* Testimonial Section */}
       <TestimonialSection />
 
