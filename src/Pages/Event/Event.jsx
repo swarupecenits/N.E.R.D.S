@@ -2,8 +2,7 @@ import stuff from "./stuff.svg"
 import robot from "./robot.svg"
 import time from "./timeline.svg"
 import time2 from "./time2.svg"
-import card from "./card.svg"
-import card2 from "./card2.svg"
+import {motion} from "framer-motion"
 
 // function Hero() {
 //     return(
@@ -22,6 +21,13 @@ import card2 from "./card2.svg"
 //         </div>
 //     )
 // }
+
+const links = {
+    card1:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244036/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m.jpg",
+    card2:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_1_rwqeqj.jpg",
+    card3:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.51_AM_w3r231.jpg",
+    card4:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_set08m.jpg",
+}
 
 function Hero() {
     return (
@@ -59,19 +65,19 @@ function Timeline(){
         <div className="timeline_container hidden md:block">
             <div className="timeline flex flex-col items-center relative">
                 <img src={time} alt="" className="pt-24 z-0 hidden md:inline" />
-                <div className="absolute cards z-10 h-[100%] w-[100%] flex flex-col items-center justify-between pt-40">
-                    <div className="cards">
+                <div className="absolute cards z-10 h-[100%] overflow-visible w-[100%] flex flex-col items-center justify-between pt-40">
+                    <motion.div className="cards" whileHover={{ y:-20, scale:1.03}}>
                         <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244036/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m.jpg" alt="" />
-                    </div>
-                    <div className="cards">
+                    </motion.div>
+                    <motion.div className="cards" whileHover={{ y:-20, scale:1.03}}>
                         <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_1_rwqeqj.jpg" alt="" />
-                    </div>
-                    <div className="cards mt-4">
+                    </motion.div>
+                    <motion.div className="cards mt-4"  whileHover={{ y:-20, scale:1.03}}>
                         <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.51_AM_w3r231.jpg" alt="" />
-                    </div>
-                    <div className="cards mb-[-2rem]">
+                    </motion.div>
+                    <motion.div className="cards z-10"  whileHover={{ y:-20, scale:1.03}}>
                         <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_set08m.jpg" alt="" />
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
@@ -80,9 +86,28 @@ function Timeline(){
 
 function Timeline_small(){
     return (
-        <div className="timeline_container md:hidden">
-            <div className="timeline">
-                <img src={time2} alt="" className="py-20 px-5" />
+        <div className="timeline_container md:hidden ">
+            <div className="timeline relative">
+                <img src={time2} alt="" className="ml-[-10rem] mt-[-16rem] min-h-[100rem]" />
+                <div className="cards absolute top-[15rem] left-12 z-10 max-w-72 flex flex-col min-h-[80%] ">
+                    
+                    <div className="cards mt-32">
+                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244036/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m.jpg" alt="" />
+                    </div>
+
+                    <div className="cards mt-16">
+                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_1_rwqeqj.jpg" alt="" />
+                    </div>
+
+                    <div className="cards mt-20">
+                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.51_AM_w3r231.jpg" alt="" />
+                    </div>
+
+                    <div className="cards  mt-20">
+                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_set08m.jpg" alt="" />
+                    </div>
+
+                </div>
 
             </div>
         </div>
