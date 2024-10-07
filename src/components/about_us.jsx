@@ -38,7 +38,7 @@ const AboutUs = () => {
       <div className="flex flex-col items-center px-4 md:px-20 mt-8">
         {/* First Box - Introduction */}
         <div
-          className="relative z-10 mt-8 mx-auto p-6 shadow-lg w-full md:w-2/3 backdrop-blur-md hover:shadow-[0_0_25px_10px_#0083ff] hover:backdrop-blur-none hover:bg-black hover:bg-opacity-50 transition-all duration-500"
+          className="relative z-10 mt-8 mx-auto p-6 shadow-lg w-full md:w-2/3 backdrop-blur-md hover:shadow-[0_0_25px_10px_#0083ff] hover:backdrop-blur-none hover:bg-black hover:bg-opacity-50 transition-all duration-500 "
           style={{
             border: '5px solid #8a8787',
             borderRadius: '5%',
@@ -60,8 +60,8 @@ const AboutUs = () => {
               paddingLeft: '7%', // Shift the text inside the first box to the right
               marginRight: '7%',
               paddingTop: '4%',
-              paddingBottom: '5%',
-              lineHeight: '1.2', // Adjust line height for closer lines
+              paddingBottom: '8%',
+              lineHeight: '0.8', // Adjust line height for closer lines
             }}
           >
             On The Other Hand, We Denounce With Righteous Indignation And Dislike Men Who Are So
@@ -98,8 +98,8 @@ const AboutUs = () => {
               paddingRight: '7%',
               paddingTop: '4%',
               marginLeft: '7%',
-              paddingBottom: '5%',
-              lineHeight: '1.2', // Adjust line height for closer lines
+              paddingBottom: '8%',
+              lineHeight: '0.8', // Adjust line height for closer lines
             }}
           >
             On The Other Hand, We Denounce With Righteous Indignation And Dislike Men Who Are So
@@ -136,8 +136,8 @@ const AboutUs = () => {
               paddingLeft: '7%', // Shift the text inside the first box to the right
               marginRight: '7%',
               paddingTop: '4%',
-              paddingBottom: '5%',
-              lineHeight: '1.2', // Adjust line height for closer lines
+              paddingBottom: '8%',
+              lineHeight: '0.8', // Adjust line height for closer lines
             }}
           >
             On The Other Hand, We Denounce With Righteous Indignation And Dislike Men Who Are So
