@@ -7,6 +7,7 @@ import { useState } from "react"
 import { AnimatePresence } from "framer-motion";
 import Modal from "./Component/Modal"
 import Modal_mini from "./Component/Modal_mini"
+import Modal_mini_body from "./Component/Modal_mini_body"
 
 // function Hero() {
 //     return(
@@ -240,20 +241,13 @@ function Timeline_small(){
                             
                             {/* Modal content */}
                             <motion.div
-                            className="fixed top-[30%] left-[10%] mx-auto transform  w-[80vw] bg-white p-6 rounded-lg shadow-lg text-center"
+                            className="fixed top-[20%] left-[10%] mx-auto transform  w-[80vw]"
                             variants={modalVariants}
                             initial="hidden"
                             animate="visible"
                             exit="exit"
-                            >
-                            <h2 className="text-xl font-bold mb-4">{modal_data[id].head}</h2>
-                            <p className="mb-4">{modal_data[id].text}</p>
-                            <button 
-                                onClick={toggleModal} 
-                                className="bg-red-500 text-white px-4 py-2 rounded-lg"
-                            >
-                                Close
-                            </button>
+                            onClick={toggleModal} >
+                                <Modal_mini_body />
                             </motion.div>
                         </>
                         )}
