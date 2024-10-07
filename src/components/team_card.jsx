@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
 
 const TeamCard = ({ member }) => {
-  const { name, designation, social } = member;
+  const { name, designation, social, github, linkedin, image_id } = member;
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -10,12 +10,16 @@ const TeamCard = ({ member }) => {
       className="relative"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-    >
+    > 
+    <div style={{
+      padding: "50px",
+      overflow: "hidden"
+    }}>
       <div
         className={`relative rounded-lg p-4 text-center transition-all duration-500 ease-in-out`}
         style={{
-          width: "383px",
-          height: "483px",
+          width: "350px",
+          height: "445px",
           position: "relative",
           transform: hovered ? "scale(1.05)" : "scale(1)",
         }}
@@ -29,7 +33,7 @@ const TeamCard = ({ member }) => {
             backgroundSize: "cover",
             width: "100%",
             height: "100%",
-            clipPath: "polygon(92px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 93px)",
+            clipPath: "polygon(80px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 80px)",
             position: "absolute",
             top: 0,
             left: 0,
@@ -40,7 +44,7 @@ const TeamCard = ({ member }) => {
 
         {/* Profile Image */}
         <img
-  src={`https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/edtrt1vujoq7mwla4mrz.webp`}
+  src={image_id}
   alt={name}
   className={`mx-auto object-cover transition-opacity duration-500 ${hovered ? "opacity-20" : "opacity-100"}`} // Added transition classes here
   style={{
@@ -56,13 +60,12 @@ const TeamCard = ({ member }) => {
 
         {/* Name and Role */}
         <h2
-          className={`text-2xl font-semibold mt-4 text-white transition-opacity duration-300 ${
+          className={`font-spaced font-semibold text-xl mt-4 text-white transition-opacity duration-300 ${
             hovered ? "opacity-0" : "opacity-100"
           }`}
+          
           style={{
-            fontFamily: "'Inria Serif', serif",
-            fontSize: "36px",
-            fontWeight: 400,
+            fontSize: "1.5rem",
             lineHeight: "35.97px",
             textAlign: "center",
             marginTop: "2.5rem",
@@ -75,9 +78,8 @@ const TeamCard = ({ member }) => {
             hovered ? "opacity-0" : "opacity-100"
           }`}
           style={{
-            fontFamily: "'Inria Serif', serif",
-            fontSize: "30px",
-            fontWeight: 400,
+            fontSize: "1.2rem",
+            fontWeight: 600,
             lineHeight: "35.97px",
             textAlign: "center",
           }}
@@ -101,35 +103,36 @@ const TeamCard = ({ member }) => {
           }}
         >
           <h2
-            className={`text-white text-2xl mb-2 transition-opacity duration-300 ${hovered ? "opacity-100" : "opacity-0"}`}
-            style={{ fontFamily: "'Inria Serif', serif" }}
+            className={`font-spaced font-semibold text-white text-xl mb-2 transition-opacity duration-300 ${hovered ? "opacity-100" : "opacity-0"}`}
+            
           >
             {name}
           </h2>
           <p
-            className={`text-yellow-400 text-lg transition-opacity duration-300 ${hovered ? "opacity-100" : "opacity-0"}`}
+            className={`text-yellow-400 font-semibold text-md transition-opacity duration-300 ${hovered ? "opacity-100" : "opacity-0"}`}
           >
             {designation}
           </p>
           <div className="flex space-x-6 mt-4 text-white">
-            {social.instagram && (
-              <a href={social.instagram} target="_blank" rel="noreferrer">
-                <FaInstagram className="text-3xl" />
+            {social && (
+              <a href={social} target="_blank" rel="noreferrer">
+                <FaInstagram className="text-2xl" />
               </a>
             )}
-            {social.linkedin && (
-              <a href={social.linkedin} target="_blank" rel="noreferrer">
-                <FaLinkedin className="text-3xl" />
+            {linkedin && (
+              <a href={linkedin} target="_blank" rel="noreferrer">
+                <FaLinkedin className="text-2xl" />
               </a>
             )}
-            {social.github && (
-              <a href={social.github} target="_blank" rel="noreferrer">
-                <FaGithub className="text-3xl" />
+            {github && (
+              <a href={github} target="_blank" rel="noreferrer">
+                <FaGithub className="text-2xl" />
               </a>
             )}
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

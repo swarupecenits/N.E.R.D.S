@@ -117,6 +117,7 @@ import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules'; // Import Swiper modules
 import styled from 'styled-components';
 import EventCard from '../../components/Upcoming-events/Card'; // Import your EventCard component
+import App from '../../components/Upcoming-events/Card'
 
 // List of event images
 const events = [
@@ -136,32 +137,43 @@ const events = [
 
 const Home = () => {
   return (
-    <Container>
-      <Swiper
-        spaceBetween={30} // Adjust spacing between slides
-        slidesPerView={1} // Display one slide at a time
-        loop={true} // Enable infinite sliding
-        autoplay={{
-          delay: 5000, // 2 seconds delay between slides
-          disableOnInteraction: false, // Keep autoplay enabled after interaction
-          waitForTransition: true, // Ensure smooth transition during autoplay
-        }} // Enable autoplay
-        pagination={{ clickable: true }} // Enable pagination dots
-        navigation={true} // Enable navigation arrows
-        modules={[Pagination, Navigation, Autoplay]} // Use Pagination, Navigation, and Autoplay modules
-        className="mySwiper"
-        style={{ width: '100%', height: 'auto' }} // Full width for the slider
-      >
-        {/* Map through events to display each image */}
-        {events.map((event, index) => (
-          <SwiperSlide key={index}> {/* Each card wrapped inside SwiperSlide */}
-            <EventCard image={event.image} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </Container>
-  );
+// <<<<<<< HEAD
+<Container>
+<Swiper
+  spaceBetween={30} // Adjust spacing between slides
+  slidesPerView={1} // Display one slide at a time
+  loop={true} // Enable infinite sliding
+  autoplay={{
+    delay: 5000, // 5 seconds delay between slides
+    disableOnInteraction: false, // Keep autoplay enabled after interaction
+    waitForTransition: false, // Immediate transition during autoplay
+  }} 
+  speed={800} // Adjust the transition speed for smooth scrolling
+  pagination={{ clickable: true }} // Enable pagination dots
+  navigation={true} // Enable navigation arrows
+  modules={[Pagination, Navigation, Autoplay]} // Use Pagination, Navigation, and Autoplay modules
+  className="mySwiper"
+  style={{ width: '100%', height: 'auto' }} // Full width for the slider
+>
+  {/* Map through events to display each image */}
+  {events.map((event, index) => (
+    <SwiperSlide key={index}>
+      <EventCard image={event.image} />
+    </SwiperSlide>
+  ))}
+</Swiper>
+</Container>
+);
 };
+// =======
+//     <div>
+//       <h1 className="font-ethenocentric text-3xl font-bold underline text-white">
+//       Hello NERDS!
+//     </h1>
+    
+//     </div>
+//   )
+// >>>>>>> 9631b06a10fbbf5228270c129d70eb1cb761f439
 
 // Styled container for the slider with black background and overflow hidden
 const Container = styled.div`
@@ -174,3 +186,25 @@ const Container = styled.div`
 `;
 
 export default Home;
+
+// import React from 'react';
+// import Slider from '../../components/Upcoming-events/event_card'; // Make sure this path is correct based on your project
+
+// const Home = () => {
+//   return (
+//     <div>
+      
+
+//       {/* Render the Slider component here */}
+//       <Slider />
+
+//       {/* Other content for your Home page */}
+
+      
+//     </div>
+//   );
+// };
+
+// export default Home;
+
+
