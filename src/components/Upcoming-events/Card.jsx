@@ -196,6 +196,7 @@
 // `;
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import Slider from './event_card';
 
 // Event images data
 const events = [
@@ -215,16 +216,19 @@ const events = [
 
 const App = () => {
   return (
-    <SliderContainer>
-      <Heading>Upcoming Events</Heading>
-      <InfiniteSlider>
-        {[...events, ...events, ...events].map((event, index) => (
-          <Slide key={index}>
-            <img src={event.image} alt={`event-${index}`} />
-          </Slide>
-        ))}
-      </InfiniteSlider>
-    </SliderContainer>
+    <SliderWrapper>
+      <StaticHeading>Upcoming Events</StaticHeading> {/* Heading is static */}
+      <SliderContainer>
+        <InfiniteSlider>
+          {/* Duplicate the events to create the infinite effect */}
+          {[...events, ...events, ...events].map((event, index) => (
+            <Slide key={index}>
+              <img src={event.image} alt={`event-${index}`} />
+            </Slide>
+          ))}
+        </InfiniteSlider>
+      </SliderContainer>
+    </SliderWrapper>
   );
 };
 
@@ -234,25 +238,66 @@ const scrollX = keyframes`
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-300%); /* Move left by the width of 3 slides */
+    transform: translateX(-200%); /* Move by the width of two slides (adjust this based on how many are visible) */
   }
 `;
 
 // Styled components
+const SliderWrapper = styled.div`
+  width: 100%;
+  background-color: black;
+  padding: 20px;
+
+  /* Padding adjustments for mobile screens */
+  @media (max-width: 480px) {
+    padding: 30px 20px; /* Increased padding for mobile */
+  }
+`;
+
+const StaticHeading = styled.h1`
+  font-family: 'Ethnocentric', sans-serif; /* Ensure the font is available in your project */
+  font-size: 3rem;
+  color: white; /* Text color set to white */
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative; /* Positioning for the underline effect */
+
+  &::after {
+    content: ''; /* Necessary for pseudo-elements */
+    display: block;
+    width: 50%; /* Width of the underline */
+    height: 3px; /* Height of the underline */
+    background: white; /* Color of the underline */
+    position: absolute; /* Position it absolutely */
+    bottom: -5px; /* Position it closer to the text */
+    left: 25%; /* Center the underline under the text */
+    border-radius: 2px; /* Optional: rounded corners for the underline */
+  }
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem; /* Adjust font size for tablets */
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem; /* Adjust font size for mobile devices */
+  }
+
+  // &:hover {
+  //   transform: scale(1.1); /* Scale effect on hover */
+  //   text-shadow: 0 0 20px rgba(0, 195, 255, 1), 0 0 30px rgba(0, 114, 255, 1); /* Glowing effect */
+  // }
+`;
+
 const SliderContainer = styled.div`
   width: 100%;
   overflow: hidden;
-  // background-color: black;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(75, 0, 130, 0.8) 40%, rgba(0, 0, 0, 1) 100%); /* Smooth blend with some black on the left */
-
-  padding: 20px;
+  margin-top: 20px; /* Added margin to separate the heading from the slider */
 `;
 
 const InfiniteSlider = styled.div`
   display: flex;
-  animation: ${scrollX} 20s linear infinite; /* 20s animation for larger screens */
+  animation: ${scrollX} 20s linear infinite; /* Duration of the sliding effect */
 
-  /* For mobile screens */
   @media (max-width: 480px) {
     animation: ${scrollX} 4s linear infinite; /* Faster scrolling for mobile */
   }
@@ -265,12 +310,10 @@ const Slide = styled.div`
   border: 4px solid gray;
   overflow: hidden;
   clip-path: polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  margin-right: 30px;
+  margin-right: 30px; /* Default gap between cards */
 
   &:hover {
     transform: scale(1.05); /* Scale effect on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
     border-color: blue; /* Change border color on hover */
     box-shadow: 0 0 20px rgba(0, 195, 255, 1);
   }
@@ -285,48 +328,11 @@ const Slide = styled.div`
   @media (max-width: 768px) {
     flex: 0 0 100vw; /* Full width of the viewport */
     height: 350px; /* Adjusted height for mobile */
-    margin-right: 0; /* Remove the right margin for mobile */
-  }
-`;
-
-const Heading = styled.h1`
-  font-family: 'Ethnocentric', sans-serif;
-  font-size: 3rem;
-  color: white;
-  margin-bottom: 20px;
-  text-align: center;
-  background: linear-gradient(90deg, #00c3ff, #0072ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  position: relative; /* Positioning for the underline effect */
-
-  &::after {
-    content: ''; /* Necessary for pseudo-elements */
-    display: block;
-    width: 50%; /* Adjusted width for a smaller underline */
-    height: 3px; /* Height of the underline */
-    background: linear-gradient(90deg, #00c3ff, #0072ff); /* Match the gradient of the text */
-    position: absolute; /* Position it absolutely */
-    bottom: -5px; /* Position it closer to the text */
-    left: 25%; /* Center the underline under the text */
-    border-radius: 2px; /* Optional: rounded corners for the underline */
+    margin-right: 15px; /* Gap between cards on mobile */
   }
 
-  /* For tablets */
-  @media (max-width: 768px) {
-    font-size: 2.5rem; /* Adjust font size for tablets */
-  }
-
-  /* For mobile devices */
   @media (max-width: 480px) {
-    font-size: 2rem; /* Adjust font size for mobile devices */
-  }
-
-  &:hover {
-    transform: scale(1.1); /* Scale effect on hover */
-    color: #00c3ff; /* Change color on hover */
-    text-shadow: 0 0 20px rgba(0, 195, 255, 1), 0 0 30px rgba(0, 114, 255, 1); /* Glowing effect */
+    margin-right: 10px; /* Even smaller gap for mobile */
   }
 `;
 

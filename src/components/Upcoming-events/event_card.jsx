@@ -214,29 +214,30 @@ const row1 = [
 const Slider = () => {
   return (
     <Container>
+      <StaticHeadingContainer>
+        <Heading>Upcoming Events</Heading>
+      
       <SliderContainer>
-        <Wrapper>
-          <Heading>Upcoming Events</Heading>
-          <Marquee>
-            <MarqueeGroup>
-              {/* Render the images for continuous scrolling */}
-              {row1.map((el, index) => (
-                <ImageGroup key={index}>
-                  <Image src={el.image} alt={`event-${index}`} />
-                </ImageGroup>
-              ))}
-            </MarqueeGroup>
-            <MarqueeGroup>
-              {/* Repeat the images for continuous scrolling */}
-              {row1.map((el, index) => (
-                <ImageGroup key={index}>
-                  <Image src={el.image} alt={`event-${index}`} />
-                </ImageGroup>
-              ))}
-            </MarqueeGroup>
-          </Marquee>
-        </Wrapper>
+        <Marquee>
+          <MarqueeGroup>
+            {/* Render the images for continuous scrolling */}
+            {row1.map((el, index) => (
+              <ImageGroup key={index}>
+                <Image src={el.image} alt={`event-${index}`} />
+              </ImageGroup>
+            ))}
+          </MarqueeGroup>
+          <MarqueeGroup>
+            {/* Repeat the images for continuous scrolling */}
+            {row1.map((el, index) => (
+              <ImageGroup key={index}>
+                <Image src={el.image} alt={`event-${index}`} />
+              </ImageGroup>
+            ))}
+          </MarqueeGroup>
+        </Marquee>
       </SliderContainer>
+      </StaticHeadingContainer>
     </Container>
   );
 };
@@ -247,25 +248,29 @@ const scrollX = keyframes`
     transform: translateX(0%);
   }
   to {
-    transform: translateX(-50%); /* Change to -50% for continuous scroll */
+    transform: translateX(-50%);
   }
 `;
 
 // Styled components for the slider and event card
 const Container = styled.div`
   width: 100%;
-  overflow: hidden; /* Ensure overflow is hidden */
-  border: 3px solid gold; /* Apply a golden border */
-  background: black; /* Set background color to black */
+  overflow: hidden;
+  background: black;
+  padding: 10px;
+`;
+
+const StaticHeadingContainer = styled.div`
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: black; /* Ensure background matches */
 `;
 
 const SliderContainer = styled.div`
   width: 100%;
-  height: fit-content;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
 `;
 
 const Marquee = styled.div`
@@ -278,70 +283,52 @@ const Marquee = styled.div`
 const MarqueeGroup = styled.div`
   flex-shrink: 0;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%; /* Ensures the group takes the necessary width */
+  width: 100%;
   animation: ${scrollX} 20s linear infinite;
-  min-width: 100%; 
+  min-width: 100%;
 `;
 
 const ImageGroup = styled.div`
-  flex: 0 0 auto; /* Prevent shrinking */
-  width: 300px; /* Default width for larger screens */
+  flex: 0 0 auto;
+  width: 300px;
   height: 400px;
-  margin: 0 15px; /* Adjust spacing between slides */
+  margin: 0 15px;
 
   /* Responsive adjustments */
   @media (max-width: 768px) {
-    width: 100%; /* Full width for mobile devices */
-    height: 200px; /* Adjust height for mobile devices */
-  }
-
-  @media (min-width: 769px) and (max-width: 1024px) {
-    width: calc(33.33% - 30px); /* 3 slides per view, with margin adjustment */
-    height: 300px; /* Adjust height for tablets */
-
-    /* Dynamic width for the slider based on the screen size */
-  @media (min-width: 769px) {
-    width: calc(320px * 6); /* Adjust width for larger screens, accommodating 3 visible slides */
-  }
-
-  @media (max-width: 768px) {
-    width: calc(100% * 2); /* Adjust width for mobile, accommodating 1 visible slide */
-    animation: ${scrollX} 10s linear infinite; /* Faster animation for mobile screens */
-  }
+    width: 100%;
+    height: 200px;
   }
 `;
 
 const Image = styled.img`
-  object-fit: cover; /* Use cover to maintain aspect ratio */
+  object-fit: cover;
   width: 100%;
   height: 100%;
 `;
 
 const Heading = styled.h1`
-  font-family: 'Ethnocentric', sans-serif; /* Make sure the Ethnocentric font is included in your project */
+  font-family: 'Ethnocentric', sans-serif;
   font-size: 3rem;
   color: white;
   margin-bottom: 20px;
-  text-align: center;
   background: linear-gradient(90deg, #00c3ff, #0072ff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  position: relative; /* Positioning for the underline effect */
+  position: relative;
 
   &::after {
-    content: ''; /* Necessary for pseudo-elements */
+    content: '';
     display: block;
-    width: 50%; /* Adjusted width for a smaller underline */
-    height: 3px; /* Height of the underline */
-    background: linear-gradient(90deg, #00c3ff, #0072ff); /* Match the gradient of the text */
-    position: absolute; /* Position it absolutely */
-    bottom: -5px; /* Position it closer to the text */
-    left: 25%; /* Center the underline under the text */
-    border-radius: 2px; /* Optional: rounded corners for the underline */
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, #00c3ff, #0072ff);
+    position: absolute;
+    bottom: -5px;
+    left: 25%;
+    border-radius: 2px;
   }
 `;
-// slider
+
 export default Slider;
