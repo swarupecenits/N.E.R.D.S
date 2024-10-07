@@ -1,15 +1,28 @@
 import React from "react"; 
 import { Link, Element, animateScroll as scroll } from 'react-scroll';
-import { useEffect } from "react";
-import { useState } from "react";
+
+import  { useEffect, useState, useRef } from 'react';
 import './gradient.css';
 import './gallery.css';
 import Header from './header.jsx';
 // import App from './app.jsx'
 import './section.css';
 
-// <<<<<<< HEAD
+
 function Gallery(){
+  const { fix , setFix} = useState(false)
+
+  function setFixedHeader(){
+    if (window.scrollY>= 200) {
+      setFix(true)
+    }
+    else{
+      setFix(false)
+    }
+  }
+
+  window.addEventListener("scroll" , setFixedHeader)
+
   return(
     <>
     <section className="first">
@@ -20,7 +33,7 @@ function Gallery(){
       
     <div className="content-section ">
       <h1 className=" font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading absolute" id="first">PHOTO GALLERY</h1>
-     <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading team-heading absolute"></h1>
+     {/* <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading team-heading absolute"></h1> */}
      <p className="font-spaced font-bold heading-subsection absolute gradient-text" id="second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil id magnam incidunt commodi iste! Voluptates saepe praesentium, unde nostrum quam beatae esse eveniet.</p>
      
      </div>
@@ -31,7 +44,10 @@ function Gallery(){
 {/* <App /> */}
     </section>
     <section className="third1 bg-black">
-      <Header />
+      <div className={fix ? 'header-fixed' : 'header'}>
+        <Header />
+      </div>
+      
       <div className="container   ">
         <div className="items  item1"> </div>
         <div className="items  item2 "> </div>
@@ -43,11 +59,11 @@ function Gallery(){
         <div className="items bg-yellow-400"> </div>
          
       </div>
-      <hr className="border" />
+     
     </section>
     <section className="third2 bg-black relative font-spaced">
-    <Header />
-       <div className="container1  absolute">
+    {/* <Header /> */}
+       <div className="container1  ">
        <div className="items text-white flex-col mx-5 box1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores atque deserunt labore iusto nisi architecto, cumque voluptatibus iste quasi nostrum soluta. Dolore, animi voluptas sapiente perferendis doloribus aspernatur possimus deserunt laudantium consectetur dicta beatae amet natus voluptatem, non corrupti veniam odio ducimus dolorem. Sunt nam beatae at eveniet explicabo ipsum nobis possimus odio temporibus earum quam sequi esse doloribus, quaerat illum quo id necessitatibus ratione, natus unde, provident expedita laborum consequatur. Recusandae unde, numquam officia nulla minus perferendis quam ab voluptate! Omnis dolores tenetur aliquam optio maxime! </p> </div>
         <div className="items   box2"> </div>
         <div className="items box3"> </div>
@@ -60,9 +76,9 @@ function Gallery(){
      </div>
      
     </section>
-    <hr className="border"/>
+   
     <section className="third3 bg-black relative font-spaced">
-    <Header />
+    {/* <Header /> */}
        <div className="container1 ">
        <div className="items  item1"> </div>
         <div className="items  item2 "> </div>
@@ -73,10 +89,10 @@ function Gallery(){
         <div className="items  item7"> </div>
         <div className="items bg-yellow-400"> </div>
      </div>
-     <hr className="border" />
+    
     </section>
     <section className="third4 bg-black relative font-spaced">
-    <Header />
+    {/* <Header /> */}
        <div className="container1  absolute">
        <div className="items text-white flex-col  mx-5 box1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores atque deserunt labore iusto nisi architecto, cumque voluptatibus iste quasi nostrum soluta. Dolore, animi voluptas sapiente perferendis doloribus aspernatur possimus deserunt laudantium consectetur dicta beatae amet natus voluptatem, non corrupti veniam odio ducimus dolorem. Sunt nam beatae at eveniet explicabo ipsum nobis possimus odio temporibus earum quam sequi esse doloribus, quaerat illum quo id necessitatibus ratione, natus unde, provident expedita laborum consequatur. Recusandae unde, numquam officia nulla minus perferendis quam ab voluptate! Omnis dolores tenetur aliquam optio maxime! </p> </div>
         <div className="items   box2"> </div>

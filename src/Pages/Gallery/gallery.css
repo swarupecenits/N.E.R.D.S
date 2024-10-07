@@ -2,10 +2,17 @@ body{
     position: relative;
     overflow-x: hidden;
   }
-  /* .first{
-    height: 100vh;
-    width: 50vw;
-  } */
+
+  .header{
+position: relative; 
+z-index: 1;
+  }
+
+  .header-fixed{
+position:sticky ;
+top: 6%;
+margin-top: 3rem;  
+}
 
    #first{
    margin-left: 0vh;

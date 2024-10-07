@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, Element, animateScroll as scroll } from 'react-scroll';
 
 const Header = ()=>{
     return(
         <>
-        <div className="h-16 px-9 flex items-start justify-start gap-20 font-ethenocentric font-normal text-blue-400 py-10 px-20">
+        <div className="  h-16 px-9 flex items-start justify-start gap-20 font-ethenocentric font-normal text-blue-400 py-10 px-20 ">
             <div>
             <Link
         to="third1"
@@ -58,5 +58,6 @@ const Header = ()=>{
         </>
     )
 }
+
 
 export default Header
