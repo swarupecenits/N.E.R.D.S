@@ -51,7 +51,7 @@ const TestimonialText = ({ testimonial }) => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "rgba(0, 0, 0, 0.5)", // Semi-transparent black background for the text box
+            background: "transparent",
             padding: "15px", // Padding for the text box
             borderRadius: "8px", // Rounded corners for the box
             width: "100%", // Set width to 100% of the SVG
@@ -62,6 +62,7 @@ const TestimonialText = ({ testimonial }) => {
           <p
             className="text-lg text-white"
             style={{
+              background:"transparent",
               fontFamily: "Spaced",
               fontSize: "20px",
               lineHeight: "1.5",

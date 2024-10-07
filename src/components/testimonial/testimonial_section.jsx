@@ -2,10 +2,10 @@ import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import TestimonialCard from "./testimonial_card"; // Assuming you have this component
-import TestimonialText from "./testimonial_text"; // Assuming you have this component
+import TestimonialCard from "./testimonial_card"; 
+import TestimonialText from "./testimonial_text"; 
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import "./testimonial_styles.css"; // Import additional styles if necessary
+import "./testimonial_styles.css"; 
 
 const testimonials = [
   {
@@ -54,10 +54,26 @@ const TestimonialSection = () => {
   };
 
   return (
-    <div className="w-full h-screen flex justify-center items-center bg-transparent relative">
-      <div className="slider-container w-full h-full flex flex-col justify-start items-center font-ethenocentric overflow-hidden">
+    <div className="relative w-full h-screen flex justify-center items-center overflow-hidden">
+      {/* Gradient Background */}
+      <div
+        className="absolute bg-[conic-gradient(from_134.62deg_at_50%_50%,_#111111_0deg,_#13040A_62.55deg,_#100429_189.91deg,_#f30066_205.08deg,_#111111_310.73deg,_#530ced_360deg)] h-[700px] w-[700px] rounded-full blur-3xl animate-gradient"
+        style={{
+          width: '665px',
+          height: '766px', 
+          top: '151px',
+          left: '50%',
+          transform: 'translateX(-50%)',  // Center the gradient horizontally
+          backdropFilter: 'blur(195px)',
+          opacity: '0.3', // Adjust opacity for visibility
+          zIndex: 0, // Ensure it's behind the testimonial content
+        }}
+      ></div>
+
+      {/* Testimonial Content */}
+      <div className="relative z-10 w-full h-full flex flex-col justify-start items-center font-ethenocentric">
         {/* Heading */}
-        <div className="mb-0" style={{ marginBottom: '0px', marginTop: '10px' }}>
+        <div className="mb-0 mt-10">
           <h1 className="text-center font-normal text-3xl md:text-5xl leading-tight text-gray-400">
             TESTIMONIAL
           </h1>
