@@ -1,8 +1,8 @@
 import React, { useState , useEffect} from "react";
 import { Link, Element, animateScroll as scroll } from 'react-scroll';
 import Gallery from './Gallery.jsx';
-
-const Header = ()=>{
+import './section.css'
+const Header = ({setActiveSection})=>{
     
     return(
         <>
@@ -17,7 +17,9 @@ const Header = ()=>{
         style={{  color:'white' }}
         style={{ cursor: 'pointer'   }}
       >
-       <button><h4 className="a opacity-100">ROBOTRON</h4></button>
+       <button onClick={() => setActiveSection("third1")}>
+                        <h4 className="a">ROBOTRON</h4>
+                    </button>
       </Link> </div>
            <div> <Link
         to="third2"
@@ -25,11 +27,14 @@ const Header = ()=>{
         smooth={true}
         duration={200}
         activeClass="active"
+        
         style={{  color:'white' }}
         style={{ cursor: 'pointer'   }}
         
       >
-        <h4 className="a">SESSION</h4>
+       <button onClick={() => setActiveSection("third2")}>
+                        <h4 className="a">SESSION</h4>
+                    </button>
       </Link>
 </div>
            <div> 
@@ -39,10 +44,12 @@ const Header = ()=>{
         smooth={true}
         duration={200}
         activeClass="active"
-        style={{  color:'white' }}
+        
         style={{ cursor: 'pointer'   }}
       >
-       <h4 className="a">PROJECTS</h4>
+<button onClick={() => setActiveSection("third3")}>
+                        <h4 className="a">PROJECTS</h4>
+                    </button>
       </Link></div>
            <div> 
            <Link
@@ -54,7 +61,9 @@ const Header = ()=>{
         style={{  color:'white' }}
         style={{ cursor: 'pointer'   }}
       >
-       <h4 className="a">TECNOESIS</h4>
+        <button onClick={() => setActiveSection("third4")}>
+                        <h4 className="a">TECNOESIS</h4>
+                    </button>
       </Link></div>
         </div>
         </>
@@ -62,5 +71,5 @@ const Header = ()=>{
 }
 
 
-export default Header
+export default Header;
 

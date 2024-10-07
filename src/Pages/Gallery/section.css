@@ -1,7 +1,7 @@
 .container1{
     height: 85vh;
     width: 98vw;
-    transform: translate(0%,11%);
+    transform: translate(0%,-2%);
     display: grid;
 grid-template-columns: repeat(5,1fr);
 grid-template-rows: repeat(2,1fr);
@@ -65,9 +65,15 @@ font-size: 14px;
  .active{
     color: white;
  } 
- /* .border{
-    border-top: 2px dotted white; 
-    border: none;
-    width: 100%; 
- }
-           */
+ .hidden {
+    display: none; /* Hides the section */
+  }
+  /* .hidden {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 1s;
+}
+.show {
+    opacity: 1;
+    transform: translateX(0);
+} */
