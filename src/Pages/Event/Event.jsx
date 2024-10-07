@@ -58,7 +58,7 @@ function Hero() {
 function Hero_small() {
     return(
         <div className="hero_contain md:hidden flex flex-col items-center justify-center mb-">
-            <img src={robot} alt="" className="pl-6 block"/>
+            <img src={robot} alt="" className="ml-[-3rem] block"/>
             <h1 className="text-center font-ethenocentric text-5xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading">EVENTS</h1>
             <img src={stuff} alt=""  className="block pr-14 mt-[-5rem]"/>
         </div>
@@ -67,22 +67,46 @@ function Hero_small() {
 
 function Timeline(){
     const [isOpen, setIsOpen] = useState(false);
+    const [isHovered, setIsHovered] = useState(false);
 
     return(
         <div className="timeline_container hidden md:block">
             <div className="timeline flex flex-col items-center relative">
                 <img src={time} alt="" className="pt-24 z-0 hidden md:inline" />
                 <div className="absolute cards z-10 h-[100%] overflow-visible w-[100%] flex flex-col items-center justify-between pt-40">
-                    <motion.div className="cards" whileHover={{ y:-20, scale:1.03}} onClick={() => setIsOpen(true)} >
-                        <img src={links.card1} alt="" />
+    
+                    <motion.div 
+                    className="cards flex" 
+                    onClick={() => setIsOpen(true)} >
+
+                        <motion.div
+                        className="text text-slate-200 relative text-center text"
+                        initial={{ x: 100, opacity: 0 }} // Start off the screen and hidden
+                        animate={isHovered ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} // Control visibility based on hover state
+                        transition={{ type: 'spring', stiffness: 100 }} >
+                            <p className="absolute font-ethenocentric text-4xl min-w-96 left-[-10rem] top-24">Rat in a maze was good ngl. learnt a lot of stuff. </p>
+                        </motion.div>
+
+                        <motion.img src={links.card1} alt="" 
+                        initial={{ x: 0, opacity: 1 }} // Initial position and opacity
+                        whileHover={{ x: 300, opacity: 1 }} // Slide to the right and change opacity on hover
+                        onHoverStart={() => setIsHovered(true)} // Set hover state
+                        onHoverEnd={() => setIsHovered(false)} // Reset hover state
+                        transition={{ type: 'spring', stiffness: 200 }} />
+
                     </motion.div>
-                    <motion.div className="cards" whileHover={{ y:-20, scale:1.03}} onClick={() => setIsOpen(true)}>
+
+
+
+                    {/* cards */}
+
+                    <motion.div className="cards flex" onClick={() => setIsOpen(true)}>
                         <img src={links.card2} alt="" />
                     </motion.div>
-                    <motion.div className="cards mt-4"  whileHover={{ y:-20, scale:1.03}} onClick={() => setIsOpen(true)}>
+                    <motion.div className="cards mt-4 flex"  onClick={() => setIsOpen(true)}>
                         <img src={links.card3} alt="" />
                     </motion.div>
-                    <motion.div className="cards z-10"  whileHover={{ y:-20, scale:1.03}} onClick={() => setIsOpen(true)}>
+                    <motion.div className="cards mb-10 flex"  onClick={() => setIsOpen(true)}>
                         <img src={links.card4} alt="" />
                     </motion.div>
                     <AnimatePresence>
