@@ -6,6 +6,7 @@ import {motion} from "framer-motion"
 import { useState } from "react"
 import { AnimatePresence } from "framer-motion";
 import Modal from "./Component/Modal"
+import Modal_mini from "./Component/Modal_mini"
 
 // function Hero() {
 //     return(
@@ -150,6 +151,24 @@ function Timeline(){
 }
 
 function Timeline_small(){
+    // State to manage modal visibility
+    const [isOpen, setIsOpen] = useState(false);
+
+    // Toggle modal visibility
+    const toggleModal = () => setIsOpen(!isOpen);
+
+    // Modal animation variants
+    const backdropVariants = {
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+    };
+
+    const modalVariants = {
+        hidden: { opacity: 0, y: '-100vh' },
+        visible: { opacity: 1, y: '0', transition: { duration: 0.5, ease: 'easeInOut' } },
+        exit: { opacity: 0, y: '-100vh', transition: { duration: 0.3 } },
+    };
+
     return (
         <div className="timeline_container md:hidden px-10">
             <div className="timeline grid grid-cols-8 grid-rows-20">
@@ -157,20 +176,58 @@ function Timeline_small(){
                 <img src={time2} alt="" className="col-start-1 row-start-1 col-span-1 row-span-20" />
                 
                 <div className="right_contain col-start-2 row-start-1 col-span-7 row-span-20 flex justify-around flex-col">
-                    <div className="cards col-start-2 row-start-1 col-span-7 row-span-5 mt-28" >
+                    <div className="cards col-start-2 row-start-1 col-span-7 row-span-5 mt-28"
+                    onClick={toggleModal} >
                         <img src={links.card1} alt="" />
                     </div>
-                    <div className="cards col-start-2 row-start-6 col-span-7 row-span-5 mt-[-2rem]">
+                    <div 
+                    onClick={toggleModal}
+                    className="cards col-start-2 row-start-6 col-span-7 row-span-5 mt-[-2rem]">
                         <img src={links.card2} alt="" />
                     </div>
 
-                    <div className="cards col-start-2 row-start-11 col-span-7 row-span-5 mt-[-1rem]">
+                    <div onClick={toggleModal}
+                    className="cards col-start-2 row-start-11 col-span-7 row-span-5 mt-[-1rem]">
                         <img src={links.card3} alt="" />
                     </div>
 
-                    <div className="cards col-start-2 row-start-16 col-span-7 row-span-5 mb-10">
+                    <div onClick={toggleModal}
+                    className="cards col-start-2 row-start-16 col-span-7 row-span-5 mb-10">
                         <img src={links.card4} alt="" />
                     </div>
+
+                    <AnimatePresence>
+                        {isOpen && (
+                        <>
+                            {/* Backdrop animation */}
+                            <motion.div
+                            className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50"
+                            variants={backdropVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                            />
+                            
+                            {/* Modal content */}
+                            <motion.div
+                            className="fixed top-[30%] left-[10%] mx-auto transform  w-[80vw] bg-white p-6 rounded-lg shadow-lg text-center"
+                            variants={modalVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            >
+                            <h2 className="text-xl font-bold mb-4">Modal Title</h2>
+                            <p className="mb-4">This is the modal content. Add more info or actions here!</p>
+                            <button 
+                                onClick={toggleModal} 
+                                className="bg-red-500 text-white px-4 py-2 rounded-lg"
+                            >
+                                Close
+                            </button>
+                            </motion.div>
+                        </>
+                        )}
+                    </AnimatePresence>
                 </div>
                 
             </div>

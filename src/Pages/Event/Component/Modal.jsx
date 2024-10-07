@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";4
+import React from "react";
 import modalbg from "../Assets/modalbg.svg"
 import icon  from "../Assets/modal/icon1.svg";
 
