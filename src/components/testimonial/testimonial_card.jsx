@@ -87,29 +87,25 @@ const TestimonialCard = ({ testimonial }) => {
 
       {/* Role */}
       <p
-        className="mt-2 text-center text-[#9F8600] font-spaced"
+        className="text-base text-[#9F8600] mt-2 font-medium"
         style={{
-          fontSize: "25.64px",
-          fontWeight: 400,
-          lineHeight: "24.48px",
+          textAlign: "center",
+          marginBottom: "35px",
         }}
       >
         {role}
       </p>
 
-      {/* Description */}
-      <div className="text-center text-white mt-4 px-6">
-        <p
-          className="font-spaced"
-          style={{
-            fontSize: "16px",
-            fontWeight: 300,
-            lineHeight: "22px",
-          }}
-        >
-          {text}
-        </p>
-      </div>
+      {/* Description text */}
+      <p
+        className={`text-base text-[#ffffff] mt-2 font-medium ${window.innerWidth >= 768 ? 'hidden' : ''}`} // Hide on larger screens
+        style={{
+          textAlign: "center",
+          padding: "0 15px",
+        }}
+      >
+        {text}
+      </p>
     </div>
   );
 };

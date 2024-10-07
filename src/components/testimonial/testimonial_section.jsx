@@ -46,14 +46,14 @@ const TestimonialSection = () => {
     <div className="w-full h-screen flex justify-center items-center bg-transparent">
       <div className="slider-container w-full h-full flex flex-col justify-start items-center font-ethenocentric overflow-hidden">
         {/* Heading */}
-        <div className="mb-2" style={{ marginBottom: '10px', marginTop: '20px' }}>
+        <div className="mb-0" style={{ marginBottom: '0px', marginTop: '10px' }}> {/* Reduced marginBottom */}
           <h1 className="text-center font-normal text-3xl md:text-5xl leading-tight text-gray-400">
             TESTIMONIAL
           </h1>
         </div>
 
         {/* Mobile View: Role and Message from testimonial */}
-        <div className="block lg:hidden text-center mb-4">
+        <div className="block lg:hidden text-center mb-1"> {/* Further reduced marginBottom */}
           <h2 className="text-gray-500 text-lg md:text-xl">
             Message from{" "}
             <span className="text-yellow-500 text-xl md:text-2xl tracking-wide">
@@ -63,16 +63,16 @@ const TestimonialSection = () => {
         </div>
 
         {/* Testimonial Content */}
-        <div className="w-full h-full flex flex-col justify-center items-center pt-10">
+        <div className="w-full h-full flex flex-col justify-center items-center pt-1 lg:mt-0 -mt-48"> {/* Increased negative margin-top */}
           <Slider ref={cardSliderRef} {...settings} className="w-full">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="flex justify-center w-full h-full">
                 {/* Flex container for card and text */}
-                <div className="flex flex-col lg:flex-row w-full justify-around items-center h-full">
+                <div className="flex flex-col lg:flex-row w-full justify-around items-center h-full space-y-4 lg:space-y-0 lg:space-x-4">
                   
                   {/* TestimonialCard with scaling */}
-                  <div className="flex-1 mx-1 relative" style={{ maxWidth: '90%', margin: '0 auto' }}>
-                    <div className="transform lg:scale-100 scale-75 lg:scale-100 transition-transform duration-300">
+                  <div className="flex-1 mx-1 max-w-md">
+                    <div className="transform scale-75 lg:scale-100 transition-transform duration-300">
                       <TestimonialCard testimonial={testimonial} />
                     </div>
                   </div>
@@ -83,23 +83,14 @@ const TestimonialSection = () => {
                     <div className="mb-2 font-spaced text-center">
                       <h2 className="text-gray-500 text-lg md:text-xl">
                         &nbsp;Message from&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <span
-                          className="text-yellow-500"
-                          style={{
-                            fontFamily: "Spaced",
-                            fontSize: "44px",
-                            fontWeight: "400",
-                            lineHeight: "42.02px",
-                            textAlign: "center",
-                          }}
-                        >
+                        <span className="text-yellow-500" style={{ fontFamily: "Spaced", fontSize: "44px", fontWeight: "400", lineHeight: "42.02px", textAlign: "center" }}>
                           {testimonial.role}
                         </span>
                       </h2>
                     </div>
 
                     {/* Show TestimonialText only on larger screens */}
-                    <div className="hidden lg:block">
+                    <div>
                       <TestimonialText testimonial={testimonial} />
                     </div>
                   </div>
