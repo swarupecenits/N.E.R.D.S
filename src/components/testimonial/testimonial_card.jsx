@@ -42,7 +42,7 @@ const TestimonialCard = ({ testimonial }) => {
         backgroundPosition: "center",
         width: "430px",
         height: "552px",
-        transform: "scale(1)",
+        transform: "scale(0.9)",
         transformOrigin: "top", // Adjust transform origin to keep the card centered
       }}
     >
