@@ -67,6 +67,7 @@ function Hero_small() {
 
 function Timeline(){
     const [isOpen, setIsOpen] = useState(false);
+    const [id, setId] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
 
     return(
@@ -77,7 +78,7 @@ function Timeline(){
     
                     <motion.div 
                     className="cards flex" 
-                    onClick={() => setIsOpen(true)} >
+                    onClick={() => {setIsOpen(true); setId(1);}}>
 
                         <motion.div
                         className="text text-slate-200 relative text-center text"
@@ -100,17 +101,17 @@ function Timeline(){
 
                     {/* cards */}
 
-                    <motion.div className="cards flex" onClick={() => setIsOpen(true)}>
+                    <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(2);}}>
                         <img src={links.card2} alt="" />
                     </motion.div>
-                    <motion.div className="cards mt-4 flex"  onClick={() => setIsOpen(true)}>
+                    <motion.div className="cards mt-4 flex"  onClick={() => { setIsOpen(true);setId(3);}}>
                         <img src={links.card3} alt="" />
                     </motion.div>
-                    <motion.div className="cards mb-10 flex"  onClick={() => setIsOpen(true)}>
+                    <motion.div className="cards mb-10 flex"  onClick={() =>{ setIsOpen(true);setId(4);}}>
                         <img src={links.card4} alt="" />
                     </motion.div>
                     <AnimatePresence>
-                        {isOpen && <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />}
+                        {isOpen && <Modal isOpen={isOpen} id={id} onClose={() => setIsOpen(false)} />}
                     </AnimatePresence>
                 </div>
             </div>
