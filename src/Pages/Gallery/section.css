@@ -66,14 +66,12 @@ font-size: 14px;
     color: white;
  } 
  .hidden {
-    display: none; /* Hides the section */
+    display: none; 
   }
-  /* .hidden {
-    opacity: 0;
-    transform: translateX(100%);
-    transition: all 1s;
-}
-.show {
-    opacity: 1;
-    transform: translateX(0);
-} */
+ #font{
+    font-size: 53px;
+    margin-left: 14rem;
+    transform: translate(100%,-90%);
+    width: fit-content;
+ } 
+ 

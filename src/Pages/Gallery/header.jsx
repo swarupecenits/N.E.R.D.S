@@ -2,11 +2,17 @@ import React, { useState , useEffect} from "react";
 import { Link, Element, animateScroll as scroll } from 'react-scroll';
 import Gallery from './Gallery.jsx';
 import './section.css'
+import {motion} from "framer-motion";
+
+
 const Header = ({setActiveSection})=>{
     
     return(
         <>
-        <div className=" h px-9  flex items-start justify-start gap-20 font-ethenocentric font-normal text-blue-500 py-9 px-20 ">
+        <motion.div 
+        initial={{opacity:0, translateX: "-100%"}}
+        whileInView={{opacity:1, translateX:"0%"}}
+        transition={{duration: 1}} className=" h px-9  flex items-start justify-start gap-20 font-ethenocentric font-normal text-blue-500 py-9 px-20 ">
             <div>
             <Link
         to="third1"
@@ -65,7 +71,7 @@ const Header = ({setActiveSection})=>{
                         <h4 className="a">TECNOESIS</h4>
                     </button>
       </Link></div>
-        </div>
+        </motion.div>
         </>
     )
 }

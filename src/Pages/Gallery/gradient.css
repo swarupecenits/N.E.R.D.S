@@ -1,5 +1,6 @@
 body{
     position: relative;
+    scroll-behavior: smooth;
   }
   .gradient-text {
     background: linear-gradient(90deg, #FFFFFF 0.44%, #F7D5FF 38.63%, #36B7FF 95.18%);

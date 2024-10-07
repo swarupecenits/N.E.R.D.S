@@ -11,26 +11,7 @@ import './section.css';
 
 
 function Gallery(){
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.isIntersecting) {
-  //         entry.target.classList.add('show');
-  //       } else {
-  //         entry.target.classList.remove('show');
-  //       }
-  //     });
-  //   });
-
-  //   const hiddenElements = document.querySelectorAll('.hidden');
-  //   hiddenElements.forEach((el) => observer.observe(el));
-
-  //   // Cleanup function to unobserve elements
-  //   return () => {
-  //     hiddenElements.forEach((el) => observer.unobserve(el));
-  //   };
-  // }, []);
-
+  
   const [activeSection, setActiveSection] = useState("third1");
  
   return(
@@ -41,20 +22,31 @@ function Gallery(){
      <motion.div
       initial={{opacity:0, translateX: "100%"}}
       whileInView={{opacity:1, translateX:"0%"}}
-      transition={{duration: 1.5}}><img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5" alt="robot-image" className="mix-blend-whiten  main-image-img"/>
-      <img src="src/Pages/Gallery/Rectangle 189.svg" alt="robot-image" className="mix-blend-whiten absolute gradient-img"/></motion.div>
+      transition={{duration: 1}}><img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5" alt="robot-image" className="mix-blend-whiten  main-image-img"/>
+      <img src="src/Pages/Gallery/Rectangle 189.svg" alt="robot-image" className="mix-blend-whiten absolute gradient-img"/> 
+      </motion.div>
       
     <div  className="content-section ">
-      <h1 className=" font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading absolute" id="first">PHOTO GALLERY</h1>
+      <motion.h1 
+      initial={{opacity:0, translateX: "-100%"}}
+      whileInView={{opacity:1, translateX:"0%"}}
+      transition={{duration: 1}}className=" font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading absolute" id="first">PHOTO GALLERY</motion.h1>
      {/* <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading team-heading absolute"></h1> */}
-     <p className="font-spaced font-bold heading-subsection absolute gradient-text" id="second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil id magnam incidunt commodi iste! Voluptates saepe praesentium, unde nostrum quam beatae esse eveniet.</p>
+     <motion.p 
+     initial={{opacity:0, translateX: "-100%"}}
+     whileInView={{opacity:1, translateX:"0%"}}
+     transition={{duration: 1}} className="font-spaced font-bold heading-subsection absolute gradient-text" id="second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil id magnam incidunt commodi iste! Voluptates saepe praesentium, unde nostrum quam beatae esse eveniet.</motion.p>
      
      </div>
      </div>
      {/* <hr /> */}
     </section>
     <section className="second bg-black">
-{/* <App /> */}
+          <motion.h1 
+          initial={{opacity:0, translateX: "-100%"}}
+          whileInView={{opacity:1, translateX:"90%"}}
+          transition={{duration: 1}} className=" font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading text-slide " id="font">GLIMPSE
+          </motion.h1>
     </section>
     <Header  setActiveSection={setActiveSection} />
     <section name="third1" className={`third1 section bg-black ${activeSection === "third1" ? "" : "hidden"}`}>
@@ -65,7 +57,7 @@ function Gallery(){
       <motion.div
       initial={{opacity:0, translateX: "100%"}}
       whileInView={{opacity:1, translateX:"0%"}}
-      transition={{duration: 2}}
+      transition={{duration: 1}}
       className="container   ">
         <div className="items  item1"> </div>
         <div className="items  item2 "> </div>
@@ -84,7 +76,7 @@ function Gallery(){
        <motion.div
        initial={{opacity:0, translateX: "-100%"}}
        whileInView={{opacity:1, translateX:"0%"}}
-       transition={{duration: 2}} className="container1  ">
+       transition={{duration: 1}} className="container1  ">
        <div className="items text-white flex-col mx-5 box1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores atque deserunt labore iusto nisi architecto, cumque voluptatibus iste quasi nostrum soluta. Dolore, animi voluptas sapiente perferendis doloribus aspernatur possimus deserunt laudantium consectetur dicta beatae amet natus voluptatem, non corrupti     [SESSION]     veniam odio ducimus dolorem. Sunt nam beatae at eveniet explicabo ipsum nobis possimus odio temporibus earum quam sequi esse doloribus, quaerat illum quo id necessitatibus ratione, natus unde, provident expedita laborum consequatur. Recusandae unde, numquam officia nulla minus perferendis quam ab voluptate! Omnis dolores tenetur aliquam optio maxime! </p> </div>
         <div className="items   box2"> </div>
         <div className="items box3"> </div>
@@ -103,7 +95,7 @@ function Gallery(){
        <motion.div 
        initial={{opacity:0, translateX: "100%"}}
        whileInView={{opacity:1, translateX:"0%"}}
-       transition={{duration: 2}}
+       transition={{duration: 1}}
        className="container1 ">
        <div className="items  item1"> </div>
         <div className="items  item2 "> </div>
@@ -121,7 +113,7 @@ function Gallery(){
        <motion.div
        initial={{opacity:0, translateX: "-100%",}}
        whileInView={{opacity:1, translateX:"0%"}}
-       transition={{duration: 2}} className="container1  absolute">
+       transition={{duration: 1}} className="container1  absolute">
        <div className="items text-white flex-col  mx-5 box1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores atque deserunt labore iusto nisi architecto, cumque voluptatibus iste quasi nostrum soluta. Dolore, animi voluptas sapiente perferendis doloribus aspernatur possimus deserunt laudantium consectetur dicta beatae amet natus voluptatem, non corrupti   [TECNOESIS]    veniam odio ducimus dolorem. Sunt nam beatae at eveniet explicabo ipsum nobis possimus odio temporibus earum quam sequi esse doloribus, quaerat illum quo id necessitatibus ratione, natus unde, provident expedita laborum consequatur. Recusandae unde, numquam officia nulla minus perferendis quam ab voluptate! Omnis dolores tenetur aliquam optio maxime! </p> </div>
         <div className="items   box2"> </div>
         <div className="items box3"> </div>
