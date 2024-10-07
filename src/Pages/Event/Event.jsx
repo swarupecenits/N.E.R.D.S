@@ -3,6 +3,7 @@ import robot from "./robot.svg"
 import time from "./timeline.svg"
 import time2 from "./time2.svg"
 import {motion} from "framer-motion"
+import { svg } from "framer-motion/client"
 
 // function Hero() {
 //     return(
@@ -52,7 +53,7 @@ function Hero() {
 
 function Hero_small() {
     return(
-        <div className="hero_contain md:hidden flex flex-col items-center justify-center">
+        <div className="hero_contain md:hidden flex flex-col items-center justify-center mb-40">
             <img src={robot} alt="" className="pl-6 block"/>
             <h1 className="text-center font-ethenocentric text-5xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading">EVENTS</h1>
             <img src={stuff} alt=""  className="block pr-14 mt-[-5rem]"/>
@@ -67,16 +68,16 @@ function Timeline(){
                 <img src={time} alt="" className="pt-24 z-0 hidden md:inline" />
                 <div className="absolute cards z-10 h-[100%] overflow-visible w-[100%] flex flex-col items-center justify-between pt-40">
                     <motion.div className="cards" whileHover={{ y:-20, scale:1.03}}>
-                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244036/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m.jpg" alt="" />
+                        <img src={links.card1} alt="" />
                     </motion.div>
                     <motion.div className="cards" whileHover={{ y:-20, scale:1.03}}>
-                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_1_rwqeqj.jpg" alt="" />
+                        <img src={links.card2} alt="" />
                     </motion.div>
                     <motion.div className="cards mt-4"  whileHover={{ y:-20, scale:1.03}}>
-                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.51_AM_w3r231.jpg" alt="" />
+                        <img src={links.card3} alt="" />
                     </motion.div>
                     <motion.div className="cards z-10"  whileHover={{ y:-20, scale:1.03}}>
-                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_set08m.jpg" alt="" />
+                        <img src={links.card4} alt="" />
                     </motion.div>
                 </div>
             </div>
@@ -86,29 +87,28 @@ function Timeline(){
 
 function Timeline_small(){
     return (
-        <div className="timeline_container md:hidden ">
-            <div className="timeline relative">
-                <img src={time2} alt="" className="ml-[-10rem] mt-[-16rem] min-h-[100rem]" />
-                <div className="cards absolute top-[15rem] left-12 z-10 max-w-72 flex flex-col min-h-[80%] ">
-                    
-                    <div className="cards mt-32">
-                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244036/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m.jpg" alt="" />
+        <div className="timeline_container md:hidden px-10">
+            <div className="timeline grid grid-cols-8 grid-rows-20">
+
+                <img src={time2} alt="" className="col-start-1 row-start-1 col-span-1 row-span-20" />
+                
+                <div className="right_contain col-start-2 row-start-1 col-span-7 row-span-20 flex justify-around flex-col">
+                    <div className="cards col-start-2 row-start-1 col-span-7 row-span-5 mt-28" >
+                        <img src={links.card1} alt="" />
+                    </div>
+                    <div className="cards col-start-2 row-start-6 col-span-7 row-span-5 mt-[-2rem]">
+                        <img src={links.card2} alt="" />
                     </div>
 
-                    <div className="cards mt-16">
-                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_1_rwqeqj.jpg" alt="" />
+                    <div className="cards col-start-2 row-start-11 col-span-7 row-span-5 mt-[-1rem]">
+                        <img src={links.card3} alt="" />
                     </div>
 
-                    <div className="cards mt-20">
-                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.51_AM_w3r231.jpg" alt="" />
+                    <div className="cards col-start-2 row-start-16 col-span-7 row-span-5 mb-10">
+                        <img src={links.card4} alt="" />
                     </div>
-
-                    <div className="cards  mt-20">
-                        <img src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_set08m.jpg" alt="" />
-                    </div>
-
                 </div>
-
+                
             </div>
         </div>
     )
