@@ -77,12 +77,12 @@ const Projects = () => {
         <div className="block md:hidden px-4">
           <Slider {...settings}>
             {projects.map((project, index) => (
-              <div key={index} className="p-1 px-8 sm:p-4">
+              <div key={index} className="p-1 px-3 sm:p-4">
                 <div className="flex flex-col items-center mb-8 sm:mb-12">
                   {/* Project Image with Clipped Diagonal Corners */}
                   <div className="w-full p-2 relative transition-transform duration-300 ease-in-out transform hover:scale-105">
                     <div
-                      className="relative w-full h-full overflow-hidden border border-gray-300 hover:border-blue-500 transition-all duration-300 ease-in-out rounded-lg"
+                      className="relative w-full h-full overflow-hidden border-2 border-gray-300 hover:border-blue-500 transition-all duration-300 ease-in-out rounded-lg"
                       style={{
                         clipPath:
                           "polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)",
@@ -115,6 +115,7 @@ const Projects = () => {
             ))}
           </Slider>
         </div>
+
         {/* Original Layout for Desktop View */}
         <div className="hidden md:block">
           {projects.map((project, index) => (
@@ -126,7 +127,10 @@ const Projects = () => {
             >
               <div className="md:w-1/2 p-4 relative transition-transform duration-300 ease-in-out transform hover:scale-105">
                 <div
-                  className="relative w-full h-full overflow-hidden border border-gray-300 hover:border-blue-500 transition-all duration-300 ease-in-out rounded-lg"
+                  className="relative w-full h-full overflow-hidden border-2 border-gray-300
+                  hover:border-blue-500
+                  
+                 transition-all duration-300 ease-in-out rounded-lg "
                   style={{
                     clipPath:
                       "polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)",
@@ -135,7 +139,7 @@ const Projects = () => {
                   <img
                     src={project.imageUrl}
                     alt={project.title}
-                    className="h-80 w-full object-cover"
+                    className="h-80 w-full object-cover  transition- duration-300 ease-in-out "
                   />
                 </div>
               </div>
