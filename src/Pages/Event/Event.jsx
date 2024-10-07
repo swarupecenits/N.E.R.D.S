@@ -5,7 +5,7 @@ import time2 from "./Assets/time2.svg"
 import {motion} from "framer-motion"
 import { useState } from "react"
 import { AnimatePresence } from "framer-motion";
-import Modal from "./Modal"
+import Modal from "./Component/Modal"
 
 // function Hero() {
 //     return(
@@ -81,18 +81,18 @@ function Timeline(){
 
                         <motion.div
                         className="text text-slate-200 relative text-center text"
-                        initial={{ x: 100, opacity: 0 }} // Start off the screen and hidden
-                        animate={isHovered ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} // Control visibility based on hover state
-                        transition={{ type: 'spring', stiffness: 100 }} >
+                        initial={{ x: 100, opacity: 0 }} 
+                        animate={isHovered ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
+                        transition={{ duration: 0.3, ease: "easeInOut" }} >
                             <p className="absolute font-ethenocentric text-4xl min-w-96 left-[-10rem] top-24">Rat in a maze was good ngl. learnt a lot of stuff. </p>
                         </motion.div>
 
                         <motion.img src={links.card1} alt="" 
-                        initial={{ x: 0, opacity: 1 }} // Initial position and opacity
-                        whileHover={{ x: 300, opacity: 1 }} // Slide to the right and change opacity on hover
-                        onHoverStart={() => setIsHovered(true)} // Set hover state
-                        onHoverEnd={() => setIsHovered(false)} // Reset hover state
-                        transition={{ type: 'spring', stiffness: 200 }} />
+                        initial={{ x: 0, opacity: 1 }} 
+                        whileHover={{ x: 300, opacity: 1 }} 
+                        onHoverStart={() => setIsHovered(true)} 
+                        onHoverEnd={() => setIsHovered(false)} 
+                        transition={{duration: 0.3, ease: "easeInOut"}} />
 
                     </motion.div>
 
