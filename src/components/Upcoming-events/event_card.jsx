@@ -343,5 +343,5 @@ const Heading = styled.h1`
     border-radius: 2px; /* Optional: rounded corners for the underline */
   }
 `;
-
+// slider
 export default Slider;
