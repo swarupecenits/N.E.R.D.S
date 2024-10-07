@@ -16,7 +16,10 @@ nav ul {
   nav ul li a:hover {
     text-decoration: underline;
   }
-  
+
   * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
   }
+  

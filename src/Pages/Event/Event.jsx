@@ -1,9 +1,11 @@
-import stuff from "./stuff.svg"
-import robot from "./robot.svg"
-import time from "./timeline.svg"
-import time2 from "./time2.svg"
+import stuff from "./Assets/stuff.svg"
+import robot from "./Assets/robot.svg"
+import time from "./Assets/timeline.svg"
+import time2 from "./Assets/time2.svg"
 import {motion} from "framer-motion"
-import { svg } from "framer-motion/client"
+import { useState } from "react"
+import { AnimatePresence } from "framer-motion";
+import Modal from "./Modal"
 
 // function Hero() {
 //     return(
@@ -22,6 +24,8 @@ import { svg } from "framer-motion/client"
 //         </div>
 //     )
 // }
+
+
 
 const links = {
     card1:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244036/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m.jpg",
@@ -53,7 +57,7 @@ function Hero() {
 
 function Hero_small() {
     return(
-        <div className="hero_contain md:hidden flex flex-col items-center justify-center mb-40">
+        <div className="hero_contain md:hidden flex flex-col items-center justify-center mb-">
             <img src={robot} alt="" className="pl-6 block"/>
             <h1 className="text-center font-ethenocentric text-5xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading">EVENTS</h1>
             <img src={stuff} alt=""  className="block pr-14 mt-[-5rem]"/>
@@ -62,23 +66,28 @@ function Hero_small() {
 }
 
 function Timeline(){
+    const [isOpen, setIsOpen] = useState(false);
+
     return(
         <div className="timeline_container hidden md:block">
             <div className="timeline flex flex-col items-center relative">
                 <img src={time} alt="" className="pt-24 z-0 hidden md:inline" />
                 <div className="absolute cards z-10 h-[100%] overflow-visible w-[100%] flex flex-col items-center justify-between pt-40">
-                    <motion.div className="cards" whileHover={{ y:-20, scale:1.03}}>
+                    <motion.div className="cards" whileHover={{ y:-20, scale:1.03}} onClick={() => setIsOpen(true)} >
                         <img src={links.card1} alt="" />
                     </motion.div>
-                    <motion.div className="cards" whileHover={{ y:-20, scale:1.03}}>
+                    <motion.div className="cards" whileHover={{ y:-20, scale:1.03}} onClick={() => setIsOpen(true)}>
                         <img src={links.card2} alt="" />
                     </motion.div>
-                    <motion.div className="cards mt-4"  whileHover={{ y:-20, scale:1.03}}>
+                    <motion.div className="cards mt-4"  whileHover={{ y:-20, scale:1.03}} onClick={() => setIsOpen(true)}>
                         <img src={links.card3} alt="" />
                     </motion.div>
-                    <motion.div className="cards z-10"  whileHover={{ y:-20, scale:1.03}}>
+                    <motion.div className="cards z-10"  whileHover={{ y:-20, scale:1.03}} onClick={() => setIsOpen(true)}>
                         <img src={links.card4} alt="" />
                     </motion.div>
+                    <AnimatePresence>
+                        {isOpen && <Modal isOpen={isOpen} onClose={() => setIsOpen(false)} />}
+                    </AnimatePresence>
                 </div>
             </div>
         </div>
@@ -115,7 +124,6 @@ function Timeline_small(){
 }
 
 
-
 export default function Event(){
     return (
         <div className="bg-black overflow-hidden">
@@ -123,6 +131,7 @@ export default function Event(){
             <Hero_small />
             <Timeline />
             <Timeline_small />
+            {/* <BasicTimeline className="block md:hidden"/> */}
         </div>
     )
 }
