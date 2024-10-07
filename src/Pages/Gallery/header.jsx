@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import { Link, Element, animateScroll as scroll } from 'react-scroll';
+import Gallery from './Gallery.jsx';
 
 const Header = ()=>{
+    
     return(
         <>
-        <div className="  h-16 px-9 flex items-start justify-start gap-20 font-ethenocentric font-normal text-blue-400 py-10 px-20 ">
+        <div className=" h px-9  flex items-start justify-start gap-20 font-ethenocentric font-normal text-blue-500 py-9 px-20 ">
             <div>
             <Link
         to="third1"
@@ -15,7 +17,7 @@ const Header = ()=>{
         style={{  color:'white' }}
         style={{ cursor: 'pointer'   }}
       >
-       <button><h4 className="a">ROBOTRON</h4></button>
+       <button><h4 className="a opacity-100">ROBOTRON</h4></button>
       </Link> </div>
            <div> <Link
         to="third2"
@@ -61,3 +63,4 @@ const Header = ()=>{
 
 
 export default Header
+

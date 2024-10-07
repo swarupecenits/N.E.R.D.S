@@ -3,16 +3,7 @@ body{
     overflow-x: hidden;
   }
 
-  .header{
-position: relative; 
-z-index: 1;
-  }
 
-  .header-fixed{
-position:sticky ;
-top: 6%;
-margin-top: 3rem;  
-}
 
    #first{
    margin-left: 0vh;
@@ -72,4 +63,28 @@ z-index: 0}
   justify-content: center;
  /* Vertically center the text */
   box-sizing: border-box;
+}
+
+.h {
+  position: sticky;
+  top: 0; /* Sticks to the top of the viewport */
+  left: 0;
+  width: 100%;
+  
+  background-color:black; /* Add background for better visibility */
+  z-index: 100; /* Ensure it's above other content */
+  /* padding: 10px 20px; */
+  height: 20px;
+  opacity: ;
+  
+}
+
+.a {
+
+  font-size: 18px; 
+  cursor: pointer;
+}
+
+.active {
+  color: #FFD700; /* Change color when the section is active */
 }

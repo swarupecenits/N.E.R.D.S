@@ -18,6 +18,7 @@ body{
     cursor: pointer;
   }
   .container{
+    transform: translate(0%,10%);
 height: 85vh;
 width: 100vw;
 display: grid;

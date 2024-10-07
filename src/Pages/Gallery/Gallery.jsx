@@ -10,19 +10,7 @@ import './section.css';
 
 
 function Gallery(){
-  const { fix , setFix} = useState(false)
-
-  function setFixedHeader(){
-    if (window.scrollY>= 200) {
-      setFix(true)
-    }
-    else{
-      setFix(false)
-    }
-  }
-
-  window.addEventListener("scroll" , setFixedHeader)
-
+ 
   return(
     <>
     <section className="first">
@@ -43,10 +31,11 @@ function Gallery(){
     <section className="second bg-black">
 {/* <App /> */}
     </section>
-    <section className="third1 bg-black">
-      <div className={fix ? 'header-fixed' : 'header'}>
-        <Header />
-      </div>
+    <Header />
+    <section name="third1" className="third1 section bg-black">
+      
+        
+      
       
       <div className="container   ">
         <div className="items  item1"> </div>
@@ -61,7 +50,7 @@ function Gallery(){
       </div>
      
     </section>
-    <section className="third2 bg-black relative font-spaced">
+    <section name="third2" className="third2 section bg-black">
     {/* <Header /> */}
        <div className="container1  ">
        <div className="items text-white flex-col mx-5 box1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores atque deserunt labore iusto nisi architecto, cumque voluptatibus iste quasi nostrum soluta. Dolore, animi voluptas sapiente perferendis doloribus aspernatur possimus deserunt laudantium consectetur dicta beatae amet natus voluptatem, non corrupti veniam odio ducimus dolorem. Sunt nam beatae at eveniet explicabo ipsum nobis possimus odio temporibus earum quam sequi esse doloribus, quaerat illum quo id necessitatibus ratione, natus unde, provident expedita laborum consequatur. Recusandae unde, numquam officia nulla minus perferendis quam ab voluptate! Omnis dolores tenetur aliquam optio maxime! </p> </div>
@@ -77,7 +66,7 @@ function Gallery(){
      
     </section>
    
-    <section className="third3 bg-black relative font-spaced">
+    <section name="third3" className="third3 section bg-black">
     {/* <Header /> */}
        <div className="container1 ">
        <div className="items  item1"> </div>
@@ -91,7 +80,7 @@ function Gallery(){
      </div>
     
     </section>
-    <section className="third4 bg-black relative font-spaced">
+    <section name="third4" className="third4 section bg-black">
     {/* <Header /> */}
        <div className="container1  absolute">
        <div className="items text-white flex-col  mx-5 box1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores atque deserunt labore iusto nisi architecto, cumque voluptatibus iste quasi nostrum soluta. Dolore, animi voluptas sapiente perferendis doloribus aspernatur possimus deserunt laudantium consectetur dicta beatae amet natus voluptatem, non corrupti veniam odio ducimus dolorem. Sunt nam beatae at eveniet explicabo ipsum nobis possimus odio temporibus earum quam sequi esse doloribus, quaerat illum quo id necessitatibus ratione, natus unde, provident expedita laborum consequatur. Recusandae unde, numquam officia nulla minus perferendis quam ab voluptate! Omnis dolores tenetur aliquam optio maxime! </p> </div>
