@@ -6,29 +6,29 @@ import icon  from "../Assets/modal/icon1.svg";
 const modal_data = {
   
   1:
-    {head:"kjsdhvj",
-    text:"skjdvn",
+    {head:"first",
+    text:"text 1",
     url: "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728318976/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m-removebg-preview_ci6rfb.png"
 
 
     },
   2:
-    {head:"kjsdhvj",
-    text:"skjdvn",
+    {head:"second ",
+    text:"text 2",
     url: "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728319093/WhatsApp_Image_2024-10-07_at_1.15.52_AM_1_rwqeqj-removebg-preview_qiah9h.png"
 
 
     },
   3:
-    {head:"kjsdhvj",
-    text:"skjdvn",
+    {head:"third ",
+    text:"text 3",
     url: "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728319250/WhatsApp_Image_2024-10-07_at_1.15.51_AM_w3r231-removebg-preview_1_qtqwt5.png"
 
     },
   4:
     {
-      head:"kjsdhvj",
-    text:"skjdvn",
+      head:"fourth",
+    text:"text 4",
     url: "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728319299/WhatsApp_Image_2024-10-07_at_1.02.58_AM_rhqfl2-removebg-preview_yvzens.png"
     }
 }

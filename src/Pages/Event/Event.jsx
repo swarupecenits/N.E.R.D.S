@@ -26,7 +26,36 @@ import Modal_mini from "./Component/Modal_mini"
 //     )
 // }
 
-
+const modal_data = {
+  
+    1:
+      {head:"first",
+      text:"text 1",
+      url: "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728318976/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m-removebg-preview_ci6rfb.png"
+  
+  
+      },
+    2:
+      {head:"second ",
+      text:"text 2",
+      url: "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728319093/WhatsApp_Image_2024-10-07_at_1.15.52_AM_1_rwqeqj-removebg-preview_qiah9h.png"
+  
+  
+      },
+    3:
+      {head:"third ",
+      text:"text 3",
+      url: "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728319250/WhatsApp_Image_2024-10-07_at_1.15.51_AM_w3r231-removebg-preview_1_qtqwt5.png"
+  
+      },
+    4:
+      {
+        head:"fourth",
+      text:"text 4",
+      url: "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728319299/WhatsApp_Image_2024-10-07_at_1.02.58_AM_rhqfl2-removebg-preview_yvzens.png"
+      }
+  }
+  
 
 const links = {
     card1:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244036/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m.jpg",
@@ -153,6 +182,7 @@ function Timeline(){
 function Timeline_small(){
     // State to manage modal visibility
     const [isOpen, setIsOpen] = useState(false);
+    const [id, setId] = useState(0)
 
     // Toggle modal visibility
     const toggleModal = () => setIsOpen(!isOpen);
@@ -177,21 +207,21 @@ function Timeline_small(){
                 
                 <div className="right_contain col-start-2 row-start-1 col-span-7 row-span-20 flex justify-around flex-col">
                     <div className="cards col-start-2 row-start-1 col-span-7 row-span-5 mt-28"
-                    onClick={toggleModal} >
+                    onClick={() => {setIsOpen(!isOpen), setId(1)}} >
                         <img src={links.card1} alt="" />
                     </div>
                     <div 
-                    onClick={toggleModal}
+                    onClick={() => {setIsOpen(!isOpen), setId(2)}}
                     className="cards col-start-2 row-start-6 col-span-7 row-span-5 mt-[-2rem]">
                         <img src={links.card2} alt="" />
                     </div>
 
-                    <div onClick={toggleModal}
+                    <div onClick={() => {setIsOpen(!isOpen), setId(3)}}
                     className="cards col-start-2 row-start-11 col-span-7 row-span-5 mt-[-1rem]">
                         <img src={links.card3} alt="" />
                     </div>
 
-                    <div onClick={toggleModal}
+                    <div onClick={() => {setIsOpen(!isOpen), setId(4)}}
                     className="cards col-start-2 row-start-16 col-span-7 row-span-5 mb-10">
                         <img src={links.card4} alt="" />
                     </div>
@@ -216,8 +246,8 @@ function Timeline_small(){
                             animate="visible"
                             exit="exit"
                             >
-                            <h2 className="text-xl font-bold mb-4">Modal Title</h2>
-                            <p className="mb-4">This is the modal content. Add more info or actions here!</p>
+                            <h2 className="text-xl font-bold mb-4">{modal_data[id].head}</h2>
+                            <p className="mb-4">{modal_data[id].text}</p>
                             <button 
                                 onClick={toggleModal} 
                                 className="bg-red-500 text-white px-4 py-2 rounded-lg"
