@@ -79,7 +79,7 @@ const TestimonialSection = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="flex justify-center w-full h-full">
                 {/* Flex container for card and text */}
-                <div className="flex flex-col lg:flex-row w-full justify-around items-center h-full space-y-4 lg:space-y-0 lg:space-x-4">
+                <div className="flex flex-col lg:flex-row w-full justify-around items-center h-full space-y-4 lg:space-y-0 lg:space-x-4 lg:ml-20">
                   {/* TestimonialCard with scaling */}
                   <div className="flex-1 mx-1 max-w-md">
                     <div className="transform scale-75 lg:scale-100 transition-transform duration-300">

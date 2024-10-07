@@ -63,7 +63,7 @@ const WhatDoWeProvideSlider = () => {
       {/* Custom Navigation Buttons */}
       <button
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 -mt-20 md:top-1/2 text-white p-2 rounded-full focus:outline-none transition"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 -mt-20 -ml-8 md:top-1/2 text-white p-2 rounded-full focus:outline-none transition"
         style={{ background: "transparent" }}
       >
         <IoIosArrowBack size={40} />
@@ -71,7 +71,7 @@ const WhatDoWeProvideSlider = () => {
 
       <button
         onClick={handleNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 -mt-20 md:top-1/2 text-white p-2 rounded-full focus:outline-none transition"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 -mt-20 -mr-8 md:top-1/2 text-white p-2 rounded-full focus:outline-none transition"
         style={{ background: "transparent" }}
       >
         <IoIosArrowForward size={40} />
