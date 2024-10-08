@@ -5,6 +5,7 @@ import Team_section from "./Team_section"
 
 const Team = () => {
   const [rotation, setRotation] = useState(-37.96);
+  
 
   return (
     <>

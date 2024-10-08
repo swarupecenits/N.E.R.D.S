@@ -3,7 +3,7 @@
         "id": 5,
         "name": "Swarup Chanda",
         "team": "3rd Year",
-        "designation": "Web",
+        "designation": "Web-Lead",
         "developer_team": "Yes",
         "developer_domain": "Web",
         "email": "swarupchanda1963@gmail.com",
@@ -90,19 +90,7 @@
         "linkedin": "https://www.linkedin.com/in/deepanshu-sharma-2b5a50216",
         "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/vcksenp8bngjukvaf79n.webp"
       },
-      {
-        "id": 19,
-        "name": "Hrisikesh Kashyap",
-        "team": "2nd Year",
-        "designation": "UI/UX",
-        "developer_team": "Yes",
-        "developer_domain": "UI/UX",
-        "email": "hrisikeshcollegebaba@gmail.com",
-        "social": "https://www.instagram.com/hrisikesh_esc?igsh=Ym82Zm9veHl0ajF2",
-        "github": "https://github.com/hrisikeshbegin",
-        "linkedin": "https://www.linkedin.com/in/hrisikesh-kashyap-926197280/",
-        "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726869/wquws4fxuqeqhjzgghxw.webp"
-      },
+      
       {
         "id": 22,
         "name": "Nishit Baishya",
