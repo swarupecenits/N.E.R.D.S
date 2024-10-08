@@ -7,9 +7,9 @@ const Home = () => {
   return (
     <div>
       {/* Other sections of the home page */}
-      
+
       {/* What Do We Provide Section */}
-      <WhatDoWeProvideSlider/>
+      <WhatDoWeProvideSlider />
 
       {/* Testimonial Section */}
       <TestimonialSection />
