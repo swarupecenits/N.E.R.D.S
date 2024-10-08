@@ -1,8 +1,6 @@
 import { useState } from "react";
 
 const AboutUsCard = ({ items }) => {
-  const [hovered, setHovered] = useState(false);
-
   // Define the SVGs as constants
   const svgBorder = (
     <svg
@@ -196,10 +194,10 @@ const AboutUsCard = ({ items }) => {
   );
 
   return (
-    <div className="relative my-2 transform scale-50">
+    <div className="relative my-2 transform scale-50 lg:scale-50  ">
       {" "}
       {/* Scale down to 50% */}
-      <div className="flex justify-center items-center relative w-full h-80 group">
+      <div className="flex justify-center items-center relative w-full h-80 group md:p-0 ">
         {" "}
         {/* Added group class for hover effect */}
         <div className="absolute z-15">
@@ -213,7 +211,7 @@ const AboutUsCard = ({ items }) => {
           {hoverSvgBorder}
         </div>
         {/* Centered Box with Text and Heading */}
-        <div className="flex justify-center items-center w-[1085px] h-[573px] relative z-20">
+        <div className="flex justify-center items-center max-w-[3000px] h-[570px]  relative z-20">
           {" "}
           {/* Increase z-index for the text container */}
           {/* Glassmorphism effect */}
@@ -221,18 +219,18 @@ const AboutUsCard = ({ items }) => {
             className="absolute inset-0 z-0 bg-black/30 backdrop-blur-lg border border-transparent rounded-3xl"
             style={{
               clipPath:
-                "polygon(7.4% 0%, 100% 0%, 100% 82%, 93% 100%, 0% 100%, 0% 18%)",
+                "polygon(5% 0%, 100% 0%, 100% 85%, 90% 100%, 0% 100%, 0% 15%)",
             }} // Clip path to slightly cut the top corners
           ></div>
-          <div className="text-center z-30">
+          <div className="text-center z-30 px-0 ">
             {" "}
             {/* Center text within the box */}
             {/* Heading */}
-            <h2 className="font-spaced text-left text-[65.25px] font-light leading-[56.58px] tracking-[0.03em] bg-gradient-to-b from-white to-gray-400 text-transparent bg-clip-text mt-8">
+            <h2 className="font-spaced text-left text-[40px] md:text-[60px] lg:text-[60px] bg-gradient-to-b from-white to-gray-400 text-transparent bg-clip-text mt-5 lg:mt-1">
               {items.title} {/* Updated to use dynamic title */}
             </h2>
             {/* Text */}
-            <p className="font-spaced text-justify text-[27.08px] font-light leading-[1.5] tracking-normal text-white mt-4 mb-4">
+            <p className="font-spaced text-justify text-[18px] sm:text-[18px] md:text-[22px] lg:text-[27px]   text-white mt-4 mb-4 px-2 md:px-0 lg:px-0 lg:mt-0 ">
               {items.text} {/* Updated to use dynamic text */}
             </p>
           </div>

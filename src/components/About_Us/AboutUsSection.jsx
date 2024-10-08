@@ -19,7 +19,7 @@ const AboutUsSection = () => {
 
   return (
     <div
-      className="my-16 px-4 md:px-8 lg:px-10 bg-cover bg-center bg-no-repeat"
+      className="my-16 px-4 md:px-8 lg:px-10 bg-cover bg-center bg-no-repeat py-4"
       style={{
         backgroundImage:
           'url("https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/uzsmwldv4xpfv2xkxceg")', // Replace with your image URL
@@ -27,20 +27,20 @@ const AboutUsSection = () => {
       }}
     >
       {/* Section Heading */}
-      <h2 className="text-center text-5xl font-ethenocentric text-white mb-12">
+      <h2 className="text-center text-3xl font-ethenocentric text-white mb-12 md:text-5xl lg:text-6xl ">
         About Us
       </h2>
 
       {/* Cards Container */}
-      <div className="flex flex-col items-center space-y-0">
+      <div className="flex flex-col items-center space-y-6 md:space-y-0 md:space-x-4  ">
         {cardData.map((item, index) => (
           <div
             key={index}
             className={`w-full flex ${
-              index % 2 === 0 ? "justify-start" : "justify-end"
+              index % 2 === 0 || index == 0 ? "justify-start" : "justify-end"
             } px-2 md:px-0`} // Adjust padding to keep cards centered on smaller screens
           >
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 ">
               {" "}
               {/* Ensure the card takes half the width on medium screens and above */}
               <AboutUsCard items={item} />
