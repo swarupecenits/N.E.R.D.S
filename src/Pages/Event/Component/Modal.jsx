@@ -2,15 +2,18 @@ import { motion } from "framer-motion";
 import React from "react";
 import modalbg from "../Assets/modalbg.svg"
 import icon  from "../Assets/modal/icon1.svg";
+import modaldata from "../JSON/modaldata.json"
 
 const Content = ({id}) => {
+    const obj = {...modaldata}
+
     return(
         <>
             <img src={modalbg} alt="" className=" absolute top-[-15rem]"/>
-            <h1 className="text-center  text-4xl absolute top-[-8rem] left-14 font-ethenocentric text-slate-300 ">{modal_data[id].head}</h1>
-            <p className="font-ethnocentric text-2xl absolute top-8 left-14  text-wrap max-w-[30rem] text-slate-400">{modal_data[id].text}</p>
+            <h1 className="text-center  text-4xl absolute top-[-8rem] left-14 font-ethenocentric text-slate-300 ">{obj[id].head}</h1>
+            <p className="font-ethnocentric text-2xl absolute top-8 left-14  text-wrap max-w-[30rem] text-slate-400">{obj[id].text}</p>
             <img src={icon} alt="icon in modal" className="absolute top-[-2.8rem] left-12" />
-            <img src={modal_data[id].url} alt="image in modal" className="absolute top-[-8rem] left-[33rem] max-w-96" />
+            <img src={obj[id].url} alt="image in modal" className="absolute top-[-8rem] left-[33rem] max-w-96" />
         </>
     )
 }

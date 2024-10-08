@@ -154,11 +154,11 @@ function Timeline(){
 
 function Timeline_small(){
     // State to manage modal visibility
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen2, setIsOpen2] = useState(false);
     const [id, setId] = useState(0)
 
     // Toggle modal visibility
-    const toggleModal = () => setIsOpen(!isOpen);
+    const toggleModal = () => setIsOpen2(!isOpen2);
 
     // Modal animation variants
     const backdropVariants = {
@@ -180,27 +180,27 @@ function Timeline_small(){
                 
                 <div className="right_contain col-start-2 row-start-1 col-span-7 row-span-20 flex justify-around flex-col">
                     <div className="cards col-start-2 row-start-1 col-span-7 row-span-5 mt-28"
-                    onClick={() => {setIsOpen(!isOpen), setId(1)}} >
+                    onClick={() => {setIsOpen2(!isOpen2), setId(1)}} >
                         <img src={links.card1} alt="" />
                     </div>
                     <div 
-                    onClick={() => {setIsOpen(!isOpen), setId(2)}}
+                    onClick={() => {setIsOpen2(!isOpen2), setId(2)}}
                     className="cards col-start-2 row-start-6 col-span-7 row-span-5 mt-[-2rem]">
                         <img src={links.card2} alt="" />
                     </div>
 
-                    <div onClick={() => {setIsOpen(!isOpen), setId(3)}}
+                    <div onClick={() => {setIsOpen2(!isOpen2), setId(3)}}
                     className="cards col-start-2 row-start-11 col-span-7 row-span-5 mt-[-1rem]">
                         <img src={links.card3} alt="" />
                     </div>
 
-                    <div onClick={() => {setIsOpen(!isOpen), setId(4)}}
+                    <div onClick={() => {setIsOpen2(!isOpen2), setId(4)}}
                     className="cards col-start-2 row-start-16 col-span-7 row-span-5 mb-10">
                         <img src={links.card4} alt="" />
                     </div>
 
                     <AnimatePresence>
-                        {isOpen && (
+                        {isOpen2 && (
                         <>
                             {/* Backdrop animation */}
                             <motion.div
