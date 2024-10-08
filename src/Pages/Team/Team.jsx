@@ -5,7 +5,12 @@ import Team_section from "./Team_section"
 
 const Team = () => {
   const [rotation, setRotation] = useState(-37.96);
-  
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRotation(prevRotation => prevRotation + 1); // Slowly increase the rotation angle
+    }, 50); return () => clearInterval(interval); 
+  }, []);
 
   return (
     <>
