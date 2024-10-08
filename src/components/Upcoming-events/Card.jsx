@@ -196,7 +196,6 @@
 // `;
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import Slider from './event_card';
 
 // Event images data
 const events = [
@@ -281,11 +280,6 @@ const StaticHeading = styled.h1`
   @media (max-width: 480px) {
     font-size: 2rem; /* Adjust font size for mobile devices */
   }
-
-  // &:hover {
-  //   transform: scale(1.1); /* Scale effect on hover */
-  //   text-shadow: 0 0 20px rgba(0, 195, 255, 1), 0 0 30px rgba(0, 114, 255, 1); /* Glowing effect */
-  // }
 `;
 
 const SliderContainer = styled.div`

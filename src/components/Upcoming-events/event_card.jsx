@@ -213,9 +213,9 @@ const row1 = [
 
 const Slider = () => {
   return (
-    <Container>
-      <StaticHeadingContainer>
-        <Heading>Upcoming Events</Heading>
+    <Whole>
+      <div StaticHeadingContainer>
+        <Heading>Upcoming Events</Heading></div>
       
       <SliderContainer>
         <Marquee>
@@ -237,8 +237,8 @@ const Slider = () => {
           </MarqueeGroup>
         </Marquee>
       </SliderContainer>
-      </StaticHeadingContainer>
-    </Container>
+      
+    </Whole>
   );
 };
 
