@@ -209,6 +209,7 @@ function Timeline_small(){
                             initial="hidden"
                             animate="visible"
                             exit="hidden"
+                            onClick={toggleModal}
                             />
                             
                             {/* Modal content */}
@@ -219,7 +220,7 @@ function Timeline_small(){
                             animate="visible"
                             exit="exit"
                             onClick={toggleModal} >
-                                <Modal_mini_body id={id} />
+                                <Modal_mini_body id={id} toggleModal={toggleModal} />
                             </motion.div>
                         </>
                         )}
