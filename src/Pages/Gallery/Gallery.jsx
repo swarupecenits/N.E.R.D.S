@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react"; 
 import {motion} from 'framer-motion';
 import { Link, Element, animateScroll as scroll } from 'react-scroll';
@@ -135,3 +136,14 @@ function Gallery(){
 export default Gallery;
 
 
+=======
+const Gallery = () => {
+  return (
+    <>
+      <div className="text-white">Gallery it is</div>
+    </>
+  );
+};
+
+export default Gallery;
+>>>>>>> 7280917e9218c8b9c6107b082579768753f20418

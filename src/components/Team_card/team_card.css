@@ -1,0 +1,40 @@
+.team_kard {
+  width: 350px;
+  height: 445px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+
+/* Add styles for even smaller mobile screens */
+@media screen and (max-width: 480px) {
+  .team_kard {
+    width: 280px;
+    height: 355px;
+  }
+  .team_card_frame{
+    width: 280px !important;
+    height: 355px !important;
+    clip-path:polygon(30px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 30px) !important;
+  }
+
+  .team_kard img {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .team_kard h2 {
+    font-size: 19px !important;
+    margin-top: 20px;
+  }
+
+  .team_kard p {
+    font-size: 1rem;
+  }
+  .hover-card h2{
+    font-size: 19px !important;
+  }
+
+
+
+}
