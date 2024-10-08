@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import "./gradient.css";
 import "./team.css";
-import TeamCard from "../../components/team_card";
+import TeamCard from "../../components/Team_card/team_card";
 import "swiper/swiper-bundle.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
