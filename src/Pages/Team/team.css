@@ -219,9 +219,7 @@
 }
 
 .team-card {
-  /* You can adjust this class based on your actual class used in TeamCard */
-  padding: 1rem; /* Ensure padding */
-  /* Optional: Set a minimum height */
+  /* padding: 1rem;  */
   min-height: 200px; /* Adjust as needed */
   box-sizing: border-box; /* Include padding in height calculations */
 }
