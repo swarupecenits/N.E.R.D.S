@@ -36,7 +36,7 @@ function Gallery(){
      <motion.p 
      initial={{opacity:0, translateX: "-100%"}}
      whileInView={{opacity:1, translateX:"0%"}}
-     transition={{duration: 1}} className="font-spaced font-bold heading-subsection absolute gradient-text" id="second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil id magnam incidunt commodi iste! Voluptates saepe praesentium, unde nostrum quam beatae esse eveniet.</motion.p>
+     transition={{duration: 1}} className="font-spaced font-bold heading-subsection absolute gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent" id="second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil id magnam incidunt commodi iste! Voluptates saepe praesentium, unde nostrum quam beatae esse eveniet.</motion.p>
      
      </div>
      </div>
@@ -60,14 +60,14 @@ function Gallery(){
       initial={{opacity:0, translateX: "100%", translateY: "9%"}}
       whileInView={{opacity:1, translateX:"0%", translateY: "9%"}}
       transition={{duration: 1}}
-      className="container   ">
-        <div className="items  item1"> </div>
-        <div className="items  item2 "> </div>
-        <div className="items  item3"> </div>
-        <div className="items text-white flex-col item4 font-spaced"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae corrupti cum recusandae ab ipsam nemo reprehenderit enim aliquam, voluptatum, fugiat deleniti. Minima, ipsum distinctio. Sapiente nulla aspernatur odio, quaerat facere praesentium, ut earum autem repellendus ullam doloribus quidem    [ROBOTRON]    reiciendis, saepe voluptatem dolor eos dolorum. Iste perferendis inventore ipsum exercitationem ex neque facere at! Ea quia cupiditate dolore distinctio expedita incidunt velit eveniet earum fugit! Quo non eum, inventore harum quas alias sed ullam ipsam illo, quidem ducimus, ea perspiciatis voluptatum voluptatem? Repudiandae laboriosam provident nam omnis? Aperiam commodi quod illo? hudu jhfdsjh jfjdsh</p> </div>
-        <div className="items  item5"> </div>
-        <div className="items  item6"> </div>
-        <div className="items  item7"> </div>
+      className="container  container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 h-[65vh] w-[95vw] items-center mt-16  ">
+        <div className="items  item1 col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-2 mx-4 bg-cover bg-[url('image.svg')] rounded-lg"> </div>
+        <div className="items  item2 bg-cover bg-[url('k.svg')] mx-4 rounded-lg "> </div>
+        <div className="items  item3 bg-cover bg-[url('i.svg')] col-span-1 md:row-span-2 mx-4 rounded-lg"> </div>
+        <div className="items text-white flex-col item4 col-span-1 md:row-span-2 mx-3 rounded-lg  font-spaced"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae corrupti cum recusandae ab ipsam nemo reprehenderit enim aliquam, voluptatum, fugiat deleniti. Minima, ipsum distinctio. Sapiente nulla aspernatur odio, quaerat facere praesentium, ut earum autem repellendus ullam doloribus quidem    [ROBOTRON]    reiciendis, saepe voluptatem dolor eos dolorum. Iste perferendis inventore ipsum exercitationem ex neque facere at! Ea quia cupiditate dolore distinctio expedita incidunt velit eveniet earum fugit! Quo non eum, inventore harum quas alias sed ullam ipsam illo, quidem ducimus, ea perspiciatis voluptatum voluptatem? Repudiandae laboriosam provident nam omnis? Aperiam commodi quod illo? hudu jhfdsjh jfjdsh</p> </div>
+        <div className="items  item5 bg-cover bg-[url('k.svg')] mx-4 rounded-lg"> </div>
+        <div className="items  item6 bg-cover bg-[url('j.svg')] mx-4 rounded-lg"> </div>
+        <div className="items  item7 bg-cover bg-[url('image.svg')] mx-4 rounded-lg"> </div>
         {/* <div className="items bg-yellow-400"> </div> */}
          
       </motion.div>
