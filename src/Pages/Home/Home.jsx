@@ -1,14 +1,20 @@
-import Projects from "../../components/Projects/Projects";
+import React from "react";
+import TestimonialSection from "../../components/testimonial/testimonial_section"; // Adjust the path if needed
+import WhatDoWeProvide from "../../components/what_do_we_provide/what_do_we_provide_card"; // Adjust the import name
+import WhatDoWeProvideSlider from "../../components/what_do_we_provide/what_do_we_provide_section";
 
 const Home = () => {
   return (
     <div>
-      <h1 className="font-ethenocentric text-3xl font-bold underline">
-        Hello NERDS!
-      </h1>
-      <div className="px-4 md:px-8 lg:px-16">
-        <Projects></Projects>
-      </div>
+      {/* Other sections of the home page */}
+
+      {/* What Do We Provide Section */}
+      <WhatDoWeProvideSlider />
+
+      {/* Testimonial Section */}
+      <TestimonialSection />
+
+      {/* Other sections of the home page */}
     </div>
   );
 };
