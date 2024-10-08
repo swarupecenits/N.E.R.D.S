@@ -40,11 +40,11 @@ function Hero() {
         <div className="hidden pl-28 md:pl-0 hero_container flex-col items-center md:block">
             <div className="hero md:flex">
                 <div className="left md:mx-auto">
-                    <img src={robot} alt="the robot" className="md:ml-16 pr-12 md:pr-0" />
+                    <img src={robot} alt="the robot" className="md:ml-1 pr-12 md:pr-0" />
                 </div>
 
                 <div className="block md:flex right flex-col items-center justify-center">
-                    <h1 className="ml-12 inline font-ethenocentric font-xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading">EVENTS</h1>
+                    <h1 className="ml-12 inline font-ethenocentric font-xl bg-gradient-to-b from-[#ffffff] to-[#d2332b] bg-clip-text text-transparent main-heading meet-heading">EVENTS</h1>
                     <img src={stuff} alt="the stuff at the bottom " className="md:flex-shrink-0 md:mr-36 md:mt-[-3rem] pr-36 pb-12 md:pr-0 md:pb-0 "/>
                 </div>
             </div>
