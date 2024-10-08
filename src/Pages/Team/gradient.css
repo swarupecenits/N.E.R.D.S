@@ -1,0 +1,8 @@
+body {
+  position: relative;
+  background-color: black;
+}
+.content-section {
+  background: black;
+  animation: motion infinite 5s;
+}
