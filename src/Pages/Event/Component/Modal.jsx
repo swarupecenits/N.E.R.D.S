@@ -24,7 +24,7 @@ const Modal = ({ isOpen, onClose, id }) => {
   return (
     <div style={backdropStyle} onClick={onClose}>
       <motion.div
-        onClick={(e) => e.stopPropagation()} 
+        // onClick={(e) => e.stopPropagation()} 
         initial={{ opacity: 0, y: "-100vh" }}
         animate={{ opacity: 1, y: "0" }}
         exit={{ opacity: 0, y: "-100vh" }}
