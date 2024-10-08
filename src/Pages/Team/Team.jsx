@@ -6,14 +6,13 @@ import TeamCard from "../../components/team_card";
 import "swiper/swiper-bundle.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import data from "./teamData.json";
 import Footer from "../../components/Footer/footer";
+
 const Team = () => {
   const [rotation, setRotation] = useState(-37.96);
   const [isLaptopView, setIsLaptopView] = useState(window.innerWidth >= 1024);
