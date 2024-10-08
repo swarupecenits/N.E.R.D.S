@@ -33,7 +33,7 @@ const Team = () => {
             <img
               src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/txdg7c0ofspqdw5qajni"
               alt="robot-image"
-              className="mix-blend-whiten absolute main-image-img"
+              className="mix-blend-whiten sm:self-center sm:justify-center sm:flex absolute main-image-img"
             />
           </div>
         </div>

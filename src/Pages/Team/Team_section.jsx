@@ -50,13 +50,13 @@ const Team = () => {
         <h1 className="font-ethenocentric text-5xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent meetour">
           MEET OUR
         </h1>
-        <h1 className="font-ethenocentric text-4xl mt-3 bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent member">
+        <h1 className="  font-ethenocentric text-4xl mt-3 bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent member">
           FOURTH YEAR MEMBER
         </h1>
       </div>
       <Swiper
         navigation
-        pagination={{ clickable: true }}
+        pagination={false}
         grabCursor={true}
         spaceBetween={20}
         slidesPerView={1}
@@ -69,7 +69,7 @@ const Team = () => {
       >
         {fourthYearMembers.map((member, index) => (
           <SwiperSlide key={index}>
-            <TeamCard member={member} />
+            <TeamCard className="kardy" member={member} />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -106,7 +106,7 @@ const Team = () => {
       ) : (
         <Swiper
           navigation
-          pagination={{ clickable: true }}
+          pagination={false}
           grabCursor={true}
           spaceBetween={20}
           slidesPerView={1}
@@ -155,7 +155,7 @@ const Team = () => {
       ) : (
         <Swiper
           navigation
-          pagination={{ clickable: true }}
+          pagination={false}
           grabCursor={true}
           spaceBetween={20}
           slidesPerView={1}
@@ -204,7 +204,7 @@ const Team = () => {
       ) : (
         <Swiper
           navigation
-          pagination={{ clickable: true }}
+          pagination={false}
           grabCursor={true}
           spaceBetween={20}
           slidesPerView={1}
