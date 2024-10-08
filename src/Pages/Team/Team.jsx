@@ -11,7 +11,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import data from "./teamData.json";
-import Footer from "../../components/Footer/footer";
 
 const Team = () => {
   const [rotation, setRotation] = useState(-37.96);
