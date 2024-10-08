@@ -7,16 +7,16 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 // Custom Arrow Components for Slick Slider
 const CustomPrevArrow = ({ onClick }) => (
   <div
-    className="absolute top-1/2 left-2 sm:-left-4 transform -translate-y-1/2 bg-black border-2 border-blue-800 rounded-full p-1 cursor-pointer transition duration-300 ease-in-out hover:bg-gray-800 hover:shadow-lg hover:shadow-purple-500 z-10"
+    className="absolute top-[245px] left-2 sm:left-4 transform -translate-y-1/2 bg-black border-2 border-blue-800 rounded-full p-1 cursor-pointer transition duration-300 ease-in-out hover:bg-gray-800 hover:shadow-lg hover:shadow-purple-500 z-10"
     onClick={onClick}
   >
-    <IoIosArrowBack size={20} color="white" />
+    <IoIosArrowBack size={18} color="white" />
   </div>
 );
 
 const CustomNextArrow = ({ onClick }) => (
   <div
-    className="absolute top-1/2 right-2 sm:-right-4 transform -translate-y-1/2 bg-black border-2 border-blue-800 rounded-full p-1 cursor-pointer transition duration-300 ease-in-out hover:bg-gray-800 hover:shadow-lg hover:shadow-purple-500 z-10"
+    className="absolute top-[245px] right-2 sm:right-4 transform -translate-y-1/2 bg-black border-2 border-blue-800 rounded-full p-1 cursor-pointer transition duration-300 ease-in-out hover:bg-gray-800 hover:shadow-lg hover:shadow-purple-500 z-10"
     onClick={onClick}
   >
     <IoIosArrowForward size={20} color="white" />
@@ -74,7 +74,7 @@ const Projects = () => {
           Projects
         </h1>
         {/* Slick Slider for Mobile View */}
-        <div className="block md:hidden px-4">
+        <div className="block md:hidden px-0 ">
           <Slider {...settings}>
             {projects.map((project, index) => (
               <div key={index} className="p-1 px-3 sm:p-4">
