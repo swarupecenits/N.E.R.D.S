@@ -1,9 +1,248 @@
+import stuff from "./Assets/stuff.svg"
+import robot from "./Assets/robot.svg"
+import time from "./Assets/timeline.svg"
+import time2 from "./Assets/time2.svg"
+import {motion} from "framer-motion"
+import { useState } from "react"
+import { AnimatePresence } from "framer-motion";
+import Modal from "./Component/Modal"
+import Modal_mini from "./Component/Modal_mini"
+import Modal_mini_body from "./Component/Modal_mini_body"
+import translate_description_on_timeline from "./JSON/translate_description_on_timeline.json"
 
+// function Hero() {
+//     return(
+//         <div className="container_hero grid grid-cols-10">
+            
+//             <div className="left row-start-1 col-start-2 col-span-4" >
+//                 <img src={robot} alt="the robot" className="" />
+//             </div>
+            
+//             <div className="right row-start-1 col-start-4 col-span-6 grid grid-cols-6">
+//                 <h1 className="col-start-3 row-start-2 font-ethenocentric font-xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading">EVENTS</h1>
+//                 <img src={stuff} alt="the stuff at the bottom " className="flex-shrink-0 col-start-1 row-start-2 col-span-6"/>
+//             </div>
 
-const Event = () => {
-  return (
-    <div className="text-white">Event</div>
-  )
+//             <p className="col-start-4 font-spaced text-white font-normal heading-subsection">A playful way to emphasize your inner competitive spirit and determination</p>
+//         </div>
+//     )
+// }
+
+const links = {
+    card1:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244036/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m.jpg",
+    card2:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_1_rwqeqj.jpg",
+    card3:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.51_AM_w3r231.jpg",
+    card4:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_set08m.jpg",
 }
 
-export default Event
+function Hero() {
+    return (
+        <div className="hidden pl-28 md:pl-0 hero_container flex-col items-center md:block"
+        style={{backgroundImage:"url(https://res.cloudinary.com/dehyqj5i3/image/upload/v1728357474/656b9c98-adbe-4848-916f-67f2f9a0154b.png)"}}
+        >
+            <div className="hero md:flex">
+                <div className="left md:mx-auto">
+                    <img src={robot} alt="the robot" className="md:ml-1 pr-12 md:pr-0" />
+                </div>
+
+                <div className="block md:flex right flex-col items-center justify-center">
+                    <h1 className="ml-12 inline font-ethenocentric font-xl bg-gradient-to-b from-[#ffffff] to-[#d2332b] bg-clip-text text-transparent main-heading meet-heading">EVENTS</h1>
+                    <img src={stuff} alt="the stuff at the bottom " className="md:flex-shrink-0 md:mr-36 md:mt-[-3rem] pr-36 pb-12 md:pr-0 md:pb-0 "/>
+                </div>
+            </div>
+
+            <p className="pl-6  md:mx-auto md:pl-9 font-spaced text-white font-normal heading-subsection">A playful way to emphasize your inner competitive spirit and determination</p>
+
+
+        </div>
+    )
+}
+
+function Hero_small() {
+    return(
+        <div className="hero_contain md:hidden flex flex-col items-center justify-center mb-">
+            <img src={robot} alt="" className="ml-[-3rem] block"/>
+            <h1 className="text-center font-ethenocentric text-5xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading">EVENTS</h1>
+            <img src={stuff} alt=""  className="block pr-14 mt-[-5rem]"/>
+        </div>
+    )
+}
+
+function Timeline(){
+    const [isOpen, setIsOpen] = useState(false);
+    const [id, setId] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
+    const [dataId, setDataId] = useState(1);
+    const obj = {...translate_description_on_timeline};
+
+    return(
+        <div className="timeline_container hidden mb-32 md:block lg:block">
+            <div className="timeline flex flex-col items-center relative">
+                <img src={time} alt="" className="pt-24 lg:px-0 md:px-20 z-0 md:inline" />
+                <div className="absolute lg:px-5 md:px-20 cards z-10 h-[100%] overflow-visible lg:w-[100%] md:w-[65%] flex flex-col items-center justify-between pt-40">
+    
+                    <motion.div 
+                    className="cards flex lg:-mt-0 md:-mt-5" 
+                    onClick={() => {setIsOpen(true); setId(1);}}>
+
+                        <motion.div
+                        className="text text-slate-200 relative text-center text"
+                        initial={{ x: 100, opacity: 0 }} 
+                        animate={isHovered ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
+                        transition={{ duration: 0.3, ease: "easeInOut" }} >
+                            <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data}</p>
+                        </motion.div>
+
+                        <motion.img src={links.card1} alt="" 
+                        initial={{ x: 0, opacity: 1 }} 
+                        whileHover={{ x: 300, opacity: 1 }} 
+                        onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1);}}
+                        onHoverEnd={() => setIsHovered(false)} 
+                        transition={{duration: 0.3, ease: "easeInOut"}} />
+
+                    </motion.div>
+
+
+
+                    {/* cards */}
+
+                    <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(2);}}>
+                        <motion.img src={links.card2} alt="" initial={{ x: 0, opacity: 1 }} 
+                        whileHover={{ x: -300, opacity: 1 }} 
+                        onHoverStart={() => {setIsHovered(true); setId(2);setDataId(2);}} 
+                        onHoverEnd={() => setIsHovered(false)} 
+                        transition={{duration: 0.3, ease: "easeInOut"}} className="" />
+                        <motion.div
+                         className="text text-slate-200 relative text-center text"
+                         initial={{ x: 100, opacity: 0 }} 
+                         animate={(isHovered && id==2)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
+                         transition={{ duration: 0.3, ease: "easeInOut" }} >
+                             <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                        </motion.div>
+                    </motion.div>
+                    <motion.div className="cards mt-4 flex"  onClick={() => { setIsOpen(true);setId(3);}}>
+                        <motion.div  className="text text-slate-200 relative text-center text"
+                        initial={{ x: 100, opacity: 0 }} 
+                        animate={(isHovered && id==3) ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
+                        transition={{ duration: 0.3, ease: "easeInOut" }} >
+                            <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p></motion.div>
+                        <motion.img src={links.card3} alt="" initial={{ x: 0, opacity: 1 }} 
+                        whileHover={{ x: 300, opacity: 1 }} 
+                        onHoverStart={() => {setIsHovered(true); setId(3); setDataId(3);}} 
+                        onHoverEnd={() => setIsHovered(false)} 
+                        transition={{duration: 0.3, ease: "easeInOut"}} />
+                    </motion.div>
+                    <motion.div className="cards mb-10 flex"  onClick={() =>{ setIsOpen(true);setId(4);}}>
+                        <motion.img src={links.card4} alt="" initial={{ x: 0, opacity: 1 }} 
+                        whileHover={{ x: -300, opacity: 1 }} 
+                        onHoverStart={() => {setIsHovered(true); setId(4); setDataId(4);}} 
+                        onHoverEnd={() => setIsHovered(false)} 
+                        transition={{duration: 0.3, ease: "easeInOut"}} />
+                        <motion.div  className="text text-slate-200 relative text-center text"
+                        initial={{ x: 100, opacity: 0 }} 
+                        animate={(isHovered && id==4) ? { x: -40, opacity: 1 } : { x: -100, opacity: 0 }} 
+                        transition={{ duration: 0.3, ease: "easeInOut" }} >
+                            <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p></motion.div>
+                    </motion.div>
+
+                    <AnimatePresence>
+                        {isOpen && <Modal isOpen={isOpen} id={id} onClose={() => setIsOpen(false)} />}
+                    </AnimatePresence>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+function Timeline_small(){
+    // State to manage modal visibility
+    const [isOpen2, setIsOpen2] = useState(false);
+    const [id, setId] = useState(0)
+
+    // Toggle modal visibility
+    const toggleModal = () => setIsOpen2(!isOpen2);
+
+    // Modal animation variants
+    const backdropVariants = {
+        visible: { opacity: 1 },
+        hidden: { opacity: 0 },
+    };
+
+    const modalVariants = {
+        hidden: { opacity: 0, y: '-100vh' },
+        visible: { opacity: 1, y: '0', transition: { duration: 0.5, ease: 'easeInOut' } },
+        exit: { opacity: 0, y: '-100vh', transition: { duration: 0.3 } },
+    };
+
+    return (
+        <div className="timeline_container md:hidden px-10">
+            <div className="timeline grid grid-cols-8 grid-rows-20">
+
+                <img src={time2} alt="" className="col-start-1 row-start-1 col-span-1 row-span-20" />
+                
+                <div className="right_contain col-start-2 row-start-1 col-span-7 row-span-20 flex justify-around flex-col">
+                    <div className="cards col-start-2 row-start-1 col-span-7 row-span-5 mt-28"
+                    onClick={() => {setIsOpen2(!isOpen2), setId(1)}} >
+                        <img src={links.card1} alt="" />
+                    </div>
+                    <div 
+                    onClick={() => {setIsOpen2(!isOpen2), setId(2)}}
+                    className="cards col-start-2 row-start-6 col-span-7 row-span-5 mt-[-2rem]">
+                        <img src={links.card2} alt="" />
+                    </div>
+
+                    <div onClick={() => {setIsOpen2(!isOpen2), setId(3)}}
+                    className="cards col-start-2 row-start-11 col-span-7 row-span-5 mt-[-1rem]">
+                        <img src={links.card3} alt="" />
+                    </div>
+
+                    <div onClick={() => {setIsOpen2(!isOpen2), setId(4)}}
+                    className="cards col-start-2 row-start-16 col-span-7 row-span-5 mb-10">
+                        <img src={links.card4} alt="" />
+                    </div>
+
+                    <AnimatePresence>
+                        {isOpen2 && (
+                        <>
+                            {/* Backdrop animation */}
+                            <motion.div
+                            className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50"
+                            variants={backdropVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="hidden"
+                            onClick={toggleModal}
+                            />
+                            
+                            {/* Modal content */}
+                            <motion.div
+                            className="fixed z-30 top-[25%] left-[10%] w-[80%] bg-white/60 p-5 rounded-xl bg-opacity-60 backdrop-filter backdrop-blur-sm"
+                            variants={modalVariants}
+                            initial="hidden"
+                            animate="visible"
+                            exit="exit"
+                            onClick={toggleModal} >
+                                <Modal_mini_body id={id} toggleModal={toggleModal} />
+                            </motion.div>
+                        </>
+                        )}
+                    </AnimatePresence>
+                </div>
+                
+            </div>
+        </div>
+    )
+}
+
+
+export default function Event(){
+    return (
+        <div className="bg-black overflow-hidden">
+            <Hero />
+            <Hero_small />
+            <Timeline />
+            <Timeline_small />
+            {/* <BasicTimeline className="block md:hidden"/> */}
+        </div>
+    )
+}
