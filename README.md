@@ -1,3 +1,3 @@
 # N.E.R.D.S
 
-Robotics Club of NIT Silchar
+Robotics Club of NIT Silchar.
