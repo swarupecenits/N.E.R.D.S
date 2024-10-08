@@ -24,13 +24,17 @@
   }
 
   .team_kard h2 {
-    font-size: 1.2rem;
+    font-size: 19px !important;
     margin-top: 20px;
   }
 
   .team_kard p {
     font-size: 1rem;
   }
+  .hover-card h2{
+    font-size: 19px !important;
+  }
 
- 
+
+
 }

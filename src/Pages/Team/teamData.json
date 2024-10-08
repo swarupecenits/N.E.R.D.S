@@ -33,7 +33,7 @@
     "social": "",
     "github": "",
     "linkedin": "",
-    "image_id": ""
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728401885/WhatsApp_Image_2024-10-08_at_16.22.08_blj1qh.jpg"
   },
   {
     "id": 5,
@@ -41,6 +41,7 @@
     "team": "3rd Year",
     "designation": "General Secretary",
     "developer_team": "Yes",
+    "developer_domain": "Web",
     "email": "swarupchanda1963@gmail.com",
     "social": "https://www.instagram.com/this_is_swarup_?igsh=MXA4MzE4bnJ3YWs0Mg==",
     "github": "https://github.com/swarupecenits",
@@ -53,6 +54,7 @@
     "team": "3rd Year",
     "designation": "Technical Head",
     "developer_team": "Yes",
+    "developer_domain": "Web",
     "email": "himdfayzan1735@gmail.com",
     "social": "https://www.facebook.com/md.fayzan.79/",
     "github": "https://github.com/fayjan",
@@ -106,7 +108,7 @@
     "social": "",
     "github": "",
     "linkedin": "https://www.linkedin.com/in/rakibul-islam-midul-1b8a081a9/",
-    "image_id": ""
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728401811/WhatsApp_Image_2024-10-08_at_16.22.07_dwxbtl.jpg"
   },
   {
     "id": 7,
@@ -114,6 +116,7 @@
     "team": "2nd Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
+    "developer_domain": "Web",
     "email": "abhinav8723@gmail.com",
     "social": "https://www.instagram.com/abhinav_xingh?igsh=MWUzdGJwaHJpa3hu",
     "github": "https://github.com/abhinav8723",
@@ -174,6 +177,7 @@
     "team": "2nd Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
+    "developer_domain": "UI/UX",
     "email": "amitabhowmik300@gmail.com",
     "social": "https://www.facebook.com/profile.php?id=61564196018243&mibextid=ZbWKwL",
     "github": "https://github.com/Amita-00",
@@ -210,6 +214,7 @@
     "team": "2nd Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
+    "developer_domain": "Web",
     "email": "ayushmanbaruah0101@gmail.com",
     "social": "https://www.instagram.com/ayushmansagar?igsh=MWlqbTh0bnR4azJmZA==",
     "github": "https://github.com/Rockjone-pixel",
@@ -222,6 +227,7 @@
     "team": "2nd Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
+    "developer_domain": "UI/UX",
     "email": "ayushmansagar46@gmail.com",
     "social": "https://www.instagram.com/___b1shal_svs?igsh=MWluN2tpYTRmcHE2dQ==",
     "github": "https://github.com/svsBishal",
@@ -246,6 +252,7 @@
     "team": "2nd Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
+    "developer_domain": "Web",
     "email": "deepanshu_ug_23@ece.nits.ac.in",
     "social": "https://www.instagram.com/_dsharmaa?igsh=YzljYTk1ODg3Zg==",
     "github": "https://github.com/deepanshusharma",
@@ -270,6 +277,7 @@
     "team": "2nd Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
+    "developer_domain": "UI/UX",
     "email": "hrisikeshcollegebaba@gmail.com",
     "social": "https://www.instagram.com/hrisikesh_esc?igsh=Ym82Zm9veHl0ajF2",
     "github": "https://github.com/hrisikeshbegin",
@@ -294,6 +302,7 @@
     "team": "2nd Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
+    "developer_domain": "Web",
     "email": "nishit_ug_23@ece.nits.ac.in",
     "social": "https://www.instagram.com/nishit._9?igsh=Z3FyYnUxb3ZobTJk&utm_source=qr",
     "github": "https://github.com/Ezed9",
@@ -306,6 +315,7 @@
     "team": "2nd Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
+    "developer_domain": "Web",
     "email": "reechadeka010@gmail.com",
     "social": "https://www.instagram.com/_ree.chaa?igsh=bmxnNzZld2ZsbnQ5",
     "github": "https://github.com/rd4554",
@@ -330,6 +340,7 @@
     "team": "2nd Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
+    "developer_domain": "UI/UX",
     "email": "shouvikpaul04@gmail.com",
     "social": "https://www.instagram.com/__s.h.o.u.v.i.k__/",
     "github": "https://github.com/ShouvikNITS",
@@ -354,6 +365,7 @@
     "team": "2nd Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
+    "developer_domain": "Web",
     "email": "sunidhi_ug_23@ei.nits.ac.in",
     "social": "https://www.instagram.com/sunidhiyk?igsh=MXdvMWtxY2xyYmZjbA%3D%3D&utm_source=qr",
     "github": "https://github.com/sunidhiyk",
@@ -378,6 +390,7 @@
     "team": "1st Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
+    "developer_domain": "Web",
     "email": "uddhav_ug_23@ece.nits.ac.in",
     "social": "https://www.instagram.com/inspiral_40mg/",
     "github": "https://github.com/Uddhav-Saikia",
@@ -418,7 +431,7 @@
     "social": "",
     "github": "",
     "linkedin": "",
-    "image_id": ""
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728401997/WhatsApp_Image_2024-10-08_at_16.22.07_1_fcrhpy.jpg"
   },
   {
     "id": 37,
@@ -430,7 +443,7 @@
     "social": "",
     "github": "",
     "linkedin": "",
-    "image_id": ""
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402029/WhatsApp_Image_2024-10-08_at_16.22.07_2_f9yev6.jpg"
   },
   {
     "id": 38,
@@ -442,7 +455,7 @@
     "social": "",
     "github": "",
     "linkedin": "",
-    "image_id": ""
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402068/WhatsApp_Image_2024-10-08_at_16.22.09_swlxop.jpg"
   },
 
   {
@@ -455,7 +468,7 @@
     "social": "",
     "github": "",
     "linkedin": "",
-    "image_id": ""
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402105/WhatsApp_Image_2024-10-08_at_16.22.08_1_rdkv3d.jpg"
   },
   {
     "id": 41,
@@ -463,6 +476,7 @@
     "team": "2nd Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
+    "developer_domain": "Web",
     "email": "damanushka@gmail.com",
     "social": "https://www.instagram.com/anushkadam_24?igsh=aWozeHVoNXV5azB1",
     "github": "https://github.com/Anushkadam4",
@@ -547,6 +561,7 @@
     "team": "2nd Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
+    "developer_domain": "UI/UX",
     "email": "mahashwetab27@gmail.com",
     "social": "https://www.instagram.com/mahashweta_borgohain/",
     "github": "https://github.com/account",
@@ -563,7 +578,7 @@
     "social": "",
     "github": "",
     "linkedin": "",
-    "image_id": ""
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402413/WhatsApp_Image_2024-10-08_at_21.15.01_qweovw.jpg"
   },
   {
     "id": 50,
@@ -575,7 +590,7 @@
     "social": "",
     "github": "",
     "linkedin": "",
-    "image_id": ""
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728403944/WhatsApp_Image_2024-10-08_at_21.41.50_zpfrdd.jpg"
   },
   {
     "id": 51,
@@ -587,7 +602,7 @@
     "social": "",
     "github": "",
     "linkedin": "",
-    "image_id": ""
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728403944/WhatsApp_Image_2024-10-08_at_21.41.39_gnq9vk.jpg"
   },
   {
     "id": 52,
@@ -599,7 +614,7 @@
     "social": "",
     "github": "",
     "linkedin": "",
-    "image_id": ""
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402707/WhatsApp_Image_2024-10-08_at_21.21.21_f17z12.jpg"
   },
   {
     "id": 53,
@@ -623,7 +638,7 @@
     "social": "",
     "github": "",
     "linkedin": "",
-    "image_id": ""
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402409/WhatsApp_Image_2024-10-08_at_21.14.18_e6ckka.jpg"
   },
   {
     "id": 55,
@@ -631,6 +646,7 @@
     "team": "2nd Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
+    "developer_domain": "Web",
     "email": "jubaraj.t3006@gmail.com",
     "social": "https://www.instagram.com/jubaraj__talukdar/",
     "github": "https://github.com/JACKIE30",

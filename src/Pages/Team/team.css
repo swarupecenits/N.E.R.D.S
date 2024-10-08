@@ -41,6 +41,42 @@
   mask-repeat: no-repeat;
   object-fit: cover;
 }
+.meetour{
+  font-size: 4.2rem;
+}
+.member{
+  font-size: 4.0rem;
+}
+
+@media screen and (max-width:768px){
+  .meetour{
+    font-size: 3.2rem;
+  }
+  .member{
+    font-size: 2.6rem;
+  }
+  .meet4th{
+    padding-top: 100px;
+  }
+  .meet-heading{
+    top: 380px!important
+  }
+  .team-heading{
+    top: 480px !important;
+  }
+  .heading-subsection{
+    top: 580px !important;
+  }
+}
+@media screen and (max-width: 426px) {
+  .meetour{
+    font-size: 2.2rem;
+  }
+  .member{
+    font-size: 1.4rem;
+  }
+}
+
 @media screen and (max-width: 1401px) {
   .main-image-img {
     left: 450px;
@@ -165,10 +201,10 @@
 }
 @media screen and (max-width: 495px) {
   .main-image-img {
-    width: 300px !important;
-    height: 400px !important;
+    width: 400px;
+    height: 650px !important;
     top: -40px;
-    left: 4rem !important;
+    left: 40px;
   }
   .main-heading {
     font-size: 40px !important;
@@ -180,9 +216,11 @@
     left: 45px;
   }
 
-  .meetour{
-    margin-top: -15rem;
+@media screen and (max-width: 439px) {
+  .main-image-img{
+    left: 10px;
   }
+}
   /* .firstline,.thirdline{
         width: 200px;
        }
@@ -259,5 +297,38 @@
   .main-heading,
   .heading-subsection {
     left: 20px;
+  }
+}
+.firstline,
+.thirdline {
+  width: 80%;
+  background-color: #e807b7;
+  margin-bottom: 20px;
+  height: 3px;
+}
+.secondline {
+  width: 95%;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  height: 3px;
+}
+@media (max-width: 768px) {
+  .firstline,
+  .thirdline {
+    width: 60%;
+  }
+  .secondline {
+    width: 75%;
+  }
+}
+
+
+@media (max-width: 479px) {
+  .firstline,
+  .thirdline {
+    width: 40%;
+  }
+  .secondline {
+    width: 55%;
   }
 }
