@@ -1,13 +1,14 @@
 import React from "react"; 
 import {motion} from 'framer-motion';
 import { Link, Element, animateScroll as scroll } from 'react-scroll';
-
+import Pop from "./pop.jsx";
 import  { useEffect, useState, useRef } from 'react';
 import './gradient.css';
 import './gallery.css';
 import Header from './header.jsx';
 // import App from './app.jsx'
 import './section.css';
+import App from './app.jsx';
 
 
 function Gallery(){
@@ -47,6 +48,7 @@ function Gallery(){
           whileInView={{opacity:1, translateX:"100%"}}
           transition={{duration: 1}} className=" font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading text-slide " id="font">GLIMPSE
           </motion.h1>
+          <App />
     </section>
     <Header  setActiveSection={setActiveSection} />
     <section name="third1" className={`third1 section bg-black ${activeSection === "third1" ? "" : "hidden"}`}>
@@ -97,6 +99,7 @@ function Gallery(){
        whileInView={{opacity:1, translateX:"0%", translateY: "12%"}}
        transition={{duration: 1}}
        className="container1 ">
+        {/* <Pop/> */}
        <div className="items  item1"> </div>
         <div className="items  item2 "> </div>
         <div className="items  item3"> </div>
