@@ -37,7 +37,9 @@ const links = {
 
 function Hero() {
     return (
-        <div className="hidden pl-28 md:pl-0 hero_container flex-col items-center md:block">
+        <div className="hidden pl-28 md:pl-0 hero_container flex-col items-center md:block"
+        style={{backgroundImage:"url(https://res.cloudinary.com/dehyqj5i3/image/upload/v1728357474/656b9c98-adbe-4848-916f-67f2f9a0154b.png)"}}
+        >
             <div className="hero md:flex">
                 <div className="left md:mx-auto">
                     <img src={robot} alt="the robot" className="md:ml-1 pr-12 md:pr-0" />
@@ -74,13 +76,13 @@ function Timeline(){
     const obj = {...translate_description_on_timeline};
 
     return(
-        <div className="timeline_container hidden mb-32 md:block">
+        <div className="timeline_container hidden mb-32 md:block lg:block">
             <div className="timeline flex flex-col items-center relative">
-                <img src={time} alt="" className="pt-24 z-0 hidden md:inline" />
-                <div className="absolute cards z-10 h-[100%] overflow-visible w-[100%] flex flex-col items-center justify-between pt-40">
+                <img src={time} alt="" className="pt-24 lg:px-0 md:px-20 z-0 md:inline" />
+                <div className="absolute lg:px-5 md:px-20 cards z-10 h-[100%] overflow-visible lg:w-[100%] md:w-[65%] flex flex-col items-center justify-between pt-40">
     
                     <motion.div 
-                    className="cards flex" 
+                    className="cards flex lg:-mt-0 md:-mt-5" 
                     onClick={() => {setIsOpen(true); setId(1);}}>
 
                         <motion.div
