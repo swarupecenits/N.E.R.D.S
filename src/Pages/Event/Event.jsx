@@ -8,6 +8,7 @@ import { AnimatePresence } from "framer-motion";
 import Modal from "./Component/Modal"
 import Modal_mini from "./Component/Modal_mini"
 import Modal_mini_body from "./Component/Modal_mini_body"
+import translate_description_on_timeline from "./JSON/translate_description_on_timeline.json"
 
 // function Hero() {
 //     return(
@@ -26,37 +27,6 @@ import Modal_mini_body from "./Component/Modal_mini_body"
 //         </div>
 //     )
 // }
-
-const modal_data = {
-  
-    1:
-      {head:"first",
-      text:"text 1",
-      url: "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728318976/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m-removebg-preview_ci6rfb.png"
-  
-  
-      },
-    2:
-      {head:"second ",
-      text:"text 2",
-      url: "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728319093/WhatsApp_Image_2024-10-07_at_1.15.52_AM_1_rwqeqj-removebg-preview_qiah9h.png"
-  
-  
-      },
-    3:
-      {head:"third ",
-      text:"text 3",
-      url: "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728319250/WhatsApp_Image_2024-10-07_at_1.15.51_AM_w3r231-removebg-preview_1_qtqwt5.png"
-  
-      },
-    4:
-      {
-        head:"fourth",
-      text:"text 4",
-      url: "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728319299/WhatsApp_Image_2024-10-07_at_1.02.58_AM_rhqfl2-removebg-preview_yvzens.png"
-      }
-  }
-  
 
 const links = {
     card1:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244036/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m.jpg",
@@ -100,6 +70,8 @@ function Timeline(){
     const [isOpen, setIsOpen] = useState(false);
     const [id, setId] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
+    const [dataId, setDataId] = useState(1);
+    const obj = {...translate_description_on_timeline};
 
     return(
         <div className="timeline_container hidden mb-32 md:block">
@@ -116,13 +88,13 @@ function Timeline(){
                         initial={{ x: 100, opacity: 0 }} 
                         animate={isHovered ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
                         transition={{ duration: 0.3, ease: "easeInOut" }} >
-                            <p className="absolute font-ethenocentric text-4xl min-w-96 left-[-10rem] top-24">Rat in a maze, pretty interesting thing ngl. learnt and had a lot of fun too</p>
+                            <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data}</p>
                         </motion.div>
 
                         <motion.img src={links.card1} alt="" 
                         initial={{ x: 0, opacity: 1 }} 
                         whileHover={{ x: 300, opacity: 1 }} 
-                        onHoverStart={() => {setIsHovered(true); setId(1);}}
+                        onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1);}}
                         onHoverEnd={() => setIsHovered(false)} 
                         transition={{duration: 0.3, ease: "easeInOut"}} />
 
@@ -135,7 +107,7 @@ function Timeline(){
                     <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(2);}}>
                         <motion.img src={links.card2} alt="" initial={{ x: 0, opacity: 1 }} 
                         whileHover={{ x: -300, opacity: 1 }} 
-                        onHoverStart={() => {setIsHovered(true); setId(2);}} 
+                        onHoverStart={() => {setIsHovered(true); setId(2);setDataId(2);}} 
                         onHoverEnd={() => setIsHovered(false)} 
                         transition={{duration: 0.3, ease: "easeInOut"}} className="" />
                         <motion.div
@@ -143,7 +115,7 @@ function Timeline(){
                          initial={{ x: 100, opacity: 0 }} 
                          animate={(isHovered && id==2)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
                          transition={{ duration: 0.3, ease: "easeInOut" }} >
-                             <p className="absolute font-ethenocentric text-4xl min-w-96 left-[-10rem] top-24">Rat in a maze was good ngl. learnt a lot of stuff. </p>
+                             <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
                         </motion.div>
                     </motion.div>
                     <motion.div className="cards mt-4 flex"  onClick={() => { setIsOpen(true);setId(3);}}>
@@ -151,24 +123,24 @@ function Timeline(){
                         initial={{ x: 100, opacity: 0 }} 
                         animate={(isHovered && id==3) ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
                         transition={{ duration: 0.3, ease: "easeInOut" }} >
-                            <p className="absolute font-ethenocentric text-4xl min-w-96 left-[-10rem] top-24">Rat in a maze was good ngl. learnt a lot of stuff. </p></motion.div>
+                            <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p></motion.div>
                         <motion.img src={links.card3} alt="" initial={{ x: 0, opacity: 1 }} 
                         whileHover={{ x: 300, opacity: 1 }} 
-                        onHoverStart={() => {setIsHovered(true); setId(3);}} 
+                        onHoverStart={() => {setIsHovered(true); setId(3); setDataId(3);}} 
                         onHoverEnd={() => setIsHovered(false)} 
                         transition={{duration: 0.3, ease: "easeInOut"}} />
                     </motion.div>
                     <motion.div className="cards mb-10 flex"  onClick={() =>{ setIsOpen(true);setId(4);}}>
                         <motion.img src={links.card4} alt="" initial={{ x: 0, opacity: 1 }} 
                         whileHover={{ x: -300, opacity: 1 }} 
-                        onHoverStart={() => {setIsHovered(true); setId(4);}} 
+                        onHoverStart={() => {setIsHovered(true); setId(4); setDataId(4);}} 
                         onHoverEnd={() => setIsHovered(false)} 
                         transition={{duration: 0.3, ease: "easeInOut"}} />
                         <motion.div  className="text text-slate-200 relative text-center text"
                         initial={{ x: 100, opacity: 0 }} 
                         animate={(isHovered && id==4) ? { x: -40, opacity: 1 } : { x: -100, opacity: 0 }} 
                         transition={{ duration: 0.3, ease: "easeInOut" }} >
-                            <p className="absolute font-ethenocentric text-4xl min-w-96 left-[-10rem] top-24">Rat in a maze was good ngl. learnt a lot of stuff. </p></motion.div>
+                            <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p></motion.div>
                     </motion.div>
 
                     <AnimatePresence>
@@ -241,13 +213,13 @@ function Timeline_small(){
                             
                             {/* Modal content */}
                             <motion.div
-                            className="fixed top-[20%] left-[10%] mx-auto transform  w-[80vw]"
+                            className="fixed z-30 top-[25%] left-[10%] w-[80%] bg-white/60 p-5 rounded-xl bg-opacity-60 backdrop-filter backdrop-blur-sm"
                             variants={modalVariants}
                             initial="hidden"
                             animate="visible"
                             exit="exit"
                             onClick={toggleModal} >
-                                <Modal_mini_body />
+                                <Modal_mini_body id={id} />
                             </motion.div>
                         </>
                         )}
