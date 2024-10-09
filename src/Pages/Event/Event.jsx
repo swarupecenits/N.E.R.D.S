@@ -6,7 +6,6 @@ import {motion} from "framer-motion"
 import { useState } from "react"
 import { AnimatePresence } from "framer-motion";
 import Modal from "./Component/Modal"
-import Modal_mini from "./Component/Modal_mini"
 import Modal_mini_body from "./Component/Modal_mini_body"
 import translate_description_on_timeline from "./JSON/translate_description_on_timeline.json"
 import pc_card_border from "./Assets/pc_card_border.svg"
@@ -321,7 +320,7 @@ function Timeline_small(){
                                 aspectRatio: '730 / 460',
                             }}
                             >
-                                <img src={pc_card_border} alt="" /> 
+                                <img src={pc_card_border} alt="" />     
                                 <img
                                     src={links.card1} // Use the passed image source prop
                                     alt="Sample Image"

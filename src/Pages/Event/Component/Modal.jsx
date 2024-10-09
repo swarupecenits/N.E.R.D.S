@@ -3,6 +3,7 @@ import React from "react";
 import modalbg from "../Assets/modalbg.svg"
 import icon  from "../Assets/modal/icon1.svg";
 import modaldata from "../JSON/modaldata.json"
+import pc_card_border from "../Assets/pc_card_border.svg"
 
 const Content = ({id}) => {
     const obj = {...modaldata}
@@ -13,7 +14,26 @@ const Content = ({id}) => {
             <h1 className="text-center  text-4xl absolute top-[-8rem] left-14 font-ethenocentric text-slate-300 ">{obj[id].head}</h1>
             <p className="font-ethnocentric text-2xl absolute top-8 left-14  text-wrap max-w-[30rem] text-slate-400">{obj[id].text}</p>
             <img src={icon} alt="icon in modal" className="absolute top-[-2.8rem] left-12" />
-            <img src={obj[id].url} alt="image in modal" className="absolute top-[-8rem] left-[33rem] max-w-96" />
+            {/* <img src={obj[id].url} alt="image in modal" className="absolute top-[-8rem] left-[33rem] max-w-96" /> */}
+
+                        <div
+                            className="overflow-hidden flex absolute top-[-8rem] left-[33rem] max-w-96 "
+                            style={{
+                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+                                aspectRatio: '730 / 460',
+                            }}
+                            >
+                                
+                                <img src={pc_card_border} alt=""  className="z-0 absolute" />     
+
+                                <img
+                                    src={"https://www.quantamagazine.org/wp-content/uploads/2018/07/SolarFull_SeanDoran_2880FullwidthLede.jpg"} // Use the passed image source prop
+                                    alt="Sample Image"
+                                    className=" h-full w-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
+                                />
+                        </div>
+
+            
         </>
     )
 }
