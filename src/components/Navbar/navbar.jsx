@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Logo from "./logo.png"; 
+import Logo from "./logo.png";
 
 const links = [
   { name: 'Home', path: '/' },
@@ -13,53 +13,42 @@ const links = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [nerdsClicked, setNerdsClicked] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Toggle the mobile menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
-  // Handle NERDS click and apply glow effect
-  const handleNerdsClick = () => {
-    setNerdsClicked(true);
-    setTimeout(() => setNerdsClicked(false), 1000);
-  };
-
-  // Handle link click and show loader
   const handleLinkClick = (path) => {
+    // Close menu and navigate to the selected path
     if (path !== '/') {
       setLoading(true);
     }
+
     setTimeout(() => {
       setLoading(false);
       navigate(path);
+      setIsOpen(false);  // Close the mobile menu after clicking the link
     }, 1000);
   };
 
   return (
-    <nav className="bg-black text-white">
-      <div className="lg:px-12 sm:px-7 max-w-9xl mx-auto max-h-24 flex justify-between items-center p-6 "> {/* Adjusted max width */}
+    <nav className="bg-black text-white sticky top-0 z-50"> {/* Sticky Navbar */}
+      <div className="lg:px-12 sm:px-7 max-w-9xl mx-auto max-h-24 flex justify-between items-center p-6">
         
-        {/* Logo and Title */}
         <div className="flex items-center">
-          <img  src={Logo} alt="NERDS Logo" className="h-16 mr-8" />
-          
+          <img src={Logo} alt="NERDS Logo" className="h-16 mr-8" />
           <span className="hidden md:block text-2xl font-ethenocentric font-semibold">
-          <span
-  className="hover:[text-shadow:_0_5px_100px_rgba(0,255,255,0.9),_0_0_15px_rgba(0,255,255,1),_0_0_200px_rgba(0,255,255,1),_0_0_100px_rgba(99,102,241,0.8);] hover:text-[#00FFFF]"
->
-  N.E.R.D.S
-</span>
-
-
+            <span
+              className="hover:[text-shadow:_0_5px_100px_rgba(0,255,255,0.9),_0_0_15px_rgba(0,255,255,1),_0_0_200px_rgba(0,255,255,1),_0_0_100px_rgba(99,102,241,0.8);] hover:text-[#00FFFF]"
+            >
+              N.E.R.D.S
+            </span>
           </span>
         </div>
 
-        {/* Desktop Links (Hidden on Mobile) */}
-        <div className="hidden md:flex space-x-6 text-xl font-spaced font-extrabold ">
+        <div className="hidden md:flex space-x-6 text-xl font-spaced font-extrabold">
           {links.map((link, index) => (
             <button
               key={index}
@@ -75,7 +64,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Toggle (Always Visible on Mobile) */}
+        {/* Hamburger Menu for mobile view */}
         <button
           className="menu-toggle flex justify-center items-center p-2 md:hidden"
           onClick={toggleMenu}
@@ -92,24 +81,21 @@ const Navbar = () => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
       >
-        {/* Mobile Header */}
         <div className="flex items-center justify-between p-4">
           <Link to="/" onClick={toggleMenu}>
-            <img src={Logo} alt="NERDS Logo" className="h-10 ml-0" /> {/* Shifted logo to the leftmost corner */}
+            <img src={Logo} alt="NERDS Logo" className="h-10 ml-0" />
           </Link>
-          
           <button className="text-2xl text-white" onClick={toggleMenu}>
             &#10005;
           </button>
         </div>
 
-        {/* Mobile Links */}
         <nav className="menu-links flex flex-col justify-center items-start gap-8 p-6">
           {links.map((link, index) => (
             <button
               key={index}
               onClick={() => handleLinkClick(link.path)}
-              className={`relative group w-full py-2 text-lg capitalize text-white transition-all font-spaced`}
+              className="relative group w-full py-2 text-lg capitalize text-white transition-all font-spaced"
             >
               <span className="relative z-10 px-5 py-4"> 
                 {link.name}
@@ -120,6 +106,7 @@ const Navbar = () => {
         </nav>
       </div>
 
+      {/* Overlay for mobile menu */}
       {isOpen && (
         <div
           className="menu-overlay fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40 md:hidden"
@@ -131,3 +118,6 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
