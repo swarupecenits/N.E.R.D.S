@@ -81,10 +81,10 @@ function Timeline(){
                 <img src={time} alt="" className="pt-24 lg:px-0 md:px-20 z-0 md:inline" />
                 <div className="absolute lg:px-5 md:px-20 cards z-10 h-[100%] overflow-visible lg:w-[100%] md:w-[65%] flex flex-col items-center justify-between pt-40">
     
-                    <motion.div 
-                    className="cards flex lg:-mt-0 md:-mt-5" 
-                    onClick={() => {setIsOpen(true); setId(1);}}>
+                    {/* cards */}
 
+                    {/* card1 */}
+                    <motion.div className="cards flex lg:-mt-0 md:-mt-5" onClick={() => {setIsOpen(true); setId(1);}}>
                         <motion.div
                         className="text text-slate-200 relative text-center text"
                         initial={{ x: 100, opacity: 0 }} 
@@ -103,9 +103,7 @@ function Timeline(){
                     </motion.div>
 
 
-
-                    {/* cards */}
-
+                    {/* card2 */}
                     <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(2);}}>
                         <motion.img src={links.card2} alt="" initial={{ x: 0, opacity: 1 }} 
                         whileHover={{ x: -300, opacity: 1 }} 
@@ -120,6 +118,8 @@ function Timeline(){
                              <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
                         </motion.div>
                     </motion.div>
+                    
+                    {/* card3 */}
                     <motion.div className="cards mt-4 flex"  onClick={() => { setIsOpen(true);setId(3);}}>
                         <motion.div  className="text text-slate-200 relative text-center text"
                         initial={{ x: 100, opacity: 0 }} 
@@ -132,6 +132,8 @@ function Timeline(){
                         onHoverEnd={() => setIsHovered(false)} 
                         transition={{duration: 0.3, ease: "easeInOut"}} />
                     </motion.div>
+                    
+                    {/* card4 */}
                     <motion.div className="cards mb-10 flex"  onClick={() =>{ setIsOpen(true);setId(4);}}>
                         <motion.img src={links.card4} alt="" initial={{ x: 0, opacity: 1 }} 
                         whileHover={{ x: -300, opacity: 1 }} 
@@ -141,6 +143,34 @@ function Timeline(){
                         <motion.div  className="text text-slate-200 relative text-center text"
                         initial={{ x: 100, opacity: 0 }} 
                         animate={(isHovered && id==4) ? { x: -40, opacity: 1 } : { x: -100, opacity: 0 }} 
+                        transition={{ duration: 0.3, ease: "easeInOut" }} >
+                            <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p></motion.div>
+                    </motion.div>
+                    
+                    {/* card5 */}
+                    <motion.div className="cards mb-10 flex"  onClick={() =>{ setIsOpen(true);setId(5);}}>
+                        <motion.div  className="text text-slate-200 relative text-center text"
+                        initial={{ x: 100, opacity: 0 }} 
+                        animate={(isHovered && id==5) ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
+                        transition={{ duration: 0.3, ease: "easeInOut" }} >
+                            <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p></motion.div>
+                        <motion.img src={links.card4} alt="" initial={{ x: 0, opacity: 1 }} 
+                        whileHover={{ x: 300, opacity: 1 }} 
+                        onHoverStart={() => {setIsHovered(true); setId(5); setDataId(5);}} 
+                        onHoverEnd={() => setIsHovered(false)} 
+                        transition={{duration: 0.3, ease: "easeInOut"}} />
+                    </motion.div>
+                    
+                    {/* card6 */}
+                    <motion.div className="cards mb-10 flex"  onClick={() =>{ setIsOpen(true);setId(6);}}>
+                        <motion.img src={links.card4} alt="" initial={{ x: 0, opacity: 1 }} 
+                        whileHover={{ x: -300, opacity: 1 }} 
+                        onHoverStart={() => {setIsHovered(true); setId(6); setDataId(6);}} 
+                        onHoverEnd={() => setIsHovered(false)} 
+                        transition={{duration: 0.3, ease: "easeInOut"}} />
+                        <motion.div  className="text text-slate-200 relative text-center text"
+                        initial={{ x: 100, opacity: 0 }} 
+                        animate={(isHovered && id==6) ? { x: -40, opacity: 1 } : { x: -100, opacity: 0 }} 
                         transition={{ duration: 0.3, ease: "easeInOut" }} >
                             <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p></motion.div>
                     </motion.div>
