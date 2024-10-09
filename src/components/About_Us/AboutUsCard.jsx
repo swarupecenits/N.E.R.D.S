@@ -193,46 +193,121 @@ const AboutUsCard = ({ items }) => {
     </svg>
   );
 
+  // Define the SVG for the mobile view
+  const mobileSvgBorder = (
+    <svg
+      width="360" // Adjusted width for mobile view
+      height="300"
+      viewBox="0 0 1087 577"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g opacity="0.55" filter="url(#filter0_b_443_776)">
+        <mask id="path-1-inside-1_443_776" fill="white">
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M68.8053 9.7464C73.3299 3.61708 80.4958 0 88.1143 0H1063C1076.25 0 1087 10.7452 1087 24V466.146C1087 471.277 1085.36 476.272 1082.31 480.4L1018.19 567.254C1013.67 573.383 1006.5 577 998.886 577H24C10.7452 577 0 566.255 0 553V110.854C0 105.723 1.64408 100.728 4.69107 96.6L68.8053 9.7464Z"
+          />
+        </mask>
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M68.8053 9.7464C73.3299 3.61708 80.4958 0 88.1143 0H1063C1076.25 0 1087 10.7452 1087 24V466.146C1087 471.277 1085.36 476.272 1082.31 480.4L1018.19 567.254C1013.67 573.383 1006.5 577 998.886 577H24C10.7452 577 0 566.255 0 553V110.854C0 105.723 1.64408 100.728 4.69107 96.6L68.8053 9.7464Z"
+          fill="#020203"
+          fillOpacity="0.9"
+        />
+      </g>
+      <defs>
+        <filter
+          id="filter0_b_443_776"
+          x="-13.1"
+          y="-13.1"
+          width="1113.2"
+          height="603.2"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feGaussianBlur in="BackgroundImageFix" stdDeviation="6.55" />
+          <feComposite
+            in2="SourceAlpha"
+            operator="in"
+            result="effect1_backgroundBlur_443_776"
+          />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="effect1_backgroundBlur_443_776"
+            result="shape"
+          />
+        </filter>
+      </defs>
+    </svg>
+  );
+
   return (
-    <div className="relative my-2 transform scale-50 lg:scale-50  ">
-      {" "}
-      {/* Scale down to 50% */}
-      <div className="flex justify-center items-center relative w-full h-80 group md:p-0 ">
+    <div>
+      {/* Desktop View */}
+      <div className="hidden md:block relative my-2 transform scale-50 lg:scale-50  ">
         {" "}
-        {/* Added group class for hover effect */}
-        <div className="absolute z-15">
+        {/* Scale down to 50% */}
+        <div className="flex justify-center items-center relative w-full h-64 group md:p-0 ">
           {" "}
-          {/* First SVG */}
-          {svgBorder}
-        </div>
-        <div className="absolute z-5 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100">
-          {" "}
-          {/* Second SVG with opacity change on hover */}
-          {hoverSvgBorder}
-        </div>
-        {/* Centered Box with Text and Heading */}
-        <div className="flex justify-center items-center max-w-[3000px] h-[570px]  relative z-20">
-          {" "}
-          {/* Increase z-index for the text container */}
-          {/* Glassmorphism effect */}
-          <div
-            className="absolute inset-0 z-0 bg-black/30 backdrop-blur-lg border border-transparent rounded-3xl"
-            style={{
-              clipPath:
-                "polygon(5% 0%, 100% 0%, 100% 85%, 90% 100%, 0% 100%, 0% 15%)",
-            }} // Clip path to slightly cut the top corners
-          ></div>
-          <div className="text-center z-30 px-0 ">
+          {/* Added group class for hover effect */}
+          <div className="absolute z-15">
             {" "}
-            {/* Center text within the box */}
-            {/* Heading */}
-            <h2 className="font-spaced text-left text-[40px] md:text-[60px] lg:text-[60px] bg-gradient-to-b from-white to-gray-400 text-transparent bg-clip-text mt-5 lg:mt-1">
-              {items.title} {/* Updated to use dynamic title */}
-            </h2>
-            {/* Text */}
-            <p className="font-spaced text-justify text-[18px] sm:text-[18px] md:text-[22px] lg:text-[27px]   text-white mt-4 mb-4 px-2 md:px-0 lg:px-0 lg:mt-0 ">
-              {items.text} {/* Updated to use dynamic text */}
-            </p>
+            {/* First SVG */}
+            {svgBorder}
+          </div>
+          <div className="absolute z-5 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100">
+            {" "}
+            {/* Second SVG with opacity change on hover */}
+            {hoverSvgBorder}
+          </div>
+          {/* Centered Box with Text and Heading */}
+          <div className="flex justify-center items-center w-[1085px] h-[570px]  relative z-20">
+            {" "}
+            {/* Increase z-index for the text container */}
+            {/* Glassmorphism effect */}
+            <div
+              className="absolute inset-0 z-0 bg-black/30 backdrop-blur-lg border border-transparent rounded-3xl"
+              style={{
+                clipPath:
+                  "polygon(7.4% 0%, 100% 0%, 100% 82%, 93% 100%, 0% 100%, 0% 18%)",
+              }} // Clip path to slightly cut the top corners
+            ></div>
+            <div className="text-center z-30">
+              {" "}
+              {/* Center text within the box */}
+              {/* Heading */}
+              <h2 className="font-spaced text-left text-[40px] md:text-[60px] leading-[56.58px] tracking-[0.03em] lg:text-[60px] bg-gradient-to-b from-white to-gray-400 text-transparent bg-clip-text mt-3 lg:mt-1">
+                {items.title} {/* Updated to use dynamic title */}
+              </h2>
+              {/* Text */}
+              <p className="font-spaced text-justify text-[18px] sm:text-[18px] md:text-[22px] lg:text-[27px]   text-white mt-4 mb-4 px-2 md:px-0 lg:px-0 lg:mt-1  ">
+                {items.text} {/* Updated to use dynamic text */}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Mobile View */}
+      <div className="flex flex-col gap-4 p-4 md:hidden">
+        <div className="relative p-1 rounded-lg">
+          {/* Optional background ring light effect */}
+          <div className="absolute inset-0 border-2 border-gradient-to-r from-gray-800 to-black rounded-lg blur-lg shadow-lg"></div>
+
+          {/* Inner card with glassmorphism */}
+          <div
+            className="relative border-4 border-gray-600 bg-black/30 backdrop-blur-md p-4 shadow-lg hover:shadow-xl transition duration-200 rounded-[32px] rounded-tr-lg rounded-bl-lg"
+            style={{
+              background: "rgba(255, 255, 255, 0.05)", // Optional, can be adjusted
+              backdropFilter: "blur(10px)",
+            }}
+          >
+            <h3 className="text-xl font-spaced text-white">{items.title}</h3>
+            <p className="mt-2 text-white">{items.text}</p>
           </div>
         </div>
       </div>

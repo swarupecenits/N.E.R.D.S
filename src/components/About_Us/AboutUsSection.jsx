@@ -27,7 +27,7 @@ const AboutUsSection = () => {
       }}
     >
       {/* Section Heading */}
-      <h2 className="text-center text-3xl font-ethenocentric text-white mb-12 md:text-5xl lg:text-6xl ">
+      <h2 className="text-center text-4xl font-ethenocentric bg-gradient-to-r from-white to-cyan-500 text-transparent bg-clip-text mb-12 md:text-5xl lg:text-6xl">
         About Us
       </h2>
 
@@ -38,9 +38,9 @@ const AboutUsSection = () => {
             key={index}
             className={`w-full flex ${
               index % 2 === 0 || index == 0 ? "justify-start" : "justify-end"
-            } px-2 md:px-0`} // Adjust padding to keep cards centered on smaller screens
+            } px-2 md:px-0 py-4`} // Adjust padding to keep cards centered on smaller screens
           >
-            <div className="w-full md:w-1/2 ">
+            <div className="w-full md:w-1/2  ">
               {" "}
               {/* Ensure the card takes half the width on medium screens and above */}
               <AboutUsCard items={item} />
