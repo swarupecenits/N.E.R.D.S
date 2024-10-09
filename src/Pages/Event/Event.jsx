@@ -84,7 +84,7 @@ function Timeline(){
                     {/* cards */}
 
                     {/* card1 */}
-                    <motion.div className="cards flex lg:-mt-0 md:-mt-5" onClick={() => {setIsOpen(true); setId(1);}}>
+                    {/* <motion.div className="cards flex lg:-mt-0 md:-mt-5" onClick={() => {setIsOpen(true); setId(1);}}>
                         <motion.div
                         className="text text-slate-200 relative text-center text"
                         initial={{ x: 100, opacity: 0 }} 
@@ -98,9 +98,49 @@ function Timeline(){
                         whileHover={{ x: 300, opacity: 1 }} 
                         onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1);}}
                         onHoverEnd={() => setIsHovered(false)} 
-                        transition={{duration: 0.3, ease: "easeInOut"}} />
+                        transition={{duration: 0.3, ease: "easeInOut"}} /> */}
+                        {/* </motion.div> */}
 
-                    </motion.div>
+<motion.div
+      className="relative overflow-hidden border-brown border flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
+      style={{
+        clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+        aspectRatio: '730 / 460',
+      }}
+      onClick={() => {setIsOpen(true); setId(1);}}
+      initial={{ x: 0, opacity: 1 }} 
+      whileHover={{ x: 300, opacity: 1 }} 
+      onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1);}}
+      onHoverEnd={() => setIsHovered(false)} 
+      transition={{duration: 0.3, ease: "easeInOut"}}
+    >
+      <img
+        src={links.card1} // Use the passed image source prop
+        alt="Sample Image"
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10" // Using Tailwind for positioning and sizing
+     
+      />
+      <svg width="100%" height="100%" viewBox="0 0 730 460" xmlns="http://www.w3.org/2000/svg">
+        {/* Define the gradient for the stroke */}
+        <defs>
+          <linearGradient id="cut-corner-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style={{ stopColor: '#800080' }} />   {/* Purple (Top Left) */}
+            <stop offset="50%" style={{ stopColor: '#8000ff' }} />  {/* Maroon (Center) */}
+            <stop offset="75%" style={{ stopColor: '#800080' }} />  {/* Purple (Bottom Right) */}
+            <stop offset="100%" style={{ stopColor: '#0a0a0a' }} /> {/* Almost Black (Bottom Left) */}
+          </linearGradient>
+        </defs>
+
+        {/* Apply transparent fill and gradient stroke to the polygon */}
+        <polygon
+          points="73,0 730,0 730,414 657,460 0,460 0,46"
+          fill="none"
+          stroke="url(#cut-corner-gradient)"
+          strokeWidth="10"
+        />
+      </svg>
+    </motion.div>
+
 
 
                     {/* card2 */}
@@ -267,7 +307,7 @@ function Timeline_small(){
 
 export default function Event(){
     return (
-        <div className="bg-black overflow-hidden">
+        <div className="bg-white overflow-hidden">
             <Hero />
             <Hero_small />
             <Timeline />
