@@ -306,8 +306,8 @@ const AboutUsCard = ({ items }) => {
               backdropFilter: "blur(10px)",
             }}
           >
-            <h3 className="text-xl font-spaced text-white">{items.title}</h3>
-            <p className="mt-2 text-white">{items.text}</p>
+            <h3 className="text-3xl font-spaced text-white">{items.title}</h3>
+            <p className="mt-2 font-spaced text-white">{items.text}</p>
           </div>
         </div>
       </div>
