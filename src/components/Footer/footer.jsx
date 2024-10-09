@@ -1,5 +1,5 @@
 // import React from 'react';
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaYoutube, FaYoutubeSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { PiInstagramLogoFill } from "react-icons/pi";
 
@@ -76,27 +76,34 @@ function Footer() {
               </p>
             </div>
 
-            <div className="flex flex-col gap-6 justify-end mr-[-20rem] mt-[-6rem] items-end">
+            <div className="flex flex-col gap-6 justify-end mr-[-20rem] mt-[-8rem] items-end">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.facebook.com/roboticsclub.nits?mibextid=ZbWKwL"
               >
-                <FaFacebook color="white" size="25px" />
+                <FaFacebook color="white" size="23px" />
               </a>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.instagram.com/nerds.nitsilchar?igsh=MTM0MjFpZjF6M3Zucg=="
               >
-                <PiInstagramLogoFill color="white" size="25px" />
+                <PiInstagramLogoFill color="white" size="23px" />
               </a>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/company/n-e-r-d-s-nits/"
               >
-                <FaLinkedin color="white" size="25px" />
+                <FaLinkedin color="white" size="23px" />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.youtube.com/@NERDSRoboticsNITS"
+              >
+                <FaYoutube color="white" size="23px" />
               </a>
             </div>
           </div>
@@ -184,14 +191,14 @@ function Footer() {
 
             <div
               id="icons"
-              className="mt-14 flex flex-col w-[16px] h-[140px] mr-[110px]"
+              className="mt-9 flex flex-col w-[16px] h-[140px] mr-[110px]"
             >
               <div>
                 <a
                   target="_blank"
                   href="https://www.facebook.com/roboticsclub.nits?mibextid=ZbWKwL"
                 >
-                  <FaFacebook color="white" size="30px" />
+                  <FaFacebook color="white" size="26px" />
                 </a>
               </div>
               <div className="mt-6">
@@ -199,7 +206,7 @@ function Footer() {
                   target="_blank"
                   href="https://www.instagram.com/nerds.nitsilchar?igsh=MTM0MjFpZjF6M3Zucg=="
                 >
-                  <PiInstagramLogoFill color="white" size="30px" />
+                  <PiInstagramLogoFill color="white" size="26px" />
                 </a>
               </div>
               <div className="mt-6">
@@ -207,7 +214,15 @@ function Footer() {
                   target="_blank"
                   href="https://www.linkedin.com/company/n-e-r-d-s-nits/"
                 >
-                  <FaLinkedin color="white" size="30px" />
+                  <FaLinkedin color="white" size="26px" />
+                </a>
+              </div>
+              <div className="mt-6">
+                <a
+                  target="_blank"
+                  href="https://www.youtube.com/@NERDSRoboticsNITS"
+                >
+                  <FaYoutube color="white" size="26px" />
                 </a>
               </div>
             </div>
