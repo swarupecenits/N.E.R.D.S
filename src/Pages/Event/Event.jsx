@@ -87,6 +87,14 @@ function Timeline(){
                     {/* card1 */}
                     <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(2);}}>
                         <motion.div
+                            className="text text-slate-200 relative text-center text"
+                            initial={{ x: 100, opacity: 0 }} 
+                            animate={(isHovered && id==1)  ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
+                            transition={{ duration: 0.3, ease: "easeInOut" }} >
+                                <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                        </motion.div>
+
+                        <motion.div
                             className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
                             style={{
                                 clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
@@ -107,87 +115,172 @@ function Timeline(){
                                 />
                         </motion.div>
 
-                        <motion.div
-                            className="text text-slate-200 relative text-center text"
-                            initial={{ x: 100, opacity: 0 }} 
-                            animate={(isHovered && id==2)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
-                            transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
-                        </motion.div>
                     </motion.div>        
-
 
                     {/* card2 */}
                     <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(2);}}>
-                        <motion.img src={links.card2} alt="" initial={{ x: 0, opacity: 1 }} 
-                        whileHover={{ x: -300, opacity: 1 }} 
-                        onHoverStart={() => {setIsHovered(true); setId(2);setDataId(2);}} 
-                        onHoverEnd={() => setIsHovered(false)} 
-                        transition={{duration: 0.3, ease: "easeInOut"}} className="" />
+
                         <motion.div
-                         className="text text-slate-200 relative text-center text"
-                         initial={{ x: 100, opacity: 0 }} 
-                         animate={(isHovered && id==2)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
-                         transition={{ duration: 0.3, ease: "easeInOut" }} >
-                             <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
+                            style={{
+                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+                                aspectRatio: '730 / 460',
+                            }}
+                            onClick={() => {setIsOpen(true); setId(1);}}
+                            initial={{ x: 0, opacity: 1 }} 
+                            whileHover={{ x: -300, opacity: 1 }} 
+                            onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1);}}
+                            onHoverEnd={() => setIsHovered(false)} 
+                            transition={{duration: 0.3, ease: "easeInOut"}}
+                            >
+                                <img src={pc_card_border} alt="" /> 
+                                <img
+                                    src={links.card1} // Use the passed image source prop
+                                    alt="Sample Image"
+                                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
+                                />
                         </motion.div>
-                    </motion.div>
-                    
+
+                            <motion.div
+                                className="text text-slate-200 relative text-center text"
+                                initial={{ x: 100, opacity: 0 }} 
+                                animate={(isHovered && id==1)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
+                                transition={{ duration: 0.3, ease: "easeInOut" }} >
+                                    <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                            </motion.div>
+                    </motion.div>        
+
                     {/* card3 */}
-                    <motion.div className="cards mt-4 flex"  onClick={() => { setIsOpen(true);setId(3);}}>
-                        <motion.div  className="text text-slate-200 relative text-center text"
-                        initial={{ x: 100, opacity: 0 }} 
-                        animate={(isHovered && id==3) ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
-                        transition={{ duration: 0.3, ease: "easeInOut" }} >
-                            <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p></motion.div>
-                        <motion.img src={links.card3} alt="" initial={{ x: 0, opacity: 1 }} 
-                        whileHover={{ x: 300, opacity: 1 }} 
-                        onHoverStart={() => {setIsHovered(true); setId(3); setDataId(3);}} 
-                        onHoverEnd={() => setIsHovered(false)} 
-                        transition={{duration: 0.3, ease: "easeInOut"}} />
-                    </motion.div>
-                    
+                    <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(2);}}>
+                        <motion.div
+                            className="text text-slate-200 relative text-center text"
+                            initial={{ x: 100, opacity: 0 }} 
+                            animate={(isHovered && id==1)  ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
+                            transition={{ duration: 0.3, ease: "easeInOut" }} >
+                                <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                        </motion.div>
+
+                        <motion.div
+                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
+                            style={{
+                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+                                aspectRatio: '730 / 460',
+                            }}
+                            onClick={() => {setIsOpen(true); setId(1);}}
+                            initial={{ x: 0, opacity: 1 }} 
+                            whileHover={{ x: 300, opacity: 1 }} 
+                            onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1);}}
+                            onHoverEnd={() => setIsHovered(false)} 
+                            transition={{duration: 0.3, ease: "easeInOut"}}
+                            >
+                                <img src={pc_card_border} alt="" /> 
+                                <img
+                                    src={links.card1} // Use the passed image source prop
+                                    alt="Sample Image"
+                                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
+                                />
+                        </motion.div>
+
+                    </motion.div>        
+
                     {/* card4 */}
-                    <motion.div className="cards mb-10 flex"  onClick={() =>{ setIsOpen(true);setId(4);}}>
-                        <motion.img src={links.card4} alt="" initial={{ x: 0, opacity: 1 }} 
-                        whileHover={{ x: -300, opacity: 1 }} 
-                        onHoverStart={() => {setIsHovered(true); setId(4); setDataId(4);}} 
-                        onHoverEnd={() => setIsHovered(false)} 
-                        transition={{duration: 0.3, ease: "easeInOut"}} />
-                        <motion.div  className="text text-slate-200 relative text-center text"
-                        initial={{ x: 100, opacity: 0 }} 
-                        animate={(isHovered && id==4) ? { x: -40, opacity: 1 } : { x: -100, opacity: 0 }} 
-                        transition={{ duration: 0.3, ease: "easeInOut" }} >
-                            <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p></motion.div>
-                    </motion.div>
-                    
+                    <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(2);}}>
+
+                        <motion.div
+                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
+                            style={{
+                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+                                aspectRatio: '730 / 460',
+                            }}
+                            onClick={() => {setIsOpen(true); setId(1);}}
+                            initial={{ x: 0, opacity: 1 }} 
+                            whileHover={{ x: -300, opacity: 1 }} 
+                            onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1);}}
+                            onHoverEnd={() => setIsHovered(false)} 
+                            transition={{duration: 0.3, ease: "easeInOut"}}
+                            >
+                                <img src={pc_card_border} alt="" /> 
+                                <img
+                                    src={links.card1} // Use the passed image source prop
+                                    alt="Sample Image"
+                                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
+                                />
+                        </motion.div>
+
+                            <motion.div
+                                className="text text-slate-200 relative text-center text"
+                                initial={{ x: 100, opacity: 0 }} 
+                                animate={(isHovered && id==1)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
+                                transition={{ duration: 0.3, ease: "easeInOut" }} >
+                                    <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                            </motion.div>
+                    </motion.div> 
+
                     {/* card5 */}
-                    <motion.div className="cards mb-10 flex"  onClick={() =>{ setIsOpen(true);setId(5);}}>
-                        <motion.div  className="text text-slate-200 relative text-center text"
-                        initial={{ x: 100, opacity: 0 }} 
-                        animate={(isHovered && id==5) ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
-                        transition={{ duration: 0.3, ease: "easeInOut" }} >
-                            <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p></motion.div>
-                        <motion.img src={links.card4} alt="" initial={{ x: 0, opacity: 1 }} 
-                        whileHover={{ x: 300, opacity: 1 }} 
-                        onHoverStart={() => {setIsHovered(true); setId(5); setDataId(5);}} 
-                        onHoverEnd={() => setIsHovered(false)} 
-                        transition={{duration: 0.3, ease: "easeInOut"}} />
-                    </motion.div>
-                    
+                    <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(2);}}>
+                        <motion.div
+                            className="text text-slate-200 relative text-center text"
+                            initial={{ x: 100, opacity: 0 }} 
+                            animate={(isHovered && id==1)  ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
+                            transition={{ duration: 0.3, ease: "easeInOut" }} >
+                                <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                        </motion.div>
+
+                        <motion.div
+                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
+                            style={{
+                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+                                aspectRatio: '730 / 460',
+                            }}
+                            onClick={() => {setIsOpen(true); setId(1);}}
+                            initial={{ x: 0, opacity: 1 }} 
+                            whileHover={{ x: 300, opacity: 1 }} 
+                            onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1);}}
+                            onHoverEnd={() => setIsHovered(false)} 
+                            transition={{duration: 0.3, ease: "easeInOut"}}
+                            >
+                                <img src={pc_card_border} alt="" /> 
+                                <img
+                                    src={links.card1} // Use the passed image source prop
+                                    alt="Sample Image"
+                                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
+                                />
+                        </motion.div>
+
+                    </motion.div>        
+
                     {/* card6 */}
-                    <motion.div className="cards mb-10 flex"  onClick={() =>{ setIsOpen(true);setId(6);}}>
-                        <motion.img src={links.card4} alt="" initial={{ x: 0, opacity: 1 }} 
-                        whileHover={{ x: -300, opacity: 1 }} 
-                        onHoverStart={() => {setIsHovered(true); setId(6); setDataId(6);}} 
-                        onHoverEnd={() => setIsHovered(false)} 
-                        transition={{duration: 0.3, ease: "easeInOut"}} />
-                        <motion.div  className="text text-slate-200 relative text-center text"
-                        initial={{ x: 100, opacity: 0 }} 
-                        animate={(isHovered && id==6) ? { x: -40, opacity: 1 } : { x: -100, opacity: 0 }} 
-                        transition={{ duration: 0.3, ease: "easeInOut" }} >
-                            <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p></motion.div>
-                    </motion.div>
+                    <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(2);}}>
+
+                        <motion.div
+                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
+                            style={{
+                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+                                aspectRatio: '730 / 460',
+                            }}
+                            onClick={() => {setIsOpen(true); setId(1);}}
+                            initial={{ x: 0, opacity: 1 }} 
+                            whileHover={{ x: -300, opacity: 1 }} 
+                            onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1);}}
+                            onHoverEnd={() => setIsHovered(false)} 
+                            transition={{duration: 0.3, ease: "easeInOut"}}
+                            >
+                                <img src={pc_card_border} alt="" /> 
+                                <img
+                                    src={links.card1} // Use the passed image source prop
+                                    alt="Sample Image"
+                                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
+                                />
+                        </motion.div>
+
+                            <motion.div
+                                className="text text-slate-200 relative text-center text"
+                                initial={{ x: 100, opacity: 0 }} 
+                                animate={(isHovered && id==1)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
+                                transition={{ duration: 0.3, ease: "easeInOut" }} >
+                                    <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                            </motion.div>
+                    </motion.div> 
 
                     <AnimatePresence>
                         {isOpen && <Modal isOpen={isOpen} id={id} onClose={() => setIsOpen(false)} />}
