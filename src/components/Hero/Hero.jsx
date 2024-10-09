@@ -122,7 +122,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className={`absolute top-1/3 right-0 ${hovered ? 'opacity-40 scale-1.5' : 'opacity-10 scale-1'} filter brightness-40 
+          className={`absolute top-1/3 right-1/7 ${hovered ? 'opacity-40 scale-1.5' : 'opacity-10 scale-1'} filter brightness-40 
           w-28 h-28 md:w-64 md:h-64 overflow-hidden`} /* Smaller size for mobile */
           variants={gearVariants}
           animate="rotateReverse"
@@ -160,12 +160,8 @@ const Hero = () => {
             onHoverEnd={() => setHovered(false)}
           >
             <motion.h2
-              className="text-5xl md:text-7xl font-ethenocentric tracking-wide text-white hover:text-glow hover:stroke-2 drop-shadow-lg transition-all duration-300 transform hover:scale-105"
-              style={{
-                textShadow: hovered
-                  ? '0 0 20px #FF0000, 0 0 30px #FF0000, 0 0 40px #FF0000, 0 0 50px #FF0000' // Red glow
-                  : 'none',
-              }}
+              className="text-5xl md:text-8xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent font-ethenocentric"
+             
               animate={{ scale: hovered ? 1 : 1 }}
             >
               N.E.R.D.S
@@ -188,7 +184,7 @@ const Hero = () => {
           </motion.div>
 
           <motion.img
-            className="w-[160vw] h-[65vh] md:w-[150vw] md:h-[120vh] flex flex-col justify-end mt-0 -ml-28 -mr-28"
+            className="w-[100vw] h-[40vh] md:w-[130vw] md:h-[100vh] flex flex-col justify-end md:mr-[48] "
             src="https://res.cloudinary.com/dieef3h1w/image/upload/v1728406864/ogtayxy6wgo4bbf3wslo-removebg-preview_2_wyb07i.png"
             alt="Robot"
             variants={imageVariants}
