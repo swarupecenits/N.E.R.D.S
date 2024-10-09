@@ -160,7 +160,7 @@ const Hero = () => {
             onHoverEnd={() => setHovered(false)}
           >
             <motion.h2
-              className="text-8xl md:text-7xl font-ethenocentric tracking-wide text-white hover:text-glow hover:stroke-2 drop-shadow-lg transition-all duration-300 transform hover:scale-105"
+              className="text-5xl md:text-7xl font-ethenocentric tracking-wide text-white hover:text-glow hover:stroke-2 drop-shadow-lg transition-all duration-300 transform hover:scale-105"
               style={{
                 textShadow: hovered
                   ? '0 0 20px #FF0000, 0 0 30px #FF0000, 0 0 40px #FF0000, 0 0 50px #FF0000' // Red glow
@@ -188,7 +188,7 @@ const Hero = () => {
           </motion.div>
 
           <motion.img
-            className="w-[90%] h-[40vh] md:w-[150vw] md:h-[120vh] flex flex-col justify-end mt-14 -ml-28"
+            className="w-[160vw] h-[65vh] md:w-[150vw] md:h-[120vh] flex flex-col justify-end mt-0 -ml-28 -mr-28"
             src="https://res.cloudinary.com/dieef3h1w/image/upload/v1728406864/ogtayxy6wgo4bbf3wslo-removebg-preview_2_wyb07i.png"
             alt="Robot"
             variants={imageVariants}
