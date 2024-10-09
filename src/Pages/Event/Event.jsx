@@ -9,6 +9,7 @@ import Modal from "./Component/Modal"
 import Modal_mini from "./Component/Modal_mini"
 import Modal_mini_body from "./Component/Modal_mini_body"
 import translate_description_on_timeline from "./JSON/translate_description_on_timeline.json"
+import pc_card_border from "./Assets/pc_card_border.svg"
 
 // function Hero() {
 //     return(
@@ -29,7 +30,7 @@ import translate_description_on_timeline from "./JSON/translate_description_on_t
 // }
 
 const links = {
-    card1:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244036/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m.jpg",
+    card1:"https://res.cloudinary.com/dmhbmurzw/image/upload/v1728216843/IMG-20241006-WA0011_gcjegk.jpg",
     card2:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_1_rwqeqj.jpg",
     card3:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.51_AM_w3r231.jpg",
     card4:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_set08m.jpg",
@@ -84,22 +85,7 @@ function Timeline(){
                     {/* cards */}
 
                     {/* card1 */}
-                    {/* <motion.div className="cards flex lg:-mt-0 md:-mt-5" onClick={() => {setIsOpen(true); setId(1);}}>
-                        <motion.div
-                        className="text text-slate-200 relative text-center text"
-                        initial={{ x: 100, opacity: 0 }} 
-                        animate={isHovered ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
-                        transition={{ duration: 0.3, ease: "easeInOut" }} >
-                            <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data}</p>
-                        </motion.div>
-
-                        <motion.img src={links.card1} alt="" 
-                        initial={{ x: 0, opacity: 1 }} 
-                        whileHover={{ x: 300, opacity: 1 }} 
-                        onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1);}}
-                        onHoverEnd={() => setIsHovered(false)} 
-                        transition={{duration: 0.3, ease: "easeInOut"}} /> */}
-                        {/* </motion.div> */}
+        
 
 <motion.div
       className="relative overflow-hidden border-brown border flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
@@ -114,31 +100,12 @@ function Timeline(){
       onHoverEnd={() => setIsHovered(false)} 
       transition={{duration: 0.3, ease: "easeInOut"}}
     >
-      <img
-        src={links.card1} // Use the passed image source prop
-        alt="Sample Image"
-        className="absolute top-0 left-0 w-full h-full object-cover -z-10" // Using Tailwind for positioning and sizing
-     
-      />
-      <svg width="100%" height="100%" viewBox="0 0 730 460" xmlns="http://www.w3.org/2000/svg">
-        {/* Define the gradient for the stroke */}
-        <defs>
-          <linearGradient id="cut-corner-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{ stopColor: '#800080' }} />   {/* Purple (Top Left) */}
-            <stop offset="50%" style={{ stopColor: '#8000ff' }} />  {/* Maroon (Center) */}
-            <stop offset="75%" style={{ stopColor: '#800080' }} />  {/* Purple (Bottom Right) */}
-            <stop offset="100%" style={{ stopColor: '#0a0a0a' }} /> {/* Almost Black (Bottom Left) */}
-          </linearGradient>
-        </defs>
-
-        {/* Apply transparent fill and gradient stroke to the polygon */}
-        <polygon
-          points="73,0 730,0 730,414 657,460 0,460 0,46"
-          fill="none"
-          stroke="url(#cut-corner-gradient)"
-          strokeWidth="10"
+        <img src={pc_card_border} alt="" /> 
+        <img
+            src={links.card1} // Use the passed image source prop
+            alt="Sample Image"
+            className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
         />
-      </svg>
     </motion.div>
 
 
