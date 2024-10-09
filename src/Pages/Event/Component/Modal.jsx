@@ -27,7 +27,7 @@ const Content = ({id}) => {
                                 <img src={pc_card_border} alt=""  className="z-0 absolute" />     
 
                                 <img
-                                    src={"https://www.quantamagazine.org/wp-content/uploads/2018/07/SolarFull_SeanDoran_2880FullwidthLede.jpg"} // Use the passed image source prop
+                                    src={obj[id].url} // Use the passed image source prop
                                     alt="Sample Image"
                                     className=" h-full w-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
                                 />
