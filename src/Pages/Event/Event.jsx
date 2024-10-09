@@ -10,6 +10,7 @@ import Modal_mini from "./Component/Modal_mini"
 import Modal_mini_body from "./Component/Modal_mini_body"
 import translate_description_on_timeline from "./JSON/translate_description_on_timeline.json"
 import pc_card_border from "./Assets/pc_card_border.svg"
+import links from "./JSON/img_links_for_timeline_cards.json"
 
 // function Hero() {
 //     return(
@@ -28,13 +29,6 @@ import pc_card_border from "./Assets/pc_card_border.svg"
 //         </div>
 //     )
 // }
-
-const links = {
-    card1:"https://res.cloudinary.com/dmhbmurzw/image/upload/v1728216843/IMG-20241006-WA0011_gcjegk.jpg",
-    card2:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_1_rwqeqj.jpg",
-    card3:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.51_AM_w3r231.jpg",
-    card4:"https://res.cloudinary.com/dehyqj5i3/image/upload/v1728244035/WhatsApp_Image_2024-10-07_at_1.15.52_AM_set08m.jpg",
-}
 
 function Hero() {
     return (
@@ -320,22 +314,111 @@ function Timeline_small(){
                 <div className="right_contain col-start-2 row-start-1 col-span-7 row-span-20 flex justify-around flex-col">
                     <div className="cards col-start-2 row-start-1 col-span-7 row-span-5 mt-28"
                     onClick={() => {setIsOpen2(!isOpen2), setId(1)}} >
-                        <img src={links.card1} alt="" />
+                        <div
+                            className="relative overflow-hidden flex "
+                            style={{
+                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+                                aspectRatio: '730 / 460',
+                            }}
+                            >
+                                <img src={pc_card_border} alt="" /> 
+                                <img
+                                    src={links.card1} // Use the passed image source prop
+                                    alt="Sample Image"
+                                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
+                                />
+                        </div>
                     </div>
+
                     <div 
                     onClick={() => {setIsOpen2(!isOpen2), setId(2)}}
                     className="cards col-start-2 row-start-6 col-span-7 row-span-5 mt-[-2rem]">
-                        <img src={links.card2} alt="" />
+                        <div
+                            className="relative overflow-hidden flex "
+                            style={{
+                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+                                aspectRatio: '730 / 460',
+                            }}
+                            >
+                                <img src={pc_card_border} alt="" /> 
+                                <img
+                                    src={links.card1} // Use the passed image source prop
+                                    alt="Sample Image"
+                                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
+                                />
+                        </div>                    
                     </div>
 
                     <div onClick={() => {setIsOpen2(!isOpen2), setId(3)}}
                     className="cards col-start-2 row-start-11 col-span-7 row-span-5 mt-[-1rem]">
-                        <img src={links.card3} alt="" />
+                        <div
+                            className="relative overflow-hidden flex "
+                            style={{
+                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+                                aspectRatio: '730 / 460',
+                            }}
+                            >
+                                <img src={pc_card_border} alt="" /> 
+                                <img
+                                    src={links.card1} // Use the passed image source prop
+                                    alt="Sample Image"
+                                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
+                                />
+                        </div>                    
                     </div>
 
                     <div onClick={() => {setIsOpen2(!isOpen2), setId(4)}}
                     className="cards col-start-2 row-start-16 col-span-7 row-span-5 mb-10">
-                        <img src={links.card4} alt="" />
+                        <div
+                            className="relative overflow-hidden flex "
+                            style={{
+                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+                                aspectRatio: '730 / 460',
+                            }}
+                            >
+                                <img src={pc_card_border} alt="" /> 
+                                <img
+                                    src={links.card1} // Use the passed image source prop
+                                    alt="Sample Image"
+                                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
+                                />
+                        </div>                    
+                    </div>
+
+                    <div onClick={() => {setIsOpen2(!isOpen2), setId(5)}}
+                    className="cards col-start-2 row-start-16 col-span-7 row-span-5 mb-10">
+                        <div
+                            className="relative overflow-hidden flex "
+                            style={{
+                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+                                aspectRatio: '730 / 460',
+                            }}
+                            >
+                                <img src={pc_card_border} alt="" /> 
+                                <img
+                                    src={links.card1} // Use the passed image source prop
+                                    alt="Sample Image"
+                                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
+                                />
+                        </div>                    
+                    </div>
+
+                    <div onClick={() => {setIsOpen2(!isOpen2), setId(6)}}
+                    className="cards col-start-2 row-start-16 col-span-7 row-span-5 mb-10">
+                        <div
+                            className="relative overflow-hidden flex "
+                            style={{
+                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+                                aspectRatio: '730 / 460',
+                            }}
+                            >
+                                <img src={pc_card_border} alt="" /> 
+                                <img
+                                    src={links.card1} // Use the passed image source prop
+                                    alt="Sample Image"
+                                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
+                                />
+                        </div>                    
                     </div>
 
                     <AnimatePresence>
