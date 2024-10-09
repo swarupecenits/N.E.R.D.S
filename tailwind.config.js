@@ -15,4 +15,26 @@ export default {
     },
   },
   plugins: [],
+ 
+  theme: {
+    extend: {
+      keyframes: {
+        scrollDown: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(0%)' },
+        },
+        scrollUp: {
+          '0%': { transform: 'translateY(0%)' },
+          '100%': { transform: 'translateY(-100%)' },
+        },
+      },
+      animation: {
+        scrollDown: 'scrollDown 6s linear infinite',
+        scrollUp: 'scrollUp 6s linear infinite',
+      },
+    },
+  },
 };
+
+
+
