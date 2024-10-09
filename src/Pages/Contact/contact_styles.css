@@ -1,0 +1,48 @@
+.text-gradient {
+  background: linear-gradient(90.96deg, #DFD5E1 0.2%, #E1ACEF 3.63%, #42AFEC 95.18%);
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari */
+  color: transparent;
+}
+
+@keyframes borderColorChange {
+  0% {
+      border-color: #42AFEC; /* Turquoise */
+  }
+  14% {
+      border-color: #0BA7FF; /* Blue */
+  }
+  28% {
+      border-color: #A67CBE; /* Purple */
+  }
+  42% {
+      border-color: #FF4081; /* Pink */
+  }
+  57% {
+      border-color: #FF0000; /* Red */
+  }
+  71% {
+      border-color: #FFA500; /* Orange */
+  }
+  85% {
+      border-color: #FFEA00; /* Yellow */
+  }
+  100% {
+      border-color: #42AFEC; /* Turquoise (loop back to start) */
+  }
+}
+
+.animate-border {
+  animation: borderColorChange 6s infinite; /* Change duration as needed */
+}
+
+
+/* Add this to your CSS file */
+@media (max-width: 640px) { /* Mobile view */
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.1); /* Adjust color and opacity */
+    backdrop-filter: blur(10px); /* Adjust the blur intensity */
+    border-radius: 10px; /* Optional: round corners */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: border effect */
+  }
+}
