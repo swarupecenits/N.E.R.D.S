@@ -8,5 +8,5 @@
         </linearGradient>
       </defs>
 
-      <polygon points="73,0 730,0 730,414 657,460 0,460 0,46" fill="none" stroke="url(#cut-corner-gradient)" stroke-width="10" />
+      <polygon points="73,0 730,0 730,414 657,460 0,460 0,46" fill="none" stroke="url(#cut-corner-gradient)" stroke-width="20" />
     </svg>

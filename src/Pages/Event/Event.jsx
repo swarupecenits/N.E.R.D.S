@@ -85,29 +85,36 @@ function Timeline(){
                     {/* cards */}
 
                     {/* card1 */}
-        
+                    <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(2);}}>
+                        <motion.div
+                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
+                            style={{
+                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+                                aspectRatio: '730 / 460',
+                            }}
+                            onClick={() => {setIsOpen(true); setId(1);}}
+                            initial={{ x: 0, opacity: 1 }} 
+                            whileHover={{ x: 300, opacity: 1 }} 
+                            onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1);}}
+                            onHoverEnd={() => setIsHovered(false)} 
+                            transition={{duration: 0.3, ease: "easeInOut"}}
+                            >
+                                <img src={pc_card_border} alt="" /> 
+                                <img
+                                    src={links.card1} // Use the passed image source prop
+                                    alt="Sample Image"
+                                    className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
+                                />
+                        </motion.div>
 
-<motion.div
-      className="relative overflow-hidden border-brown border flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
-      style={{
-        clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
-        aspectRatio: '730 / 460',
-      }}
-      onClick={() => {setIsOpen(true); setId(1);}}
-      initial={{ x: 0, opacity: 1 }} 
-      whileHover={{ x: 300, opacity: 1 }} 
-      onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1);}}
-      onHoverEnd={() => setIsHovered(false)} 
-      transition={{duration: 0.3, ease: "easeInOut"}}
-    >
-        <img src={pc_card_border} alt="" /> 
-        <img
-            src={links.card1} // Use the passed image source prop
-            alt="Sample Image"
-            className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
-        />
-    </motion.div>
-
+                        <motion.div
+                            className="text text-slate-200 relative text-center text"
+                            initial={{ x: 100, opacity: 0 }} 
+                            animate={(isHovered && id==2)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
+                            transition={{ duration: 0.3, ease: "easeInOut" }} >
+                                <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                        </motion.div>
+                    </motion.div>        
 
 
                     {/* card2 */}
@@ -274,7 +281,7 @@ function Timeline_small(){
 
 export default function Event(){
     return (
-        <div className="bg-white overflow-hidden">
+        <div className="bg-black overflow-hidden">
             <Hero />
             <Hero_small />
             <Timeline />
