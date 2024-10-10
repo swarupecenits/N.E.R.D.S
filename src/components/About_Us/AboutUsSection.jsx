@@ -32,15 +32,15 @@ const AboutUsSection = () => {
       </h2>
 
       {/* Cards Container */}
-      <div className="flex flex-col items-center space-y-6 md:space-y-0 md:space-x-4  ">
+      <div className="flex flex-col items-center space-y-2 md:space-y-1 md:space-x-2 max-w-[1200px] mx-auto px-4  overflow-hidden">
         {cardData.map((item, index) => (
           <div
             key={index}
             className={`w-full flex ${
               index % 2 === 0 || index == 0 ? "justify-start" : "justify-end"
-            } px-2 md:px-0 py-4`} // Adjust padding to keep cards centered on smaller screens
+            }  px-1 md:px-0 py-2`} // Adjust padding to keep cards centered on smaller screens
           >
-            <div className="w-full md:w-1/2  ">
+            <div className="w-full  md:w-[88%] lg:w-[70%]">
               {" "}
               {/* Ensure the card takes half the width on medium screens and above */}
               <AboutUsCard items={item} />
