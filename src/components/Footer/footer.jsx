@@ -7,7 +7,7 @@ function Footer() {
   return (
     <>
       {/* Mobile Footer */}
-      <footer className="md:hidden   flex flex-col items-center">
+      <footer className="md:hidden  flex flex-col items-center">
         <div
           className="w-[100vw] h-[40rem] bg-cover absolute  bg-no-repeat"
           style={{
