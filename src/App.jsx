@@ -8,6 +8,7 @@ import Gallery from "./Pages/Gallery/Gallery";
 import Contact from "./Pages/Contact/Contact";
 import Navbar from "./components/Navbar/navbar";
 import Footer from "./components/Footer/footer";
+import Error from "./Pages/Error/Error";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/team" element={<Team />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="*" element={<Error/>} />
           </Routes>
 
           <Footer />
