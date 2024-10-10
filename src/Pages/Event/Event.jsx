@@ -9,7 +9,10 @@ import Modal from "./Component/Modal"
 import Modal_mini_body from "./Component/Modal_mini_body"
 import translate_description_on_timeline from "./JSON/translate_description_on_timeline.json"
 import pc_card_border from "./Assets/pc_card_border.svg"
+import pc_card_border2 from "./Assets/pc_card_border2.svg"
 import links from "./JSON/img_links_for_timeline_cards.json"
+import GlitchText from "./Animations/TextFlip"
+import TextAnimation from "./Animations/TextFlip"
 
 // function Hero() {
 //     return(
@@ -29,9 +32,10 @@ import links from "./JSON/img_links_for_timeline_cards.json"
 //     )
 // }
 
+
 function Hero() {
     return (
-        <div className="hidden pl-28 md:pl-0 hero_container flex-col items-center md:block"
+        <div className="hidden pl-28 pb-10 md:pl-0 hero_container flex-col items-center md:block"
         style={{backgroundImage:"url(https://res.cloudinary.com/dehyqj5i3/image/upload/v1728357474/656b9c98-adbe-4848-916f-67f2f9a0154b.png)"}}
         >
             <div className="hero md:flex">
@@ -40,12 +44,14 @@ function Hero() {
                 </div>
 
                 <div className="block md:flex right flex-col items-center justify-center">
-                    <h1 className="ml-12 inline font-ethenocentric font-xl bg-gradient-to-b from-[#ffffff] to-[#d2332b] bg-clip-text text-transparent main-heading meet-heading">EVENTS</h1>
-                    <img src={stuff} alt="the stuff at the bottom " className="md:flex-shrink-0 md:mr-36 md:mt-[-3rem] pr-36 pb-12 md:pr-0 md:pb-0 "/>
+                <TextAnimation />
+                <img src={stuff} alt="the stuff at the bottom " className="md:flex-shrink-0 md:mr-36 md:mt-[-3rem] pr-36 pb-12 md:pr-0 md:pb-0 "/>
                 </div>
             </div>
 
-            <p className="pl-6  md:mx-auto md:pl-9 font-spaced text-white font-normal heading-subsection">A playful way to emphasize your inner competitive spirit and determination</p>
+            <motion.p 
+            whileHover={{color:"yellow"}}
+            className="pl-6  md:mx-auto md:pl-9 font-spaced text-white font-normal heading-subsection">A playful way to emphasize your inner competitive spirit and determination</motion.p>
 
 
         </div>
@@ -56,7 +62,7 @@ function Hero_small() {
     return(
         <div className="hero_contain md:hidden flex flex-col items-center justify-center mb-">
             <img src={robot} alt="" className="ml-[-3rem] block"/>
-            <h1 className="text-center font-ethenocentric text-5xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading">EVENTS</h1>
+            <h1 className="text-center font-ethenocentric text-5xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading relative"></h1>
             <img src={stuff} alt=""  className="block pr-14 mt-[-5rem]"/>
         </div>
     )
@@ -68,6 +74,7 @@ function Timeline(){
     const [isHovered, setIsHovered] = useState(false);
     const [dataId, setDataId] = useState(1);
     const obj = {...translate_description_on_timeline};
+    const [border, setBorder] = useState(pc_card_border)
 
     return(
         <div className="timeline_container hidden mb-32 md:block lg:block">
@@ -96,11 +103,11 @@ function Timeline(){
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
                             whileHover={{ x: 300, opacity: 1 }} 
-                            onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1);}}
-                            onHoverEnd={() => setIsHovered(false)} 
+                            onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1); setBorder(pc_card_border2)}}
+                            onHoverEnd={() => {setIsHovered(false); setBorder(pc_card_border)}}
                             transition={{duration: 0.3, ease: "easeInOut"}}
                             >
-                                <img src={pc_card_border} alt="" /> 
+                                <img src={border} alt="" /> 
                                 <img
                                     src={links.card1} // Use the passed image source prop
                                     alt="Sample Image"
