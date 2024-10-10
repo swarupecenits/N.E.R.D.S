@@ -73,12 +73,12 @@ function Timeline(){
         <div className="timeline_container hidden mb-32 md:block lg:block">
             <div className="timeline flex flex-col items-center relative">
                 <img src={time} alt="" className="pt-24 lg:px-0 md:px-20 z-0 md:inline" />
-                <div className="absolute lg:px-5 md:px-20 cards z-10 h-[100%] overflow-visible lg:w-[100%] md:w-[65%] flex flex-col items-center justify-between pt-40">
+                <div className="absolute lg:px-5 md:px-20 cards z-10 h-[100%] overflow-visible lg:w-[100%] md:w-[100%] flex flex-col items-center justify-between pt-40">
     
                     {/* cards */}
 
                     {/* card1 */}
-                    <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(1);}}>
+                    <motion.div className="cards flex mt-8" onClick={() =>{ setIsOpen(true);setId(1);}}>
                         <motion.div
                             className="text text-slate-200 relative text-center text"
                             initial={{ x: 100, opacity: 0 }} 
@@ -88,7 +88,7 @@ function Timeline(){
                         </motion.div>
 
                         <motion.div
-                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
+                            className="relative overflow-hidden flex lg:-mt-0 min-w-[30rem] "
                             style={{
                                 clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
                                 aspectRatio: '730 / 460',
@@ -114,7 +114,7 @@ function Timeline(){
                     <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(2);}}>
 
                         <motion.div
-                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
+                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[30rem]"
                             style={{
                                 clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
                                 aspectRatio: '730 / 460',
@@ -128,7 +128,7 @@ function Timeline(){
                             >
                                 <img src={pc_card_border} alt="" /> 
                                 <img
-                                    src={links.card1} // Use the passed image source prop
+                                    src={links.card2} // Use the passed image source prop
                                     alt="Sample Image"
                                     className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
                                 />
@@ -154,7 +154,7 @@ function Timeline(){
                         </motion.div>
 
                         <motion.div
-                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
+                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[30rem]"
                             style={{
                                 clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
                                 aspectRatio: '730 / 460',
@@ -168,7 +168,7 @@ function Timeline(){
                             >
                                 <img src={pc_card_border} alt="" /> 
                                 <img
-                                    src={links.card1} // Use the passed image source prop
+                                    src={links.card3} // Use the passed image source prop
                                     alt="Sample Image"
                                     className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
                                 />
@@ -180,7 +180,7 @@ function Timeline(){
                     <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(4);}}>
 
                         <motion.div
-                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
+                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[30rem]"
                             style={{
                                 clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
                                 aspectRatio: '730 / 460',
@@ -194,7 +194,7 @@ function Timeline(){
                             >
                                 <img src={pc_card_border} alt="" /> 
                                 <img
-                                    src={links.card1} // Use the passed image source prop
+                                    src={links.card4} // Use the passed image source prop
                                     alt="Sample Image"
                                     className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
                                 />
@@ -220,7 +220,7 @@ function Timeline(){
                         </motion.div>
 
                         <motion.div
-                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
+                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[30rem]"
                             style={{
                                 clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
                                 aspectRatio: '730 / 460',
@@ -234,7 +234,7 @@ function Timeline(){
                             >
                                 <img src={pc_card_border} alt="" /> 
                                 <img
-                                    src={links.card1} // Use the passed image source prop
+                                    src={links.card5} // Use the passed image source prop
                                     alt="Sample Image"
                                     className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
                                 />
@@ -246,7 +246,7 @@ function Timeline(){
                     <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(6);}}>
 
                         <motion.div
-                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[40rem]"
+                            className="relative overflow-hidden flex lg:-mt-0 md:-mt-5  min-w-[30rem]"
                             style={{
                                 clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
                                 aspectRatio: '730 / 460',
@@ -260,7 +260,7 @@ function Timeline(){
                             >
                                 <img src={pc_card_border} alt="" /> 
                                 <img
-                                    src={links.card1} // Use the passed image source prop
+                                    src={links.card6} // Use the passed image source prop
                                     alt="Sample Image"
                                     className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
                                 />
@@ -305,13 +305,16 @@ function Timeline_small(){
     };
 
     return (
-        <div className="timeline_container md:hidden px-10">
+        <div className="timeline_container md:hidden px-10 mb-10 -mt-10">
             <div className="timeline grid grid-cols-8 grid-rows-20">
 
                 <img src={time2} alt="" className="col-start-1 row-start-1 col-span-1 row-span-20" />
                 
-                <div className="right_contain col-start-2 row-start-1 col-span-7 row-span-20 flex justify-around flex-col">
-                    <div className="cards col-start-2 row-start-1 col-span-7 row-span-5 mt-28"
+                <div className="right_contain col-start-2 row-start-1 col-span-7 row-span-20 flex justify-around flex-col max-w-[25rem]">
+                    
+                    
+                    {/* cards */}
+                    <div className="cards col-start-2 row-start-1 col-span-7 row-span-5 mt-[9rem]"
                     onClick={() => {setIsOpen2(!isOpen2), setId(1)}} >
                         <div
                             className="relative overflow-hidden flex "
@@ -331,7 +334,7 @@ function Timeline_small(){
 
                     <div 
                     onClick={() => {setIsOpen2(!isOpen2), setId(2)}}
-                    className="cards col-start-2 row-start-6 col-span-7 row-span-5 mt-[-2rem]">
+                    className="cards col-start-2 row-start-6 col-span-7 row-span-5 mt-[0rem]">
                         <div
                             className="relative overflow-hidden flex "
                             style={{
@@ -341,7 +344,7 @@ function Timeline_small(){
                             >
                                 <img src={pc_card_border} alt="" /> 
                                 <img
-                                    src={links.card1} // Use the passed image source prop
+                                    src={links.card2} // Use the passed image source prop
                                     alt="Sample Image"
                                     className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
                                 />
@@ -349,7 +352,7 @@ function Timeline_small(){
                     </div>
 
                     <div onClick={() => {setIsOpen2(!isOpen2), setId(3)}}
-                    className="cards col-start-2 row-start-11 col-span-7 row-span-5 mt-[-1rem]">
+                    className="cards col-start-2 row-start-11 col-span-7 row-span-5 mt-[0rem]">
                         <div
                             className="relative overflow-hidden flex "
                             style={{
@@ -359,7 +362,7 @@ function Timeline_small(){
                             >
                                 <img src={pc_card_border} alt="" /> 
                                 <img
-                                    src={links.card1} // Use the passed image source prop
+                                    src={links.card3} // Use the passed image source prop
                                     alt="Sample Image"
                                     className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
                                 />
@@ -367,7 +370,7 @@ function Timeline_small(){
                     </div>
 
                     <div onClick={() => {setIsOpen2(!isOpen2), setId(4)}}
-                    className="cards col-start-2 row-start-16 col-span-7 row-span-5 mb-10">
+                    className="cards col-start-2 row-start-16 col-span-7 row-span-5 mt-[0rem]">
                         <div
                             className="relative overflow-hidden flex "
                             style={{
@@ -377,7 +380,7 @@ function Timeline_small(){
                             >
                                 <img src={pc_card_border} alt="" /> 
                                 <img
-                                    src={links.card1} // Use the passed image source prop
+                                    src={links.card4} // Use the passed image source prop
                                     alt="Sample Image"
                                     className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
                                 />
@@ -385,7 +388,7 @@ function Timeline_small(){
                     </div>
 
                     <div onClick={() => {setIsOpen2(!isOpen2), setId(5)}}
-                    className="cards col-start-2 row-start-16 col-span-7 row-span-5 mb-10">
+                    className="cards col-start-2 row-start-16 col-span-7 row-span-5 mb-[0rem]">
                         <div
                             className="relative overflow-hidden flex "
                             style={{
@@ -395,7 +398,7 @@ function Timeline_small(){
                             >
                                 <img src={pc_card_border} alt="" /> 
                                 <img
-                                    src={links.card1} // Use the passed image source prop
+                                    src={links.card5} // Use the passed image source prop
                                     alt="Sample Image"
                                     className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
                                 />
@@ -403,7 +406,7 @@ function Timeline_small(){
                     </div>
 
                     <div onClick={() => {setIsOpen2(!isOpen2), setId(6)}}
-                    className="cards col-start-2 row-start-16 col-span-7 row-span-5 mb-10">
+                    className="cards col-start-2 row-start-16 col-span-7 row-span-5 mb-[2.3rem]">
                         <div
                             className="relative overflow-hidden flex "
                             style={{
@@ -413,7 +416,7 @@ function Timeline_small(){
                             >
                                 <img src={pc_card_border} alt="" /> 
                                 <img
-                                    src={links.card1} // Use the passed image source prop
+                                    src={links.card6} // Use the passed image source prop
                                     alt="Sample Image"
                                     className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
                                 />
