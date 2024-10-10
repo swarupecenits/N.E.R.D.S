@@ -3,7 +3,7 @@ import robot from "./Assets/robot.svg"
 import time from "./Assets/timeline.svg"
 import time2 from "./Assets/time2.svg"
 import {motion} from "framer-motion"
-import { useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import { AnimatePresence } from "framer-motion";
 import Modal from "./Component/Modal"
 import Modal_mini_body from "./Component/Modal_mini_body"
@@ -11,7 +11,6 @@ import translate_description_on_timeline from "./JSON/translate_description_on_t
 import pc_card_border from "./Assets/pc_card_border.svg"
 import pc_card_border2 from "./Assets/pc_card_border2.svg"
 import links from "./JSON/img_links_for_timeline_cards.json"
-import GlitchText from "./Animations/TextFlip"
 import TextAnimation from "./Animations/TextFlip"
 
 // function Hero() {
@@ -34,23 +33,52 @@ import TextAnimation from "./Animations/TextFlip"
 
 
 function Hero() {
+    const [isloaded, setIsLoaded] = useState(false)
+    const ref = useRef(null)
+    useEffect(() => {
+        // Trigger the transition when the page loads
+        const timer = setTimeout(() => {
+          setIsLoaded(true);
+        }, 100);
+        return () => clearTimeout(timer); // Cleanup the timer
+    }, []);
+  
+
     return (
         <div className="hidden pl-28 pb-10 md:pl-0 hero_container flex-col items-center md:block"
         style={{backgroundImage:"url(https://res.cloudinary.com/dehyqj5i3/image/upload/v1728357474/656b9c98-adbe-4848-916f-67f2f9a0154b.png)"}}
         >
-            <div className="hero md:flex">
+            <div 
+            ref={ref}
+            style={{
+                transform: isloaded ? "none" : "translateY(100px)",
+                opacity: isloaded ? 1 : 0,
+                transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s"}}
+            className="hero md:flex">
                 <div className="left md:mx-auto">
                     <img src={robot} alt="the robot" className="md:ml-1 pr-12 md:pr-0" />
                 </div>
 
-                <div className="block md:flex right flex-col items-center justify-center">
+                <div
+                ref={ref}
+                style={{
+                    transform: isloaded ? "none" : "translateX(150px)",
+                    opacity: isloaded ? 1 : 0,
+                    transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s"}}
+                className="right block md:flex  flex-col items-center justify-center">
                 <TextAnimation />
                 <img src={stuff} alt="the stuff at the bottom " className="md:flex-shrink-0 md:mr-36 md:mt-[-3rem] pr-36 pb-12 md:pr-0 md:pb-0 "/>
                 </div>
             </div>
 
             <motion.p 
-            whileHover={{color:"yellow"}}
+            ref={ref}
+            style={{
+                transform: isloaded ? "none" : "translateX(200px)",
+                opacity: isloaded ? 1 : 0,
+                transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s"}}
+            whileHover={{color:"yellow", transition: {duration:0.005}}}
+            transition={{duration:0.005}}
             className="pl-6  md:mx-auto md:pl-9 font-spaced text-white font-normal heading-subsection">A playful way to emphasize your inner competitive spirit and determination</motion.p>
 
 
@@ -75,6 +103,11 @@ function Timeline(){
     const [dataId, setDataId] = useState(1);
     const obj = {...translate_description_on_timeline};
     const [border, setBorder] = useState(pc_card_border)
+    const [border2, setBorder2] = useState(pc_card_border)
+    const [border3, setBorder3] = useState(pc_card_border)
+    const [border4, setBorder4] = useState(pc_card_border)
+    const [border5, setBorder5] = useState(pc_card_border)
+    const [border6, setBorder6] = useState(pc_card_border)
 
     return(
         <div className="timeline_container hidden mb-32 md:block lg:block">
@@ -129,11 +162,11 @@ function Timeline(){
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
                             whileHover={{ x: -300, opacity: 1 }} 
-                            onHoverStart={() => {setIsHovered(true); setId(2); setDataId(2);}}
-                            onHoverEnd={() => setIsHovered(false)} 
+                            onHoverStart={() => {setIsHovered(true); setId(2); setDataId(2);setBorder2(pc_card_border2)}}
+                            onHoverEnd={() => {setIsHovered(false); setBorder2(pc_card_border)}} 
                             transition={{duration: 0.3, ease: "easeInOut"}}
                             >
-                                <img src={pc_card_border} alt="" /> 
+                                <img src={border2} alt="" /> 
                                 <img
                                     src={links.card2} // Use the passed image source prop
                                     alt="Sample Image"
@@ -169,11 +202,11 @@ function Timeline(){
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
                             whileHover={{ x: 300, opacity: 1 }} 
-                            onHoverStart={() => {setIsHovered(true); setId(3); setDataId(3);}}
-                            onHoverEnd={() => setIsHovered(false)} 
+                            onHoverStart={() => {setIsHovered(true); setId(3); setDataId(3);setBorder3(pc_card_border2)}}
+                            onHoverEnd={() => {setIsHovered(false); setBorder3(pc_card_border)}} 
                             transition={{duration: 0.3, ease: "easeInOut"}}
                             >
-                                <img src={pc_card_border} alt="" /> 
+                                <img src={border3} alt="" /> 
                                 <img
                                     src={links.card3} // Use the passed image source prop
                                     alt="Sample Image"
@@ -195,11 +228,11 @@ function Timeline(){
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
                             whileHover={{ x: -300, opacity: 1 }} 
-                            onHoverStart={() => {setIsHovered(true); setId(4); setDataId(4);}}
-                            onHoverEnd={() => setIsHovered(false)} 
+                            onHoverStart={() => {setIsHovered(true); setId(4); setDataId(4);setBorder4(pc_card_border2)}}
+                            onHoverEnd={() => {setIsHovered(false); setBorder4(pc_card_border)}} 
                             transition={{duration: 0.3, ease: "easeInOut"}}
                             >
-                                <img src={pc_card_border} alt="" /> 
+                                <img src={border4} alt="" /> 
                                 <img
                                     src={links.card4} // Use the passed image source prop
                                     alt="Sample Image"
@@ -235,11 +268,11 @@ function Timeline(){
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
                             whileHover={{ x: 300, opacity: 1 }} 
-                            onHoverStart={() => {setIsHovered(true); setId(5); setDataId(5);}}
-                            onHoverEnd={() => setIsHovered(false)} 
+                            onHoverStart={() => {setIsHovered(true); setId(5); setDataId(5);setBorder5(pc_card_border2)}}
+                            onHoverEnd={() => {setIsHovered(false); setBorder5(pc_card_border)}} 
                             transition={{duration: 0.3, ease: "easeInOut"}}
                             >
-                                <img src={pc_card_border} alt="" /> 
+                                <img src={border5} alt="" /> 
                                 <img
                                     src={links.card5} // Use the passed image source prop
                                     alt="Sample Image"
@@ -261,11 +294,11 @@ function Timeline(){
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
                             whileHover={{ x: -300, opacity: 1 }} 
-                            onHoverStart={() => {setIsHovered(true); setId(6); setDataId(6);}}
-                            onHoverEnd={() => setIsHovered(false)} 
+                            onHoverStart={() => {setIsHovered(true); setId(6); setDataId(6);setBorder6(pc_card_border2)}}
+                            onHoverEnd={() => {setIsHovered(false); setBorder6(pc_card_border)}} 
                             transition={{duration: 0.3, ease: "easeInOut"}}
                             >
-                                <img src={pc_card_border} alt="" /> 
+                                <img src={border6} alt="" /> 
                                 <img
                                     src={links.card6} // Use the passed image source prop
                                     alt="Sample Image"
