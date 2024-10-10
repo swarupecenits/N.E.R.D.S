@@ -94,7 +94,7 @@ function Gallery(){
                     initial={{ opacity: 0, translateX: "-100%",translateY: "20%" }}
                     whileInView={{ opacity: 1, translateX: "12%", translateY: "30%" }}
                     transition={{ duration: 1 }}
-                    className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading  "
+                    className="ml-[-1.5rem] font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading  "
                     id="first"
                     >
                     PHOTO GALLERY
@@ -103,7 +103,7 @@ function Gallery(){
                     initial={{ opacity: 0, translateX: "-100%", translateY: "30%" }}
                     whileInView={{ opacity: 1, translateX: "15%", translateY: "30%" }}
                     transition={{ duration: 1 }}
-                    className="font-spaced font-bold heading-subsection gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent text-lg"
+                    className="ml-[-2rem] mb-14 font-spaced font-bold heading-subsection gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent text-lg"
                     id="second"
                     >
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil id
