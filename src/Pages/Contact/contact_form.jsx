@@ -104,6 +104,14 @@ const ContactForm = () => {
                 "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%)",
               borderImageSlice: 1,
             }}
+            onMouseEnter={(e) => {
+              e.target.style.borderImageSource =
+                'linear-gradient(91.17deg, rgba(255, 0, 230, 0.8) 23.6%, rgba(255, 255, 255, 0.8) 89.27%)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.borderImageSource =
+                'linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%)';
+            }}
           />
         </div>
 
@@ -122,6 +130,14 @@ const ContactForm = () => {
                 "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%)",
               borderImageSlice: 1,
             }}
+            onMouseEnter={(e) => {
+              e.target.style.borderImageSource =
+                'linear-gradient(91.17deg, rgba(151, 71, 255, 0.8) 23.6%, rgba(255, 255, 255, 0.8) 89.27%)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.borderImageSource =
+                'linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%)';
+            }}
           />
         </div>
 
@@ -138,6 +154,14 @@ const ContactForm = () => {
               borderImageSource:
                 "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%)",
               borderImageSlice: 1,
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.borderImageSource =
+                'linear-gradient(91.19deg, rgba(103, 127, 252, 0.8) 23.63%, rgba(255, 255, 255, 0.8) 89.27%)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.borderImageSource =
+                'linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%)';
             }}
           />
         </div>

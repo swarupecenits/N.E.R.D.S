@@ -55,7 +55,7 @@ const Contact = () => {
       {/* Flex container for the card and the form */}
       <div className="flex flex-col items-center relative z-10 mt-36"> {/* Maintain margin top for desktop */}
         {/* Mobile View - Only visible on sm and md */}
-        <div className="flex flex-col items-center justify-center lg:hidden -mt-44">
+        <div className="flex flex-col items-center justify-center lg:hidden -mt-56">
           {/* Glowing Logo */}
           <GlowingLogo />
           
