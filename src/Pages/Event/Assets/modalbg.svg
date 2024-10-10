@@ -1,0 +1,25 @@
+<svg width="1198" height="665" viewBox="0 0 1198 665" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glass_blur" x="-35" y="-35" width="1268" height="734.633" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feGaussianBlur in="BackgroundImageFix" stdDeviation="40" />  <!-- Increased blur here -->
+      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_27_336" />
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_27_336" result="shape" />
+    </filter>
+    <linearGradient id="paint0_linear_27_336" x1="1.8686e-05" y1="304.498" x2="1155.18" y2="74.0137" gradientUnits="userSpaceOnUse">
+      <stop />
+      <stop offset="0.485" stop-color="#1E174F" />
+      <stop offset="1" stop-color="#6A1179" />
+    </linearGradient>
+    <linearGradient id="paint1_linear_27_336" x1="-1.7514e-05" y1="267.658" x2="1140.35" y2="-14.2526" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A050B6" stop-opacity="0.6" />
+      <stop offset="1" stop-color="#B838FF" />
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#glass_blur)">
+    <rect width="1198" height="665" rx="30" fill="rgba(128, 0, 128, 0.1)" />
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 27C0 12.0883 12.0883 0 27 0H1059.29C1065.61 0 1071.73 2.21575 1076.58 6.2615L1188.29 99.3921C1194.44 104.522 1198 112.119 1198 120.131V637.633C1198 652.544 1185.91 664.633 1171 664.633H1C0.447754 664.633 0 664.185 0 663.633V27Z" fill="rgba(128, 0, 128, 0.25)" />
+    <path d="M1059.29 4H27V-4H1059.29V4ZM1185.73 102.464L1074.02 9.33387L1079.14 3.18913L1190.85 96.3197L1185.73 102.464ZM1194 637.633V120.131H1202V637.633H1194ZM1 660.633H1171V668.633H1V660.633ZM4 663.633C4 661.976 2.65673 660.633 1 660.633V668.633C-1.76123 668.633 -4 666.394 -4 663.633H4ZM4 27V663.633H-4V27H4ZM1202 637.633C1202 654.754 1188.12 668.633 1171 668.633V660.633C1183.7 660.633 1194 650.335 1194 637.633H1202ZM1190.85 96.3197C1197.92 102.21 1202 110.933 1202 120.131H1194C1194 113.306 1190.97 106.834 1185.73 102.464L1190.85 96.3197ZM27 4C14.2975 4 4 14.2975 4 27H-4C-4 9.87917 9.8792 -4 27 -4V4ZM1059.29 -4C1066.54 -4 1073.57 -1.456 1079.14 3.18913L1074.02 9.33387C1069.88 5.88749 1064.67 4 1059.29 4V-4Z" fill="url(#paint1_linear_27_336)" />
+  </g>
+</svg>
