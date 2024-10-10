@@ -4,10 +4,12 @@ import TestimonialSection from "../../components/testimonial/testimonial_section
 import WhatDoWeProvideSlider from "../../components/what_do_we_provide/what_do_we_provide_section";
 import Projects from "../../components/Projects/Projects";
 import AboutUsSection from "../../components/About_Us/AboutUsSection";
+import Upcoming_events from "../../components/upcoming_events/event_card_slider";
 
 const Home = () => {
   return (
     <div>
+      <Upcoming_events/>
       <AboutUsSection></AboutUsSection>
       <Projects />
 
