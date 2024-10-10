@@ -12,14 +12,8 @@ const Home = () => {
       <Upcoming_events/>
       <AboutUsSection></AboutUsSection>
       <Projects />
-
-      {/* What Do We Provide Section */}
       <WhatDoWeProvideSlider />
-
-      {/* Testimonial Section */}
       <TestimonialSection />
-
-      {/* Other sections of the home page */}
     </div>
   );
 };
