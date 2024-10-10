@@ -29,88 +29,89 @@ function Gallery(){
   return(
 
     
-    <>
+    <div className="overflow-hidden">
     <section className="first  hidden lg:block h-[100vh] w-[95vw] box-border snap-start">
-      <div className="img ">
-     <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/buvdzppkwtr8jxfklb1v" alt="bg-image" className="mix-blend-whiten absolute bg-image-img w-[100vw] h-[100vh] object-cover  top-0 left-0 z-0"/>
-     <motion.div
-      initial={{opacity:0, translateX: "100%"}}
-      whileInView={{opacity:1, translateX:"0%"}}
-      transition={{duration: 1}}><img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5" alt="robot-image" className="mix-blend-whiten  main-image-img transform translate-x-[10%] translate-y-[-12%] w-[85vw] h-[95vh] z-0 "/>
-      <img src="src/Pages/Gallery/Rectangle 189.svg" alt="robot-image" className="mix-blend-whiten  gradient-img transform translate-x-[95%] translate-y-[-45%] z-1 ml-[26%] relative"/> 
-      </motion.div>
+        <div className="img ">
+            <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/buvdzppkwtr8jxfklb1v" alt="bg-image" className="mix-blend-whiten absolute bg-image-img w-[100vw] h-[100vh] object-cover  top-0 left-0 z-0"/>
+            <motion.div
+            initial={{opacity:0, translateX: "100%"}}
+            whileInView={{opacity:1, translateX:"0%"}}
+            transition={{duration: 1}}><img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5" alt="robot-image" className="mix-blend-whiten  main-image-img transform translate-x-[10%] translate-y-[-12%] w-[85vw] h-[95vh] z-0 "/>
+            <img src="src/Pages/Gallery/Rectangle 189.svg" alt="robot-image" className="mix-blend-whiten  gradient-img transform translate-x-[95%] translate-y-[-45%] z-1 ml-[26%] relative"/> 
+            </motion.div>
 
-      {/*for mobile*/}
+        {/*for mobile*/}
 
-      
-      
-    <div  className="content-section ">
-      <motion.h1 
-      initial={{opacity:0, translateX: "-100%"}}
-      whileInView={{opacity:1, translateX:"0%"}}
-      transition={{duration: 1}}className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading mx-0 mt-[20vh] text-[65px] w-fit absolute" id="first">PHOTO GALLERY</motion.h1>
-     {/* <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading team-heading absolute"></h1> */}
-     <motion.p 
-     initial={{opacity:0, translateX: "-100%"}}
-     whileInView={{opacity:1, translateX:"0%"}}
-     transition={{duration: 1}} className="font-spaced font-bold heading-subsection absolute gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent mx-0 mt-0 mr-[95vh] text-[18px]" id="second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil id magnam incidunt commodi iste! Voluptates saepe praesentium, unde nostrum quam beatae esse eveniet.</motion.p>
-     
-     </div>
-     </div>
-     {/* <hr /> */}
+        
+        
+        <div  className="content-section ">
+        <motion.h1 
+        initial={{opacity:0, translateX: "-100%"}}
+        whileInView={{opacity:1, translateX:"0%"}}
+        transition={{duration: 1}}className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading mx-0 mt-[20vh] text-[65px] w-fit absolute" id="first">PHOTO GALLERY</motion.h1>
+        {/* <h1 className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading team-heading absolute"></h1> */}
+        <motion.p 
+        initial={{opacity:0, translateX: "-100%"}}
+        whileInView={{opacity:1, translateX:"0%"}}
+        transition={{duration: 1}} className="font-spaced font-bold heading-subsection absolute gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent mx-0 mt-0 mr-[95vh] text-[18px]" id="second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil id magnam incidunt commodi iste! Voluptates saepe praesentium, unde nostrum quam beatae esse eveniet.</motion.p>
+        
+        </div>
+        </div>
+        {/* <hr /> */}
     </section>
 
 
 
-    <section className="first block lg:hidden w-[100vw] h-[100vh] box-border snap-start bg-cover bg-center bg-no-repeat relative" style={{
+    <section className="first block lg:hidden box-border snap-start bg-cover bg-center bg-no-repeat relative" style={{
         backgroundImage: "url('https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/buvdzppkwtr8jxfklb1v')", 
         }}> 
 
  
 
 
-{/* <img
-src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/buvdzppkwtr8jxfklb1v"
-alt="bg-image"
-className="mix-blend-whiten  bg-image-img w-full h-auto object-cover top-0 left-0 z-0 w-[85vw] md:w-[85vw] h-[80vh] md:h-[95vh]"
-/> */}
+                    {/* <img
+                    src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/buvdzppkwtr8jxfklb1v"
+                    alt="bg-image"
+                    className="mix-blend-whiten  bg-image-img w-full h-auto object-cover top-0 left-0 z-0 w-[85vw] md:w-[85vw] h-[80vh] md:h-[95vh]"
+                    /> */}
 
-<motion.div
-initial={{ opacity: 0, translateX: "80%" , translateY: "45%"}}
-whileInView={{ opacity: 1, translateX: "-30%", ranslateY: "45%" }}
-transition={{ duration: 1 }}
-className="" 
->
-  
-<img
-src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5"
-alt="robot-image"
-className="mix-blend-whiten main-image-img  w-full h-full " // Set height for mobile and larger screens
-/>
+                    <motion.div
+                    initial={{ opacity: 0, translateX: "80%" , translateY: "45%"}}
+                    whileInView={{ opacity: 1, translateX: "-30%", ranslateY: "45%" }}
+                    transition={{ duration: 1 }}
+                    className="" 
+                    >
+                    
+                        <img
+                        src="https://res.cloudinary.com/dehyqj5i3/image/upload/v1728550690/1f33018e-a7e9-451c-91e6-dfd5e2b931c3.png"
+                        alt="robot-image"
+                        className=" main-image-img object ml-[7.5rem] mt-[-6rem] mb-20 " // Set height for mobile and larger screens
+                        />
 
-</motion.div>
-<motion.h1
-  initial={{ opacity: 0, translateX: "-100%",translateY: "20%" }}
-  whileInView={{ opacity: 1, translateX: "12%", translateY: "30%" }}
-  transition={{ duration: 1 }}
-  className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading  "
-  id="first"
->
-  PHOTO GALLERY
-</motion.h1>
-<motion.p
-  initial={{ opacity: 0, translateX: "-100%", translateY: "30%" }}
-  whileInView={{ opacity: 1, translateX: "15%", translateY: "30%" }}
-  transition={{ duration: 1 }}
-  className="font-spaced font-bold heading-subsection gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent text-lg"
-  id="second"
->
-  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil id
-  magnam incidunt commodi iste! Voluptates saepe praesentium, unde
-  nostrum quam beatae esse eveniet.
-</motion.p>
+                    </motion.div>
 
-</section>  
+                    <motion.h1
+                    initial={{ opacity: 0, translateX: "-100%",translateY: "20%" }}
+                    whileInView={{ opacity: 1, translateX: "12%", translateY: "30%" }}
+                    transition={{ duration: 1 }}
+                    className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading  "
+                    id="first"
+                    >
+                    PHOTO GALLERY
+                    </motion.h1>
+                    <motion.p
+                    initial={{ opacity: 0, translateX: "-100%", translateY: "30%" }}
+                    whileInView={{ opacity: 1, translateX: "15%", translateY: "30%" }}
+                    transition={{ duration: 1 }}
+                    className="font-spaced font-bold heading-subsection gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent text-lg"
+                    id="second"
+                    >
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil id
+                    magnam incidunt commodi iste! Voluptates saepe praesentium, unde
+                    nostrum quam beatae esse eveniet.
+                    </motion.p>
+
+            </section>  
 
 
 
@@ -118,24 +119,21 @@ className="mix-blend-whiten main-image-img  w-full h-full " // Set height for mo
 
     <section className="  second h-[100vh]    bg-black">
       
-    <motion.h1
-  initial={{ opacity: 0, translateX: "-100%" }} // Starts from the far left off-screen
-  whileInView={{ opacity: 1, translateX: "0%" }} // Animates to the exact center
-  transition={{ duration: 1 }}
-  className="text-[32px] sm:text-[40px] lg:text-[53px] w-fit font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading mx-auto text-center translate-y-[-30%] sm:translate-y-[-70%] lg:translate-y-[-90%]" // Center the text
-  id="font"
->
-  GLIMPSE
-</motion.h1>
+                <motion.h1
+            initial={{ opacity: 0, translateX: "-100%" }} // Starts from the far left off-screen
+            whileInView={{ opacity: 1, translateX: "0%" }} // Animates to the exact center
+            transition={{ duration: 1 }}
+            className="text-[32px] sm:text-[40px] lg:text-[53px] w-fit font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading mx-auto text-center translate-y-[-30%] sm:translate-y-[-70%] lg:translate-y-[-90%]" // Center the text
+            id="font"
+            >
+            GLIMPSE
+            </motion.h1>
 
-          <App />
-         <img src="src/Pages/Gallery/gradient.png" style={{
-    transform: "rotate(45deg) translateY(-100px)", // Adjust the angle and translation as needed
-    transition: "transform 0.5s", // Optional: smooth transition
-  }} />
-      
-      
-      
+                    <App />
+                    <img src="src/Pages/Gallery/gradient.png" style={{
+                transform: "rotate(45deg) translateY(-100px)", // Adjust the angle and translation as needed
+                transition: "transform 0.5s", // Optional: smooth transition
+            }} />
     </section>
     
     
@@ -793,7 +791,7 @@ className="mix-blend-whiten main-image-img  w-full h-full " // Set height for mo
   </motion.div>
 </section>
 
-    </>
+    </div>
   )
 }
 export default Gallery;
