@@ -8,7 +8,7 @@ import Upcoming_events from "../../components/upcoming_events/event_card_slider"
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Upcoming_events/>
       <AboutUsSection></AboutUsSection>
       <Projects />
