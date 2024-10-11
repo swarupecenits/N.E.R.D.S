@@ -88,10 +88,10 @@ function Hero() {
 
 function Hero_small() {
     return(
-        <div className="hero_contain md:hidden flex flex-col items-center justify-center mb-">
+        <div className="hero_contain md:hidden flex flex-col items-center justify-center">
             <img src={robot} alt="" className="ml-[-3rem] block"/>
-            <h1 className="text-center font-ethenocentric text-5xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading relative"></h1>
-            <img src={stuff} alt=""  className="block pr-14 mt-[-5rem]"/>
+            <h1 className="m-0 p-0 z-50 font-ethenocentric text-4xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent">EVENTS</h1>
+            <img src={stuff} alt=""  className="block pr-14 mt-[-3rem]"/>
         </div>
     )
 }
@@ -345,7 +345,7 @@ function Timeline_small(){
     };
 
     return (
-        <div className="timeline_container md:hidden px-10 mb-10 -mt-10">
+        <div className="timeline_container md:hidden px-10 mb-10 -mt-16">
             <div className="timeline grid grid-cols-8 grid-rows-20">
 
                 <img src={time2} alt="" className="col-start-1 row-start-1 col-span-1 row-span-20" />
@@ -503,8 +503,8 @@ export default function Event(){
             <ProgressBar duration="0.01"/>
             <Hero />
             <Hero_small />
-            <Timeline />
             <Timeline_small />
+            <Timeline />
             {/* <BasicTimeline className="block md:hidden"/> */}
         </div>
     )
