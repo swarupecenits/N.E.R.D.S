@@ -46,7 +46,7 @@ function Hero() {
   
 
     return (
-        <div className="hidden pl-28 pb-10 md:pl-0 hero_container flex-col items-center md:block rounded-3xl ml-28 mr-32 mt-11 shadow-[0_10px_30px_rgba(1,1,74,6)]"
+        <div className="hidden pl-28 pb-10 md:pl-0 hero_container flex-col items-center md:block "
         style={{backgroundColor:"rgb(1,1,30)"}}
         >
             <div 
