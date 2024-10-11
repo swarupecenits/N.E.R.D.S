@@ -4,14 +4,19 @@ import App from "./app.jsx";
 
 function Carousel() {
     const row1 = [
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5",
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/buvdzppkwtr8jxfklb1v",
+      // "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5",
+      "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/wd4lcaneqsckozlzuv8n",
+      "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/oio4um08mvrvae1wvabi",
+      "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj",
     ];
   
     const row2 = [
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5",
-      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/buvdzppkwtr8jxfklb1v",
-    ];
+      // "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5",
+      "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/wd4lcaneqsckozlzuv8n",
+      "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/oio4um08mvrvae1wvabi",
+"https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj",    
+// "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj", q   
+];
   
     return (
       <CarouselContainer>
@@ -61,17 +66,17 @@ function Carousel() {
     position: relative;
     display: flex;
     
-    align-items: center;
-    justify-content: center;
+    // align-items: center;
+    // justify-content: center;
   `;
   
   const Wrapper = styled.div`
     width: 100%;
-    height: fit-content;
+    height: 80vh;
     flex-direction: column;
     display: flex;
    
-    align-items: center;
+    // align-items: center;
     justify-content: center;
   `;
   
@@ -99,8 +104,8 @@ function Carousel() {
     flex-shrink: 0;
     display: flex;
     
-    align-items: center;
-    justify-content: space-around;
+    // align-items: center;
+    // justify-content: space-around;
     animation: ${scrollX} 10s linear infinite;
   `;
   
@@ -118,16 +123,16 @@ function Carousel() {
     flex-shrink: 0;
     display: grid;
     place-items: center;
-    width: clamp(10rem, 3rem + 40vmin, 30rem);
-    height: clamp(10rem, 4rem + 30vmin, 30rem);
-    padding: calc(clamp(10rem, 1rem + 20vmin, 30rem) / 10);
+    width: clamp(10rem, 1rem + 31vmin, 30rem);
+    height: clamp(10rem, 3rem + 30vmin, 30rem);
+    padding: calc(clamp(1rem, 1rem + 10vmin, 30rem) / 10);
     margin-bottom: 90px;
   `;
   
   const Image = styled.img`
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: 35vh;
+    object-fit: cover;
     border-radius: 0.5rem;
     border: 1px solid white
     `;
