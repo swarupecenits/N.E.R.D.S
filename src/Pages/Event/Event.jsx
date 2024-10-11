@@ -13,6 +13,7 @@ import pc_card_border2 from "./Assets/pc_card_border2.svg"
 import links from "./JSON/img_links_for_timeline_cards.json"
 import TextAnimation from "./Animations/TextFlip"
 import ProgressBar from "react-scroll-progress-bar";
+import Gradient from "./Assets/Gradient.svg"
 
 // function Hero() {
 //     return(
@@ -45,8 +46,8 @@ function Hero() {
   
 
     return (
-        <div className="hidden pl-28 pb-10 md:pl-0 hero_container flex-col items-center md:block"
-        style={{backgroundImage:"url(https://res.cloudinary.com/dehyqj5i3/image/upload/v1728357474/656b9c98-adbe-4848-916f-67f2f9a0154b.png)"}}
+        <div className="hidden pl-28 pb-10 md:pl-0 hero_container flex-col items-center md:block rounded-3xl ml-28 mr-32 mt-11 shadow-[0_10px_30px_rgba(1,1,74,6)]"
+        style={{backgroundColor:"rgb(1,1,30)"}}
         >
             <div 
             ref={ref}
@@ -56,7 +57,7 @@ function Hero() {
                 transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s"}}
             className="hero md:flex">
                 <div className="left md:mx-auto">
-                    <img src={robot} alt="the robot" className="md:ml-1 pr-12 md:pr-0" />
+                    <img src={robot} alt="the robot" className="md:ml-1 md:pr-0" />
                 </div>
 
                 <div
@@ -79,7 +80,7 @@ function Hero() {
                 transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s"}}
             whileHover={{color:"yellow", transition: {duration:0.005}}}
             transition={{duration:0.005}}
-            className="pl-6  md:mx-auto md:pl-9 font-spaced text-white font-normal heading-subsection">A playful way to emphasize your inner competitive spirit and determination</motion.p>
+            className="pl-6 pb-10  md:mx-auto md:pl-9 font-spaced text-white font-normal heading-subsection">A playful way to emphasize your inner competitive spirit and determination</motion.p>
 
 
         </div>
@@ -110,7 +111,7 @@ function Timeline(){
     const [border6, setBorder6] = useState(pc_card_border)
 
     return(
-        <div className="timeline_container hidden mb-32 md:block lg:block">
+        <div className="timeline_container hidden mb-32 md:block lg:block" >
             <div className="timeline flex flex-col items-center relative">
                 <img src={time} alt="" className="pt-24 lg:px-0 md:px-20 z-0 md:inline" />
                 <div className="absolute lg:px-5 md:px-20 cards z-10 h-[100%] overflow-visible lg:w-[100%] md:w-[100%] flex flex-col items-center justify-between pt-40">
@@ -118,9 +119,13 @@ function Timeline(){
                     {/* cards */}
 
                     {/* card1 */}
-                    <motion.div className="cards flex mt-8" onClick={() =>{ setIsOpen(true);setId(1);}}>
+                    <motion.div className="cards flex mt-8 " onClick={() =>{ setIsOpen(true);setId(1);}}>
+                    <img 
+                    src={Gradient} 
+                    className="absolute top-[17rem] left-[-45rem] z-50"
+                    alt="" />
                         <motion.div
-                            className="text text-slate-200 relative text-center text"
+                            className="text text-slate-200 relative text-center text "
                             initial={{ x: 100, opacity: 0 }} 
                             animate={(isHovered && id==1)  ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
@@ -151,8 +156,7 @@ function Timeline(){
                     </motion.div>        
 
                     {/* card2 */}
-                    <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(2);}}>
-
+                    <motion.div className="cards flex relative overflow-visible" onClick={() =>{ setIsOpen(true);setId(2);}}>
                         <motion.div
                             className="relative overflow-hidden flex lg:-mt-0 md:-mt-5 min-w-[30rem]"
                             style={{

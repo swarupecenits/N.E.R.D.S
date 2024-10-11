@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 
-const words = ["are", "where", "those", "ideas", "become a", "reality"];
+const words = ["are", "where", "those", "ideas", "become", "a", "reality"];
 
 const TextAnimation = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,7 +19,7 @@ const TextAnimation = () => {
   return (
 
 
-    <div className='flex text-5xl relative justify-start w-full pl-28 bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent font-ethenocentric'>
+    <div className='flex text-5xl relative justify-start w-full pl-2 bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent font-ethenocentric'>
        <motion.span className=''
        whileHover={{color: "red"}}>Events:</motion.span> 
       <motion.span
