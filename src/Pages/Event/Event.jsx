@@ -483,7 +483,7 @@ function Timeline_small(){
                             
                             {/* Modal content */}
                             <motion.div
-                            className="fixed z-50 top-[10%] left-[10%] w-[80%] bg-opacity-60 backdrop-filter  "
+                            className="fixed z-50 top-[5%] left-[10%] w-[80%] bg-opacity-60 backdrop-filter  "
                             variants={modalVariants}
                             // style={{
                             //     width: "80%",
