@@ -483,11 +483,17 @@ function Timeline_small(){
                             
                             {/* Modal content */}
                             <motion.div
-                            className="fixed z-30 top-[25%] left-[10%] w-[80%] bg-opacity-60 backdrop-filter backdrop-blur-sm bg-cover"
+                            className="fixed z-50 top-[10%] left-[10%] w-[80%] bg-opacity-60 backdrop-filter  "
                             variants={modalVariants}
-                            style={{
-                                backgroundImage: `url(${modalbg})`
-                            }}
+                            // style={{
+                            //     width: "80%",
+                            //     height: "100%",
+                            //     backgroundImage: `url(${modalbg})`, 
+                            //     backgroundSize: "cover",            
+                            //     backgroundRepeat: "no-repeat",      
+                            //     backgroundPosition: "center"        
+                            //   }}
+                              
                             initial="hidden"
                             animate="visible"
                             exit="exit"
