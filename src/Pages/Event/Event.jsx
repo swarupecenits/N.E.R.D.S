@@ -14,6 +14,7 @@ import links from "./JSON/img_links_for_timeline_cards.json"
 import TextAnimation from "./Animations/TextFlip"
 import ProgressBar from "react-scroll-progress-bar";
 import Gradient from "./Assets/Gradient.svg"
+import modalbg from "./Assets/modalbgmobile.svg"
 
 // function Hero() {
 //     return(
@@ -482,8 +483,11 @@ function Timeline_small(){
                             
                             {/* Modal content */}
                             <motion.div
-                            className="fixed z-30 top-[25%] left-[10%] w-[80%] bg-white/60 p-5 rounded-xl bg-opacity-60 backdrop-filter backdrop-blur-sm"
+                            className="fixed z-30 top-[25%] left-[10%] w-[80%] bg-opacity-60 backdrop-filter backdrop-blur-sm bg-cover"
                             variants={modalVariants}
+                            style={{
+                                backgroundImage: `url(${modalbg})`
+                            }}
                             initial="hidden"
                             animate="visible"
                             exit="exit"
