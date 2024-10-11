@@ -52,12 +52,8 @@
   height: 100%;
 }
 
-@media (max-width: 640px) {
-  .item1 {
-      width: 50% ;
-      height: 50%;
-  }
-}
+
+
 /* 
 <section name="third2" className={`third2 section h-[100vh] box-border snap-start bg-black ${activeSection === "third2" ? "" : "hidden"}`}>
 
