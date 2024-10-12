@@ -184,7 +184,7 @@ const Hero = () => {
           </motion.div>
 
           <motion.img
-            className="w-[100vw] h-[40vh] md:w-[130vw] md:h-[100vh] flex flex-col justify-end md:mr-[48] "
+            className="object-cover pt-8 md:pt-0 min-w-[150vw] md:min-w-0 md:w-[130vw] md:h-[100vh] flex flex-col justify-end md:mr-[48] "
             src="https://res.cloudinary.com/dieef3h1w/image/upload/v1728406864/ogtayxy6wgo4bbf3wslo-removebg-preview_2_wyb07i.png"
             alt="Robot"
             variants={imageVariants}
