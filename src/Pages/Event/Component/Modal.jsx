@@ -12,7 +12,7 @@ const Content = ({id}) => {
         <>
             <img src={modalbg} alt="" className=" absolute top-[-15rem]"/>
             <h1 className="text-center  text-4xl absolute top-[-8rem] left-14 font-ethenocentric text-slate-300 ">{obj[id].head}</h1>
-            <p className="font-ethnocentric text-2xl absolute top-8 left-14  text-wrap max-w-[30rem] text-slate-400">{obj[id].text}</p>
+            <p className="font-ethnocentric text-base absolute top-8 left-14  text-wrap max-w-[28rem] text-slate-200">{obj[id].text}</p>
             <img src={icon} alt="icon in modal" className="absolute top-[-2.8rem] left-12" />
             {/* <img src={obj[id].url} alt="image in modal" className="absolute top-[-8rem] left-[33rem] max-w-96" /> */}
 
