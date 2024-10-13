@@ -25,12 +25,8 @@
   );
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
-<<<<<<< HEAD
-=======
   z-index: 2;
   animation: slideFromBottom 5s ease-in-out forwards;
->>>>>>> 0772f73bc00b829c37132c2850ca2a1736af6b36
-
 }
 @keyframes slideFromBottom {
     0% {
@@ -82,11 +78,11 @@
     bottom: 0;
     font-family: "Ethno";
     display: flex;
-    line-height: 200px;
     justify-content: space-between;
-    align-items: center;
     animation: tubelightFlickerSmooth 1.5s ease-in;
     z-index: 2;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 @keyframes tubelightFlickerSmooth {
     0%, 15%, 30%, 100% {
@@ -102,24 +98,70 @@
         opacity: 0.6;
     }
 }
-@media screen and (max-width: 939px) {
+@media screen and (max-width: 1034px) {
     .nerds{
         font-size: 120px;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 924px) {
     .nerds{
         font-size: 100px;
     }
 }
-@media screen and (max-width: 581px) {
+@media screen and (max-width: 768px) {
     .nerds{
         font-size: 80px;
     }
+    .main-div img{
+        height: 74vh;
+    }
+    .typewriter{
+        margin-left: 0px;
+    }
 }
-@media screen and (max-width: 509px) {
+@media screen and (max-width: 639px) {
+    .nerds{
+        font-size: 70px;
+    }
+    .main-div img{
+        height: 70vh;
+    }
+    .main-div{
+        height: 80vh;
+    }
+}
+@media screen and (max-width: 563px) {
+    .nerds{
+        font-size: 65px;
+    }
+    .main-div{
+        height: 78vh;
+    }
+    .main-div img{
+        height: 65vh;
+        margin-left: 25px;
+    }
+}
+@media screen and (max-width: 483px) {
     .nerds{
         font-size: 60px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .nerds{
+        font-size: 55px;
+    }
+    .main-div{
+        height: 73vh;
+    }
+    .main-div img{
+        height: 60vh;
+        margin-left: 45px;
+    }
+}
+@media screen and (max-width: 416px) {
+    .main-div img{
+        margin-left: 20px;
     }
 }
 @media screen and (max-width: 447px) {
