@@ -85,14 +85,22 @@ const ContactForm = () => {
         ref={form}
         onSubmit={sendEmail}
         className={`space-y-6 p-8 relative z-20 mt-10
-          ${
-            windowSize < 768
-              ? "bg-black bg-opacity-10 backdrop-blur-lg border border-gray-300 shadow-lg rounded-lg max-w-md mx-auto"
-              : "bg-transparent"
-          }`}
+    ${
+      windowSize < 768
+        ? "bg-black bg-opacity-10 backdrop-blur-lg border border-gray-300 shadow-lg max-w-md mx-auto"
+        : "bg-transparent"
+    }`}
         style={{
           border:
-            windowSize < 768 ? "2px solid rgba(255, 255, 255, 0.3)" : "none",
+            windowSize < 768
+              ? "2px solid transparent" // Keep the border transparent initially
+              : "none",
+          borderImage:
+            windowSize < 768
+              ? "linear-gradient(293.3deg, rgba(87, 0, 136, 0.2) 3.05%, #B838FF 95.9%) 1"
+              : "none", // Apply gradient border image
+          borderWidth: windowSize < 768 ? "2px" : "none", // Set the border width
+          borderRadius: "12px", // Set the rounded edges
           backdropFilter: windowSize < 768 ? "blur(10px)" : "none",
         }}
       >
