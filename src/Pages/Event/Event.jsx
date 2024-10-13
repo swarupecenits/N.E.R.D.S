@@ -132,7 +132,7 @@ function Timeline(){
                             initial={{ x: 100, opacity: 0 }} 
                             animate={(isHovered && id==1)  ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                                <p className="absolute font-ethenocentric text-sm min-w-96 left-[-10rem] ">{obj[dataId].data} </p>
                         </motion.div>
 
                         <motion.div
@@ -186,7 +186,7 @@ function Timeline(){
                                 initial={{ x: 100, opacity: 0 }} 
                                 animate={(isHovered && id==2)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
                                 transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                    <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                                    <p className="absolute font-ethenocentric text-sm min-w-96 left-[-10rem] ">{obj[dataId].data} </p>
                             </motion.div>
                     </motion.div>        
 
@@ -197,7 +197,7 @@ function Timeline(){
                             initial={{ x: 100, opacity: 0 }} 
                             animate={(isHovered && id==3)  ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                                <p className="absolute font-ethenocentric text-sm min-w-96 left-[-10rem] ">{obj[dataId].data} </p>
                         </motion.div>
 
                         <motion.div
@@ -252,7 +252,7 @@ function Timeline(){
                                 initial={{ x: 100, opacity: 0 }} 
                                 animate={(isHovered && id==4)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
                                 transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                    <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                                    <p className="absolute font-ethenocentric text-sm min-w-96 left-[-10rem] ">{obj[dataId].data} </p>
                             </motion.div>
                     </motion.div> 
 
@@ -263,7 +263,7 @@ function Timeline(){
                             initial={{ x: 100, opacity: 0 }} 
                             animate={(isHovered && id==5)  ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                                <p className="absolute font-ethenocentric text-sm min-w-96 left-[-10rem] ">{obj[dataId].data} </p>
                         </motion.div>
 
                         <motion.div
@@ -318,7 +318,7 @@ function Timeline(){
                                 initial={{ x: 100, opacity: 0 }} 
                                 animate={(isHovered && id==6)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
                                 transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                    <p className="absolute font-ethenocentric text-xl min-w-96 left-[-10rem] top-24">{obj[dataId].data} </p>
+                                    <p className="absolute font-ethenocentric text-sm min-w-96 left-[-10rem] ">{obj[dataId].data} </p>
                             </motion.div>
                     </motion.div> 
 
