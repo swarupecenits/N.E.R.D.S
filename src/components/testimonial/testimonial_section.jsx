@@ -18,7 +18,7 @@ const testimonials = [
     name: "Ayush Maurya",
     role: "President",
     image: "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/xei3psbuveqvu8vgb0hx.webp",
-    text: "Fantastic experience! Will definitely use this service again.",
+    text: "Our mission is not just to build robots but to aim for excellence in hackathons, participate in various national and international events, and foster ideas for future tech startups.",
   },
   {
     name: "Swarup Chanda",
