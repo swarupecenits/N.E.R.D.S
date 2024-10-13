@@ -46,7 +46,7 @@ const EventCardSlider = () => {
     <div className="w-full p-4 sm:p-8 relative min-h-screen">
       {/* Heading Section */}
       <h1 className="font-ethenocentric text-center bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent mb-8
-        text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight">
+         sm:text-4xl md:text-5xl lg:text-5xl leading-tight">
         Upcoming Events
       </h1>
 
