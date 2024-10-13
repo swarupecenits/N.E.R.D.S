@@ -38,7 +38,7 @@ const projects = [
       "The Head-motion-controlled wheelchair offers an innovative solution for individuals with mobility impairments. Using sensors to detect head movements, the system translates these into directional commands, allowing users to navigate with ease. Powered by microcontrollers and sensor technology, this hands-free design provides greater independence, enhancing accessibility and improving the quality of life for people with limited physical mobility.",
     imageUrl:
       "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/e3z5b5s5zihzynxxqi8o",
-    link: "", // custom URL
+    link: "#", 
   },
   {
     title: "Quadcopter Drone",
@@ -46,7 +46,7 @@ const projects = [
       "The quadcopter drone is an unmanned aerial vehicle (UAV) that operates using four rotors for lift, stability, and maneuverability. Controlled remotely or autonomously via onboard sensors and GPS, quadcopters are used in various fields such as aerial photography, surveillance, delivery, and research. Their agile flight capabilities and ease of use make them highly versatile in both commercial and recreational applications.",
     imageUrl:
       "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/mwaszrp83seimayoqbl6",
-    link: "", // custom URL
+    link: "#", 
   },
   {
     title: "Bluetooth Bot",
@@ -54,7 +54,7 @@ const projects = [
       "The Bluetooth-controlled car is a small, wireless vehicle operated via a smartphone or controller using Bluetooth technology. It typically involves an embedded microcontroller like Arduino, which receives commands from a mobile app to control the car's movement, such as forward, backward, left, and right. This technology allows for remote operation, making it a fun and educational project for learning robotics and wireless communication.",
     imageUrl:
       "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ea9y3xi7we9gonc2qudy",
-    link: "https://example.com/bluetooth-bot", // custom URL
+    link: "https://youtu.be/KyjrGN9ZTPg?si=oehFA-BAHmJJ5sR_",
   },
 ];
 
