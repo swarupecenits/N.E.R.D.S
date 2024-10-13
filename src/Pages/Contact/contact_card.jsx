@@ -1,4 +1,4 @@
-
+import React from 'react';
 
 const contactCardSVG = (
   <svg width="1200" height="742" viewBox="0 0 1200 742" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,7 +26,7 @@ const contactCardSVG = (
 
 const ContactCard = () => {
     return (
-      <div className="relative">
+      <div className="relative p-20">
         {/* Space for the SVG */}
         <div className="relative z-0 scale-[70%]">
           {contactCardSVG}

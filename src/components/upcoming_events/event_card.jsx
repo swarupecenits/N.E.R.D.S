@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const EventCard = ({ heading, text, image }) => {
+const EventCard = ({ heading, image }) => {
   const [hovered, setHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -38,8 +38,8 @@ const EventCard = ({ heading, text, image }) => {
 
   return (
     <div
-      className={`relative flex flex-col items-center justify-center transition-transform duration-300 
-        ${hovered && !isMobile ? "scale-100" : "scale-90"} p-8 w-full max-w-[90vw] md:max-w-[430px]`}
+      className={`relative flex flex-col items-center justify-center transition-transform duration-300
+        ${hovered && !isMobile ? "scale-100" : "scale-90"} p-6 w-full max-w-[90vw] md:max-w-[430px]`}
       onMouseEnter={() => !isMobile && setHovered(true)}
       onMouseLeave={() => !isMobile && setHovered(false)}
       style={{
@@ -53,12 +53,7 @@ const EventCard = ({ heading, text, image }) => {
           : "polygon(15% 0%, 100% 0%, 100% 90.6%, 88% 100%, 0% 100%, 0% 12.1%)", // Keep the existing clip path for larger screens
       }}
     >
-      <h2 className="text-white font-spaced text-[32px] md:text-[51.08px] font-normal leading-[48.79px] text-left p-4 -mt-28">
-        {heading}
-      </h2>
-      <p className="text-[#FFF0F0] font-spaced text-[14px] md:text-[18.22px] font-normal leading-[17.4px] text-center p-4 mt-16">
-        {text}
-      </p>
+      {/* Removed the heading tag */}
     </div>
   );
 };
