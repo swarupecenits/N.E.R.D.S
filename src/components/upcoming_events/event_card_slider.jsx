@@ -1,11 +1,11 @@
-import { useRef } from 'react';
-import Slider from 'react-slick';
-import EventCard from './event_card';  // Update path if necessary
+import { useRef } from "react";
+import Slider from "react-slick";
+import EventCard from "./event_card"; // Update path if necessary
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import useWindowSize from './useWindowSize'; // Custom hook to get window size
+import useWindowSize from "./useWindowSize"; // Custom hook to get window size
 
 const EventCardSlider = () => {
-  const sliderRef = useRef(null); 
+  const sliderRef = useRef(null);
   const { width } = useWindowSize(); // Get the screen width for responsive behavior
 
   // Slider settings based on screen width
@@ -20,16 +20,41 @@ const EventCardSlider = () => {
     arrows: false, // Hide arrows (custom buttons used)
     pauseOnHover: false, // Disable pause on hover
     pauseOnFocus: false, // Disable pause on focus
-    cssEase: 'linear',   // Smooth continuous scrolling without jittering
+    cssEase: "linear", // Smooth continuous scrolling without jittering
   };
 
   // Array of card data for the EventCard
   const cardData = [
-    { heading: 'Robowar', text: 'Description for Event 1.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/oio4um08mvrvae1wvabi' },
-    { heading: 'Robo Soccer', text: 'Description for Event 2.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj' },
-    { heading: 'RaceCircuit', text: 'Description for Event 3.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/wd4lcaneqsckozlzuv8n' },
-    { heading: 'Bluetooth Blitz', text: 'Description for Event 4.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/q0z5pmaxpz1jwq131l1q' },
-    { heading: 'SkyHack Workshop', text: 'Description for Event 5.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj' },
+    {
+      heading: "Robowar",
+      text: "Description for Event 1.",
+      image:
+        "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/oio4um08mvrvae1wvabi",
+    },
+    {
+      heading: "Robo Soccer",
+      text: "Description for Event 2.",
+      image:
+        "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj",
+    },
+    {
+      heading: "RaceCircuit",
+      text: "Description for Event 3.",
+      image:
+        "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/wd4lcaneqsckozlzuv8n",
+    },
+    {
+      heading: "Bluetooth Blitz",
+      text: "Description for Event 4.",
+      image:
+        "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/q0z5pmaxpz1jwq131l1q",
+    },
+    {
+      heading: "SkyHack Workshop",
+      text: "Description for Event 5.",
+      image:
+        "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj",
+    },
     // Add more objects as needed
   ];
 
@@ -45,15 +70,21 @@ const EventCardSlider = () => {
   return (
     <div className="w-full p-4 sm:p-8 relative min-h-screen">
       {/* Heading Section */}
-      <h1 className="font-ethenocentric text-center bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent mb-8
-         sm:text-4xl md:text-5xl lg:text-5xl leading-tight">
+      <h1
+        className="font-ethenocentric text-center bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent mb-8
+         text-3xl md:text-4xl lg:text-4xl leading-tight"
+      >
         Upcoming Events
       </h1>
 
       <Slider ref={sliderRef} {...settings}>
         {cardData.map((card, index) => (
           <div key={index}>
-            <EventCard heading={card.heading} text={card.text} image={card.image} />
+            <EventCard
+              heading={card.heading}
+              text={card.text}
+              image={card.image}
+            />
           </div>
         ))}
       </Slider>
