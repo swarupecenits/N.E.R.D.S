@@ -5,7 +5,7 @@ import GlowingLogo from "./glowing_logo";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen relative z-0 p-6 lg:p-10 ">
+    <div className="flex flex-col items-center justify-center min-h-screen relative z-0 p-6 lg:p-5 lg:pb-20  ">
       {" "}
       {/* Reduced padding for mobile */}
       {/* Background Image */}
