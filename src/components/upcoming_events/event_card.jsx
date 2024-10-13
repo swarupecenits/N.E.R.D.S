@@ -49,8 +49,8 @@ const EventCard = ({ heading, image }) => {
         height: isMobile ? "auto" : "552px",
         aspectRatio: isMobile ? "383/492" : "auto",
         clipPath: isMobile
-          ? "polygon(15% 0%, 100% 0%, 100% 90.6%, 88% 100%, 0% 100%, 0% 12.1%)"
-          : "polygon(15% 0%, 100% 0%, 100% 90.6%, 88% 100%, 0% 100%, 0% 12.1%)", // Keep the existing clip path for larger screens
+          ? "polygon(15% 0%, 98% 0%, 100% 0.8%, 100% 90.6%, 88% 100%, 0% 100%, 0% 12.1%)"
+          : "polygon(15% 0%, 98% 0%, 100% 0.8%, 100% 90.6%, 88% 100%, 0% 100%, 0% 12.1%)",
       }}
     >
       {/* Removed the heading tag */}
