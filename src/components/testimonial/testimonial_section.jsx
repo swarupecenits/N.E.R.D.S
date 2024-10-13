@@ -26,7 +26,6 @@ const testimonials = [
     image: "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/ucr0cfbfdfdytnm9hhrh",
     text: "Joining NIT Silchar's Robotics Club transformed my skills and creativity, offering hands-on experience and a collaborative community passionate about robotics.",
   },
-  
 ];
 
 const TestimonialSection = () => {
@@ -64,10 +63,10 @@ const TestimonialSection = () => {
           height: '766px', 
           top: '151px',
           left: '50%',
-          transform: 'translateX(-50%)',  // Center the gradient horizontally
+          transform: 'translateX(-50%)',
           backdropFilter: 'blur(195px)',
-          opacity: '0.3', // Adjust opacity for visibility
-          zIndex: 0, // Ensure it's behind the testimonial content
+          opacity: '0.3',
+          zIndex: 0,
         }}
       ></div>
 
@@ -81,7 +80,7 @@ const TestimonialSection = () => {
         </div>
 
         {/* Mobile View: Role and Message from testimonial */}
-        <div className="block lg:hidden text-center mb-1">
+        <div className="block lg:hidden text-center mb-4 mt-8">
           <h2 className="text-gray-500 text-lg md:text-xl">
             Message from{" "}
             <span className="text-yellow-500 text-xl md:text-2xl tracking-wide">
@@ -91,33 +90,33 @@ const TestimonialSection = () => {
         </div>
 
         {/* Testimonial Content */}
-        <div className="w-full h-full flex flex-col justify-center items-center pt-1 lg:mt-0 -mt-48 relative">
+        <div className="w-full h-full flex flex-col justify-center items-center relative">
           <Slider ref={cardSliderRef} {...settings} className="w-full">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="flex justify-center w-full h-full">
                 {/* Flex container for card and text */}
-                <div className="flex flex-col lg:flex-row w-full justify-around items-center h-full space-y-4 lg:space-y-0 lg:space-x-4 lg:ml-20">
+                <div className="flex flex-col lg:flex-row w-full justify-around items-center lg:ml-20">
                   {/* TestimonialCard with scaling */}
                   <div className="flex-1 mx-1 max-w-md">
-                    <div className="transform scale-75 lg:scale-100 transition-transform duration-300">
+                    <div className="transform scale-[75%] lg:scale-100 transition-transform duration-300">
                       <TestimonialCard testimonial={testimonial} />
                     </div>
                   </div>
 
                   {/* TestimonialText - Visible only on large screens */}
-                  <div className="flex-1 mx-1 flex flex-col items-center justify-start hidden lg:flex">
+                  <div className="flex-1 mx-1 flex-col items-center justify-start hidden lg:flex">
                     {/* Message from role */}
                     <div className="mb-2 font-spaced text-center">
                       <h2 className="text-gray-500 text-lg md:text-xl">
-                        &nbsp;Message from&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <span className="text-yellow-500" style={{ fontFamily: "Spaced", fontSize: "44px", fontWeight: "400", lineHeight: "42.02px", textAlign: "center" }}>
+                        Message from
+                        <span className="text-yellow-500 ml-2" style={{ fontFamily: "Spaced", fontSize: "44px", fontWeight: "400", lineHeight: "42.02px", textAlign: "center" }}>
                           {testimonial.role}
                         </span>
                       </h2>
                     </div>
 
                     {/* Show TestimonialText only on larger screens */}
-                    <div>
+                    <div className="mr-20">
                       <TestimonialText testimonial={testimonial} />
                     </div>
                   </div>

@@ -44,13 +44,13 @@ const TestimonialCard = ({ testimonial }) => {
         height: "552px",
         transform: "scale(0.9)",
         transformOrigin: "top", // Adjust transform origin to keep the card centered
+        padding:"20px",
       }}
     >
       {/* Profile Image Container */}
       <div
-        className="flex justify-center items-center"
+        className="flex justify-center items-center mt-5 lg:mt-16"
         style={{
-          marginTop: "67px",
           width: "243px",
           height: "243px",
           borderRadius: "50%",
@@ -98,7 +98,7 @@ const TestimonialCard = ({ testimonial }) => {
 
       {/* Description text */}
       <p
-        className={`text-base text-[#ffffff] mt-2 font-medium ${window.innerWidth >= 768 ? 'hidden' : ''}`} // Hide on larger screens
+        className={`text-base text-[#ffffff] text-[10px] mt-2 ${window.innerWidth >= 768 ? 'hidden' : ''}`} // Hide on larger screens
         style={{
           textAlign: "center",
           padding: "0 15px",
