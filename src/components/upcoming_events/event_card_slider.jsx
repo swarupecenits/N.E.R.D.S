@@ -25,11 +25,11 @@ const EventCardSlider = () => {
 
   // Array of card data for the EventCard
   const cardData = [
-    { heading: 'Event 1', text: 'Description for Event 1.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/oio4um08mvrvae1wvabi' },
-    { heading: 'Event 2', text: 'Description for Event 2.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj' },
-    { heading: 'Event 3', text: 'Description for Event 3.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/wd4lcaneqsckozlzuv8n' },
-    { heading: 'Event 4', text: 'Description for Event 4.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/q0z5pmaxpz1jwq131l1q' },
-    { heading: 'Event 5', text: 'Description for Event 5.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj' },
+    { heading: 'Robowar', text: 'Description for Event 1.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/oio4um08mvrvae1wvabi' },
+    { heading: 'Robo Soccer', text: 'Description for Event 2.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj' },
+    { heading: 'RaceCircuit', text: 'Description for Event 3.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/wd4lcaneqsckozlzuv8n' },
+    { heading: 'Bluetooth Blitz', text: 'Description for Event 4.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/q0z5pmaxpz1jwq131l1q' },
+    { heading: 'SkyHack Workshop', text: 'Description for Event 5.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj' },
     // Add more objects as needed
   ];
 
