@@ -1,4 +1,4 @@
-import  { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
@@ -71,7 +71,11 @@ const ContactForm = () => {
         <div
           className={`absolute w-80 bg-blue-500 text-white font-semibold text-center px-4 py-3 rounded-md shadow-lg z-40 transition-all duration-300 ease-in-out
             ${showBanner ? "opacity-100" : "opacity-0"} 
-            ${windowSize < 768 ? "top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" : "bottom-5 right-5"}`}
+            ${
+              windowSize < 768
+                ? "top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                : "bottom-5 right-5"
+            }`}
         >
           {bannerMessage}
         </div>
@@ -81,11 +85,22 @@ const ContactForm = () => {
         ref={form}
         onSubmit={sendEmail}
         className={`space-y-6 p-8 relative z-20 mt-10
-          ${windowSize < 768 ? 
-            "bg-white bg-opacity-10 backdrop-blur-lg border border-gray-300 shadow-lg rounded-lg max-w-md mx-auto" : 
-            "bg-transparent"}`}
+    ${
+      windowSize < 768
+        ? "bg-black bg-opacity-10 backdrop-blur-lg border border-gray-300 shadow-lg max-w-md mx-auto"
+        : "bg-transparent"
+    }`}
         style={{
-          border: windowSize < 768 ? "2px solid rgba(255, 255, 255, 0.3)" : "none",
+          border:
+            windowSize < 768
+              ? "2px solid transparent" // Keep the border transparent initially
+              : "none",
+          borderImage:
+            windowSize < 768
+              ? "linear-gradient(293.3deg, rgba(87, 0, 136, 0.2) 3.05%, #B838FF 95.9%) 1"
+              : "none", // Apply gradient border image
+          borderWidth: windowSize < 768 ? "2px" : "none", // Set the border width
+          borderRadius: "12px", // Set the rounded edges
           backdropFilter: windowSize < 768 ? "blur(10px)" : "none",
         }}
       >
@@ -106,11 +121,11 @@ const ContactForm = () => {
             }}
             onMouseEnter={(e) => {
               e.target.style.borderImageSource =
-                'linear-gradient(91.17deg, rgba(255, 0, 230, 0.8) 23.6%, rgba(255, 255, 255, 0.8) 89.27%)';
+                "linear-gradient(91.17deg, rgba(255, 0, 230, 0.8) 23.6%, rgba(255, 255, 255, 0.8) 89.27%)";
             }}
             onMouseLeave={(e) => {
               e.target.style.borderImageSource =
-                'linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%)';
+                "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%)";
             }}
           />
         </div>
@@ -132,11 +147,11 @@ const ContactForm = () => {
             }}
             onMouseEnter={(e) => {
               e.target.style.borderImageSource =
-                'linear-gradient(91.17deg, rgba(151, 71, 255, 0.8) 23.6%, rgba(255, 255, 255, 0.8) 89.27%)';
+                "linear-gradient(91.17deg, rgba(151, 71, 255, 0.8) 23.6%, rgba(255, 255, 255, 0.8) 89.27%)";
             }}
             onMouseLeave={(e) => {
               e.target.style.borderImageSource =
-                'linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%)';
+                "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%)";
             }}
           />
         </div>
@@ -157,11 +172,11 @@ const ContactForm = () => {
             }}
             onMouseEnter={(e) => {
               e.target.style.borderImageSource =
-                'linear-gradient(91.19deg, rgba(103, 127, 252, 0.8) 23.63%, rgba(255, 255, 255, 0.8) 89.27%)';
+                "linear-gradient(91.19deg, rgba(103, 127, 252, 0.8) 23.63%, rgba(255, 255, 255, 0.8) 89.27%)";
             }}
             onMouseLeave={(e) => {
               e.target.style.borderImageSource =
-                'linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%)';
+                "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%)";
             }}
           />
         </div>
