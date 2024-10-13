@@ -98,7 +98,7 @@ const TestimonialCard = ({ testimonial }) => {
 
       {/* Description text */}
       <p
-        className={`text-base text-[#ffffff] text-[10px] mt-2 ${window.innerWidth >= 768 ? 'hidden' : ''}`} // Hide on larger screens
+        className={`text-[#ffffff] text-[10px] mt-2 ${window.innerWidth >= 768 ? 'hidden' : ''}`} // Hide on larger screens
         style={{
           textAlign: "center",
           padding: "0 15px",
