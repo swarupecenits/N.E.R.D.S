@@ -128,14 +128,14 @@ function Footer() {
         </div>
       </footer>
 
-      {/* Laptop Footer */}
+      {/* Desktop Footer */}
       <div className="hidden md:flex  relative flex items-center justify-center">
         <div
           id="background"
           className="w-screen h-[371px] absolute top-0 left-0 bg-cover bg-no-repeat opacity-100"
           style={{
             backgroundImage:
-              'url("https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tuchgn9xdbqwiesi3ywk")',
+              'url("https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/fwwdfzvguihdknv6zbxt")',
           }}
         >
           <div className="w-full h-[68%] opacity-100 flex flex-row relative justify-between backdrop-blur-[40px] bg-white/10 shadow-md">
