@@ -11,14 +11,15 @@ import Error from "./Pages/Error/Error";
 
 function App() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Router>
-        <div>
-          <nav>
-            <Navbar />
-          </nav>
+        
+        <div className="sticky top-0 z-50 w-full">
+          <Navbar />
+        </div>
 
-          {/* Define Routes */}
+        
+        <div className="flex-grow w-full">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/event" element={<Event />} />
@@ -27,9 +28,10 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="*" element={<Error/>} />
           </Routes>
-
-          <Footer />
         </div>
+
+        
+        <Footer />
       </Router>
     </div>
   );
