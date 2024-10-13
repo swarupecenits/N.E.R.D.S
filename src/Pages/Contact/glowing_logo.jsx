@@ -1,4 +1,3 @@
-import React from "react";
 import "./contact_styles.css"; // Ensure to import your CSS file if it's not already imported
 
 const GlowingLogo = () => {
