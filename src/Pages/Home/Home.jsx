@@ -4,7 +4,7 @@ import WhatDoWeProvideSlider from "../../components/what_do_we_provide/what_do_w
 import Projects from "../../components/Projects/Projects";
 import AboutUsSection from "../../components/About_Us/AboutUsSection";
 import Upcoming_events from "../../components/upcoming_events/event_card_slider";
-import Hero from "./Landing";
+import Hero from "../../components/Hero/Landing";
 
 const Home = () => {
   return (
