@@ -6,7 +6,7 @@ const LoadingAnimation = () => {
     position: 'relative',
     overflow: 'hidden',
     maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0))',
-    fontFamily: 'monospace',
+    fontFamily: 'spaced',
   };
 
   const letterStyle = {
