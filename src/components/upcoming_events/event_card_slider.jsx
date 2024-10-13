@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import Slider from 'react-slick';
 import EventCard from './event_card';  // Update path if necessary
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";

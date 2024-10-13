@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import Slider from 'react-slick';
 import WhatDoWeProvide from './what_do_we_provide_card';
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
