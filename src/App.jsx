@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 import Event from './Pages/Event/Event';
@@ -7,17 +6,18 @@ import Gallery from './Pages/Gallery/Gallery';
 import Contact from './Pages/Contact/Contact';
 import Navbar from './components/Navbar/navbar';
 import Footer from './components/Footer/footer';
+import Error from "./Pages/Error/Error";
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen"> {/* Full height and prevent horizontal scroll */}
+    <div className="flex flex-col min-h-screen">
       <Router>
-        {/* Sticky Navbar */}
+        
         <div className="sticky top-0 z-50 w-full">
           <Navbar />
         </div>
 
-        {/* Main Content (flex-grow to fill remaining space) */}
+        
         <div className="flex-grow w-full">
           <Routes>
             <Route path="/" element={<Home />} />
@@ -25,10 +25,11 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/team" element={<Team />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="*" element={<Error/>} />
           </Routes>
         </div>
 
-        {/* Footer (visible at the bottom) */}
+        
         <Footer />
       </Router>
     </div>

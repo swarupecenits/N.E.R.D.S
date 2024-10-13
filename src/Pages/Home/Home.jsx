@@ -3,28 +3,17 @@ import TestimonialSection from "../../components/testimonial/testimonial_section
 // import WhatDoWeProvide from "../../components/what_do_we_provide/what_do_we_provide_card"; // Adjust the import name
 import WhatDoWeProvideSlider from "../../components/what_do_we_provide/what_do_we_provide_section";
 import Projects from "../../components/Projects/Projects";
-import EventCardSlider from "../../components/upcoming_events/event_card_slider";
-import Hero from "../../components/Hero/Hero";
-
+import AboutUsSection from "../../components/About_Us/AboutUsSection";
+import Upcoming_events from "../../components/upcoming_events/event_card_slider";
 
 const Home = () => {
   return (
-    <div>
-      <Hero/>
-
-      
-    <EventCardSlider/>
-
-      <Projects/>
-
-
-      {/* What Do We Provide Section */}
+    <div className="overflow-x-hidden">
+      <Upcoming_events/>
+      <AboutUsSection></AboutUsSection>
+      <Projects />
       <WhatDoWeProvideSlider />
-
-      {/* Testimonial Section */}
       <TestimonialSection />
-
-      {/* Other sections of the home page */}
     </div>
   );
 };
