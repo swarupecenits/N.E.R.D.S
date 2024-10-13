@@ -1,7 +1,4 @@
-// import React from 'react';
-import { FaFacebook, FaYoutube, FaYoutubeSquare } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { PiInstagramLogoFill } from "react-icons/pi";
+
 
 function Footer() {
   return (
@@ -79,31 +76,47 @@ function Footer() {
             <div className="flex flex-col gap-6 justify-end mr-[-20rem] mt-[-8rem] items-end">
               <a
                 target="_blank"
-                rel="noopener noreferrer"
                 href="https://www.facebook.com/roboticsclub.nits?mibextid=ZbWKwL"
+                rel="noopener noreferrer"
               >
-                <FaFacebook color="white" size="23px" />
+                <img
+                  src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/viuomoqgmkofttwlli8v"
+                  alt="Facebook"
+                  style={{ height: '23px' }}
+                />
               </a>
               <a
                 target="_blank"
-                rel="noopener noreferrer"
                 href="https://www.instagram.com/nerds.nitsilchar?igsh=MTM0MjFpZjF6M3Zucg=="
+                rel="noopener noreferrer"
               >
-                <PiInstagramLogoFill color="white" size="23px" />
+                <img
+                  src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/udtuzvgwajqwjozwqzwr"
+                  alt="Instagram"
+                  style={{ height: '23px' }}
+                />
               </a>
               <a
                 target="_blank"
-                rel="noopener noreferrer"
                 href="https://www.linkedin.com/company/n-e-r-d-s-nits/"
+                rel="noopener noreferrer"
               >
-                <FaLinkedin color="white" size="23px" />
+                <img
+                  src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/t1gyihfapsxp6huydy8x"
+                  alt="Linkedin"
+                  style={{ height: '23px' }}
+                />
               </a>
               <a
                 target="_blank"
-                rel="noopener noreferrer"
                 href="https://www.youtube.com/@NERDSRoboticsNITS"
+                rel="noopener noreferrer"
               >
-                <FaYoutube color="white" size="23px" />
+                <img
+                  src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/wdw8e75uvlzubpatqkri"
+                  alt="Youtube"
+                  style={{ height: '23px' }}
+                />
               </a>
             </div>
           </div>
@@ -191,38 +204,58 @@ function Footer() {
 
             <div
               id="icons"
-              className="mt-9 flex flex-col w-[16px] h-[140px] mr-[110px]"
+              className="mt-9 flex flex-col w-[26px] h-[140px] mr-[110px]"
             >
               <div>
                 <a
                   target="_blank"
                   href="https://www.facebook.com/roboticsclub.nits?mibextid=ZbWKwL"
+                  rel="noopener noreferrer"
                 >
-                  <FaFacebook color="white" size="26px" />
+                  <img
+                    src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/viuomoqgmkofttwlli8v"
+                    alt="Facebook"
+                    style={{ height: '26px' }}
+                  />
                 </a>
               </div>
               <div className="mt-6">
                 <a
                   target="_blank"
                   href="https://www.instagram.com/nerds.nitsilchar?igsh=MTM0MjFpZjF6M3Zucg=="
+                  rel="noopener noreferrer"
                 >
-                  <PiInstagramLogoFill color="white" size="26px" />
+                  <img
+                    src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/udtuzvgwajqwjozwqzwr"
+                    alt="Instagram"
+                    style={{ height: '26px' }}
+                  />
                 </a>
               </div>
               <div className="mt-6">
                 <a
                   target="_blank"
                   href="https://www.linkedin.com/company/n-e-r-d-s-nits/"
+                  rel="noopener noreferrer"
                 >
-                  <FaLinkedin color="white" size="26px" />
+                  <img
+                    src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/t1gyihfapsxp6huydy8x"
+                    alt="Linkedin"
+                    style={{ height: '26px' }}
+                  />
                 </a>
               </div>
               <div className="mt-6">
                 <a
                   target="_blank"
                   href="https://www.youtube.com/@NERDSRoboticsNITS"
+                  rel="noopener noreferrer"
                 >
-                  <FaYoutube color="white" size="26px" />
+                  <img
+                    src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/wdw8e75uvlzubpatqkri"
+                    alt="Youtube"
+                    style={{ height: '26px' }}
+                  />
                 </a>
               </div>
             </div>
