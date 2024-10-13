@@ -12,19 +12,37 @@ const testimonials = [
     name: "Dr. Chandrajit Choudhury",
     role: "Faculty Incharge",
     image: "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/faazwbq6kkkwek2accan",
-    text: "A must-have for any business. Very satisfied!",
+    text: (
+      <>
+        <span className="quote">“</span>
+        The experience at NIT Silchar has been transformative, fostering creativity, teamwork, and invaluable skills for my future in technology.
+        <span className="quote">”</span>
+      </>
+    ),
   },
   {
     name: "Ayush Maurya",
     role: "President",
     image: "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/xei3psbuveqvu8vgb0hx.webp",
-    text: "Our mission is not just to build robots but to aim for excellence in hackathons, participate in various national and international events, and foster ideas for future tech startups.",
+    text: (
+      <>
+        <span className="quote">“</span>
+        Our mission is not just to build robots but to aim for excellence in hackathons, participate in various national and international events, and foster ideas for future tech startups.
+        <span className="quote">”</span>
+      </>
+    ),
   },
   {
     name: "Swarup Chanda",
     role: "General Secretary",
     image: "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/ucr0cfbfdfdytnm9hhrh",
-    text: "Joining NIT Silchar's Robotics Club transformed my skills and creativity, offering hands-on experience and a collaborative community passionate about robotics.",
+    text: (
+      <>
+        <span className="quote">“</span>
+        Joining NIT Silchar's Robotics Club transformed my skills and creativity, offering hands-on experience and a collaborative community passionate about robotics.
+        <span className="quote">”</span>
+      </>
+    ),
   },
 ];
 

@@ -17,3 +17,8 @@ background: black;
   animation: motion infinite 5s;
 }
 
+.quote {
+  color: #fbbf24; /* Yellow color for the quotes */
+  font-size: 1rem; /* Adjust size as needed */
+  font-weight: bold; /* Optional: Makes the text bold */
+}
