@@ -26,9 +26,16 @@
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
   z-index: 2;
-  will-change: transform; /* Optimize for smooth performance */
-    transition: transform 0.1s ease-out;
+  animation: slideFromBottom 5s ease-in-out infinite;
 
+}
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(100%); /* Start from below */
+    }
+    100% {
+        transform: translateY(0); /* End at the original position */
+    }
 }
 .typewriter{
     font-family: "Spaced";
