@@ -16,7 +16,12 @@
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+<<<<<<< HEAD
     "framer-motion": "^11.11.7",
+=======
+    "emailjs-com": "^3.2.0",
+    "framer-motion": "^11.11.8",
+>>>>>>> 5255204bb2da9540f0726540b0608084f37126d7
     "i": "^0.3.7",
     "react": "^18.3.1",
     "react-carousel": "^4.3.0",

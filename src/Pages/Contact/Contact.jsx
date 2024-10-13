@@ -1,4 +1,3 @@
-import React from "react";
 import ContactForm from "./contact_form";
 import ContactCard from "./contact_card";
 import GlowingLogo from "./glowing_logo";
