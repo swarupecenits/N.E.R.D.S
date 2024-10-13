@@ -30,7 +30,7 @@ const EventCardSlider = () => {
     {image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj' },
     {image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/wd4lcaneqsckozlzuv8n' },
     {image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/q0z5pmaxpz1jwq131l1q' },
-    {image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj' },
+    {image: 'https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/kef9r42wjfz38k0ysw4o' },
   ];
 
   return (

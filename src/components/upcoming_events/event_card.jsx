@@ -28,10 +28,10 @@ const EventCard = ({ heading, image }) => {
           <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1378_2153"/>
           <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1378_2153" result="shape"/>
         </filter>
-        <linearGradient id="paint0_linear_1378_2153" x1="41" y1="27" x2="330" y2="428" gradientUnits="userSpaceOnUse">
-          <stop stop-color="#8C8C8C"/>
-          <stop offset="1" stop-color="#242424" stop-opacity="0.2"/>
-        </linearGradient>
+        // <linearGradient id="paint0_linear_1378_2153" x1="41" y1="27" x2="330" y2="428" gradientUnits="userSpaceOnUse">
+        //   <stop stop-color="#8C8C8C"/>
+        //   <stop offset="1" stop-color="#242424" stop-opacity="0.2"/>
+        // </linearGradient>
       </defs>
     </svg>
   `);
