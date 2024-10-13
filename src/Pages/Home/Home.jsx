@@ -4,12 +4,12 @@ import WhatDoWeProvideSlider from "../../components/what_do_we_provide/what_do_w
 import Projects from "../../components/Projects/Projects";
 import AboutUsSection from "../../components/About_Us/AboutUsSection";
 import Upcoming_events from "../../components/upcoming_events/event_card_slider";
-import Landing from "./Landing";
+import Hero from "./Landing";
 
 const Home = () => {
   return (
     <div className="overflow-x-hidden">
-      <Landing/>
+      <Hero/>
       <Upcoming_events/>
       <AboutUsSection></AboutUsSection>
       <Projects />
