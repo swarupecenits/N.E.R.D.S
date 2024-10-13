@@ -87,7 +87,7 @@ const ContactForm = () => {
         className={`space-y-6 p-8 relative z-20 mt-10
     ${
       windowSize < 768
-        ? "bg-black bg-opacity-10 backdrop-blur-lg border border-gray-300 shadow-lg max-w-md mx-auto"
+        ? "bg-black bg-opacity-10 backdrop-blur-lg border  border-gray-300 shadow-lg max-w-md mx-auto"
         : "bg-transparent"
     }`}
         style={{
@@ -114,6 +114,7 @@ const ContactForm = () => {
             placeholder="Enter Your Name"
             className="w-full px-4 py-2 text-white bg-white bg-opacity-10 backdrop-blur-md border border-gray-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 transition-all duration-500 ease-in-out"
             style={{
+              
               border: "1.7px solid",
               borderImageSource:
                 "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%)",
