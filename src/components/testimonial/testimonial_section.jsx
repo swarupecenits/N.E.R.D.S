@@ -9,10 +9,10 @@ import "./testimonial_styles.css";
 
 const testimonials = [
   {
-    name: "Swarup Chanda",
-    role: "General Secretary",
-    image: "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/ucr0cfbfdfdytnm9hhrh",
-    text: "This is a great product! Highly recommend it to everyone.",
+    name: "Dr. Chandrajit Choudhury",
+    role: "Faculty Incharge",
+    image: "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/faazwbq6kkkwek2accan",
+    text: "A must-have for any business. Very satisfied!",
   },
   {
     name: "Ayush Maurya",
@@ -21,11 +21,12 @@ const testimonials = [
     text: "Fantastic experience! Will definitely use this service again.",
   },
   {
-    name: "Dr. Chandrajit Choudhury",
-    role: "Faculty Incharge",
-    image: "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/faazwbq6kkkwek2accan",
-    text: "A must-have for any business. Very satisfied!",
+    name: "Swarup Chanda",
+    role: "General Secretary",
+    image: "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/ucr0cfbfdfdytnm9hhrh",
+    text: "This is a great product! Highly recommend it to everyone.",
   },
+  
 ];
 
 const TestimonialSection = () => {
