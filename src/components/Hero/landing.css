@@ -137,10 +137,12 @@
     .nerds{
         font-size: 3rem;
         z-index: 10;
-        bottom: 3rem;
+        bottom: 4.5rem;
+        
     }   
 
     .main-div img{
+        margin-bottom: 1.8rem;
         height: 58vh;
     }
 
