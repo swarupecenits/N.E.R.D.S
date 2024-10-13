@@ -25,8 +25,11 @@
   );
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
-  z-index: 1;
-  animation: slideFromBottom 2s ease-in ;
+<<<<<<< HEAD
+=======
+  z-index: 2;
+  animation: slideFromBottom 5s ease-in-out forwards;
+>>>>>>> 0772f73bc00b829c37132c2850ca2a1736af6b36
 
 }
 @keyframes slideFromBottom {
@@ -57,6 +60,8 @@
     animation: typing 10s steps(26) alternate infinite,
                 line 1s infinite;
 }
+
+
 @keyframes typing{
     to{
         width: 0%;
@@ -72,7 +77,7 @@
     width: 100%;
     font-size: 140px;
     color: white;
-    z-index: 0;
+    z-index: 2;
     position: absolute;
     bottom: 0;
     font-family: "Ethno";
