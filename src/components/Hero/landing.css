@@ -10,8 +10,10 @@
     height: 90vh;
     background-color: black;
     display: grid;
-    align-items: center;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: relative;
     margin-bottom: 100px;
 }
@@ -39,9 +41,11 @@
 .typewriter{
     font-family: "Spaced";
     font-size: 30px;
+    font-weight: 600;
     color: #ffd700;
     width: 410px;
     margin-left: 45px;
+    margin-bottom: 1rem;
 }
 .typewriter{
     position: relative;
@@ -118,76 +122,25 @@
         margin-left: 0px;
     }
 }
-@media screen and (max-width: 639px) {
-    .nerds{
-        font-size: 70px;
-    }
-    .main-div img{
-        height: 70vh;
-    }
-    .main-div{
-        height: 80vh;
-    }
-}
-@media screen and (max-width: 563px) {
-    .nerds{
-        font-size: 65px;
-    }
-    .main-div{
-        height: 78vh;
-    }
-    .main-div img{
-        height: 65vh;
-        margin-left: 0px;
-    }
-}
 
-@media screen and (max-width: 483px) {
-    .nerds{
-        font-size: 60px;
-    }
-}
-@media screen and (max-width: 465px) {
-    .nerds{
-        font-size: 55px;
-    }
-    .main-div{
-        height: 73vh;
-    }
-    .main-div img{
-        height: 60vh;
-    }
-}
-@media screen and (max-width: 432px) {
-    .main-div{
-        height: 70vh;
-    }
-    .main-div img{
-        height: 55vh;
-        margin-left: 10px;
-    }
-}
-@media screen and (max-width: 447px) {
+
+
+
+@media screen and (max-width: 448px) {
     .typewriter{
-        margin-left: 20px;
-    }
-}
-@media screen and (max-width: 423px) {
-    .typewriter{
-        margin-left: 10px;
-    }
-}
-@media screen and (max-width: 416px) {
-    .typewriter{
-        font-size: 25px;
-        margin-left: 40px;
+        font-size: 1.6rem;
         width: 350px;
+        margin-bottom: 4rem;
+        font-weight: 600;
+        margin-top: -4rem;
     }
-}
-@media screen and (max-width: 400px) {
-    .typewriter{
+    .nerds{
+        font-size: 3rem;
+        z-index: 10;
+    }   
 
-        margin-left: 30px;
-
+    .main-div img{
+        height: 58vh;
     }
+
 }
