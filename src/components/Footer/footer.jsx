@@ -129,7 +129,7 @@ function Footer() {
       </footer>
 
       {/* Laptop Footer */}
-      <div className="hidden md:flex mt-20 relative flex items-center justify-center">
+      <div className="hidden md:flex  relative flex items-center justify-center">
         <div
           id="background"
           className="w-screen h-[371px] absolute top-0 left-0 bg-cover bg-no-repeat opacity-100"
