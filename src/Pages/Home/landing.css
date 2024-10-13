@@ -25,8 +25,8 @@
   );
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
-  z-index: 2;
-  animation: slideFromBottom 5s ease-in-out infinite;
+  z-index: 1;
+  animation: slideFromBottom 2s ease-in ;
 
 }
 @keyframes slideFromBottom {
@@ -40,7 +40,7 @@
 .typewriter{
     font-family: "Spaced";
     font-size: 30px;
-    color: #e5e3de;
+    color: #ffd700;
     width: 410px;
     margin-left: 45px;
 }
@@ -51,7 +51,7 @@
     content: '|';
     position: absolute;
     right: 0;
-    color: #eeeae1;
+    color: #ffd700;
     background-color: #000000;
     width: 100%;
     animation: typing 10s steps(26) alternate infinite,
@@ -81,6 +81,7 @@
     justify-content: space-between;
     align-items: center;
     animation: tubelightFlickerSmooth 1.5s ease-in;
+    z-index: 2;
 }
 @keyframes tubelightFlickerSmooth {
     0%, 15%, 30%, 100% {
