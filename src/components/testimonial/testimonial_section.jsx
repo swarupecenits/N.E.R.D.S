@@ -9,23 +9,24 @@ import "./testimonial_styles.css";
 
 const testimonials = [
   {
-    name: "Swarup Chanda",
-    role: "General Secretary",
-    image: "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/ucr0cfbfdfdytnm9hhrh",
-    text: "This is a great product! Highly recommend it to everyone.",
-  },
-  {
-    name: "Ayush Maurya",
-    role: "President",
-    image: "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/xei3psbuveqvu8vgb0hx.webp",
-    text: "Fantastic experience! Will definitely use this service again.",
-  },
-  {
     name: "Dr. Chandrajit Choudhury",
     role: "Faculty Incharge",
     image: "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/faazwbq6kkkwek2accan",
     text: "A must-have for any business. Very satisfied!",
   },
+  {
+    name: "Ayush Maurya",
+    role: "President",
+    image: "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/xei3psbuveqvu8vgb0hx.webp",
+    text: "Our mission is not just to build robots but to aim for excellence in hackathons, participate in various national and international events, and foster ideas for future tech startups.",
+  },
+  {
+    name: "Swarup Chanda",
+    role: "General Secretary",
+    image: "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/ucr0cfbfdfdytnm9hhrh",
+    text: "Joining NIT Silchar's Robotics Club transformed my skills and creativity, offering hands-on experience and a collaborative community passionate about robotics.",
+  },
+  
 ];
 
 const TestimonialSection = () => {

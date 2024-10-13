@@ -5,15 +5,15 @@ const AboutUsSection = () => {
   const cardData = [
     {
       title: "Introduction",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
+      text: "N.E.R.D.S (NITS Embedded and Robotics Development Society) is the official robotics club of NIT Silchar. We aim to foster creativity, technical innovation, and hands-on learning through robotics and automation. Our members collaborate on projects ranging from simple bots to advanced autonomous systems, providing a platform for students to transform ideas into real-world solutions.",
     },
     {
       title: "What we do?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
+      text: "At N.E.R.D.S, we design, build, and program robots for competitions, research, and innovation. We host workshops, hackathons, and technical training sessions to help students master robotics, electronics, and AI. Our club also participates in national and international contests, promoting teamwork and creativity while solving complex engineering challenges.",
     },
     {
       title: "what can you expect?",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident",
+      text: "By joining N.E.R.D.S, you can expect a hands-on learning experience in robotics and automation. We offer opportunities to work on cutting-edge projects, participate in national competitions, and collaborate with like-minded tech enthusiasts. Members will gain practical skills, mentorship, and industry exposure, preparing them for future innovations in robotics and technology.",
     },
   ];
 

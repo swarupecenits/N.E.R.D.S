@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -26,34 +25,39 @@ const CustomNextArrow = ({ onClick }) => (
 // Project data example
 const projects = [
   {
-    title: "Project One",
+    title: "Arachno Bot",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "The Spider Bot is a compact, multi-legged robot built using an Arduino Nano. It features precise motor control for smooth movement and agility. Equipped with sensors, the bot can navigate obstacles, offering a blend of mechanical engineering and coding. Ideal for robotics enthusiasts, it demonstrates how compact microcontrollers like the Arduino Nano can create sophisticated, interactive robots.",
     imageUrl:
-      "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/m3pjelslrtrcdkqtv2uk",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/q63qpsdjxmfwowqzzcul",
+    link: "https://youtu.be/MOtOSJDkom8?si=BG7DCMavWIUhIVg9", 
   },
   {
-    title: "Project Two",
+    title: "Head Motion Controlled Wheelchair",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "The Head-motion-controlled wheelchair offers an innovative solution for individuals with mobility impairments. Using sensors to detect head movements, the system translates these into directional commands, allowing users to navigate with ease. Powered by microcontrollers and sensor technology, this hands-free design provides greater independence, enhancing accessibility and improving the quality of life for people with limited physical mobility.",
+    imageUrl:
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/e3z5b5s5zihzynxxqi8o",
+    link: "#", 
+  },
+  {
+    title: "Quadcopter Drone",
+    description:
+      "The quadcopter drone is an unmanned aerial vehicle (UAV) that operates using four rotors for lift, stability, and maneuverability. Controlled remotely or autonomously via onboard sensors and GPS, quadcopters are used in various fields such as aerial photography, surveillance, delivery, and research. Their agile flight capabilities and ease of use make them highly versatile in both commercial and recreational applications.",
     imageUrl:
       "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/mwaszrp83seimayoqbl6",
+    link: "#", 
   },
   {
-    title: "Project Three",
+    title: "Bluetooth Bot",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "The Bluetooth-controlled car is a small, wireless vehicle operated via a smartphone or controller using Bluetooth technology. It typically involves an embedded microcontroller like Arduino, which receives commands from a mobile app to control the car's movement, such as forward, backward, left, and right. This technology allows for remote operation, making it a fun and educational project for learning robotics and wireless communication.",
     imageUrl:
-      "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/eqzyb9vnhsqbprc89xij",
-  },
-  {
-    title: "Project Four",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    imageUrl:
-      "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/m3pjelslrtrcdkqtv2uk",
+      "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ea9y3xi7we9gonc2qudy",
+    link: "https://youtu.be/KyjrGN9ZTPg?si=oehFA-BAHmJJ5sR_",
   },
 ];
+
 
 const Projects = () => {
   const settings = {
@@ -66,6 +70,7 @@ const Projects = () => {
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />,
   };
+
   return (
     <section className="bg-black py-8">
       <div className="container mx-auto px-4">
@@ -73,13 +78,13 @@ const Projects = () => {
         <h1 className="text-3xl md:text-4xl font-ethenocentric text-white text-center mb-12">
           Projects
         </h1>
+
         {/* Slick Slider for Mobile View */}
         <div className="block md:hidden px-0 ">
           <Slider {...settings}>
             {projects.map((project, index) => (
               <div key={index} className="p-1 px-3 sm:p-4">
                 <div className="flex flex-col items-center mb-8 sm:mb-12">
-                  {/* Project Image with Clipped Diagonal Corners */}
                   <div className="w-full p-2 relative transition-transform duration-300 ease-in-out transform hover:scale-105">
                     <div
                       className="relative w-full h-full overflow-hidden border-2 border-gray-300 hover:border-blue-500 transition-all duration-300 ease-in-out rounded-lg"
@@ -95,20 +100,23 @@ const Projects = () => {
                       />
                     </div>
                   </div>
-                  {/* Project Description */}
+
                   <div className="px-4 sm:px-6 text-white text-center mt-5">
                     <h2 className="text-xl sm:text-2xl font-ethenocentric mb-2 sm:mb-4">
                       {project.title}
                     </h2>
-                    <p
-                      className="font-spaced text-white text-justify text-sm sm:text-base mt-4
-                    "
-                    >
+                    <p className="font-spaced text-white text-justify text-sm sm:text-base mt-4">
                       {project.description}
                     </p>
-                    <button className="mt-4 sm:mt-6 px-2 sm:px-3 py-1 bg-black text-white border-2 border-blue-800 font-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-xs sm:text-sm">
-                      Know More
-                    </button>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="mt-4 sm:mt-6 px-2 sm:px-3 py-1 bg-black text-white border-2 border-blue-800 font-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-xs sm:text-sm">
+                        Know More
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -127,10 +135,7 @@ const Projects = () => {
             >
               <div className="md:w-1/2 p-4 relative transition-transform duration-300 ease-in-out transform hover:scale-105">
                 <div
-                  className="relative w-full h-full overflow-hidden border-2 border-gray-300
-                  hover:border-blue-500
-                  
-                 transition-all duration-300 ease-in-out rounded-lg "
+                  className="relative w-full h-full overflow-hidden border-2 border-gray-300 hover:border-blue-500 transition-all duration-300 ease-in-out rounded-lg"
                   style={{
                     clipPath:
                       "polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)",
@@ -139,7 +144,7 @@ const Projects = () => {
                   <img
                     src={project.imageUrl}
                     alt={project.title}
-                    className="h-80 w-full object-cover  transition- duration-300 ease-in-out "
+                    className="h-80 w-full object-cover transition- duration-300 ease-in-out"
                   />
                 </div>
               </div>
@@ -150,9 +155,15 @@ const Projects = () => {
                 <p className="font-spaced text-white text-justify">
                   {project.description}
                 </p>
-                <button className="mt-8 px-3 py-1 bg-black text-white border-2 border-blue-800 font-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-sm">
-                  Know More
-                </button>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="mt-8 px-3 py-1 bg-black text-white border-2 border-blue-800 font-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-sm">
+                    Know More
+                  </button>
+                </a>
               </div>
             </div>
           ))}
@@ -163,3 +174,4 @@ const Projects = () => {
 };
 
 export default Projects;
+
