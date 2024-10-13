@@ -24,7 +24,7 @@ const testimonials = [
     name: "Swarup Chanda",
     role: "General Secretary",
     image: "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/ucr0cfbfdfdytnm9hhrh",
-    text: "This is a great product! Highly recommend it to everyone.",
+    text: "Joining NIT Silchar's Robotics Club transformed my skills and creativity, offering hands-on experience and a collaborative community passionate about robotics.",
   },
   
 ];
