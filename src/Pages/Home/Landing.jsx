@@ -9,7 +9,7 @@ const Landing = () => {
     <StarCanvas/>
     <h1 className="typewriter font-spaced">ROBOTICS CLUB, NIT SILCHAR</h1>
 
-        <img src="https://res.cloudinary.com/dmhbmurzw/image/upload/v1728710649/Subject_lvavbf.png" alt="" className='parallax-image'/>
+        <img src="https://res.cloudinary.com/dmhbmurzw/image/upload/v1728710649/Subject_lvavbf.png" alt="Hero-img" className='parallax-image'/>
         <div className='nerds parallax-text font-ethenocentric bg-gradient-to-b from-[#ffffff] to-[#c7c7c7] bg-clip-text text-transparent'>
             <h1>N.</h1>
             <h1>E.</h1>
