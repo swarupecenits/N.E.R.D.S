@@ -22,9 +22,11 @@ const WhatDoWeProvideSlider = () => {
 
   // Array of card data
   const cardData = [
-    { heading: 'Workshop 1', text: 'Description for Workshop 1.' },
-    { heading: 'Workshop 2', text: 'Description for Workshop 2.' },
-    { heading: 'Workshop 3', text: 'Description for Workshop 3.' },
+    { heading: 'Arduino Workshop', text: 'Description for Workshop 1.' },
+    { heading: 'ML Workshop', text: 'Description for Workshop 2.' },
+    { heading: 'IOT Workshop', text: 'Description for Workshop 3.' },
+    { heading: 'Sessional Classes', text: 'Description for Workshop 3.' },
+    { heading: 'Bot Building Sessions', text: 'Description for Workshop 3.' },
     // Add more objects as needed
   ];
 
