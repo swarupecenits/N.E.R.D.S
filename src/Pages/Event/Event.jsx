@@ -48,7 +48,9 @@ function Hero() {
 
     return (
         <div className="hidden pl-28 pb-10 md:pl-0 hero_container flex-col items-center md:block "
-        style={{backgroundColor:"rgb(1,1,30)"}}
+        style={{backgroundColor:"rgb(1,1,10)",
+                background: 'linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(11, 9, 45, 1) 100%)'
+        }}
         >
             <div 
             ref={ref}
