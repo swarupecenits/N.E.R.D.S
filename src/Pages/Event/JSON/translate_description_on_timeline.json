@@ -1,0 +1,30 @@
+{
+    "1":{
+        "head":"Robo War",
+        "data":"The Robowar competition, hosted by N.E.R.D.S at Tecnoesis, invites students to unleash their engineering potential by designing fierce combat robots. In a thrilling arena, bots face off in intense battles, testing strength, durability, and strategy. With sparks flying, it's a showcase of technical skill and creativity, where only the toughest bots claim victory in this ultimate clash of machines."
+    },
+    "2":{
+        "head":"Robo Soccer" ,       
+        "data":"The Robbo-Soccer Competition, organized by N.E.R.D.S at NIT Silchar, combines robotics with soccer as teams build two bots—a striker and a defender—to compete in thrilling matches. The goal is to score the most within a set time, showcasing speed, agility, and strategy. It’s a fun, challenging event that fosters teamwork and sharpens engineering skills in an exciting robotic showdown."
+    },
+    "3":{
+        "data":"The Line-Following Robot Competition, organized by N.E.R.D.S at NIT Silchar, challenges teams to design autonomous robots that navigate a course by following a predefined line. With twists and obstacles, robots race to finish in the shortest time. This competition hones programming, design, and problem-solving skills, offering participants hands-on experience with sensors, algorithms, and teamwork in a thrilling showcase of innovation."
+        ,"head":"Race Circuit"
+
+    },
+    "4":{
+        "data":"The Bluetooth RC Motor Racing Car Competition, organized by N.E.R.D.S at NIT Silchar, blends speed and innovation as teams build remote-controlled cars using Bluetooth technology. Racing on a dynamic track with sharp turns and obstacles, the event tests speed, control, and maneuverability. It's a fast-paced competition that highlights teamwork, creativity, and technical expertise in an exciting showcase of engineering and racing skills."
+        ,"head":"Bluetooth Blitz"
+
+    },
+    "5":{
+        "data":"The Nerds Robotics Club of NIT Silchar will soon host an exciting drone workshop, offering hands-on training in drone technology and flight control. Participants will learn the fundamentals of drone assembly, programming, and piloting, guided by experienced mentors. The workshop will provide a valuable platform for students to explore robotics and automation, fostering innovation and practical skills in aerial technology."
+        ,"head":"SkyHack"
+
+    },
+    "6":{
+        "data":"Details Live Soon!"
+        ,"head":"Coming Soon"
+
+    }
+}
