@@ -16,6 +16,7 @@ import ProgressBar from "react-scroll-progress-bar";
 import Gradient from "./Assets/Gradient.svg"
 import modalbg from "./Assets/modalbgmobile.svg"
 import Button from "./Component/Button"
+import Text from "./Component/Verti-text"
 
 // function Hero() {
 //     return(
@@ -375,7 +376,7 @@ function Timeline_small(){
                 
                 <div className="right_contain col-start-2 row-start-1 col-span-7 row-span-20 flex justify-around flex-col max-w-[25rem]">
                     
-                    
+              
                     {/* cards */}
                     <div className="cards col-start-2 row-start-1 col-span-7 row-span-5 mt-[9rem]"
                     onClick={() => {setIsOpen2(!isOpen2), setId(1)}} >
@@ -392,6 +393,7 @@ function Timeline_small(){
                                     alt="Sample Image"
                                     className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
                                 />
+                               <Text />
                         </div>
                     </div>
 
