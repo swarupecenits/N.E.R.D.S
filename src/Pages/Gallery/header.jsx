@@ -108,9 +108,9 @@ const Header = ({ setActiveSection }) => {
 
 
 <motion.div
-  initial={{ opacity: 0, translateX: "-100%" }}
+  initial={{ opacity: 0, translateX: "0%" }}
   whileInView={{ opacity: 1, translateX: "0%" }}
-  transition={{ duration: 1 }}
+  transition={{ duration: 4 }}
   className="sticky top-0 left-0 w-full bg-black z-50 bg-opacity-30 flex flex-col md:flex-row items-start justify-start gap-4 md:gap-12 lg:gap-20 py-3 md:py-6 pl-2 md:px-12 lg:px-20 font-ethnocentric font-normal text-blue-500 z-50 -mt-3">
 
   {/* Desktop Links (No Grid) */}

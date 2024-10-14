@@ -31,9 +31,9 @@ const YourComponent = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, translateX: '100%' }}
+      initial={{ opacity: 0, translateX: translateXValue }}
       animate={hasAnimated ? { opacity: 1, translateX: translateXValue } : {}}
-      transition={{ duration: 1 }}
+      transition={{ duration: 4 }}
       className=""
     >
       <img
