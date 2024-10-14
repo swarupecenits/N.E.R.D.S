@@ -6,7 +6,7 @@ const SmallScreen = () => {
       <motion.div
         initial={{ opacity: 0, translateX: "-35%", translateY: "20%" }}
         whileInView={{ opacity: 1, translateX: "-35%", translateY: "20%" }}
-        transition={{ duration: 4 }}
+        transition={{ duration: 2 }}
         className="relative h-[60vh] ml-32 w-[93vw] bg-[url('https://res.cloudinary.com/dehyqj5i3/image/upload/v1728550690/1f33018e-a7e9-451c-91e6-dfd5e2b931c3.png'),_url('src/Pages/Gallery/Rectangle_189.svg')] bg-[length:110%_100%] bg-center bg-no-repeat z-0 overflow-hidden block sm:hidden" // Increase the size here
       >
       </motion.div>
@@ -15,7 +15,7 @@ const SmallScreen = () => {
       <motion.div
     initial={{ opacity: 0 }} // Start with 0 opacity
     animate={{ opacity: 1 }} // Animate to 1 opacity
-    transition={{ duration: 1.5 }} // Duration of the animation
+    transition={{ duration: 2 }} // Duration of the animation
   >
     <p className="font-ethenocentric font-normal heading-subsection gradient-text bg-gradient-to-r from-white via-pink-200 to-black bg-clip-text text-transparent !text-[35px] mt-7 ml-10 px-2">
       PHOTO

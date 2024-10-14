@@ -33,7 +33,7 @@ const YourComponent = () => {
     <motion.div
       initial={{ opacity: 0, translateX: translateXValue }}
       animate={hasAnimated ? { opacity: 1, translateX: translateXValue } : {}}
-      transition={{ duration: 4 }}
+      transition={{ duration: 2}}
       className=""
     >
       <img

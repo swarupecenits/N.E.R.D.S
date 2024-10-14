@@ -63,7 +63,7 @@ function Gallery() {
           <motion.div
             initial={{ opacity: 0, translateX: "0%", translateY: "10%" }}
             whileInView={{ opacity: 1, translateX: "0%", translateY: "10%" }}
-            transition={{ duration: 4 }}
+            transition={{ duration: 2 }}
             className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:grid-rows-1 md:grid-rows-2 sm:gap-3 md:gap-5  mt-11 lg:ml-20 lg:mt-10 h-[75vh] w-[95vw] items-center  sm:w-[90vw] lg:w-[92vw] pl-4 pr-4 md:w-[90vw] grid-cols-2 grid-rows-3 "
           >
             {/* First Image (spans two columns on medium and large screens) */}
@@ -219,7 +219,7 @@ function Gallery() {
 
       <section
         name="third2"
-        className={`third2 h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32 ${
+        className={`third2 h-[99vh] section overflow-hidden box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32 ${
           activeSection === "third2" ? "" : "hidden"
         }`}
       >
@@ -227,7 +227,7 @@ function Gallery() {
           <motion.div
             initial={{ opacity: 0, translateX: "3%", translateY: "10%" }}
             whileInView={{ opacity: 1, translateX: "3%", translateY: "10%" }}
-            transition={{ duration: 4 }}
+            transition={{ duration: 2 }}
             className="container1 h-[75vh] w-[88vw] transform translate-y-[50%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid-rows-2 gap-6 mt-12 ml-11  lg:text-[14px] sm:w-[86vw] sm:gap-10 sm:ml-4 sm:mt-20 " // Changed gap to 6 for better spacing
           >
             <MobileSlideshow1 />
@@ -387,7 +387,7 @@ function Gallery() {
       </section>
       <section
         name="third3"
-        className={`third3  h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32 ${
+        className={`third3  h-[99vh] section overflow-hidden box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32 ${
           activeSection === "third3" ? "" : "hidden"
         }`}
       >
@@ -395,7 +395,7 @@ function Gallery() {
           <motion.div
             initial={{ opacity: 0, translateX: "0%", translateY: "11%" }}
             whileInView={{ opacity: 1, translateX: "0%", translateY: "11%" }}
-            transition={{ duration: 4 }}
+            transition={{ duration: 2 }}
             className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:grid-rows-1 md:grid-rows-2 sm:gap-3 md:gap-5  mt-11 lg:ml-20 lg:mt-11 h-[75vh] w-[88vw] items-center  sm:w-[90vw] lg:w-[92vw] pl-4 pr-4 md:w-[90vw] grid-cols-2 grid-rows-3 "
           >
             {/* First Image (spans two columns on medium and large screens) */}
@@ -543,7 +543,7 @@ function Gallery() {
 
       <section
         name="third4"
-        className={`third4 h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32  ${
+        className={`third4 h-[99vh] overflow-hidden section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32  ${
           activeSection === "third4" ? "" : "hidden"
         }`}
       >
@@ -551,7 +551,7 @@ function Gallery() {
           <motion.div
             initial={{ opacity: 0, translateX: "3%", translateY: "9%" }}
             whileInView={{ opacity: 1, translateX: "3%", translateY: "9%" }}
-            transition={{ duration: 4 }}
+            transition={{ duration: 2 }}
             className="container1 h-[75vh] w-[88vw] transform translate-y-[40%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid-rows-2 gap-6 mt-12 ml-11  lg:text-[14px] sm:w-[86vw] sm:gap-10 sm:ml-4 sm:mt-20" // Changed gap to 6 for better spacing
           >
             <MobileSlideshow1 />
