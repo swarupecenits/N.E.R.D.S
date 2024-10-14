@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const WhatDoWeProvide = ({ heading, text }) => {
   const [hovered, setHovered] = useState(false);
@@ -50,17 +50,17 @@ const WhatDoWeProvide = ({ heading, text }) => {
         height: isMobile ? "auto" : "552px",  // Set height to auto on mobile for better responsiveness
         aspectRatio: isMobile ? "383/492" : "auto",  // Maintain aspect ratio on mobile
         clipPath: isMobile
-          ? "none"
+          ? "polygon(15% 0%, 100% 0%, 100% 90.6%, 88% 100%, 0% 100%, 0% 12.1%)"
           : "polygon(15% 0%, 100% 0%, 100% 90.6%, 88% 100%, 0% 100%, 0% 12.1%)", // Remove clip-path on mobile
       }}
     >
       {/* Heading */}
-      <h2 className="text-white font-spaced text-[32px] md:text-[51.08px] font-normal leading-[48.79px] text-left p-4 -mt-28">
+      <h2 className="text-white font-spaced text-[20px] text-center md:text-[30px] lg:text-[40px]">
         {heading}
       </h2>
 
       {/* Text */}
-      <p className="text-[#FFF0F0] font-spaced text-[14px] md:text-[18.22px] font-normal leading-[17.4px] text-center p-4 mt-16">
+      <p className="text-[#FFF0F0] font-spaced text-[14px] mt-10 text-center">
         {text}
       </p>
     </div>
