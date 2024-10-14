@@ -6,7 +6,7 @@ const GlowingLogo = () => {
       <img
         src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/eajcrfovq2eos2omfqv6"
         alt="Glowing Logo"
-        className="w-[105px] h-[105px] ml-20 border-4 border-transparent animate-border hidden sm:block" // Hidden on mobile, visible on larger screens
+        className="w-[105px] h-[105px] ml-20 border-4 rounded-md border-transparent animate-border hidden sm:block" // Hidden on mobile, visible on larger screens
       />
       <p className="mt-8 text-left text-[18px] font-medium leading-[29.05px] text-gradient font-spaced">
         Have a question or want to <br />

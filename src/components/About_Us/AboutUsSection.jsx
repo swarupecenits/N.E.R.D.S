@@ -27,7 +27,7 @@ const AboutUsSection = () => {
       }}
     >
       {/* Section Heading */}
-      <h2 className="text-center text-4xl font-ethenocentric bg-gradient-to-r from-white to-cyan-500 text-transparent bg-clip-text mb-12 md:text-5xl lg:text-6xl">
+      <h2 className="text-center text-3xl font-ethenocentric bg-gradient-to-r from-white to-cyan-500 text-transparent bg-clip-text mb-12 md:text-4xl lg:text-4xl">
         About Us
       </h2>
 

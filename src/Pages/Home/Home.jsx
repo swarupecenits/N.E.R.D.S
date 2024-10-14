@@ -6,9 +6,11 @@ import AboutUsSection from "../../components/About_Us/AboutUsSection";
 import Upcoming_events from "../../components/upcoming_events/event_card_slider";
 import Hero from "../../components/Hero/Landing";
 
+
 const Home = () => {
   return (
     <div className="overflow-x-hidden">
+      
       <Hero/>
       <Upcoming_events/>
       <AboutUsSection></AboutUsSection>
