@@ -133,19 +133,11 @@ function Gallery() {
             ></div>
 
             {/* Text Item (spans two rows) */}
-            <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-9 mt-60 sm:mt-0 mr-6  c backdrop-blur-[5px]">
+            <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-9 mt-60 sm:mt-0 mr-6  c backdrop-blur-[5px] lg:mb-8">
               <p className="text-justify sm:line-clamp-none text-sm  line-clamp-2">
-                Robotron is a prominent module under Tecnoesis, attracting teams
-                to compete with their custom-built robots in various challenges.
-                Known for its prestige, Robotron is a platform where
-                participants demonstrate creativity and technical skills by
-                designing robots capable of tackling complex tasks. The
-                competitions test a robot's abilities in areas such as
-                navigation, problem-solving, and adaptability. Teams strive for
-                excellence, as winning Robotron is highly regarded within the
-                Tecnoesis community. It fosters innovation and collaboration,
-                providing a valuable learning experience that pushes the
-                boundaries of robotics and engineering.
+              Robotron is a prominent and highly anticipated module under Tecnoesis, attracting numerous teams to compete with their custom-built robots in a variety of challenging events. Known for its prestige and excitement, Robotron serves as a dynamic platform where participants can showcase their creativity and technical skills by designing robots capable of tackling complex tasks. The competitions rigorously test a robot's abilities in critical areas such as navigation, problem-solving, and adaptability. Teams strive for excellence, as winning Robotron is a highly esteemed achievement within the Tecnoesis community. This event fosters innovation and collaboration, providing participants with a valuable learning experience that pushes the boundaries of robotics and engineering to new heights.
+
+
               </p>
             </div>
 
@@ -229,21 +221,17 @@ function Gallery() {
             initial={{ opacity: 0, translateX: "100%", translateY: "13.2%" }}
             whileInView={{ opacity: 1, translateX: "3%", translateY: "13.2%" }}
             transition={{ duration: 1 }}
-            className="container1 h-[75vh] w-[88vw] transform translate-y-[40%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid-rows-2 gap-6 mt-12 ml-11  lg:text-[14px] sm:w-[86vw] sm:gap-10 sm:ml-4 sm:mt-20" // Changed gap to 6 for better spacing
+            className="container1 h-[75vh] w-[88vw] transform translate-y-[40%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid-rows-2 gap-6 mt-12 ml-11  lg:text-[14px] sm:w-[86vw] sm:gap-10 sm:ml-4 sm:mt-20 " // Changed gap to 6 for better spacing
           >
             <MobileSlideshow1 />
 
-            <div className="font-spaced text-white flex-col mx-0 box1 lg:row-span-2 md:row-span-1 row-span-2 sm:row-span-1 ml-4 sm:ml-8 text-justify text-sm sm:text-[14px] sm:mt-0 mt-20 lg:mt-0 sm:mr-0 mr-20 sm:pl-5 sm:pt-5">
-              <p className="text-justify sm:line-clamp-none line-clamp-2">
-                Sessions play a crucial role in enhancing growth and the
-                learning process. Weekly classes, workshops, meetings, and
-                conferences provide valuable opportunities for hands-on
-                experience. Organized by NERDS, these events create an
-                environment where participants can engage with experts,
-                collaborate on projects, and deepen their understanding of
-                various topics. The practical experience gained through these
-                sessions is vital for developing skills and staying updated with
-                the latest advancements in the field.{" "}
+            <div className="font-spaced text-white flex-col lg:p-0 justify-around mx-0 box1 lg:row-span-2 md:row-span-1 row-span-2 sm:row-span-1 ml-4 sm:ml-8  text-sm sm:text-[14px] sm:mt-0 mt-20 lg:mt-0 sm:mr-0 mr-20 sm:pl-5 sm:pt-5 ">
+              <p className="text-justify sm:line-clamp-none line-clamp-2 ">
+              Sessions play a crucial role in enhancing growth and the overall learning process. Weekly classes, workshops, meetings, and conferences provide valuable opportunities for hands-on experience. Organized by NERDS, these events create an engaging environment where participants can interact with industry experts, collaborate on projects, and deepen their understanding of various topics. The practical experience gained through these sessions is vital for developing skills and staying updated with the latest advancements in the field. By fostering a culture of continuous learning, NERDS empowers individuals to thrive.
+
+
+
+
               </p>
             </div>
 
@@ -474,17 +462,9 @@ function Gallery() {
             ></div>
 
             {/* Text Item (spans two rows) */}
-            <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-10 mt-60 sm:mt-0 mr-2 c backdrop-blur-[5px]">
+            <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-9 mt-60 sm:mt-0 mr-6  c backdrop-blur-[5px] lg:mb-2">
               <p className="text-justify sm:line-clamp-none text-sm  line-clamp-2">
-                The NERDS initiative showcases innovative projects aimed at
-                enhancing technology’s accessibility. Arachno Bot, a robotic
-                spider, navigates complex terrains autonomously, while the Head
-                Motion Controlled Wheelchair allows users with mobility
-                challenges to control movement through head gestures. The
-                Quadcopter Drone offers aerial perspectives for surveillance and
-                recreation, and the Bluetooth Bot demonstrates remote
-                interaction via wireless technology. These projects reflect
-                NERDS' focus on practical, impactful tech solutions
+              The NERDS initiative showcases a range of innovative projects aimed at enhancing technology’s accessibility for all users. Arachno Bot, a robotic spider, skillfully navigates complex terrains autonomously, demonstrating advanced mobility. Meanwhile, the Head Motion Controlled Wheelchair empowers users with mobility challenges by allowing them to control movement through simple head gestures. The Quadcopter Drone provides valuable aerial perspectives for both surveillance and recreational purposes, while the Bluetooth Bot illustrates the potential for remote interaction via wireless technology. Together, these projects reflect NERDS' commitment to developing practical tech solutions that significantly enhance user experience.
               </p>
             </div>
 
@@ -572,17 +552,9 @@ function Gallery() {
           >
             <MobileSlideshow1 />
 
-            <div className="font-spaced text-white flex-col mx-0 box1 lg:row-span-2 md:row-span-1 row-span-2 sm:row-span-1 ml-4 sm:ml-8 text-justify text-sm sm:text-[14px] sm:mt-0 mt-20 lg:mt-0 sm:mr-0 mr-20 sm:pl-5 sm:pt-5">
+            <div className="font-spaced text-white flex-col lg:p-0 justify-around mx-0 box1 lg:row-span-2 md:row-span-1 row-span-2 sm:row-span-1 ml-4 sm:ml-8  text-sm sm:text-[14px] sm:mt-0 mt-20 lg:mt-0 sm:mr-0 mr-20 sm:pl-5 sm:pt-5">
               <p className="text-justify sm:line-clamp-none line-clamp-2">
-                Tecnoesis, the annual tech fest of NIT Silchar, is the most
-                prestigious tech event in the entire Northeast. It showcases
-                numerous flagship events, including the renowned Robotron,
-                organized by NERDS. The fest features a variety of workshops and
-                events conducted by NERDS, allowing participants to engage
-                actively in cutting-edge technology and innovation. With its
-                rich blend of competitions and learning opportunities, Tecnoesis
-                attracts tech enthusiasts from across the region, fostering
-                collaboration and creativity.{" "}
+              Tecnoesis, the annual tech fest of NIT Silchar, is the most prestigious tech event in the entire Northeast. It showcases numerous flagship events, including the renowned Robotron, organized by NERDS. The fest features a wide variety of workshops and activities conducted by NERDS, allowing participants to engage actively with cutting-edge technology and innovation. With its rich blend of competitions, learning opportunities, and hands-on experiences, Tecnoesis attracts tech enthusiasts from across the region, fostering collaboration, creativity, and a deep passion for technology among all participants and attendees.
               </p>
             </div>
 
