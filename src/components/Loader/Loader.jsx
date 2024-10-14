@@ -47,19 +47,19 @@ const LoadingAnimation = () => {
             }
           }
           
-          @keyframes rainbow {
-            0% { color: white; }
-            10% { color: #ff0000; }
-            20% { color: #ff8700; }
-            30% { color: #ffd300; }
-            40% { color: #deff0a; }
-            50% { color: #a1ff0a; }
-            60% { color: #0aff99; }
-            70% { color: #0aefff; }
-            80% { color: #147df5; }
-            90% { color: #580aff; }
-            100% { color: #be0aff; }
-          }
+         @keyframes rainbow {
+  0% { color: #c71585; }  /* Dark Pink */
+  10% { color: #d1006b; } /* Medium Dark Pink */
+  20% { color: #e10082; } /* Medium Pink */
+  30% { color: #f20099; } /* Light Pink */
+  40% { color: #f594b7; } /* Very Light Pink */
+  50% { color: #f8b7e4; } /* Pale Pink */
+  60% { color: #d6a0e0; } /* Light Lavender */
+  70% { color: #b97cd7; } /* Medium Purple */
+  80% { color: #9b59b6; } /* Purple */
+  90% { color: #7d3c98; } /* Dark Purple */
+  100% { color: #6c3483; } /* Very Dark Purple */
+}
         `}
       </style>
       {letters}
