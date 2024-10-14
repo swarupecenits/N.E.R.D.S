@@ -111,9 +111,9 @@ function Timeline(){
                             initial={{ x: 120, opacity: 0 }} 
                             animate={(isHovered && id==1)  ? { x: 100, opacity: 1 } : { x: 120, opacity: 0 }} 
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                <h1 className="absolute font-ethenocentric text-2xl text-cyan-400 top-[-1rem] min-w-max left-[2rem]">{obj[dataId].head}</h1>
-                                <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
-                                <Button className="ml-[-4.5rem]" children="Know more"/>
+                                <h1 className="absolute font-ethenocentric text-2xl text-cyan-400  min-w-max left-[2rem]">{obj[dataId].head}</h1>
+                                <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-10 ">{obj[dataId].data} </p>
+                                <Button className=" ml-[-4.5rem]" children="Know more"/>
                                 <Button className="ml-[6rem]" children="register"/>
                         </motion.div>
 
@@ -168,8 +168,8 @@ function Timeline(){
                                 initial={{ x: 100, opacity: 0 }} 
                                 animate={(isHovered && id==2)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
                                 transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                    <h1 className="absolute font-ethenocentric text-2xl text-cyan-400 top-[-1rem] min-w-max left-[-10rem]">{obj[dataId].head}</h1>
-                                    <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
+                                    <h1 className="absolute font-ethenocentric text-2xl text-cyan-400  min-w-max left-[-10rem]">{obj[dataId].head}</h1>
+                                    <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-10">{obj[dataId].data} </p>
                                     <Button className="ml-[-10rem]" children="Know more"/>
                                     <Button className="ml-[1rem]" children="register"/>                            </motion.div>
                     </motion.div>        
@@ -240,8 +240,8 @@ function Timeline(){
                                 initial={{ x: 100, opacity: 0 }} 
                                 animate={(isHovered && id==4)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
                                 transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                    <h1 className="absolute font-ethenocentric min-w-max text-2xl text-cyan-400 top-[-1rem] left-[-10rem]">{obj[dataId].head}</h1>
-                                    <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
+                                    <h1 className="absolute font-ethenocentric min-w-max text-2xl text-cyan-400  left-[-10rem]">{obj[dataId].head}</h1>
+                                    <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-10">{obj[dataId].data} </p>
                                     <Button className="ml-[-10rem]" children="Know more"/>
                                     <Button className="ml-[1rem]" children="register"/>                            
                         </motion.div>
@@ -254,8 +254,8 @@ function Timeline(){
                             initial={{ x: 120, opacity: 0 }} 
                             animate={(isHovered && id==5)  ? { x: 100, opacity: 1 } : { x: 120, opacity: 0 }} 
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                <h1 className="absolute font-ethenocentric min-w-max text-2xl text-cyan-400 top-[-1rem] left-[-6rem]">{obj[dataId].head}</h1>
-                                <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
+                                <h1 className="absolute font-ethenocentric min-w-max text-2xl text-cyan-400  left-16">{obj[dataId].head}</h1>
+                                <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-10">{obj[dataId].data} </p>
                                 <Button className="ml-[-4.5rem]" children="Know more"/>
                                 <Button className="ml-[6rem]" children="register"/>
                         </motion.div>
@@ -312,8 +312,8 @@ function Timeline(){
                                 initial={{ x: 100, opacity: 0 }} 
                                 animate={(isHovered && id==6)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
                                 transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                    <h1 className="absolute font-ethenocentric min-w-max text-2xl text-cyan-400 top-[-1rem] left-[-4rem]">{obj[dataId].head}</h1>
-                                    <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
+                                    <h1 className="absolute font-ethenocentric min-w-max text-2xl text-cyan-400  left-[-10rem]">{obj[dataId].head}</h1>
+                                    <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-10">{obj[dataId].data} </p>
                                     <Button className="ml-[-10rem]" children="Know more"/>
                                     <Button className="ml-[1rem]" children="register"/>                            
                         </motion.div>
