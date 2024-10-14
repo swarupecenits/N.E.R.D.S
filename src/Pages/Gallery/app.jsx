@@ -1,9 +1,7 @@
-
-
 import React, { useEffect, useState } from "react";
 import styled, { keyframes, css } from "styled-components";
 import Carousel from "./carousel.jsx";
-import './gradient.css';
+import "./gradient.css";
 
 function App() {
   const [rotation, setRotation] = useState(-37.96);
@@ -13,7 +11,7 @@ function App() {
     const interval = setInterval(() => {
       setRotation((prevRotation) => prevRotation + 1); // Slowly increase the rotation angle
     }, 50);
-    
+
     const handleResize = () => {
       if (window.innerWidth < 640) {
         // For small screens
@@ -66,7 +64,9 @@ function App() {
       ></div>
 
       {/* Main content area */}
-      <div className="flex items-center justify-center z-10 relative"> {/* Set z-index to 10 */}
+      <div className="flex items-center justify-center z-10 relative">
+        {" "}
+        {/* Set z-index to 10 */}
         <div className="w-full flex justify-center space-x-6 md:space-x-10 lg:space-x-16">
           {/* Column scrolling from top to bottom */}
           <div className="hidden md:flex flex-col w-48 sm:w-56 lg:w-64 h-[400px] sm:h-[500px] lg:h-[600px] overflow-hidden">
@@ -97,7 +97,8 @@ function App() {
 }
 
 function MarqueeGroup({ direction, images }) {
-  const scrollClass = direction === "up" ? "animate-scrollUp" : "animate-scrollDown";
+  const scrollClass =
+    direction === "up" ? "animate-scrollUp" : "animate-scrollDown";
   return (
     <div className={`flex flex-col ${scrollClass}`}>
       {images.map((el, index) => (
@@ -111,5 +112,5 @@ function MarqueeGroup({ direction, images }) {
       ))}
     </div>
   );
-} 
+}
 export default App;
