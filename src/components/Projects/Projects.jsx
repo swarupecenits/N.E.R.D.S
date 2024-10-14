@@ -6,7 +6,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 // Custom Arrow Components for Slick Slider
 const CustomPrevArrow = ({ onClick }) => (
   <div
-    className="absolute top-[245px] left-2 sm:left-4 transform -translate-y-1/2 bg-black border-2 border-blue-800 rounded-full p-1 cursor-pointer transition duration-300 ease-in-out hover:bg-gray-800 hover:shadow-lg hover:shadow-purple-500 z-10"
+    className="absolute top-[245px] left-2 sm:left-4 transform -translate-y-1/2 bg-black border-2 border-blue-800 rounded-full p-1 cursor-pointer transition duration-300 ease-in-out  z-10"
     onClick={onClick}
   >
     <IoIosArrowBack size={18} color="white" />
@@ -15,7 +15,7 @@ const CustomPrevArrow = ({ onClick }) => (
 
 const CustomNextArrow = ({ onClick }) => (
   <div
-    className="absolute top-[245px] right-2 sm:right-4 transform -translate-y-1/2 bg-black border-2 border-blue-800 rounded-full p-1 cursor-pointer transition duration-300 ease-in-out hover:bg-gray-800 hover:shadow-lg hover:shadow-purple-500 z-10"
+    className="absolute top-[245px] right-2 sm:right-4 transform -translate-y-1/2 bg-black border-2 border-blue-800 rounded-full p-1 cursor-pointer transition duration-300 ease-in-out  z-10"
     onClick={onClick}
   >
     <IoIosArrowForward size={20} color="white" />
