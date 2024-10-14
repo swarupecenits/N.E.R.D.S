@@ -1,4 +1,4 @@
-function Button({className}) {
+function Button({className, children}) {
     return(
         <>
             <button
@@ -11,7 +11,7 @@ function Button({className}) {
                     <span
                       className="font-spaced inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-md font-medium text-white backdrop-blur-3xl gap-2 undefined"
                     >
-                      Know More
+                      {children}
                     </span>
             </button>
         </>
