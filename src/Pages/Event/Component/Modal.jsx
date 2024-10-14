@@ -10,28 +10,31 @@ const Content = ({id}) => {
 
     return(
         <>
-            <img src={modalbg} alt="" className=" absolute top-[-15rem]"/>
-            <h1 className="text-center  text-4xl absolute top-[-8rem] left-14 font-ethenocentric text-slate-300 ">{obj[id].head}</h1>
-            <p className="font-ethnocentric text-base absolute top-8 left-14  text-wrap max-w-[28rem] text-slate-200">{obj[id].text}</p>
-            <img src={icon} alt="icon in modal" className="absolute top-[-2.8rem] left-12" />
-            {/* <img src={obj[id].url} alt="image in modal" className="absolute top-[-8rem] left-[33rem] max-w-96" /> */}
+            <div className="modal_container z-[100000]">
 
-                        <div
-                            className="overflow-hidden flex absolute top-[-8rem] left-[33rem] max-w-96 "
-                            style={{
-                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
-                                aspectRatio: '730 / 460',
-                            }}
-                            >
-                                
-                                <img src={pc_card_border} alt=""  className="z-0 absolute" />     
+                <img src={modalbg} alt="" className=" absolute top-[-15rem]"/>
+                <h1 className="text-center  text-4xl absolute top-[-8rem] left-14 font-ethenocentric text-slate-300 ">{obj[id].head}</h1>
+                <p className="font-ethnocentric text-base absolute top-8 left-14  text-wrap max-w-[28rem] text-slate-200">{obj[id].text}</p>
+                <img src={icon} alt="icon in modal" className="absolute top-[-2.8rem] left-12" />
+                {/* <img src={obj[id].url} alt="image in modal" className="absolute top-[-8rem] left-[33rem] max-w-96" /> */}
 
-                                <img
-                                    src={obj[id].url} // Use the passed image source prop
-                                    alt="Sample Image"
-                                    className=" h-full w-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
-                                />
-                        </div>
+                            <div
+                                className="overflow-hidden flex absolute top-[-8rem] left-[33rem] max-w-96 "
+                                style={{
+                                    clipPath: 'polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)',
+                                    aspectRatio: '730 / 460',
+                                }}
+                                >
+                                    
+                                    <img src={pc_card_border} alt=""  className="z-0 absolute" />     
+
+                                    <img
+                                        src={obj[id].url} // Use the passed image source prop
+                                        alt="Sample Image"
+                                        className=" h-full w-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
+                                    />
+                            </div>
+            </div>
 
             
         </>

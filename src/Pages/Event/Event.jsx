@@ -15,6 +15,7 @@ import TextAnimation from "./Animations/TextFlip"
 import ProgressBar from "react-scroll-progress-bar";
 import Gradient from "./Assets/Gradient.svg"
 import modalbg from "./Assets/modalbgmobile.svg"
+import Button from "./Component/Button"
 
 // function Hero() {
 //     return(
@@ -49,7 +50,7 @@ function Hero() {
     return (
         <div className="hidden pl-28 pb-10 md:pl-0 hero_container flex-col items-center md:block "
         style={{backgroundColor:"rgb(1,1,10)",
-                background: 'linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(11, 9, 45, 1) 100%)'
+                background: 'linear-gradient(0deg, rgba(0, 0, 0, 1) 50%, rgba(1, 1, 15, 1) 100%)'
         }}
         >
             <div 
@@ -128,11 +129,12 @@ function Timeline(){
                     className="absolute top-[17rem] left-[-45rem] z-50"
                     alt="" />
                         <motion.div
-                            className="text text-slate-200 relative text-center text "
+                            className="text text-slate-200 relative text-right "
                             initial={{ x: 100, opacity: 0 }} 
                             animate={(isHovered && id==1)  ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                <p className="absolute font-ethenocentric text-sm min-w-96 left-[-10rem] ">{obj[dataId].data} </p>
+                                <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
+                                <Button className="ml-[-5rem]"/>
                         </motion.div>
 
                         <motion.div
@@ -143,7 +145,7 @@ function Timeline(){
                             }}
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
-                            whileHover={{ x: 300, opacity: 1 }} 
+                            whileHover={{ x: 180, opacity: 1 }} 
                             onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1); setBorder(pc_card_border2)}}
                             onHoverEnd={() => {setIsHovered(false); setBorder(pc_card_border)}}
                             transition={{duration: 0.3, ease: "easeInOut"}}
@@ -168,7 +170,7 @@ function Timeline(){
                             }}
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
-                            whileHover={{ x: -300, opacity: 1 }} 
+                            whileHover={{ x: -180, opacity: 1 }} 
                             onHoverStart={() => {setIsHovered(true); setId(2); setDataId(2);setBorder2(pc_card_border2)}}
                             onHoverEnd={() => {setIsHovered(false); setBorder2(pc_card_border)}} 
                             transition={{duration: 0.3, ease: "easeInOut"}}
@@ -182,22 +184,24 @@ function Timeline(){
                         </motion.div>
 
                             <motion.div
-                                className="text text-slate-200 relative text-center text"
+                                className="text text-slate-200 relative text-left text"
                                 initial={{ x: 100, opacity: 0 }} 
                                 animate={(isHovered && id==2)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
                                 transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                    <p className="absolute font-ethenocentric text-sm min-w-96 left-[-10rem] ">{obj[dataId].data} </p>
+                                    <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
+                                    <Button />
                             </motion.div>
                     </motion.div>        
 
                     {/* card3 */}
                     <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(3);}}>
                         <motion.div
-                            className="text text-slate-200 relative text-center text"
+                            className="text text-slate-200 relative text-right text"
                             initial={{ x: 100, opacity: 0 }} 
                             animate={(isHovered && id==3)  ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                <p className="absolute font-ethenocentric text-sm min-w-96 left-[-10rem] ">{obj[dataId].data} </p>
+                                <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
+                                <Button className="ml-[-5rem]"/>
                         </motion.div>
 
                         <motion.div
@@ -208,7 +212,7 @@ function Timeline(){
                             }}
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
-                            whileHover={{ x: 300, opacity: 1 }} 
+                            whileHover={{ x: 180, opacity: 1 }} 
                             onHoverStart={() => {setIsHovered(true); setId(3); setDataId(3);setBorder3(pc_card_border2)}}
                             onHoverEnd={() => {setIsHovered(false); setBorder3(pc_card_border)}} 
                             transition={{duration: 0.3, ease: "easeInOut"}}
@@ -234,7 +238,7 @@ function Timeline(){
                             }}
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
-                            whileHover={{ x: -300, opacity: 1 }} 
+                            whileHover={{ x: -180, opacity: 1 }} 
                             onHoverStart={() => {setIsHovered(true); setId(4); setDataId(4);setBorder4(pc_card_border2)}}
                             onHoverEnd={() => {setIsHovered(false); setBorder4(pc_card_border)}} 
                             transition={{duration: 0.3, ease: "easeInOut"}}
@@ -248,22 +252,24 @@ function Timeline(){
                         </motion.div>
 
                             <motion.div
-                                className="text text-slate-200 relative text-center text"
+                                className="text text-slate-200 relative text-left text"
                                 initial={{ x: 100, opacity: 0 }} 
                                 animate={(isHovered && id==4)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
                                 transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                    <p className="absolute font-ethenocentric text-sm min-w-96 left-[-10rem] ">{obj[dataId].data} </p>
+                                    <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
+                                    <Button />
                             </motion.div>
                     </motion.div> 
 
                     {/* card5 */}
                     <motion.div className="cards flex" onClick={() =>{ setIsOpen(true);setId(5);}}>
                         <motion.div
-                            className="text text-slate-200 relative text-center text"
+                            className="text text-slate-200 relative text-right text"
                             initial={{ x: 100, opacity: 0 }} 
                             animate={(isHovered && id==5)  ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }} 
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                <p className="absolute font-ethenocentric text-sm min-w-96 left-[-10rem] ">{obj[dataId].data} </p>
+                                <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
+                                <Button className="ml-[-5rem]"/>
                         </motion.div>
 
                         <motion.div
@@ -274,7 +280,7 @@ function Timeline(){
                             }}
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
-                            whileHover={{ x: 300, opacity: 1 }} 
+                            whileHover={{ x: 180, opacity: 1 }} 
                             onHoverStart={() => {setIsHovered(true); setId(5); setDataId(5);setBorder5(pc_card_border2)}}
                             onHoverEnd={() => {setIsHovered(false); setBorder5(pc_card_border)}} 
                             transition={{duration: 0.3, ease: "easeInOut"}}
@@ -300,7 +306,7 @@ function Timeline(){
                             }}
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
-                            whileHover={{ x: -300, opacity: 1 }} 
+                            whileHover={{ x: -180, opacity: 1 }} 
                             onHoverStart={() => {setIsHovered(true); setId(6); setDataId(6);setBorder6(pc_card_border2)}}
                             onHoverEnd={() => {setIsHovered(false); setBorder6(pc_card_border)}} 
                             transition={{duration: 0.3, ease: "easeInOut"}}
@@ -314,11 +320,12 @@ function Timeline(){
                         </motion.div>
 
                             <motion.div
-                                className="text text-slate-200 relative text-center text"
+                                className="text text-slate-200 relative text-left text"
                                 initial={{ x: 100, opacity: 0 }} 
                                 animate={(isHovered && id==6)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
                                 transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                    <p className="absolute font-ethenocentric text-sm min-w-96 left-[-10rem] ">{obj[dataId].data} </p>
+                                    <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
+                                    <Button />
                             </motion.div>
                     </motion.div> 
 
