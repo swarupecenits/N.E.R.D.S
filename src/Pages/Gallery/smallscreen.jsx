@@ -14,12 +14,12 @@ const SmallScreen = () => {
       </motion.div>
       
       <div className="relative z-50 block sm:hidden overflow-hidden">
-      <p className="font-ethenocentric font-normal heading-subsection gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent  !text-[27px] mt-28 ml-3 px-1 ">
+      <p className="font-ethenocentric font-normal heading-subsection gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent  !text-[27px] mt-28 ml-4 px-2 ">
   PHOTO GALLERY
 </p>
 
   
-  <p className="font-spaced font-bold heading-subsection gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent text-[20px] ml-7 mt-1">
+  <p className="font-spaced font-bold heading-subsection gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent text-[20px] ml-9 mt-1">
     A journey through timeless images
   </p>
 </div>
