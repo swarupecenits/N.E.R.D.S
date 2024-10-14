@@ -23,9 +23,11 @@ const Header = ({ setActiveSection }) => {
           >
             <button
               onClick={() => setActiveSection("third1")}
-              className="text-base md:text-xl  px-0.5 lg:text-xl sm:px-3 py-0 bg-black text-white border-1 border-transparent font-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-[9.8px] md:text-sm sm:text-sm"
-            >
-              ROBOTRON
+              className=" mt-5 relative inline-flex h-10 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"></span>
+              <span className="font-spaced inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-xl font-medium text-white backdrop-blur-3xl gap-2 undefined  ">
+               Robotron
+              </span>
             </button>
           </Link>
         </div>
@@ -42,9 +44,11 @@ const Header = ({ setActiveSection }) => {
           >
             <button
               onClick={() => setActiveSection("third2")}
-              className="text-base md:text-xl px-0.5 lg:text-xl  sm:px-3 py-0 bg-black text-white border-2 border-transparent font-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-[9.8px]   md:text-sm sm:text-sm"
-            >
-              SESSION
+              className=" mt-5 relative inline-flex h-10 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"></span>
+              <span className="font-spaced inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-xl font-medium text-white backdrop-blur-3xl gap-2 undefined  ">
+               Session
+              </span>
             </button>
           </Link>
         </div>
@@ -61,10 +65,11 @@ const Header = ({ setActiveSection }) => {
           >
             <button
               onClick={() => setActiveSection("third3")}
-              className="text-base md:text-xl px-0.5 lg:text-xl  sm:px-3 
- py-0 bg-black text-white border-2 border-transparent font-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500  md:text-sm text-[9.8px]  sm:text-sm"
-            >
-              PROJECTS
+              className=" mt-5 relative inline-flex h-10 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"></span>
+              <span className="font-spaced inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-xl font-medium text-white backdrop-blur-3xl gap-2 undefined  ">
+               Projects
+              </span>
             </button>
           </Link>
         </div>
@@ -81,9 +86,11 @@ const Header = ({ setActiveSection }) => {
           >
             <button
               onClick={() => setActiveSection("third4")}
-              className="text-base md:text-xl  lg:text-xl px-0.5 sm:px-3 py-0 bg-black text-white border-2 border-transparent font-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-[9.8px]   md:text-sm sm:text-sm"
-            >
-              TECNOESIS
+              className=" mt-5 relative inline-flex h-10 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"></span>
+              <span className="font-spaced inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-xl font-medium text-white backdrop-blur-3xl gap-2 undefined  ">
+               Tecnoesis
+              </span>
             </button>
           </Link>
         </div>

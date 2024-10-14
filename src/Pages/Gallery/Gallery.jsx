@@ -218,10 +218,10 @@ function Gallery() {
       >
         <div className=" backdrop-blur-[5px]">
           <motion.div
-            initial={{ opacity: 0, translateX: "100%", translateY: "13.2%" }}
-            whileInView={{ opacity: 1, translateX: "3%", translateY: "13.2%" }}
+            initial={{ opacity: 0, translateX: "100%", translateY: "14%" }}
+            whileInView={{ opacity: 1, translateX: "3%", translateY: "14%" }}
             transition={{ duration: 1 }}
-            className="container1 h-[75vh] w-[88vw] transform translate-y-[40%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid-rows-2 gap-6 mt-12 ml-11  lg:text-[14px] sm:w-[86vw] sm:gap-10 sm:ml-4 sm:mt-20 " // Changed gap to 6 for better spacing
+            className="container1 h-[75vh] w-[88vw] transform translate-y-[50%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid-rows-2 gap-6 mt-12 ml-11  lg:text-[14px] sm:w-[86vw] sm:gap-10 sm:ml-4 sm:mt-20 " // Changed gap to 6 for better spacing
           >
             <MobileSlideshow1 />
 
