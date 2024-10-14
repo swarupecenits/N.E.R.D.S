@@ -31,5 +31,5 @@ export default {
       scrollUp: 'scrollUp 6s linear infinite',
     },
   },
-  plugins: [],
+  plugins: [ require('@tailwindcss/line-clamp')],
 };

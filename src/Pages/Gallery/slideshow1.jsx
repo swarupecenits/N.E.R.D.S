@@ -15,7 +15,7 @@ const MobileSlideshow1 = () => {
 
   return (
        
-    <div className='grid h-[48vh] w-[69vw] ml-6 mt- sm:hidden lg:hidden md:hidden block '>
+    <div className='grid h-[48vh] w-[69vw] mr-20 -mt-5 sm:hidden lg:hidden md:hidden block '>
       <div
         className="block sm:hidden lg:hidden md:hidden bg-cover"
         style={{

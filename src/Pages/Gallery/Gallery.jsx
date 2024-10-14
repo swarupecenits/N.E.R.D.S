@@ -9,6 +9,9 @@ import App from './app.jsx';
 import MobileSlideshow from "./slideshow.jsx";
 import MobileSlideshow1 from "./slideshow1.jsx";
 import YourComponent from "./translate.jsx";
+import PhotoGallery from "./slideonce.jsx";
+import Glimpse from "./slideonce1.jsx";
+import SmallScreen from "./smallscreen.jsx";
 
 
 function Gallery(){
@@ -29,52 +32,29 @@ function Gallery(){
 
     
     <>
-    <section className="first   lg:block h-[100vh] w-[95vw] box-border snap-start">
-      <div className="img ">
-     <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/buvdzppkwtr8jxfklb1v" alt="bg-image" className="mix-blend-whiten absolute bg-image-img w-[100vw] h-[100vh] object-cover  top-0 left-0 z-0 "/>
-     <YourComponent/>
-
-
-      
-      
-    <div  className="content-section ">
-      <motion.h1 
-      initial={{opacity:0, translateX: "-100%"}}
-      whileInView={{opacity:1, translateX:"0%"}}
-      transition={{duration: 1}}className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading mx-0 mt-[20vh] lg:text-[65px] w-fit absolute sm:text-[45px] text-[35px] md:mt-64 lg:mt-32 md:text-[55px] " id="first">PHOTO GALLERY</motion.h1>
-    
-     <motion.p 
-     initial={{opacity:0, translateX: "-100%"}}
-     whileInView={{opacity:1, translateX:"0%"}}
-     transition={{duration: 1}} className="font-spaced font-bold heading-subsection absolute gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent mx-0 lg:mt-0 mr-[95vh] text-[13px] mt-7 md:mt-32 lg:text-[21px] md:text-[17px]" id="second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil id magnam incidunt commodi iste! Voluptates .</motion.p>
-     
-     </div>
-     </div>
-     {/* <hr /> */}
-    </section>
-
-
-
-
+    <section className="first lg:block h-[100vh] w-[95vw] box-border snap-start relative">
+  <div className="img">
+    <img
+      src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/buvdzppkwtr8jxfklb1v"
+      alt="bg-image"
+      className="mix-blend-whiten absolute bg-image-img w-[100vw] h-[100vh] object-cover top-0 left-0 z-0"
+    />
+    <YourComponent />
+<SmallScreen/>
+      <PhotoGallery />
+   
+    <div className="absolute bottom-0 left-0 w-full h-[30vh] bg-gradient-to-b from-transparent to-black z-10"></div>
+  </div>
+</section>
 
 
     <section className="  second h-[100vh]    bg-black">
       
-    <motion.h1
-  initial={{ opacity: 0, translateX: "-100%" }} // Starts from the far left off-screen
-  whileInView={{ opacity: 1, translateX: "0%" }} // Animates to the exact center
-  transition={{ duration: 1 }}
-  className="text-[32px] sm:text-[40px] lg:text-[53px] w-fit font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading mx-auto text-center translate-y-[-30%] sm:translate-y-[-70%] lg:translate-y-[-90%]" // Center the text
-  id="font"
->
-  GLIMPSE
-</motion.h1>
+    <Glimpse/><div className="w-[90vw] h-[5vh] bg-gradient-to-b from-transparent to-black mt-[-2rem] z-50 "></div>
 
           <App />
-         <img src="src/Pages/Gallery/gradient.png" style={{
-    transform: "rotate(45deg) translateY(-100px)", // Adjust the angle and translation as needed
-    transition: "transform 0.5s", // Optional: smooth transition
-  }} />
+        
+  
       
       
       
@@ -84,23 +64,23 @@ function Gallery(){
     <Header  setActiveSection={setActiveSection} />
     <section
   name="third1"
-  className={`third1  h-[100vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third1" ? "" : "hidden"}`}
+  className={`third1  h-[89vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third1" ? "" : "hidden"}`}
 >
-<div className=" backdrop-blur-[5px]">
+<div className=" backdrop-blur-[5px] ">
   <motion.div
-    initial={{ opacity: 0, translateX: "100%", translateY: "14%" }}
-    whileInView={{ opacity: 1, translateX: "0%", translateY: "14%" }}
+    initial={{ opacity: 0, translateX: "100%", translateY: "18%" }}
+    whileInView={{ opacity: 1, translateX: "-2%", translateY: "18%" }}
     transition={{ duration: 1 }}
-    className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:grid-rows-1 md:grid-rows-2 sm:gap-3 md:gap-5 gap-10 ml-7 mb-5 h-[85vh] w-[70vw] items-center mt-9 sm:w-[90vw] lg:w-[95vw]  md:w-[90vw] grid-cols-2 grid-rows-3 "
+    className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:grid-rows-1 md:grid-rows-2 sm:gap-3 md:gap-5  mt-11 ml-14 lg:mt-10 h-[75vh] w-[88vw] items-center  sm:w-[90vw] lg:w-[95vw] pl-4 pr-4 md:w-[90vw] grid-cols-2 grid-rows-3 "
   >
     {/* First Image (spans two columns on medium and large screens) */}
     <div
       className=" sm:block md:block lg:block hidden items item1 z-10 col-span-1 sm:h-50 sm:col-span-2 md:col-span-2 lg:row-span-1 
-      sm:row-span-1 md:row-span-1 lg:col-span-2 bg-cover col-span-2 row-span-2 sm:ml-0 md:ml-0 lg:ml-0 ml-12 mr-0"
+      sm:row-span-1 md:row-span-1 lg:col-span-2 bg-cover col-span-2 row-span-2 sm:ml-0 md:ml-0 lg:ml-0 lg:mr-3 lg:mr-4"
       style={{
         backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
         height: "100%",
-        width: "100%",
+        width: "auto",
         border: "3px solid transparent",
         transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
       }}
@@ -116,12 +96,12 @@ function Gallery(){
 <MobileSlideshow/>
     {/* Second Image */}
     <div
-      className="items item2 bg-cover rounded-lg hidden sm:block md:block lg:block  "
+      className="items item2 bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-3 "
       style={{
         backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
         height: "100%",
-        width: "100%",
-        border: "5px solid transparent",
+        width: "auto",
+        border: "3px solid transparent",
         transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
       }}
       onMouseEnter={(e) => {
@@ -136,12 +116,12 @@ function Gallery(){
 
     {/* Third Image (spans one row and two columns on large screens) */}
     <div
-      className="items item3 bg-cover md:row-span-2 rounded-lg hidden md:block lg:block "
+      className="items item3 bg-cover md:row-span-2 rounded-lg hidden md:block lg:block lg:mr-3"
       style={{
         backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
         height: "100%",
-        width: "100%",
-        border: "5px solid transparent",
+        width: "auto",
+        border: "3px solid transparent",
         transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
       }}
       onMouseEnter={(e) => {
@@ -155,29 +135,23 @@ function Gallery(){
     ></div>
 
     {/* Text Item (spans two rows) */}
-    <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-justify box-border lg:col-span-1 md:col-span-1
-    sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] text-[12px] sm:ml-0 md:ml-0 lg:ml-0 ml-20 mt-96 sm:mt-0 mr-0 text-justify backdrop-blur-[5px]">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae corrupti
-        cum recusandae ab ipsam nemo reprehenderit enim aliquam, voluptatum,
-        fugiat deleniti. Minima, ipsum distinctio. Sapiente nulla aspernatur
-        odio, quaerat facere praesentium, ut earum autem repellendus ullam
-        doloribus quidem [ROBOTRON] reiciendis, saepe voluptatem dolor eos
-        
-      </p>
-      <button className="mt-5 px-1 py-0 bg-black text-white border-2 md:px-0  md:border-spacing-0 border-transparentfont-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-sm hidden sm:block lg: block md:block">
-        Know More
-      </button>
-    </div>
+    <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-5 mt-52 sm:mt-0 mr-16 c backdrop-blur-[5px]">
+
+  <p className="text-justify sm:line-clamp-none text-sm  line-clamp-2">
+  Robotron is a prominent module under Tecnoesis, attracting teams to compete with their custom-built robots in various challenges. Known for its prestige, Robotron is a platform where participants demonstrate creativity and technical skills by designing robots capable of tackling complex tasks. The competitions test a robot's abilities in areas such as navigation, problem-solving, and adaptability. Teams strive for excellence, as winning Robotron is highly regarded within the Tecnoesis community. It fosters innovation and collaboration, providing a valuable learning experience that pushes the boundaries of robotics and engineering.
+  </p>
+
+</div>
+
 
     {/* Fourth Image */}
     <div
-      className="items item5 bg-cover rounded-lg hidden md:block lg:block"
+      className="items item5 bg-cover rounded-lg hidden md:block lg:block lg:mr-3 lg:mt-6"
       style={{
         backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
         height: "100%",
-        width: "100%",
-        border: "5px solid transparent",
+        width: "auto",
+        border: "3px solid transparent",
         transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
       }}
       onMouseEnter={(e) => {
@@ -192,12 +166,12 @@ function Gallery(){
 
     {/* Fifth Image */}
     <div
-      className="items item6 bg-cover rounded-lg hidden md:hidden lg:block"
+      className="items item6 bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
       style={{
         backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
         height: "100%",
-        width: "100%",
-        border: "5px solid transparent",
+        width: "auto",
+        border: "3px solid transparent",
         transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
       }}
       onMouseEnter={(e) => {
@@ -212,12 +186,12 @@ function Gallery(){
 
     {/* Sixth Image */}
     <div
-      className="items item7 bg-cover rounded-lg hidden md:hidden lg:block"
+      className="items item7 bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
       style={{
         backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
         height: "100%",
-        width: "100%",
-        border: "5px solid transparent",
+        width: "auto",
+        border: "3px solid transparent",
         transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
       }}
      
@@ -236,20 +210,19 @@ function Gallery(){
   </div>
 </section>
 
-   <section name="third2" className={`third2 h-[100vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third2" ? "" : "hidden"}`}>
-  {/* <Header /> */}<div className=" backdrop-blur-[5px]">
+   <section name="third2" className={`third2 h-[88vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third2" ? "" : "hidden"}`}>
+  <div className=" backdrop-blur-[5px]">
      <motion.div
-    initial={{ opacity: 0, translateX: "100%", translateY: "19%" }}
-    whileInView={{ opacity: 1, translateX: "3%", translateY: "19%" }}
+    initial={{ opacity: 0, translateX: "100%", translateY: "15%" }}
+    whileInView={{ opacity: 1, translateX: "3%", translateY: "15%" }}
     transition={{ duration: 1 }}
-    className="container1 h-[75vh] w-[88vw] transform translate-y-[40%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid-rows-2 gap-6 mt-11 ml-14 text-sm lg:text-[14px] sm:w-[86vw] sm:gap-10 sm:ml-4 sm:mt-20" // Changed gap to 6 for better spacing
+    className="container1 h-[75vh] w-[88vw] transform translate-y-[40%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid-rows-2 gap-6 mt-12 ml-11  lg:text-[14px] sm:w-[86vw] sm:gap-10 sm:ml-4 sm:mt-20" // Changed gap to 6 for better spacing
   >
   <MobileSlideshow1/>
 
-    <div className="items text-white flex-col mx-0 box1 lg:row-span-2 md:row-span-1 sm:row-span-1  row-span-2 sm:row-span-1 ml-4 sm:ml-8 text-justify font-spaced text-[12px] sm:text-[10px] sm:mt-0 mt-40 sm:mr-0 mr-20 sm:pl-5 sm:pt-5">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..consectetur adipisicing elit. Dolores atque deserunt labore iusto nisi architecto, cumque voluptatibus iste quasi nostrum soluta. Dolore, animi voluptas sapiente perferendis doloribus aspernatur possimus deserunt laudantium consectetur dicta beatae amet [SESSION] </p> <button className="mt-8 px-3 py-1 bg-black text-white border-2 border-transparentfont-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-sm hidden sm:hidden md:block lg:block">
-                  Know More
-                </button>
+    <div className="font-spaced text-white flex-col mx-0 box1 lg:row-span-2 md:row-span-1 row-span-2 sm:row-span-1 ml-4 sm:ml-8 text-justify text-sm sm:text-[14px] sm:mt-0 mt-14 lg:mt-0 sm:mr-0 mr-20 sm:pl-5 sm:pt-5">
+      <p className="text-justify sm:line-clamp-none line-clamp-2">Sessions play a crucial role in enhancing growth and the learning process. Weekly classes, workshops, meetings, and conferences provide valuable opportunities for hands-on experience. Organized by NERDS, these events create an environment where participants can engage with experts, collaborate on projects, and deepen their understanding of various topics. The practical experience gained through these sessions is vital for developing skills and staying updated with the latest advancements in the field. </p>
+      
     </div>
 
     <div className=" item2 hidden sm:block md:block lg:block box2 row-span-2 bg-cover pl-10 sm:pl-20 gap-0 " 
@@ -258,7 +231,7 @@ function Gallery(){
           height: "100%",
           width: "100%",
          
-            border: "5px solid transparent", 
+            border: "3px solid transparent", 
             // initial border
             // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
             transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
@@ -280,7 +253,7 @@ function Gallery(){
           height: "100%",
           width: "100%",
          
-            border: "5px solid transparent", 
+            border: "3px solid transparent", 
             // initial border
             // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
             transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
@@ -302,7 +275,7 @@ function Gallery(){
           height: "100%",
           width: "100%",
          
-            border: "5px solid transparent", 
+            border: "3px solid transparent", 
             // initial border
             // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
             transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
@@ -324,7 +297,7 @@ function Gallery(){
           height: "100%",
           width: "100%",
          
-            border: "5px solid transparent", 
+            border: "3px solid transparent", 
             // initial border
             // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
             transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
@@ -346,7 +319,7 @@ function Gallery(){
           height: "100%",
           width: "100%",
          
-            border: "5px solid transparent", 
+            border: "3px solid transparent", 
             // initial border
             // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
             transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
@@ -368,7 +341,7 @@ function Gallery(){
           height: "100%",
           width: "100%",
          
-            border: "5px solid transparent", 
+            border: "3px solid transparent", 
             // initial border
             // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
             transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
@@ -388,23 +361,23 @@ function Gallery(){
 </section>
 <section
   name="third3"
-  className={`third3  h-[100vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third3" ? "" : "hidden"}`}
+  className={`third3  h-[89vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third3" ? "" : "hidden"}`}
 >
-<div className=" backdrop-blur-[5px]">
+<div className=" backdrop-blur-[5px] ">
   <motion.div
-    initial={{ opacity: 0, translateX: "100%", translateY: "14%" }}
-    whileInView={{ opacity: 1, translateX: "0%", translateY: "14%" }}
+    initial={{ opacity: 0, translateX: "100%", translateY: "18%" }}
+    whileInView={{ opacity: 1, translateX: "-2%", translateY: "18%" }}
     transition={{ duration: 1 }}
-    className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:grid-rows-1 md:grid-rows-2 sm:gap-3 md:gap-5 gap-10 ml-7 mb-5 h-[85vh] w-[70vw] items-center mt-9 sm:w-[90vw] lg:w-[95vw]  md:w-[90vw] grid-cols-2 grid-rows-3 "
+    className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:grid-rows-1 md:grid-rows-2 sm:gap-3 md:gap-5  mt-11 ml-14 lg:mt-10 h-[75vh] w-[88vw] items-center  sm:w-[90vw] lg:w-[95vw] pl-4 pr-4 md:w-[90vw] grid-cols-2 grid-rows-3 "
   >
     {/* First Image (spans two columns on medium and large screens) */}
     <div
       className=" sm:block md:block lg:block hidden items item1 z-10 col-span-1 sm:h-50 sm:col-span-2 md:col-span-2 lg:row-span-1 
-      sm:row-span-1 md:row-span-1 lg:col-span-2 bg-cover col-span-2 row-span-2 sm:ml-0 md:ml-0 lg:ml-0 ml-12 mr-0"
+      sm:row-span-1 md:row-span-1 lg:col-span-2 bg-cover col-span-2 row-span-2 sm:ml-0 md:ml-0 lg:ml-0 lg:mr-3 lg:mr-4"
       style={{
         backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
         height: "100%",
-        width: "100%",
+        width: "auto",
         border: "3px solid transparent",
         transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
       }}
@@ -420,12 +393,12 @@ function Gallery(){
 <MobileSlideshow/>
     {/* Second Image */}
     <div
-      className="items item2 bg-cover rounded-lg hidden sm:block md:block lg:block  "
+      className="items item2 bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-3 "
       style={{
         backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
         height: "100%",
-        width: "100%",
-        border: "5px solid transparent",
+        width: "auto",
+        border: "3px solid transparent",
         transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
       }}
       onMouseEnter={(e) => {
@@ -440,12 +413,12 @@ function Gallery(){
 
     {/* Third Image (spans one row and two columns on large screens) */}
     <div
-      className="items item3 bg-cover md:row-span-2 rounded-lg hidden md:block lg:block "
+      className="items item3 bg-cover md:row-span-2 rounded-lg hidden md:block lg:block lg:mr-3"
       style={{
         backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
         height: "100%",
-        width: "100%",
-        border: "5px solid transparent",
+        width: "auto",
+        border: "3px solid transparent",
         transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
       }}
       onMouseEnter={(e) => {
@@ -459,29 +432,23 @@ function Gallery(){
     ></div>
 
     {/* Text Item (spans two rows) */}
-    <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-justify box-border lg:col-span-1 md:col-span-1
-    sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] text-[12px] sm:ml-0 md:ml-0 lg:ml-0 ml-20 mt-96 sm:mt-0 mr-0 text-justify backdrop-blur-[5px]">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae corrupti
-        cum recusandae ab ipsam nemo reprehenderit enim aliquam, voluptatum,
-        fugiat deleniti. Minima, ipsum distinctio. Sapiente nulla aspernatur
-        odio, quaerat facere praesentium, ut earum autem repellendus ullam
-        doloribus quidem [PROJECTS] reiciendis, saepe voluptatem dolor eos
-        
-      </p>
-      <button className="mt-5 px-1 py-0 bg-black text-white border-2 md:px-0  md:border-spacing-0 border-transparentfont-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-sm hidden sm:block lg: block md:block">
-        Know More
-      </button>
-    </div>
+    <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-5 mt-52 sm:mt-0 mr-16 c backdrop-blur-[5px]">
+
+  <p className="text-justify sm:line-clamp-none text-sm  line-clamp-2">
+  The NERDS initiative showcases innovative projects designed to enhance technology's accessibility and functionality. Among these projects is the Arachno Bot, a robotic spider capable of navigating complex terrains autonomously. The Head Motion Controlled Wheelchair empowers individuals with mobility challenges, allowing them to control movement through simple head gestures. Additionally, the Quadcopter Drone provides an aerial perspective, ideal for surveillance and recreational use. Lastly, the Bluetooth Bot leverages wireless technology for remote interaction and control, demonstrating the potential of connectivity in robotics. Together, these projects represent a significant leap forward in assistive technologies and robotics innovation.
+  </p>
+
+</div>
+
 
     {/* Fourth Image */}
     <div
-      className="items item5 bg-cover rounded-lg hidden md:block lg:block"
+      className="items item5 bg-cover rounded-lg hidden md:block lg:block lg:mr-3 lg:mt-6"
       style={{
         backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
         height: "100%",
-        width: "100%",
-        border: "5px solid transparent",
+        width: "auto",
+        border: "3px solid transparent",
         transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
       }}
       onMouseEnter={(e) => {
@@ -496,12 +463,12 @@ function Gallery(){
 
     {/* Fifth Image */}
     <div
-      className="items item6 bg-cover rounded-lg hidden md:hidden lg:block"
+      className="items item6 bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
       style={{
         backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
         height: "100%",
-        width: "100%",
-        border: "5px solid transparent",
+        width: "auto",
+        border: "3px solid transparent",
         transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
       }}
       onMouseEnter={(e) => {
@@ -516,12 +483,12 @@ function Gallery(){
 
     {/* Sixth Image */}
     <div
-      className="items item7 bg-cover rounded-lg hidden md:hidden lg:block"
+      className="items item7 bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
       style={{
         backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
         height: "100%",
-        width: "100%",
-        border: "5px solid transparent",
+        width: "auto",
+        border: "3px solid transparent",
         transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
       }}
      
@@ -540,29 +507,28 @@ function Gallery(){
   </div>
 </section>
 
-
-<section name="third4" className={`third4 h-[100vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third4" ? "" : "hidden"}`}>
-  {/* <Header /> */}<div className=" backdrop-blur-[5px]">
+<section name="third4" className={`third4 h-[88vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third4" ? "" : "hidden"}`}>
+  <div className=" backdrop-blur-[5px]">
      <motion.div
-    initial={{ opacity: 0, translateX: "100%", translateY: "19%" }}
-    whileInView={{ opacity: 1, translateX: "0%", translateY: "19%" }}
+    initial={{ opacity: 0, translateX: "100%", translateY: "15%" }}
+    whileInView={{ opacity: 1, translateX: "3%", translateY: "15%" }}
     transition={{ duration: 1 }}
-    className="container1 h-[75vh] w-[88vw] transform translate-y-[40%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid-rows-2 gap-6 mt-11 ml-14 text-sm lg:text-[14px]" // Changed gap to 6 for better spacing
+    className="container1 h-[75vh] w-[88vw] transform translate-y-[40%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid-rows-2 gap-6 mt-12 ml-11  lg:text-[14px] sm:w-[86vw] sm:gap-10 sm:ml-4 sm:mt-20" // Changed gap to 6 for better spacing
   >
-    <MobileSlideshow1/>
-    <div className="items text-white flex-col mx-0 box1 row-span-2 ml-4 sm:ml-8 text-justify font-spaced text-[12px] sm:mt-0 mt-40 sm:mr-0 mr-16 ">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..consectetur adipisicing elit. Dolores atque deserunt labore iusto nisi architecto, cumque voluptatibus iste quasi nostrum soluta. Dolore, animi voluptas sapiente perferendis doloribus aspernatur possimus deserunt laudantium consectetur dicta beatae amet natus voluptatem, non corrupti [TECNO] </p> <button className="mt-8 px-3 py-1 bg-black text-white border-2 border-transparentfont-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-sm hidden sm:block md:block lg:block">
-                  Know More
-                </button>
+  <MobileSlideshow1/>
+
+    <div className="font-spaced text-white flex-col mx-0 box1 lg:row-span-2 md:row-span-1 row-span-2 sm:row-span-1 ml-4 sm:ml-8 text-justify text-sm sm:text-[14px] sm:mt-0 mt-14 lg:mt-0 sm:mr-0 mr-20 sm:pl-5 sm:pt-5">
+      <p className="text-justify sm:line-clamp-none line-clamp-2">Tecnoesis, the annual tech fest of NIT Silchar, is the most prestigious tech event in the entire Northeast. It showcases numerous flagship events, including the renowned Robotron, organized by NERDS. The fest features a variety of workshops and events conducted by NERDS, allowing participants to engage actively in cutting-edge technology and innovation. With its rich blend of competitions and learning opportunities, Tecnoesis attracts tech enthusiasts from across the region, fostering collaboration and creativity. </p>
+      
     </div>
 
-    <div className="items hidden sm:block md:block lg:block box2 row-span-2 bg-cover pl-10 sm:pl-20" 
+    <div className=" item2 hidden sm:block md:block lg:block box2 row-span-2 bg-cover pl-10 sm:pl-20 gap-0 " 
          style={{
           backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
           height: "100%",
           width: "100%",
          
-            border: "5px solid transparent", 
+            border: "3px solid transparent", 
             // initial border
             // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
             transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
@@ -578,13 +544,13 @@ function Gallery(){
         }}>
     </div>
 
-    <div className="items box3 hidden sm:block md:block lg:block bg-cover ml-2 sm:ml-8" 
+    <div className="items box3 hidden md:block lg:block sm:block bg-cover ml-2 sm:ml-8" 
          style={{
           backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
           height: "100%",
           width: "100%",
          
-            border: "5px solid transparent", 
+            border: "3px solid transparent", 
             // initial border
             // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
             transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
@@ -600,13 +566,13 @@ function Gallery(){
         }}>
     </div>
 
-    <div className="items box4 hidden sm:block md:block lg:block col-span-1 sm:col-span-2 lg:col-span-2 bg-cover ml-7 mr-4 sm:mr-8"
+    <div className="items box4 hidden md:hidden lg:block col-span-1 sm:col-span-2 lg:col-span-2 bg-cover ml-7 mr-4 sm:mr-8"
         style={{
           backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
           height: "100%",
           width: "100%",
          
-            border: "5px solid transparent", 
+            border: "3px solid transparent", 
             // initial border
             // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
             transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
@@ -622,13 +588,13 @@ function Gallery(){
         }}>
     </div>
 
-    <div className="items box5 hidden sm:block md:block lg:block bg-cover ml-4 sm:ml-8"
+    <div className="items box5 hidden md:hidden lg:block bg-cover ml-4 sm:ml-8"
          style={{
           backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
           height: "100%",
           width: "100%",
          
-            border: "5px solid transparent", 
+            border: "3px solid transparent", 
             // initial border
             // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
             transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
@@ -644,13 +610,13 @@ function Gallery(){
         }}>
     </div>
 
-    <div className="items box6 hidden sm:block md:block lg:block bg-cover ml-4 sm:ml-8"
+    <div className="items box6 hidden md:hidden lg:block bg-cover ml-4 sm:ml-8"
          style={{
           backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
           height: "100%",
           width: "100%",
          
-            border: "5px solid transparent", 
+            border: "3px solid transparent", 
             // initial border
             // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
             transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
@@ -666,13 +632,13 @@ function Gallery(){
         }}>
     </div>
 
-    <div className="items box7 hidden sm:block md:block lg:block bg-cover ml-4 sm:ml-8 mr-4 sm:mr-8"
+    <div className="items box7 hidden md:hidden lg:block bg-cover ml-4 sm:ml-8 mr-4 sm:mr-8"
          style={{
           backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
           height: "100%",
           width: "100%",
          
-            border: "5px solid transparent", 
+            border: "3px solid transparent", 
             // initial border
             // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
             transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",

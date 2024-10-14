@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Robotron } from './imagedata.jsx';
+import { Robotron , Session , Projects, Tecnoesis} from './imagedata.jsx';
 
 const MobileSlideshow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,7 +15,7 @@ const MobileSlideshow = () => {
 
   return (
        
-    <div className='grid h-[48vh] w-[69vw] ml-14 mt-72 sm:hidden lg:hidden md:hidden '>
+    <div className='grid h-[45vh] w-[68vw] mr-14 mt-40 sm:hidden lg:hidden md:hidden '>
       <div
         className="block sm:hidden lg:hidden md:hidden bg-cover"
         style={{
