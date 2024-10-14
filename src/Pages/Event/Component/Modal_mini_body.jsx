@@ -1,9 +1,7 @@
 import tiny_modal_bg from "../Assets/modal/tiny_modal_bg.svg";
-import pic from "../Assets/modal/modalpic1.svg";
 import modaldata from  "../JSON/modaldata.json";
 import pc_card_border from "../Assets/pc_card_border.svg";
 import modalbg from "../Assets/modalbgmobile.svg";
-import Button from "../Component/Button"
 
 const Modal = ({ id, toggleModal }) => {
   const obj = { ...modaldata };

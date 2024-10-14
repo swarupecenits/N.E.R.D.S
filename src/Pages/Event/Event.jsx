@@ -1,4 +1,4 @@
-import stuff from "./Assets/stuff.svg"
+
 import time from "./Assets/timeline.svg"
 import time2 from "./Assets/time2.svg"
 import {motion} from "framer-motion"
@@ -54,7 +54,7 @@ function Hero() {
                     transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s"}}
                 className="right block md:flex  flex-col items-center justify-center">
                 <TextAnimation />
-                <img src={stuff} alt="the stuff at the bottom " className="md:flex-shrink-0 md:mr-36 md:mt-[-3rem] pr-36 pb-12 md:pr-0 md:pb-0 "/>
+                <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/pizowecu9wraajx7lfqs" alt="the stuff at the bottom " className="md:flex-shrink-0 md:mr-36 md:mt-[-3rem] pr-36 pb-12 md:pr-0 md:pb-0 "/>
                 </div>
             </div>
 
@@ -78,7 +78,7 @@ function Hero_small() {
         <div className="hero_contain md:hidden flex flex-col items-center justify-center">
             <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/pccrifcff8niy6prbj20" alt="" className="ml-[-3rem] block"/>
             <h1 className="m-0 p-0 z-50 font-ethenocentric text-4xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent">EVENTS</h1>
-            <img src={stuff} alt=""  className="block pr-14 mt-[-3rem]"/>
+            <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/pizowecu9wraajx7lfqs" alt=""  className="block pr-14 mt-[-3rem]"/>
         </div>
     )
 }
