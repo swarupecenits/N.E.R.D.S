@@ -77,7 +77,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`menu-sheet z-50 fixed top-0 left-0 w-[80%] max-w-[320px] h-full bg-gray-950 transition-transform transform ${
+        className={`menu-sheet z-50 fixed top-0 left-0 w-[80%] max-w-[320px] h-full bg-gray-950 transition-transform ease-in-out transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
       >
@@ -85,7 +85,7 @@ const Navbar = () => {
           <Link to="/" onClick={toggleMenu}>
             <img src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/npansp6k2ntw7qeoqoms" alt="NERDS Logo" className="h-10 ml-0" />
           </Link>
-          <button className="text-2xl text-white" onClick={toggleMenu}>
+          <button className="text-2xl text-white rounded-md" onClick={toggleMenu}>
             &#10005;
           </button>
         </div>
