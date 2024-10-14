@@ -30,7 +30,7 @@ const projects = [
     description:
       "The Spider Bot is a compact, multi-legged robot built using an Arduino Nano. It features precise motor control for smooth movement and agility. Equipped with sensors, the bot can navigate obstacles, offering a blend of mechanical engineering and coding. Ideal for robotics enthusiasts, it demonstrates how compact microcontrollers like the Arduino Nano can create sophisticated, interactive robots.",
     imageUrl:
-      "https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/iwokc0co8eihjlutrxhx",
+      "https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/dbzvweqw1xwclrijk9rh",
     link: "https://youtu.be/MOtOSJDkom8?si=BG7DCMavWIUhIVg9",
   },
   {
@@ -173,7 +173,7 @@ const Projects = () => {
             >
               <div className="md:w-1/2 p-4 relative transition-transform duration-300 ease-in-out transform hover:scale-105">
                 <div
-                  className="relative w-full h-[300px] sm:h-[400px] overflow-hidden border-2 border-gray-300 hover:border-blue-500 transition-all duration-300 ease-in-out rounded-lg"
+                  className="relative w-full h-[300px] sm:h-[350px] overflow-hidden border-2 border-gray-300 hover:border-blue-500 transition-all duration-300 ease-in-out rounded-lg"
                   style={{
                     clipPath:
                       "polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)",
