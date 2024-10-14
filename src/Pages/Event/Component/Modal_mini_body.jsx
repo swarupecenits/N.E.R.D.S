@@ -12,7 +12,7 @@ const Modal = ({ id, toggleModal }) => {
          
         >
           {/* Heading */}
-          <h1 className="text-center mb-4 font-ethenocentric text-2xl md:text-4xl text-blue-600">
+          <h1 className="text-center mb-4 font-ethenocentric text-2xl md:text-4xl text-cyan-400">
             {obj[id].head}
           </h1>
 
