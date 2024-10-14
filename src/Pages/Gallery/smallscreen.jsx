@@ -26,6 +26,7 @@ const SmallScreen = () => {
     <p className="font-spaced font-bold heading-subsection gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent text-[25px]  mt-3 ml-12">
       A journey through timeless images
     </p>
+  <div className="h-[20vh] w-full bg-gradient-to-b from-transparent via-black to-black"></div>
   </motion.div>
     </>
   );

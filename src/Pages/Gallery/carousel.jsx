@@ -56,7 +56,7 @@ export default Carousel;
 
 const CarouselContainer = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 85vh;
   color: #000000;
   position: relative;
   display: flex;
