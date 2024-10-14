@@ -1,31 +1,41 @@
 {
     "1": {
       "head": "first",
+      "register":"www.google.com",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "url": "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728318976/WhatsApp_Image_2024-10-07_at_1.16.22_AM_djxr1m-removebg-preview_ci6rfb.png"
     },
     "2": {
       "head": "second",
+      "register":"https://www.google.com",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "url": "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728319093/WhatsApp_Image_2024-10-07_at_1.15.52_AM_1_rwqeqj-removebg-preview_qiah9h.png"
     },
     "3": {
       "head": "third",
+      "register":"https://www.google.com",
+
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "url": "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728319250/WhatsApp_Image_2024-10-07_at_1.15.51_AM_w3r231-removebg-preview_1_qtqwt5.png"
     },
     "4": {
       "head": "fourth",
+      "register":"https://www.google.com",
+
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "url": "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728319299/WhatsApp_Image_2024-10-07_at_1.02.58_AM_rhqfl2-removebg-preview_yvzens.png"
     },
     "5": {
       "head": "fifth",
+      "register":"https://www.google.com",
+
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "url": "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728319299/WhatsApp_Image_2024-10-07_at_1.02.58_AM_rhqfl2-removebg-preview_yvzens.png"
     },
     "6": {
       "head": "sixth",
+      "register":"https://www.google.com",
+
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "url": "https://res.cloudinary.com/dehyqj5i3/image/upload/v1728319299/WhatsApp_Image_2024-10-07_at_1.02.58_AM_rhqfl2-removebg-preview_yvzens.png"
     }
