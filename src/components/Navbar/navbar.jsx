@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Logo from "./logo.png";
+
 
 const links = [
   { name: 'Home', path: '/' },
@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="lg:px-12 sm:px-7 max-w-9xl mx-auto max-h-24 flex justify-between items-center p-6">
         
         <div className="flex items-center">
-          <img src={Logo} alt="NERDS Logo" className="h-16 mr-8" />
+          <img src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/npansp6k2ntw7qeoqoms" alt="NERDS Logo" className="h-16 mr-8" />
           <span className="hidden md:block text-2xl font-ethenocentric font-semibold">
             <span
               className="hover:[text-shadow:_0_5px_100px_rgba(0,255,255,0.9),_0_0_15px_rgba(0,255,255,1),_0_0_200px_rgba(0,255,255,1),_0_0_100px_rgba(99,102,241,0.8);] hover:text-[#00FFFF]"
@@ -77,13 +77,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`menu-sheet fixed top-0 left-0 w-[80%] max-w-[320px] h-full bg-gray-950 z-50 transition-transform transform ${
+        className={`menu-sheet z-50 fixed top-0 left-0 w-[80%] max-w-[320px] h-full bg-gray-950 transition-transform transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
       >
         <div className="flex items-center justify-between p-4">
           <Link to="/" onClick={toggleMenu}>
-            <img src={Logo} alt="NERDS Logo" className="h-10 ml-0" />
+            <img src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/npansp6k2ntw7qeoqoms" alt="NERDS Logo" className="h-10 ml-0" />
           </Link>
           <button className="text-2xl text-white" onClick={toggleMenu}>
             &#10005;

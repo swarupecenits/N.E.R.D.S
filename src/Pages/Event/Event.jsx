@@ -77,7 +77,7 @@ function Hero_small() {
     return(
         <div className="hero_contain md:hidden flex flex-col items-center justify-center">
             <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/pccrifcff8niy6prbj20" alt="" className="ml-[-3rem] block"/>
-            <h1 className="m-0 p-0 z-50 font-ethenocentric text-4xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent">EVENTS</h1>
+            <h1 className="m-0 p-0 z-20 font-ethenocentric text-4xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent">EVENTS</h1>
             <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/pizowecu9wraajx7lfqs" alt=""  className="block pr-14 mt-[-3rem]"/>
         </div>
     )
