@@ -29,8 +29,8 @@
 }
 .main-image-img {
   z-index: 100;
-  top: -50px;
   left: 575px;
+  margin-top: 2rem;
   height: 650px;
   mask-image: linear-gradient(
     to bottom,
@@ -130,6 +130,7 @@
     overflow: hidden;
     z-index: 1;
     left: 0;
+    margin-top: 2rem;
     object-fit: cover;
   }
   .meet-heading {
@@ -171,7 +172,6 @@
   .main-image-img {
     width: 1000px;
     height: 650px;
-    top: -30px;
     object-fit: cover;
   }
 }
@@ -220,6 +220,7 @@
 
 @media screen and (max-width: 439px) {
   .main-image-img{
+    margin-top: 4rem;
     left: 10px;
   }
 }
