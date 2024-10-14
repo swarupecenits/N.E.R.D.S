@@ -26,7 +26,7 @@ const EventCardSlider = () => {
 
   // Array of card data for the EventCard
   const cardData = [
-    { image: 'https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/aktfyvcmkbqyogteawk4' },
+    { image: 'https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/aahmjv30yp7qx1bdjwat' },
     { image: 'https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/hox7gcv2f6gvax1dve09' },
     { image: 'https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/ejvo2heqqdqkel0222bc' },
     { image: 'https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/i2yqgni8i4zbdfjiu4yq' },
