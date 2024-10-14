@@ -64,7 +64,7 @@ function Gallery(){
     <Header  setActiveSection={setActiveSection} />
     <section
   name="third1"
-  className={`third1  h-[89vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third1" ? "" : "hidden"}`}
+  className={`third1  h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third1" ? "" : "hidden"}`}
 >
 <div className=" backdrop-blur-[5px] ">
   <motion.div
@@ -96,7 +96,7 @@ function Gallery(){
 <MobileSlideshow/>
     {/* Second Image */}
     <div
-      className="items item2 bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-3 "
+      className="items item2 bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-4 "
       style={{
         backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
         height: "100%",
@@ -210,11 +210,11 @@ function Gallery(){
   </div>
 </section>
 
-   <section name="third2" className={`third2 h-[88vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third2" ? "" : "hidden"}`}>
+   <section name="third2" className={`third2 h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third2" ? "" : "hidden"}`}>
   <div className=" backdrop-blur-[5px]">
      <motion.div
-    initial={{ opacity: 0, translateX: "100%", translateY: "15%" }}
-    whileInView={{ opacity: 1, translateX: "3%", translateY: "15%" }}
+    initial={{ opacity: 0, translateX: "100%", translateY: "13.2%" }}
+    whileInView={{ opacity: 1, translateX: "3%", translateY: "13.2%" }}
     transition={{ duration: 1 }}
     className="container1 h-[75vh] w-[88vw] transform translate-y-[40%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid-rows-2 gap-6 mt-12 ml-11  lg:text-[14px] sm:w-[86vw] sm:gap-10 sm:ml-4 sm:mt-20" // Changed gap to 6 for better spacing
   >
@@ -361,7 +361,7 @@ function Gallery(){
 </section>
 <section
   name="third3"
-  className={`third3  h-[89vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third3" ? "" : "hidden"}`}
+  className={`third3  h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third3" ? "" : "hidden"}`}
 >
 <div className=" backdrop-blur-[5px] ">
   <motion.div
@@ -435,7 +435,7 @@ function Gallery(){
     <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-5 mt-52 sm:mt-0 mr-16 c backdrop-blur-[5px]">
 
   <p className="text-justify sm:line-clamp-none text-sm  line-clamp-2">
-  The NERDS initiative showcases innovative projects designed to enhance technology's accessibility and functionality. Among these projects is the Arachno Bot, a robotic spider capable of navigating complex terrains autonomously. The Head Motion Controlled Wheelchair empowers individuals with mobility challenges, allowing them to control movement through simple head gestures. Additionally, the Quadcopter Drone provides an aerial perspective, ideal for surveillance and recreational use. Lastly, the Bluetooth Bot leverages wireless technology for remote interaction and control, demonstrating the potential of connectivity in robotics. Together, these projects represent a significant leap forward in assistive technologies and robotics innovation.
+  The NERDS initiative showcases innovative projects designed to enhance technology's accessibility and functionality. Among these projects is the Arachno Bot, a robotic spider capable of navigating complex terrains autonomously. The Head Motion Controlled Wheelchair empowers individuals with mobility challenges, allowing them to control movement through simple head gestures. Additionally, the Quadcopter Drone provides an aerial perspective, ideal for surveillance & recreational use. Lastly, the Bluetooth Bot leverages wireless technology for remote interaction and control, demonstrating the potential of connectivity in robotics. .
   </p>
 
 </div>
@@ -507,7 +507,7 @@ function Gallery(){
   </div>
 </section>
 
-<section name="third4" className={`third4 h-[88vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third4" ? "" : "hidden"}`}>
+<section name="third4" className={`third4 h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none ${activeSection === "third4" ? "" : "hidden"}`}>
   <div className=" backdrop-blur-[5px]">
      <motion.div
     initial={{ opacity: 0, translateX: "100%", translateY: "15%" }}
