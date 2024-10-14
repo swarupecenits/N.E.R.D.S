@@ -17,7 +17,7 @@ const SmallScreen = () => {
       </motion.div>
       
       <div className="relative z-50 block sm:hidden">
-      <p className="font-ethenocentric font-normal heading-subsection gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent  !text-[28px] mt-7 mx-5">
+      <p className="font-ethenocentric font-normal heading-subsection gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent  !text-[28px] mt-7 mx-4">
   PHOTO GALLERY
 </p>
 
