@@ -30,7 +30,7 @@ const projects = [
       "The Spider Bot is a compact, multi-legged robot built using an Arduino Nano. It features precise motor control for smooth movement and agility. Equipped with sensors, the bot can navigate obstacles, offering a blend of mechanical engineering and coding. Ideal for robotics enthusiasts, it demonstrates how compact microcontrollers like the Arduino Nano can create sophisticated, interactive robots.",
     imageUrl:
       "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/q63qpsdjxmfwowqzzcul",
-    link: "https://youtu.be/MOtOSJDkom8?si=BG7DCMavWIUhIVg9", 
+    link: "https://youtu.be/MOtOSJDkom8?si=BG7DCMavWIUhIVg9",
   },
   {
     title: "Head Motion Controlled Wheelchair",
@@ -38,7 +38,7 @@ const projects = [
       "The Head-motion-controlled wheelchair offers an innovative solution for individuals with mobility impairments. Using sensors to detect head movements, the system translates these into directional commands, allowing users to navigate with ease. Powered by microcontrollers and sensor technology, this hands-free design provides greater independence, enhancing accessibility and improving the quality of life for people with limited physical mobility.",
     imageUrl:
       "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/e3z5b5s5zihzynxxqi8o",
-    link: "#", 
+    link: "#",
   },
   {
     title: "Quadcopter Drone",
@@ -46,7 +46,7 @@ const projects = [
       "The quadcopter drone is an unmanned aerial vehicle (UAV) that operates using four rotors for lift, stability, and maneuverability. Controlled remotely or autonomously via onboard sensors and GPS, quadcopters are used in various fields such as aerial photography, surveillance, delivery, and research. Their agile flight capabilities and ease of use make them highly versatile in both commercial and recreational applications.",
     imageUrl:
       "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/mwaszrp83seimayoqbl6",
-    link: "#", 
+    link: "#",
   },
   {
     title: "Bluetooth Bot",
@@ -57,7 +57,6 @@ const projects = [
     link: "https://youtu.be/KyjrGN9ZTPg?si=oehFA-BAHmJJ5sR_",
   },
 ];
-
 
 const Projects = () => {
   const settings = {
@@ -113,8 +112,11 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <button className="mt-4 sm:mt-6 px-2 sm:px-3 py-1 bg-black text-white border-2 border-blue-800 font-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-xs sm:text-sm">
-                        Know More
+                      <button className=" mt-5 relative inline-flex h-10 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none">
+                        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"></span>
+                        <span className="font-spaced inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 sm:text:sm text-md font-medium text-white backdrop-blur-3xl gap-2 undefined">
+                          Know More
+                        </span>
                       </button>
                     </a>
                   </div>
@@ -160,8 +162,11 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="mt-8 px-3 py-1 bg-black text-white border-2 border-blue-800 font-ethenocentric rounded-md hover:bg-gray-800 hover:ring-2 hover:ring-gray-400 transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-purple-500 text-sm">
-                    Know More
+                  <button className=" mt-5 relative inline-flex h-10 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none">
+                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"></span>
+                    <span className="font-spaced inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-md font-medium text-white backdrop-blur-3xl gap-2 undefined ">
+                      Know More
+                    </span>
                   </button>
                 </a>
               </div>
@@ -174,4 +179,3 @@ const Projects = () => {
 };
 
 export default Projects;
-

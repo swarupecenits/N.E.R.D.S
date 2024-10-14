@@ -16,10 +16,16 @@
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+<<<<<<< HEAD
     "@tailwindcss/line-clamp": "^0.4.4",
+=======
+    "@react-three/drei": "^9.114.3",
+    "@react-three/fiber": "^8.17.10",
+>>>>>>> 504439e8d1b0e7e5c7f723d3731d02acc5ece64b
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.11.8",
     "i": "^0.3.7",
+    "maath": "^0.10.8",
     "react": "^18.3.1",
     "react-carousel": "^4.3.0",
     "react-dom": "^18.3.1",
