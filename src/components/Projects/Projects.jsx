@@ -1,3 +1,4 @@
+import React, { useEffect, useRef, useState } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,7 +7,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 // Custom Arrow Components for Slick Slider
 const CustomPrevArrow = ({ onClick }) => (
   <div
-    className="absolute top-[245px] left-2 sm:left-4 transform -translate-y-1/2 bg-black border-2 border-blue-800 rounded-full p-1 cursor-pointer transition duration-300 ease-in-out  z-10"
+    className="absolute top-[245px] left-2 sm:left-4 transform -translate-y-1/2 bg-black border-2 border-blue-800 rounded-full p-1 cursor-pointer transition duration-300 ease-in-out z-10"
     onClick={onClick}
   >
     <IoIosArrowBack size={18} color="white" />
@@ -15,7 +16,7 @@ const CustomPrevArrow = ({ onClick }) => (
 
 const CustomNextArrow = ({ onClick }) => (
   <div
-    className="absolute top-[245px] right-2 sm:right-4 transform -translate-y-1/2 bg-black border-2 border-blue-800 rounded-full p-1 cursor-pointer transition duration-300 ease-in-out  z-10"
+    className="absolute top-[245px] right-2 sm:right-4 transform -translate-y-1/2 bg-black border-2 border-blue-800 rounded-full p-1 cursor-pointer transition duration-300 ease-in-out z-10"
     onClick={onClick}
   >
     <IoIosArrowForward size={20} color="white" />
@@ -70,6 +71,35 @@ const Projects = () => {
     prevArrow: <CustomPrevArrow />,
   };
 
+  const [opacity, setOpacity] = useState(Array(projects.length).fill(0));
+  const sectionRefs = useRef([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = sectionRefs.current.indexOf(entry.target);
+          if (index !== -1) {
+            setOpacity((prev) => {
+              const newOpacity = [...prev];
+              newOpacity[index] = 1; // Set opacity to 1 when in view
+              return newOpacity;
+            });
+            observer.unobserve(entry.target); // Stop observing once it's visible
+          }
+        }
+      });
+    }, { threshold: 0.1 }); // Adjust threshold as needed
+
+    sectionRefs.current.forEach((section) => {
+      if (section) observer.observe(section);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [projects]);
+
   return (
     <section className="bg-black py-8">
       <div className="container mx-auto px-4">
@@ -79,10 +109,15 @@ const Projects = () => {
         </h1>
 
         {/* Slick Slider for Mobile View */}
-        <div className="block md:hidden px-0 ">
+        <div className="block md:hidden px-0">
           <Slider {...settings}>
             {projects.map((project, index) => (
-              <div key={index} className="p-1 px-3 sm:p-4">
+              <div
+                key={index}
+                ref={(el) => (sectionRefs.current[index] = el)} // Attach ref
+                className="p-1 px-3 sm:p-4"
+                style={{ opacity: opacity[index], transition: 'opacity 0.6s ease' }} // Dynamic opacity style
+              >
                 <div className="flex flex-col items-center mb-8 sm:mb-12">
                   <div className="w-full p-2 relative transition-transform duration-300 ease-in-out transform hover:scale-105">
                     <div
@@ -112,7 +147,7 @@ const Projects = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <button className=" mt-5 relative inline-flex h-10 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none">
+                      <button className="mt-5 relative inline-flex h-10 active:scale-95 transition overflow-hidden rounded-lg p-[1px] focus:outline-none">
                         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"></span>
                         <span className="font-spaced inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 sm:text:sm text-md font-medium text-white backdrop-blur-3xl gap-2 undefined">
                           Know More
@@ -131,8 +166,10 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
+              ref={(el) => (sectionRefs.current[index] = el)} // Attach ref
               className={`flex flex-col md:flex-row items-center mb-12 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
+              style={{ opacity: opacity[index], transition: 'opacity 1s ease' }} // Dynamic opacity style
             >
               <div className="md:w-1/2 p-4 relative transition-transform duration-300 ease-in-out transform hover:scale-105">
                 <div
@@ -145,15 +182,16 @@ const Projects = () => {
                   <img
                     src={project.imageUrl}
                     alt={project.title}
-                    className="h-80 w-full object-cover transition- duration-300 ease-in-out"
+                    className="h-48 w-full sm:h-56 sm:w-full object-cover"
                   />
                 </div>
               </div>
-              <div className="md:w-1/2 p-6 px-10 text-white">
-                <h2 className="text-2xl font-ethenocentric mb-4">
+
+              <div className="md:w-1/2 px-4 sm:px-6 text-white text-center mt-5">
+                <h2 className="text-xl sm:text-2xl font-ethenocentric mb-2 sm:mb-4">
                   {project.title}
                 </h2>
-                <p className="font-spaced text-white text-justify">
+                <p className="font-spaced text-white text-justify text-sm sm:text-base mt-4">
                   {project.description}
                 </p>
                 <a
@@ -161,13 +199,12 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="mt-5 relative inline-flex h-10 active:scale-95 transition overflow-hidden rounded-lg p-[1px] focus:outline-none group">
-                    <span className="absolute inset-0 bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)] transition-all duration-300 ease-out group-hover:inset-0"></span>
-                    <span className="relative font-spaced inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-md font-medium text-white backdrop-blur-3xl gap-2 group-hover:bg-transparent">
+                  <button className="mt-5 relative inline-flex h-10 active:scale-95 transition overflow-hidden rounded-lg p-[1px] focus:outline-none">
+                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"></span>
+                    <span className="font-spaced inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 sm:text:sm text-md font-medium text-white backdrop-blur-3xl gap-2 undefined">
                       Know More
                     </span>
                   </button>
-
                 </a>
               </div>
             </div>
