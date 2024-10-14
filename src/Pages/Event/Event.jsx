@@ -1,5 +1,4 @@
 import stuff from "./Assets/stuff.svg"
-import robot from "./Assets/robot.svg"
 import time from "./Assets/timeline.svg"
 import time2 from "./Assets/time2.svg"
 import {motion} from "framer-motion"
@@ -13,28 +12,10 @@ import pc_card_border2 from "./Assets/pc_card_border2.svg"
 import links from "./JSON/img_links_for_timeline_cards.json"
 import TextAnimation from "./Animations/TextFlip"
 import ProgressBar from "react-scroll-progress-bar";
-import Gradient from "./Assets/Gradient.svg"
-import modalbg from "./Assets/modalbgmobile.svg"
 import Button from "./Component/Button"
 import Text from "./Component/Verti-text"
 
-// function Hero() {
-//     return(
-//         <div className="container_hero grid grid-cols-10">
-            
-//             <div className="left row-start-1 col-start-2 col-span-4" >
-//                 <img src={robot} alt="the robot" className="" />
-//             </div>
-            
-//             <div className="right row-start-1 col-start-4 col-span-6 grid grid-cols-6">
-//                 <h1 className="col-start-3 row-start-2 font-ethenocentric font-xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading">EVENTS</h1>
-//                 <img src={stuff} alt="the stuff at the bottom " className="flex-shrink-0 col-start-1 row-start-2 col-span-6"/>
-//             </div>
 
-//             <p className="col-start-4 font-spaced text-white font-normal heading-subsection">A playful way to emphasize your inner competitive spirit and determination</p>
-//         </div>
-//     )
-// }
 
 function Hero() {
     const [isloaded, setIsLoaded] = useState(false)
@@ -62,7 +43,7 @@ function Hero() {
                 transition: "all 0.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.4s"}}
             className="hero md:flex">
                 <div className="left md:mx-auto">
-                    <img src={robot} alt="the robot" className="md:ml-1 md:pr-0" />
+                    <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/pccrifcff8niy6prbj20" alt="the robot" className="md:ml-1 md:pr-0" />
                 </div>
 
                 <div
@@ -95,7 +76,7 @@ function Hero() {
 function Hero_small() {
     return(
         <div className="hero_contain md:hidden flex flex-col items-center justify-center">
-            <img src={robot} alt="" className="ml-[-3rem] block"/>
+            <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/pccrifcff8niy6prbj20" alt="" className="ml-[-3rem] block"/>
             <h1 className="m-0 p-0 z-50 font-ethenocentric text-4xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent">EVENTS</h1>
             <img src={stuff} alt=""  className="block pr-14 mt-[-3rem]"/>
         </div>
@@ -130,9 +111,9 @@ function Timeline(){
                             initial={{ x: 120, opacity: 0 }} 
                             animate={(isHovered && id==1)  ? { x: 100, opacity: 1 } : { x: 120, opacity: 0 }} 
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                <h1 className="absolute font-ethenocentric text-2xl text-cyan-700 top-[-1rem]">{obj[dataId].head}</h1>
+                                <h1 className="absolute font-ethenocentric text-2xl text-cyan-700 top-[-1rem] min-w-max left-[2rem]">{obj[dataId].head}</h1>
                                 <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
-                                <Button className="ml-[-5rem]" children="Know more"/>
+                                <Button className="ml-[-10rem]" children="Know more"/>
                                 <Button className="ml-[1rem]" children="register"/>
                         </motion.div>
 
@@ -144,7 +125,7 @@ function Timeline(){
                             }}
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
-                            whileHover={{ x: 180, opacity: 1 }} 
+                            whileHover={{ x: 360, opacity: 1 }} 
                             onHoverStart={() => {setIsHovered(true); setId(1); setDataId(1); setBorder(pc_card_border2)}}
                             onHoverEnd={() => {setIsHovered(false); setBorder(pc_card_border)}}
                             transition={{duration: 0.3, ease: "easeInOut"}}
@@ -187,9 +168,9 @@ function Timeline(){
                                 initial={{ x: 100, opacity: 0 }} 
                                 animate={(isHovered && id==2)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
                                 transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                    <h1 className="absolute font-ethenocentric text-2xl text-cyan-700 top-[-1rem] left-[-4rem]">{obj[dataId].head}</h1>
+                                    <h1 className="absolute font-ethenocentric text-2xl text-cyan-700 top-[-1rem] min-w-max left-[-10rem]">{obj[dataId].head}</h1>
                                     <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
-                                    <Button className="ml-[-5rem]" children="Know more"/>
+                                    <Button className="ml-[-10rem]" children="Know more"/>
                                     <Button className="ml-[1rem]" children="register"/>                            </motion.div>
                     </motion.div>        
 
@@ -200,9 +181,9 @@ function Timeline(){
                             initial={{ x: 120, opacity: 0 }} 
                             animate={(isHovered && id==3)  ? { x: 100, opacity: 1 } : { x: 120, opacity: 0 }} 
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                <h1 className="absolute font-ethenocentric text-2xl text-cyan-700 top-[-1rem]">{obj[dataId].head}</h1>
+                                <h1 className="absolute font-ethenocentric text-2xl min-w-max text-cyan-700 top-[-1rem]">{obj[dataId].head}</h1>
                                 <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
-                                <Button className="ml-[-5rem]" children="Know more"/>
+                                <Button className="ml-[-10rem]" children="Know more"/>
                                 <Button className="ml-[1rem]" children="register"/>
                         </motion.div>
 
@@ -215,7 +196,7 @@ function Timeline(){
                             }}
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
-                            whileHover={{ x: 180, opacity: 1 }} 
+                            whileHover={{ x: 360, opacity: 1 }} 
                             onHoverStart={() => {setIsHovered(true); setId(3); setDataId(3);setBorder3(pc_card_border2)}}
                             onHoverEnd={() => {setIsHovered(false); setBorder3(pc_card_border)}} 
                             transition={{duration: 0.3, ease: "easeInOut"}}
@@ -259,9 +240,9 @@ function Timeline(){
                                 initial={{ x: 100, opacity: 0 }} 
                                 animate={(isHovered && id==4)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
                                 transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                    <h1 className="absolute font-ethenocentric text-2xl text-cyan-700 top-[-1rem] left-[-4rem]">{obj[dataId].head}</h1>
+                                    <h1 className="absolute font-ethenocentric min-w-max text-2xl text-cyan-700 top-[-1rem] left-[-10rem]">{obj[dataId].head}</h1>
                                     <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
-                                    <Button className="ml-[-5rem]" children="Know more"/>
+                                    <Button className="ml-[-10rem]" children="Know more"/>
                                     <Button className="ml-[1rem]" children="register"/>                            
                         </motion.div>
                     </motion.div>  
@@ -273,9 +254,9 @@ function Timeline(){
                             initial={{ x: 120, opacity: 0 }} 
                             animate={(isHovered && id==5)  ? { x: 100, opacity: 1 } : { x: 120, opacity: 0 }} 
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                <h1 className="absolute font-ethenocentric text-2xl text-cyan-700 top-[-1rem]">{obj[dataId].head}</h1>
+                                <h1 className="absolute font-ethenocentric min-w-max text-2xl text-cyan-700 top-[-1rem] left-[-6rem]">{obj[dataId].head}</h1>
                                 <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
-                                <Button className="ml-[-5rem]" children="Know more"/>
+                                <Button className="ml-[-10rem]" children="Know more"/>
                                 <Button className="ml-[1rem]" children="register"/>
                         </motion.div>
 
@@ -287,7 +268,7 @@ function Timeline(){
                             }}
                             onClick={() => {setIsOpen(true); setId(1);}}
                             initial={{ x: 0, opacity: 1 }} 
-                            whileHover={{ x: 180, opacity: 1 }} 
+                            whileHover={{ x: 360, opacity: 1 }} 
                             onHoverStart={() => {setIsHovered(true); setId(5); setDataId(5);setBorder5(pc_card_border2)}}
                             onHoverEnd={() => {setIsHovered(false); setBorder5(pc_card_border)}} 
                             transition={{duration: 0.3, ease: "easeInOut"}}
@@ -331,9 +312,9 @@ function Timeline(){
                                 initial={{ x: 100, opacity: 0 }} 
                                 animate={(isHovered && id==6)  ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }} 
                                 transition={{ duration: 0.3, ease: "easeInOut" }} >
-                                    <h1 className="absolute font-ethenocentric text-2xl text-cyan-700 top-[-1rem] left-[-4rem]">{obj[dataId].head}</h1>
+                                    <h1 className="absolute font-ethenocentric min-w-max text-2xl text-cyan-700 top-[-1rem] left-[-4rem]">{obj[dataId].head}</h1>
                                     <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
-                                    <Button className="ml-[-5rem]" children="Know more"/>
+                                    <Button className="ml-[-10rem]" children="Know more"/>
                                     <Button className="ml-[1rem]" children="register"/>                            
                         </motion.div>
                   
