@@ -9,12 +9,15 @@ const Modal = ({ id, toggleModal }) => {
 
   return (
     <>
-      <div className="relative h-full flex items-center justify-center">
-        <img
+      <div className="relative h-full flex items-center justify-center"
+        style={{
+            backgroundImage:`url(${modalbg})`
+        }}>
+        {/* <img
           src={modalbg}
           alt=""
           className="absolute top-0 left-0 w-full h-full object-cover"
-        />
+        /> */}
         <div className="relative z-10 flex flex-col justify-center items-center p-4 md:p-6 pt-20">
           <h1 className="text-center mb-4 font-ethenocentric text-3xl md:text-4xl text-blue-600">
             {obj[id].head}

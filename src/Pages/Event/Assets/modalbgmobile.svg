@@ -1,11 +1,13 @@
-<svg width="5181" height="10019" viewBox="0 0 5181 8000" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5035.11 66H145.89C74.7059 66 17 265.896 17 512.481V9516.52C17 9763.1 74.7059 9963 145.89 9963H5035.11C5106.29 9963 5164 9763.1 5164 9516.52V512.481C5164 265.896 5106.29 66 5035.11 66Z" fill="#800080" fill-opacity="0.1"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M17 467.649C17 245.824 68.9353 66 133.001 66H4568.06C4595.21 66 4621.5 98.9612 4642.34 159.145L5122.28 1544.54C5148.71 1620.86 5164 1733.87 5164 1853.05V9551.35C5164 9773.17 5112.06 9953 5048 9953H21.2963C18.9237 9953 17 9946.34 17 9938.12V467.649Z" fill="#800080" fill-opacity="0.25"/>
-<path d="M4567.92 119.162H133.177V0H4567.92V119.162ZM5111.1 1585.8L4631.2 198.611L4653.19 107.083L5133.1 1494.28L5111.1 1585.8ZM5146.63 9557.25V1848.96H5181V9557.25H5146.63ZM21.4801 9899.84H5047.82V10019H21.4801V9899.84ZM34.3682 9944.52C34.3682 9919.84 28.5974 9899.84 21.4801 9899.84V10019C9.6178 10019 0 9985.65 0 9944.52H34.3682ZM34.3682 461.751V9944.52H0V461.751H34.3682ZM5181 9557.25C5181 9812.27 5121.37 10019 5047.82 10019V9899.84C5102.38 9899.84 5146.63 9746.45 5146.63 9557.25H5181ZM5133.1 1494.28C5163.47 1582.02 5181 1711.95 5181 1848.96H5146.63C5146.63 1747.3 5133.61 1650.89 5111.1 1585.8L5133.1 1494.28ZM133.177 119.162C78.6064 119.162 34.3682 272.545 34.3682 461.751H0C0 206.733 59.6253 0 133.177 0V119.162ZM4567.92 0C4599.06 0 4629.26 37.8934 4653.19 107.083L4631.2 198.611C4613.41 147.276 4591.03 119.162 4567.92 119.162V0Z" fill="url(#paint0_linear_0_1)"/>
-<defs>
-<linearGradient id="paint0_linear_0_1" x1="17.184" y1="4046.4" x2="5189.26" y2="3677.63" gradientUnits="userSpaceOnUse">
-<stop stop-color="#A050B6" stop-opacity="0.6"/>
-<stop offset="1" stop-color="#B838FF"/>
-</linearGradient>
-</defs>
+<svg width="100%" height="100%" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <!-- Define the gradient -->
+  <defs>
+    <linearGradient id="gradient-border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:darkblue;" />
+      <stop offset="50%" style="stop-color:blue;" />
+      <stop offset="100%" style="stop-color:black;" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Polygon with gradient border -->
+  <polygon points="20,0 200,0 200,80 180,100 0,100 0,20" fill="#51afc4a6" stroke="url(#gradient-border)" stroke-width="5" />
 </svg>
