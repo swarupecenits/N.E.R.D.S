@@ -1,6 +1,5 @@
-import React from "react";
 import styled, { keyframes, css } from "styled-components";
-import App from "./app.jsx";
+
 
 function Carousel() {
   const row1 = [

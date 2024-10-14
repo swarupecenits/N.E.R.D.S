@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import styled, { keyframes, css } from "styled-components";
+import  { useEffect, useState } from "react";
 import Carousel from "./carousel.jsx";
 import "./gradient.css";
 
