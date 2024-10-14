@@ -113,8 +113,8 @@ function Timeline(){
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
                                 <h1 className="absolute font-ethenocentric text-2xl text-cyan-400 top-[-1rem] min-w-max left-[2rem]">{obj[dataId].head}</h1>
                                 <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
-                                <Button className="ml-[-10rem]" children="Know more"/>
-                                <Button className="ml-[1rem]" children="register"/>
+                                <Button className="ml-[-4.5rem]" children="Know more"/>
+                                <Button className="ml-[6rem]" children="register"/>
                         </motion.div>
 
                         <motion.div
@@ -183,8 +183,8 @@ function Timeline(){
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
                                 <h1 className="absolute font-ethenocentric text-2xl min-w-max text-cyan-400 top-[-1rem]">{obj[dataId].head}</h1>
                                 <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
-                                <Button className="ml-[-10rem]" children="Know more"/>
-                                <Button className="ml-[1rem]" children="register"/>
+                                <Button className="ml-[-4.5rem]" children="Know more"/>
+                                <Button className="ml-[6rem]" children="register"/>
                         </motion.div>
 
 
@@ -256,8 +256,8 @@ function Timeline(){
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
                                 <h1 className="absolute font-ethenocentric min-w-max text-2xl text-cyan-400 top-[-1rem] left-[-6rem]">{obj[dataId].head}</h1>
                                 <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
-                                <Button className="ml-[-10rem]" children="Know more"/>
-                                <Button className="ml-[1rem]" children="register"/>
+                                <Button className="ml-[-4.5rem]" children="Know more"/>
+                                <Button className="ml-[6rem]" children="register"/>
                         </motion.div>
 
                         <motion.div
