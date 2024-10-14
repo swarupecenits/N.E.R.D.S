@@ -135,7 +135,7 @@ function Gallery(){
     ></div>
 
     {/* Text Item (spans two rows) */}
-    <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-5 mt-52 sm:mt-0 mr-16 c backdrop-blur-[5px]">
+    <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-5 mt-60 sm:mt-0 mr-16 c backdrop-blur-[5px]">
 
   <p className="text-justify sm:line-clamp-none text-sm  line-clamp-2">
   Robotron is a prominent module under Tecnoesis, attracting teams to compete with their custom-built robots in various challenges. Known for its prestige, Robotron is a platform where participants demonstrate creativity and technical skills by designing robots capable of tackling complex tasks. The competitions test a robot's abilities in areas such as navigation, problem-solving, and adaptability. Teams strive for excellence, as winning Robotron is highly regarded within the Tecnoesis community. It fosters innovation and collaboration, providing a valuable learning experience that pushes the boundaries of robotics and engineering.
@@ -220,7 +220,7 @@ function Gallery(){
   >
   <MobileSlideshow1/>
 
-    <div className="font-spaced text-white flex-col mx-0 box1 lg:row-span-2 md:row-span-1 row-span-2 sm:row-span-1 ml-4 sm:ml-8 text-justify text-sm sm:text-[14px] sm:mt-0 mt-14 lg:mt-0 sm:mr-0 mr-20 sm:pl-5 sm:pt-5">
+    <div className="font-spaced text-white flex-col mx-0 box1 lg:row-span-2 md:row-span-1 row-span-2 sm:row-span-1 ml-4 sm:ml-8 text-justify text-sm sm:text-[14px] sm:mt-0 mt-20 lg:mt-0 sm:mr-0 mr-20 sm:pl-5 sm:pt-5">
       <p className="text-justify sm:line-clamp-none line-clamp-2">Sessions play a crucial role in enhancing growth and the learning process. Weekly classes, workshops, meetings, and conferences provide valuable opportunities for hands-on experience. Organized by NERDS, these events create an environment where participants can engage with experts, collaborate on projects, and deepen their understanding of various topics. The practical experience gained through these sessions is vital for developing skills and staying updated with the latest advancements in the field. </p>
       
     </div>
@@ -432,7 +432,7 @@ function Gallery(){
     ></div>
 
     {/* Text Item (spans two rows) */}
-    <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-5 mt-52 sm:mt-0 mr-16 c backdrop-blur-[5px]">
+    <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-5 mt-60 sm:mt-0 mr-16 c backdrop-blur-[5px]">
 
   <p className="text-justify sm:line-clamp-none text-sm  line-clamp-2">
   The NERDS initiative showcases innovative projects designed to enhance technology's accessibility and functionality. Among these projects is the Arachno Bot, a robotic spider capable of navigating complex terrains autonomously. The Head Motion Controlled Wheelchair empowers individuals with mobility challenges, allowing them to control movement through simple head gestures. Additionally, the Quadcopter Drone provides an aerial perspective, ideal for surveillance & recreational use. Lastly, the Bluetooth Bot leverages wireless technology for remote interaction and control, demonstrating the potential of connectivity in robotics. .
@@ -517,7 +517,7 @@ function Gallery(){
   >
   <MobileSlideshow1/>
 
-    <div className="font-spaced text-white flex-col mx-0 box1 lg:row-span-2 md:row-span-1 row-span-2 sm:row-span-1 ml-4 sm:ml-8 text-justify text-sm sm:text-[14px] sm:mt-0 mt-14 lg:mt-0 sm:mr-0 mr-20 sm:pl-5 sm:pt-5">
+    <div className="font-spaced text-white flex-col mx-0 box1 lg:row-span-2 md:row-span-1 row-span-2 sm:row-span-1 ml-4 sm:ml-8 text-justify text-sm sm:text-[14px] sm:mt-0 mt-20 lg:mt-0 sm:mr-0 mr-20 sm:pl-5 sm:pt-5">
       <p className="text-justify sm:line-clamp-none line-clamp-2">Tecnoesis, the annual tech fest of NIT Silchar, is the most prestigious tech event in the entire Northeast. It showcases numerous flagship events, including the renowned Robotron, organized by NERDS. The fest features a variety of workshops and events conducted by NERDS, allowing participants to engage actively in cutting-edge technology and innovation. With its rich blend of competitions and learning opportunities, Tecnoesis attracts tech enthusiasts from across the region, fostering collaboration and creativity. </p>
       
     </div>
