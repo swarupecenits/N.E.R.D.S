@@ -26,7 +26,7 @@ const contactCardSVG = (
 
 const ContactCard = () => {
     return (
-      <div className="relative">
+      <div className="relative p-20">
         {/* Space for the SVG */}
         <div className="relative z-0 scale-[70%]">
           {contactCardSVG}

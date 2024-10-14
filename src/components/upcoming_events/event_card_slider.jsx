@@ -1,7 +1,6 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import Slider from 'react-slick';
-import EventCard from './event_card';  // Update path if necessary
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import EventCard from './event_card'; // Update path if necessary
 import useWindowSize from './useWindowSize'; // Custom hook to get window size
 
 const EventCardSlider = () => {
@@ -10,70 +9,45 @@ const EventCardSlider = () => {
 
   // Slider settings based on screen width
   const settings = {
-    dots: false, // Disable dots to avoid re-rendering causing jitter
-    infinite: true, // Enable infinite scrolling
-    speed: 8000, // Very slow transition duration for seamless sliding
-    slidesToShow: width < 768 ? 1 : width < 1024 ? 2 : 3, // Adjust slidesToShow for mobile, tablet, and desktop
-    slidesToScroll: 1, // Scroll 1 slide at a time
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 0, // Continuous autoplay without stopping
-    arrows: false, // Hide arrows (custom buttons used)
-    pauseOnHover: false, // Disable pause on hover
-    pauseOnFocus: false, // Disable pause on focus
-    cssEase: 'linear',   // Smooth continuous scrolling without jittering
+    dots: false,
+    infinite: true,
+    speed: 3000,
+    slidesToShow: width < 640 ? 1 : width < 1024 ? 2 : 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    arrows: false,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    cssEase: 'linear',
+    centerPadding: '0px',
+    variableWidth: false,
   };
 
   // Array of card data for the EventCard
   const cardData = [
-    { heading: 'Event 1', text: 'Description for Event 1.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/oio4um08mvrvae1wvabi' },
-    { heading: 'Event 2', text: 'Description for Event 2.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj' },
-    { heading: 'Event 3', text: 'Description for Event 3.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/wd4lcaneqsckozlzuv8n' },
-    { heading: 'Event 4', text: 'Description for Event 4.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/q0z5pmaxpz1jwq131l1q' },
-    { heading: 'Event 5', text: 'Description for Event 5.', image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj' },
-    // Add more objects as needed
+    { image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/oio4um08mvrvae1wvabi' },
+    { image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj' },
+    { image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/wd4lcaneqsckozlzuv8n' },
+    { image: 'https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/i2yqgni8i4zbdfjiu4yq' },
+    { image: 'https://res.cloudinary.com/dqmktpekh/image/upload/v1728847659/gsmdqf0bk4hkhevnxzfe.webp' },
   ];
 
-  // Custom navigation handlers
-  const handleNext = () => {
-    sliderRef.current.slickNext();
-  };
-
-  const handlePrev = () => {
-    sliderRef.current.slickPrev();
-  };
-
   return (
-    <div className="w-full p-4 sm:p-8 relative min-h-screen">
+    <div className="w-full p-4 sm:p-4 relative overflow-hidden">
       {/* Heading Section */}
       <h1 className="font-ethenocentric text-center bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent mb-8
-        text-3xl sm:text-4xl md:text-5xl lg:text-7xl leading-tight">
+         sm:text-4xl md:text-5xl lg:text-5xl leading-tight">
         Upcoming Events
       </h1>
 
       <Slider ref={sliderRef} {...settings}>
         {cardData.map((card, index) => (
-          <div key={index}>
-            <EventCard heading={card.heading} text={card.text} image={card.image} />
+          <div key={index} className="px-2">
+            <EventCard image={card.image} /> {/* Pass other props if necessary */}
           </div>
         ))}
       </Slider>
-
-      {/* Custom Navigation Buttons */}
-      <button
-        onClick={handlePrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 -mt-20 -ml-8 md:top-1/2 text-white p-2 rounded-full focus:outline-none transition"
-        style={{ background: "transparent" }}
-      >
-        <IoIosArrowBack size={40} />
-      </button>
-
-      <button
-        onClick={handleNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 -mt-20 -mr-8 md:top-1/2 text-white p-2 rounded-full focus:outline-none transition"
-        style={{ background: "transparent" }}
-      >
-        <IoIosArrowForward size={40} />
-      </button>
     </div>
   );
 };
