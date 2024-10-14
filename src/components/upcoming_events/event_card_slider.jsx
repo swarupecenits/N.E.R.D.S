@@ -1,7 +1,7 @@
-import { useRef } from "react";
-import Slider from "react-slick";
-import EventCard from "./event_card"; // Update path if necessary
-import useWindowSize from "./useWindowSize"; // Custom hook to get window size
+import { useRef } from 'react';
+import Slider from 'react-slick';
+import EventCard from './event_card'; // Update path if necessary
+import useWindowSize from './useWindowSize'; // Custom hook to get window size
 
 const EventCardSlider = () => {
   const sliderRef = useRef(null);
@@ -9,62 +9,43 @@ const EventCardSlider = () => {
 
   // Slider settings based on screen width
   const settings = {
-    dots: false, // Disable dots to avoid re-rendering causing jitter
-    infinite: true, // Enable infinite scrolling
-    speed: 3000, // Slow transition for smooth sliding
-    slidesToShow: width < 640 ? 1 : width < 1024 ? 2 : 3, // Adjust slidesToShow for mobile, tablet, and desktop
-    slidesToScroll: 1, // Scroll 1 slide at a time
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 0, // Continuous autoplay without stopping
-    arrows: false, // Hide arrows (removed custom buttons)
-    pauseOnHover: false, // Disable pause on hover
-    pauseOnFocus: false, // Disable pause on focus
-    cssEase: "linear", // Smooth continuous scrolling without jittering
-    centerPadding: "0px", // Ensure no padding around the slides
-    variableWidth: false, // Disable variable width to avoid excess spacing
+    dots: false,
+    infinite: true,
+    speed: 3000,
+    slidesToShow: width < 640 ? 1 : width < 1024 ? 2 : 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 0,
+    arrows: false,
+    pauseOnHover: false,
+    pauseOnFocus: false,
+    cssEase: 'linear',
+    centerPadding: '0px',
+    variableWidth: false,
   };
 
   // Array of card data for the EventCard
   const cardData = [
-    {
-      image:
-        "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/oio4um08mvrvae1wvabi",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/wd4lcaneqsckozlzuv8n",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/q0z5pmaxpz1jwq131l1q",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/kef9r42wjfz38k0ysw4o",
-    },
+    { image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/oio4um08mvrvae1wvabi' },
+    { image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tlq1coju4bfscpqlo6zj' },
+    { image: 'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/wd4lcaneqsckozlzuv8n' },
+    { image: 'https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/i2yqgni8i4zbdfjiu4yq' },
+    { image: 'https://res.cloudinary.com/dqmktpekh/image/upload/v1728847659/gsmdqf0bk4hkhevnxzfe.webp' },
   ];
 
   return (
     <div className="w-full p-4 sm:p-4 relative overflow-hidden">
-      {" "}
-      {/* Removed min-h-screen */}
       {/* Heading Section */}
-      <h1
-        className="font-ethenocentric text-center bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent mb-8
-         text-3xl md:text-4xl lg:text-4xl leading-tight"
-      >
+      <h1 className="font-ethenocentric text-center bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent mb-8
+         text-2xl sm:text-3xl md:text-4xl lg:text-4xl leading-tight">
         Upcoming Events
       </h1>
+
+
       <Slider ref={sliderRef} {...settings}>
         {cardData.map((card, index) => (
           <div key={index} className="px-2">
-            {" "}
-            {/* Ensure proper padding */}
-            <EventCard heading={card.heading} image={card.image} />
+            <EventCard image={card.image} /> {/* Pass other props if necessary */}
           </div>
         ))}
       </Slider>
