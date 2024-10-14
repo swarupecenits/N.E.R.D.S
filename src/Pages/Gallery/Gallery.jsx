@@ -374,6 +374,7 @@ function Gallery() {
           </motion.div>
         </div>
       </section>
+      {/* Projects */}
       <section
         name="third3"
         className={`third3  h-[99vh] section overflow-hidden box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32 ${activeSection === "third3" ? "" : "hidden"
@@ -389,10 +390,10 @@ function Gallery() {
             {/* First Image (spans two columns on medium and large screens) */}
             <div
               className=" sm:block md:block lg:block hidden items item1 z-10 col-span-1 sm:h-50 sm:col-span-2 md:col-span-2 lg:row-span-1 
-      sm:row-span-1 md:row-span-1 lg:col-span-2 bg-cover col-span-2 row-span-2 sm:ml-0 md:ml-0 lg:ml-0 lg:mr-3 lg:mr-4"
+      sm:row-span-1 md:row-span-1 lg:col-span-2 bg-center bg-cover row-span-2 sm:ml-0 md:ml-0 lg:ml-0 lg:mr-3 "
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/e0nkkschwwk1spyc7qps.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -411,10 +412,10 @@ function Gallery() {
             <MobileSlideshow />
             {/* Second Image */}
             <div
-              className="items item2 bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-3 "
+              className="items item2 bg-center bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-3 "
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728918858/mxiuihtnrf9vlfo1sse7.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -433,10 +434,10 @@ function Gallery() {
 
             {/* Third Image (spans one row and two columns on large screens) */}
             <div
-              className="items item3 bg-cover md:row-span-2 rounded-lg hidden md:block lg:block lg:mr-3"
+              className="items item3 bg-center bg-cover md:row-span-2 rounded-lg hidden md:block lg:block lg:mr-3"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919040/jzomx8fdsx4rwampjyfg.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -454,7 +455,7 @@ function Gallery() {
             ></div>
 
             {/* Text Item (spans two rows) */}
-            <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-9 mt-72 sm:mt-0 mr-6  c backdrop-blur-[5px] lg:mb-2">
+            <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1  md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-9 mt-72 sm:mt-0 mr-6  c backdrop-blur-[5px] lg:mb-2">
               <p className="text-justify sm:line-clamp-none text-sm  line-clamp-2">
                 The NERDS initiative showcases a range of innovative projects aimed at enhancing technology’s accessibility for all users. Arachno Bot, a robotic spider, skillfully navigates complex terrains autonomously, demonstrating advanced mobility. Meanwhile, the Head Motion Controlled Wheelchair empowers users with mobility challenges by allowing them to control movement through simple head gestures. The Quadcopter Drone provides valuable aerial perspectives for both surveillance and recreational purposes, while the Bluetooth Bot illustrates the potential for remote interaction via wireless technology. Together, these projects reflect NERDS' commitment to developing practical tech solutions that significantly enhance user experience.
               </p>
@@ -462,10 +463,10 @@ function Gallery() {
 
             {/* Fourth Image */}
             <div
-              className="items item5 bg-cover rounded-lg hidden md:block lg:block lg:mr-3 lg:mt-6"
+              className="items item5 bg-center bg-cover rounded-lg hidden md:block lg:block lg:mr-3 lg:mt-6"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/vdqzlatnphdiehsr3kpj.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -484,10 +485,10 @@ function Gallery() {
 
             {/* Fifth Image */}
             <div
-              className="items item6 bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
+              className="items item6 bg-center bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/dduwpo8ylppcdijwcjh2.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -506,10 +507,10 @@ function Gallery() {
 
             {/* Sixth Image */}
             <div
-              className="items item7 bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
+              className="items item7 bg-center bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728918857/f1btwbwlccqh6dl76zy9.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
