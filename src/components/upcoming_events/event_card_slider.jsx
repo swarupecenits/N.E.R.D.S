@@ -4,7 +4,7 @@ import EventCard from './event_card'; // Update path if necessary
 import useWindowSize from './useWindowSize'; // Custom hook to get window size
 
 const EventCardSlider = () => {
-  const sliderRef = useRef(null); 
+  const sliderRef = useRef(null);
   const { width } = useWindowSize(); // Get the screen width for responsive behavior
 
   // Slider settings based on screen width
@@ -37,9 +37,10 @@ const EventCardSlider = () => {
     <div className="w-full p-4 sm:p-4 relative overflow-hidden">
       {/* Heading Section */}
       <h1 className="font-ethenocentric text-center bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent mb-8
-         sm:text-4xl md:text-5xl lg:text-5xl leading-tight">
+         text-2xl sm:text-3xl md:text-4xl lg:text-4xl leading-tight">
         Upcoming Events
       </h1>
+
 
       <Slider ref={sliderRef} {...settings}>
         {cardData.map((card, index) => (
