@@ -31,7 +31,7 @@ const Modal = ({ id, toggleModal }) => {
           </div>
 
           {/* Description text */}
-          <p className="text-slate-200 max-w-[95%] mx-auto text-left text-sm md:max-w-[75%] mb-4">
+          <p className="text-slate-200 font-spaced max-w-[95%] mx-auto text-left text-sm md:max-w-[75%] mb-4">
             {obj[id].text}
           </p>
 
