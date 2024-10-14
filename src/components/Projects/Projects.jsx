@@ -161,55 +161,55 @@ const Projects = () => {
           </Slider>
         </div>
 
-        {/* Original Layout for Desktop View */}
-        <div className="hidden md:block">
-          {projects.map((project, index) => (
-            <div
-              key={index}
-              ref={(el) => (sectionRefs.current[index] = el)} // Attach ref
-              className={`flex flex-col md:flex-row items-center mb-12 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
-              style={{ opacity: opacity[index], transition: 'opacity 1s ease' }} // Dynamic opacity style
-            >
-              <div className="md:w-1/2 p-4 relative transition-transform duration-300 ease-in-out transform hover:scale-105">
-                <div
-                  className="relative w-full h-[300px] sm:h-[350px] overflow-hidden border-2 border-gray-300 hover:border-blue-500 transition-all duration-300 ease-in-out rounded-lg"
-                  style={{
-                    clipPath:
-                      "polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)",
-                  }}
-                >
-                  <img
-                    src={project.imageUrl}
-                    alt={project.title}
-                    className="h-full w-full object-cover" // Adjusted height to full to maintain aspect ratio
-                  />
-                </div>
-              </div>
-
-              <div className="md:w-1/2 px-4 sm:px-6 text-white text-center mt-5">
-                <h2 className="text-xl sm:text-2xl font-ethenocentric mb-2 sm:mb-4">
-                  {project.title}
-                </h2>
-                <p className="font-spaced text-white text-justify text-sm sm:text-base mt-4">
-                  {project.description}
-                </p>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="mt-5 relative inline-flex h-10 active:scale-95 transition overflow-hidden rounded-lg p-[1px] focus:outline-none">
-                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"></span>
-                    <span className="font-spaced inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-md font-medium text-white backdrop-blur-3xl gap-2">
-                      Know More
-                    </span>
-                  </button>
-                </a>
-              </div>
-            </div>
-          ))}
+       {/* Original Layout for Desktop View */}
+<div className="hidden md:block">
+  {projects.map((project, index) => (
+    <div
+      key={index}
+      ref={(el) => (sectionRefs.current[index] = el)} // Attach ref
+      className={`flex flex-col md:flex-row items-center mb-12 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+        }`}
+      style={{ opacity: opacity[index], transition: 'opacity 1s ease' }} // Dynamic opacity style
+    >
+      <div className="md:w-1/2 p-4 relative transition-transform duration-300 ease-in-out transform hover:scale-105">
+        <div
+          className="relative w-full h-[300px] sm:h-[350px] overflow-hidden border-2 border-gray-300 hover:border-blue-500 transition-all duration-300 ease-in-out rounded-lg"
+          style={{
+            clipPath:
+              "polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%)",
+          }}
+        >
+          <img
+            src={project.imageUrl}
+            alt={project.title}
+            className="h-full w-full object-cover" // Adjusted height to full to maintain aspect ratio
+          />
         </div>
+      </div>
+
+      <div className="md:w-1/2 px-4 sm:px-6 text-white text-left mt-5"> {/* Changed text-center to text-left */}
+        <h2 className="text-xl sm:text-2xl font-ethenocentric mb-2 sm:mb-4">
+          {project.title}
+        </h2>
+        <p className="font-spaced text-white text-justify text-sm sm:text-base mt-4">
+          {project.description}
+        </p>
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="mt-5 relative inline-flex h-10 active:scale-95 transition overflow-hidden rounded-lg p-[1px] focus:outline-none">
+            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"></span>
+            <span className="font-spaced inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-md font-medium text-white backdrop-blur-3xl gap-2">
+              Know More
+            </span>
+          </button>
+        </a>
+      </div>
+    </div>
+  ))}
+</div>
       </div>
     </section>
   );
