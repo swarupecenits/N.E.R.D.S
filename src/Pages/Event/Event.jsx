@@ -130,8 +130,8 @@ function Timeline(){
                     alt="" />
                         <motion.div
                             className="text text-slate-200 relative text-right "
-                            initial={{ x: 120, opacity: 0 }} 
-                            animate={(isHovered && id==1)  ? { x: 80, opacity: 1 } : { x: 100, opacity: 0 }} 
+                            initial={{ x: 80, opacity: 0 }} 
+                            animate={(isHovered && id==1)  ? { x: 60, opacity: 1 } : { x: 80, opacity: 0 }} 
                             transition={{ duration: 0.3, ease: "easeInOut" }} >
                                 <h1 className="absolute font-ethenocentric text-2xl text-cyan-700 top-[-1rem]">{obj[dataId].head}</h1>
                                 <p className="absolute font-ethenocentric text-xs min-w-96 left-[-10rem] top-5">{obj[dataId].data} </p>
