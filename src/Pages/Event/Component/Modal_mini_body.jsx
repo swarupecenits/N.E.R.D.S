@@ -9,7 +9,7 @@ const Modal = ({ id, toggleModal }) => {
 
   return (
     <>
-      <div className="relative h-full flex items-center justify-center"
+      <div className="relative  flex items-center justify-center bg-cover"
         style={{
             backgroundImage:`url(${modalbg})`
         }}>
@@ -18,7 +18,7 @@ const Modal = ({ id, toggleModal }) => {
           alt=""
           className="absolute top-0 left-0 w-full h-full object-cover"
         /> */}
-        <div className="relative z-10 flex flex-col justify-center items-center p-4 md:p-6 pt-20">
+        <div className="relative z-10 flex flex-col justify-center items-center p-6 md:p-6 pt-20">
           <h1 className="text-center mb-4 font-ethenocentric text-3xl md:text-4xl text-blue-600">
             {obj[id].head}
           </h1>
@@ -37,7 +37,7 @@ const Modal = ({ id, toggleModal }) => {
             />
           </div>
 
-          <p className="mt-3 text-slate-200 max-w-[85%] mx-auto text-center text-sm md:max-w-[75%]">
+          <p className="mt-3 text-slate-200 max-w-[95%] mx-auto text-center text-sm md:max-w-[75%]">
             {obj[id].text}
           </p>
 
