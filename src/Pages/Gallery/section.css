@@ -1,0 +1,287 @@
+
+ .active{
+    color: rgb(59, 130, 246);
+    ;
+  } 
+ .hidden {
+    display: none; 
+  }
+  .gallery-container {
+    position: relative;
+  }
+  
+  .items {
+    transition: all 0.3s ease;
+  }
+  .item1{
+    height: 100%;
+  width: 100%;
+  }
+  
+  .blur {
+    filter: blur(5px); 
+  }
+  
+  .opacity-50 {
+    opacity: 0.5; 
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 10; 
+  }
+.main-image-img{
+  transform: translateY(-15%);
+} 
+@media only screen and (max-width: 720px){
+.main-image-img{
+  height: 30vh;
+}  }
+@media only screen and (max-width: 620px){
+ {
+     ;
+  }
+}
+.first{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* 
+<section name="third2" className={`third2 section h-[100vh] box-border snap-start bg-black ${activeSection === "third2" ? "" : "hidden"}`}>
+
+<motion.div
+  initial={{ opacity: 0, translateX: "100%", translateY: "19%" }}
+  whileInView={{ opacity: 1, translateX: "0%", translateY: "19%" }}
+  transition={{ duration: 1 }}
+  className="container1 h-[80vh] w-[95vw] transform translate-y-[40%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid-rows-2 sm:grid-rows-2 gap-6 text-sm lg:text-[14px]" // Changed gap to 6 for better spacing
+>
+  
+
+  <div className="hidden">
+  <div className="items text-white flex-col mx-0 box1 row-span-2 ml-4 sm:ml-8 text-justify">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..consectetur adipisicing elit. Dolores atque deserunt labore iusto nisi architecto, cumque voluptatibus iste quasi nostrum soluta. Dolore, animi voluptas sapiente perferendis doloribus aspernatur possimus deserunt laudantium consectetur dicta beatae amet natus voluptatem, non corrupti [SESSION] veniam odio ducimus dolorem. Sunt nam beatae at eveniet explicabo ipsum nobis possimus odio temporibus earum quam sequi esse doloribus, quaerat illum quo id necessitatibus ratione, natus unde, provident expedita laborum consequatur. Recusandae unde, numquam officia nulla minus perferendis quam ab voluptate! Omnis dolores tenetur .</p>
+  </div>
+
+  <div className="items box2 row-span-2 bg-cover pl-10 sm:pl-20" 
+       style={{
+        backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+        height: "100%",
+        width: "100%",
+       
+          border: "5px solid transparent", 
+          // initial border
+          // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
+          transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.borderImage =
+            "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
+            
+        }}
+      onMouseLeave={(e) => {
+        e.target.style.borderImage =
+          "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
+      }}>
+  </div>
+
+  <div className="items box3 bg-cover ml-2 sm:ml-8" 
+       style={{
+        backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+        height: "100%",
+        width: "100%",
+       
+          border: "5px solid transparent", 
+          // initial border
+          // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
+          transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.borderImage =
+            "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
+            
+        }}
+      onMouseLeave={(e) => {
+        e.target.style.borderImage =
+          "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
+      }}>
+  </div>
+
+  <div className="items box4 col-span-1 sm:col-span-2 lg:col-span-2 bg-cover ml-7 mr-4 sm:mr-8"
+      style={{
+        backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+        height: "100%",
+        width: "100%",
+       
+          border: "5px solid transparent", 
+          // initial border
+          // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
+          transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.borderImage =
+            "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
+            
+        }}
+      onMouseLeave={(e) => {
+        e.target.style.borderImage =
+          "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
+      }}>
+  </div>
+
+  <div className="items box5 bg-cover ml-4 sm:ml-8"
+       style={{
+        backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+        height: "100%",
+        width: "100%",
+       
+          border: "5px solid transparent", 
+          // initial border
+          // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
+          transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.borderImage =
+            "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
+            
+        }}
+      onMouseLeave={(e) => {
+        e.target.style.borderImage =
+          "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
+      }}>
+  </div>
+
+  <div className="items box6 bg-cover ml-4 sm:ml-8"
+       style={{
+        backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+        height: "100%",
+        width: "100%",
+       
+          border: "5px solid transparent", 
+          // initial border
+          // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
+          transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.borderImage =
+            "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
+            
+        }}
+      onMouseLeave={(e) => {
+        e.target.style.borderImage =
+          "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
+      }}>
+  </div>
+
+  <div className="items box7 bg-cover ml-4 sm:ml-8 mr-4 sm:mr-8"
+       style={{
+        backgroundImage: "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+        height: "100%",
+        width: "100%",
+       
+          border: "5px solid transparent", 
+          // initial border
+          // borderImage: "linear-gradient(91.19deg, rgba(255, 255, 255, 0.8) 11.59%, rgba(37, 129, 142, 0.8) 77.23%) 1", // initial gradient
+          transition: "border-image 0.5s ease-in-out, border-radius 0.5s ease",
+        }}
+        onMouseEnter={(e) => {
+          e.target.style.borderImage =
+            "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
+            
+        }}
+      onMouseLeave={(e) => {
+        e.target.style.borderImage =
+          "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
+      }}>
+  </div>
+  </div>
+  
+  
+
+
+
+  mobile only content
+   <div className="container1 h-[80vh] w-[95vw] mx-2  transform translate-y-[40%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid-rows-2 sm:grid-rows-2  gap-5 text-sm lg:text-[14px]">
+    
+    
+    <div className="flex items-center justify-center">
+      <img
+        src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd"
+        alt="Image 1"
+        className="object-cover w-80 "
+      />
+    </div>
+    <div className="flex items-center justify-center">
+      <img
+        src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd"
+        alt="Image 2"
+        className="object-cover w-80"
+      />
+    </div>
+    
+    <div className="col-span-2 flex items-center justify-center bg-gray-200 p-4">
+      <p className="text-center">Your Text Here</p>
+    </div>
+  </div> 
+
+</motion.div>
+</section>
+
+
+<section className="first w-[100vw] h-[100vh] box-border snap-start flex gap-36 relative"> {/* Add flex and relative to section */
+
+   /* <motion.h1
+     initial={{ opacity: 0, translateX: "-100%",translateY: "100%" }}
+     whileInView={{ opacity: 1, translateX: "50%", translateY: "100%" }}
+     transition={{ duration: 1 }}
+     className="font-ethenocentric font-normal bg-gradient-to-b from-[#ffffff] to-[#9BDAEB] bg-clip-text text-transparent main-heading meet-heading mx-0 text-[50px] sm:text-[50px] md:text-[60px] w-[50vw]"
+     id="first"
+   >
+     PHOTO GALLERY
+   </motion.h1>
+   
+   <motion.p
+     initial={{ opacity: 0, translateX: "-100%" }}
+     whileInView={{ opacity: 1, translateX: "0%" }}
+     transition={{ duration: 1 }}
+     className="font-spaced font-bold heading-subsection absolute gradient-text bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent mx-0 mt-0 mr-[5vw] sm:mr-[10vw] md:mr-[90vh] text-[15px] sm:text-[18px]"
+     id="second"
+   >
+     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil id
+     magnam incidunt commodi iste! Voluptates saepe praesentium, unde
+     nostrum quam beatae esse eveniet.
+   </motion.p>
+   <img
+   src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/buvdzppkwtr8jxfklb1v"
+   alt="bg-image"
+   className="mix-blend-whiten absolute bg-image-img w-full h-auto object-cover top-0 left-0 z-0 w-[85vw] md:w-[85vw] h-[80vh] md:h-[95vh]"
+ />
+ 
+ <motion.div
+   initial={{ opacity: 0, translateX: "80%" }}
+   whileInView={{ opacity: 1, translateX: "-50%" }}
+   transition={{ duration: 1 }}
+   className="relative z-50 w-[100vw]" 
+ >
+ <img
+src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5"
+alt="robot-image"
+className="mix-blend-whiten main-image-img h-[40vh] md:h-[80vh] w-full object-cover" // Set height for mobile and larger screens
+/>
+
+
+   <img
+     src="src/Pages/Gallery/Rectangle 189.svg"
+     alt="gradient-image"
+     className="mix-blend-whiten gradient-img transform translate-x-[50%] md:translate-x-[95%] translate-y-[-20%] md:translate-y-[-45%] z-10 relative ml-[0%] md:ml-[26%]"
+   />
+ </motion.div>
+
+</section>  */

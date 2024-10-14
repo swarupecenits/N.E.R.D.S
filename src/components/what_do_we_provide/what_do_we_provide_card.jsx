@@ -55,7 +55,7 @@ const WhatDoWeProvide = ({ heading, text }) => {
       }}
     >
       {/* Heading */}
-      <h2 className="text-white font-spaced text-[20px] text-center md:text-[30px] lg:text-[40px]">
+      <h2 className="text-white font-semibold font-spaced text-[20px] text-center md:text-[30px] lg:text-[40px]">
         {heading}
       </h2>
 

@@ -1,0 +1,13 @@
+body{
+    position: relative;
+    scroll-behavior: smooth;
+  }
+ 
+      .items{
+        scale: 1;
+      }
+      .items:hover{
+        scale: 1.1;
+        
+      }
+      
