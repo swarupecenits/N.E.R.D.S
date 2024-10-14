@@ -12,9 +12,9 @@ const Content = ({id}) => {
 
                 <img src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nkibnoq8dmrd12fuefg8" alt="" className=" absolute top-[-15rem]"/>
                 <h1 className="text-center  text-4xl absolute top-[-8rem] left-14 font-ethenocentric text-slate-300 ">{obj[id].head}</h1>
-                <p className="font-ethnocentric text-base absolute top-8 left-14  text-wrap max-w-[28rem] text-slate-200">{obj[id].text}</p>
+                <p className="font-spaced text-base absolute top-8 left-14  text-wrap max-w-[28rem] text-slate-200">{obj[id].text}</p>
                 <img src={icon} alt="icon in modal" className="absolute top-[-2.8rem] left-12" />
-                {/* <img src={obj[id].url} alt="image in modal" className="absolute top-[-8rem] left-[33rem] max-w-96" /> */}
+          
 
                             <div
                                 className="overflow-hidden flex absolute top-[-8rem] left-[33rem] max-w-96 "
