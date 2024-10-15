@@ -5,8 +5,11 @@ import "./gallery.css";
 import Header from "./header.jsx";
 import "./section.css";
 import App from "./gallery_apy.jsx";
+import { Robotron, Session, Projects,Tecnoesis } from "./imagedata.jsx";
 import MobileSlideshow from "./slideshow.jsx";
 import MobileSlideshow1 from "./slideshow1.jsx";
+import MobileSlideshow2 from "./slideshow2.jsx";
+import MobileSlideshow3 from "./slideshow3.jsx";
 import YourComponent from "./translate.jsx";
 import PhotoGallery from "./slideonce.jsx";
 import Glimpse from "./slideonce1.jsx";
@@ -409,7 +412,7 @@ function Gallery() {
                   "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
               }}
             ></div>
-            <MobileSlideshow />
+            <MobileSlideshow2 />
             {/* Second Image */}
             <div
               className="items item2 bg-center bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-3 "
@@ -542,7 +545,7 @@ function Gallery() {
             transition={{ duration: 2 }}
             className="container1 h-[75vh] w-[88vw] transform translate-y-[40%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 grid-rows-2 gap-6 mt-12 ml-11  lg:text-[14px] sm:w-[86vw] sm:gap-10 sm:ml-4 sm:mt-20" // Changed gap to 6 for better spacing
           >
-            <MobileSlideshow1 />
+            <MobileSlideshow3 />
 
             <div className="font-spaced text-white flex-col lg:p-0 justify-around mx-0 box1 lg:row-span-2 md:row-span-1 row-span-2 sm:row-span-1 ml-4 sm:ml-8  text-sm sm:text-[14px] sm:mt-0 mt-48 lg:mt-0 sm:mr-0 mr-20 sm:pl-5 sm:pt-5 ">
               <p className="text-justify sm:line-clamp-none line-clamp-2">

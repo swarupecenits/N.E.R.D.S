@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Projects} from '../images/imagedata.jsx';
+import  { useState, useEffect } from 'react';
+import { Projects} from './imagedata.jsx';
 
-const MobileSlideshow = () => {
+const MobileSlideshow2 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Function to handle automatic background change
