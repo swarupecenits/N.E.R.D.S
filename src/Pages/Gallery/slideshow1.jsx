@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Session } from "./imagedata.jsx";
 
 const MobileSlideshow1 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Function to handle automatic background change
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % Session.length);
-    }, 2500); // Change every 5 seconds
+    }, 2500); 
 
-    return () => clearInterval(interval); // Cleanup the interval on unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (

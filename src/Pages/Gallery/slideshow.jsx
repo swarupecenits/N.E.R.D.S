@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Robotron } from "./imagedata.jsx";
 
 const MobileSlideshow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Function to handle automatic background change
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % Robotron.length);
-    }, 2500); // Change every 5 seconds
+    }, 2500);
 
-    return () => clearInterval(interval); // Cleanup the interval on unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (

@@ -5,7 +5,7 @@ export default function PhotoGallery() {
   const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    // Trigger animation only once on refresh
+    
     if (!hasAnimated) {
       setHasAnimated(true);
     }

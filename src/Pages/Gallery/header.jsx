@@ -8,7 +8,7 @@ const Header = ({ setActiveSection }) => {
   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
   transition={{ duration: 2 }}
-  className="sticky top-0 left-0 w-full bg-black z-50 bg-opacity-30 flex flex-col md:flex-row items-start justify-start gap-4 md:gap-12 lg:gap-20 py-3 md:py-6 pl-2 md:px-12 lg:px-20 font-ethnocentric font-normal text-blue-500 z-50 -mt-3"
+  className="sticky mt-[-10rem] top-20 left-0 w-full bg-black z-10 bg-opacity-10 flex flex-col md:flex-row items-start justify-start gap-4 md:gap-12 lg:gap-20 py-3 md:py-6 pl-2 md:px-12 lg:px-20 font-ethnocentric font-normal text-blue-500 "
 >
   {/* Mobile Grid */}
   <div className="grid grid-cols-2 gap-x-20 gap-y-2 w-full md:hidden pl-12 pr-24">
@@ -110,7 +110,7 @@ const Header = ({ setActiveSection }) => {
   initial={{ opacity: 0, translateX: "0%" }}
   whileInView={{ opacity: 1, translateX: "0%" }}
   transition={{ duration: 2 }}
-  className="sticky top-0 left-0 w-full bg-black z-0 bg-opacity-30 flex flex-col md:flex-row items-start justify-start gap-4 md:gap-12 lg:gap-20 py-3 md:py-6 pl-2 md:px-12 lg:px-20 font-ethnocentric font-normal text-blue-500 -mt-3">
+  className="sticky top-0 left-0 w-full bg-black z-0 bg-opacity-10 flex flex-col md:flex-row items-start justify-start gap-4 md:gap-12 lg:gap-20 py-3 md:py-6 pl-2 md:px-12 lg:px-20 font-ethnocentric font-normal text-blue-500 ">
 
   {/* Desktop Links (No Grid) */}
   <div className="hidden md:flex md:flex-row gap-16 ">

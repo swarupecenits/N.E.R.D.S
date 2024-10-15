@@ -4,13 +4,13 @@ import { Projects} from './imagedata.jsx';
 const MobileSlideshow2 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Function to handle automatic background change
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % Projects.length);
-    }, 2500); // Change every 5 seconds
+    }, 2500); 
 
-    return () => clearInterval(interval); // Cleanup the interval on unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (

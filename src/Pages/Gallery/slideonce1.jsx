@@ -5,8 +5,8 @@ import { useInView } from 'react-intersection-observer';
 export default function Glimpse() {
   const [hasAnimated, setHasAnimated] = useState(false);
   const { ref, inView } = useInView({
-    triggerOnce: true,  // Ensures the animation triggers only once
-    threshold: 0.1,     // Fires when 10% of the element is visible
+    triggerOnce: true,  
+    threshold: 0.1,     
   });
 
   useEffect(() => {

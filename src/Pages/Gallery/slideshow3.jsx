@@ -4,13 +4,13 @@ import { Tecnoesis} from './imagedata.jsx';
 const MobileSlideshow3 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Function to handle automatic background change
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % Tecnoesis.length);
     }, 2500); // Change every 5 seconds
 
-    return () => clearInterval(interval); // Cleanup the interval on unmount
+    return () => clearInterval(interval); 
   }, []);
 
   return (
