@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Tecnoesis} from './imagedata.jsx';
 
-const MobileSlideshow = () => {
+const MobileSlideshow3 = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Function to handle automatic background change
@@ -15,7 +15,7 @@ const MobileSlideshow = () => {
 
   return (
        
-    <div className='grid h-[45vh] w-[68vw] ml-10 mt-40 sm:hidden lg:hidden md:hidden '>
+    <div className='grid h-[45vh] w-[68vw] ml-3  mt-12 sm:hidden lg:hidden md:hidden '>
       <div
         className="block sm:hidden lg:hidden md:hidden bg-cover"
         style={{
