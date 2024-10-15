@@ -53,7 +53,7 @@ const AboutUsSection = () => {
 
   return (
     <div
-      className="my-16 px-4 md:px-8 lg:px-10 bg-cover bg-center bg-no-repeat py-4"
+      className="my-16 -mt-1 px-4 md:px-8 lg:px-10 bg-cover bg-center bg-no-repeat py-4"
       style={{
         backgroundImage:
           'url("https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/uzsmwldv4xpfv2xkxceg")',
@@ -61,7 +61,7 @@ const AboutUsSection = () => {
       }}
     >
       {/* Section Heading */}
-      <h2 className="text-center text-3xl font-ethenocentric bg-gradient-to-r from-white to-cyan-500 text-transparent bg-clip-text mb-12 md:text-4xl lg:text-4xl">
+      <h2 className="text-center text-3xl font-ethenocentric bg-gradient-to-r from-white to-cyan-500 text-transparent bg-clip-text mt-5 mb-10 md:text-4xl lg:text-4xl">
         About Us
       </h2>
 

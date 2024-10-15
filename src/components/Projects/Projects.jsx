@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
+import  { useEffect, useRef, useState } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+
 
 // Custom Arrow Components for Slick Slider
 const CustomPrevArrow = ({ onClick }) => (
@@ -163,6 +164,7 @@ const Projects = () => {
 
         {/* Original Layout for Desktop View */}
         <div className="hidden md:block">
+          
           {projects.map((project, index) => (
             <div
               key={index}
@@ -186,6 +188,10 @@ const Projects = () => {
                   />
                 </div>
               </div>
+              
+              
+              
+              
               <div className="md:w-1/2 p-4 text-white text-center md:text-left">
                 <h2 className="text-2xl font-ethenocentric mb-4">
                   {project.title}
@@ -209,6 +215,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
+        
       </div>
     </section>
   );

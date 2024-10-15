@@ -40,7 +40,19 @@ const EventCardSlider = () => {
          text-2xl sm:text-3xl md:text-4xl lg:text-4xl leading-tight">
         Upcoming Events
       </h1>
-
+<div
+        className="absolute  bg-[conic-gradient(from_134.62deg_at_50%_50%,_#111111_0deg,_#13040A_62.55deg,_#100429_189.91deg,_#f30066_205.08deg,_#111111_310.73deg,_#530ced_360deg)] h-[700px] w-[700px] rounded-full blur-3xl animate-gradient sm:none"
+        style={{
+          width: "665px",
+          height: "766px",
+          top: "151px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          backdropFilter: "blur(195px)",
+          opacity: "0.3",
+          zIndex: 0,
+        }}
+      ></div>
 
       <Slider ref={sliderRef} {...settings}>
         {cardData.map((card, index) => (
