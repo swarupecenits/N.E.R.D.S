@@ -77,7 +77,7 @@ const Team = () => {
             <img
               src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/txdg7c0ofspqdw5qajni"
               alt="robot-image"
-              className={`mix-blend-whiten sm:self-center sm:justify-center sm:flex absolute main-image-img transition-opacity duration-1000 ${
+              className={`mix-blend-whiten z-10 sm:self-center sm:justify-center sm:flex absolute main-image-img transition-opacity duration-1000 ${
                 isVisible ? "opacity-100" : "opacity-0"
               }`}
             />
