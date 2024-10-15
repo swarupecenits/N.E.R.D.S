@@ -6,7 +6,7 @@ import Header from "./header.jsx";
 import "./section.css";
 import App from "./gallery_apy.jsx";
 import { Robotron, Session, Projects,Tecnoesis } from "./imagedata.jsx";
-// import App from "./gallery_apy.jsx";
+
 import MobileSlideshow from "./slideshow.jsx";
 import MobileSlideshow1 from "./slideshow1.jsx";
 import MobileSlideshow2 from "./slideshow2.jsx";
