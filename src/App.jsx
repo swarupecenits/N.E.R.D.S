@@ -1,40 +1,56 @@
-import './App.css'
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import Home from './Pages/Home/Home';
-import About from './Pages/About/About';
-import Team from './Pages/Team/Team';
-import Gallery from './Pages/Gallery/Gallery';
-import Contact from './Pages/Contact/Contact';
+import { useState, useEffect } from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./Pages/Home/Home";
+import Event from "./Pages/Event/Event";
+import Team from "./Pages/Team/Team";
+import Gallery from "./Pages/Gallery/Gallery";
+import Contact from "./Pages/Contact/Contact";
+import Navbar from "./components/Navbar/navbar";
+import Footer from "./components/Footer/footer";
+import Error from "./Pages/Error/Error";
+import LoadingAnimation from "./components/Loader/Loader"; // Adjust the path as necessary
 
 function App() {
-  
-  return (
-    <div>
-      <Router>
-      <div>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/team">Team</Link></li>
-          </ul>
-        </nav>
+  const [loading, setLoading] = useState(true);
 
-        {/* Define Routes */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/gallery" element={<Gallery />} />
-        </Routes>
-      </div>
-    </Router>
+  useEffect(() => {
+    // Simulate loading delay (e.g., fetching data)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Adjust the delay as needed (3000ms = 3 seconds)
+
+    return () => clearTimeout(timer); // Cleanup timeout on component unmount
+  }, []);
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Router>
+        {loading ? ( // Conditional rendering for loading animation
+          <LoadingAnimation />
+        ) : (
+          <>
+            <div className="sticky top-0 z-50 w-full">
+              <Navbar />
+            </div>
+
+            <div className="flex-grow w-full">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/event" element={<Event />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/team" element={<Team />} />
+                <Route path="/gallery" element={<Gallery />} />
+                <Route path="*" element={<Error />} />
+              </Routes>
+            </div>
+
+            <Footer />
+          </>
+        )}
+      </Router>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
