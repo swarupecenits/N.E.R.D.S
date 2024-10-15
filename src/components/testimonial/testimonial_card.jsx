@@ -87,7 +87,7 @@ const TestimonialCard = ({ testimonial }) => {
 
       {/* Role */}
       <p
-        className="text-base text-[#9F8600] mt-2 font-medium"
+        className="text-base text-yellow-500 mt-2 font-medium"
         style={{
           textAlign: "center",
           marginBottom: "35px",
