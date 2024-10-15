@@ -82,7 +82,7 @@ function Hero_small() {
         </div>
     )
 }
-
+// Desktop
 function Timeline(){
     const [isOpen, setIsOpen] = useState(false);
     const [id, setId] = useState(0);
@@ -136,6 +136,7 @@ function Timeline(){
                                     alt="Sample Image"
                                     className="absolute top-0 left-0 w-full h-full object-cover z-[-1]" // Using Tailwind for positioning and sizing
                                 />
+                                <Text/>
                         </motion.div>
 
                     </motion.div>        
