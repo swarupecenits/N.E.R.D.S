@@ -34,7 +34,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black text-white sticky top-0 z-50"> {/* Sticky Navbar */}
+    <nav className="bg-black z-50 text-white sticky top-0"> {/* Sticky Navbar */}
       <div className="lg:px-12 sm:px-7 max-w-9xl mx-auto max-h-24 flex justify-between items-center p-6">
         
         <div className="flex items-center">
@@ -97,7 +97,7 @@ const Navbar = () => {
               onClick={() => handleLinkClick(link.path)}
               className="relative group w-full py-2 text-lg capitalize text-white transition-all font-spaced"
             >
-              <span className="relative z-10 px-5 py-4"> 
+              <span className="relative z-50 px-5 py-4"> 
                 {link.name}
               </span>
               <span className="absolute inset-0 rounded-full border-2 border-purple-500 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition duration-300 shadow-lg group-hover:shadow-[0_0_20px_6px_rgba(128,0,128,0.5)]"></span>
