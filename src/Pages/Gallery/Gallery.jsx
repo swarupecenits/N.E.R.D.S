@@ -5,7 +5,7 @@ import "./gallery.css";
 import Header from "./header.jsx";
 import "./section.css";
 import App from "./gallery_apy.jsx";
-import { Robotron, Session, Projects,Tecnoesis } from "./imagedata.jsx";
+// import { Robotron, Session, Projects,Tecnoesis } from "./imagedata.jsx";
 import MobileSlideshow from "./slideshow.jsx";
 import MobileSlideshow1 from "./slideshow1.jsx";
 import MobileSlideshow2 from "./slideshow2.jsx";
@@ -22,7 +22,7 @@ function Gallery() {
 
   return (
     <>
-      <section className="first lg:block h-[100vh] w-[100vw] box-border snap-start relative overflow-hidden">
+      <section className="first lg:block h-[80vh] w-[100vw] box-border snap-start relative overflow-hidden">
         <div className="img">
           <img
             src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/buvdzppkwtr8jxfklb1v"
