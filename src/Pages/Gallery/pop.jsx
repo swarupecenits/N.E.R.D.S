@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import styled, { keyframes } from "styled-components";
 
 function Pop() {

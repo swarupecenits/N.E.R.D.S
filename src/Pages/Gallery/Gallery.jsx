@@ -40,7 +40,7 @@ function Gallery() {
 
       <section className="  second h-[100vh]  overflow-hidden  bg-black">
         <Glimpse />
-        <div className="w-[90vw] h-[5vh] bg-gradient-to-b from-transparent to-black mt-[-2rem] z-50 hidden md:block "></div>
+        <div className="w-[90vw] h-[5vh] bg-gradient-to-b from-transparent to-black mt-[-1rem] z-50 hidden md:block "></div>
 
         <App />
       </section>

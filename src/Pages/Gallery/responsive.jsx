@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 
 const ResponsiveSection = ({ mobileImage}) => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
