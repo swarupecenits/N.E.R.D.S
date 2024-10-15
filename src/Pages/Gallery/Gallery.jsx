@@ -4,7 +4,7 @@ import "./gradient.css";
 import "./gallery.css";
 import Header from "./header.jsx";
 import "./section.css";
-import App from "./gallery_apy.jsx";
+import CaroulApp from "./gallery_apy.jsx";
 // import { Robotron, Session, Projects,Tecnoesis } from "./imagedata.jsx";
 import MobileSlideshow from "./slideshow.jsx";
 import MobileSlideshow1 from "./slideshow1.jsx";
@@ -42,7 +42,7 @@ function Gallery() {
         <Glimpse />
         <div className="w-[90vw] h-[5vh] bg-gradient-to-b from-transparent to-black mt-[-1rem] z-50 hidden md:block "></div>
 
-        <App />
+        <CaroulApp />
       </section>
       {/* Tecnoessis */}
       <Header setActiveSection={setActiveSection} />

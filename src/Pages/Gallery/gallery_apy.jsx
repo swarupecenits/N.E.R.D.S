@@ -44,16 +44,16 @@ function App() {
 
   const row2 = [
     "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917097/WhatsApp_17_w0gh65.webp",
-    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728919447/saat_gfc8kk.webp",
     "https://res.cloudinary.com/dqmktpekh/image/upload/v1728919448/ek_r4xsdb.webp",
     "https://res.cloudinary.com/dqmktpekh/image/upload/v1728916835/palnoxlnv64vqaszv0hi.webp",
+    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728919447/saat_gfc8kk.webp",
   ];
 
   const row3 = [
+    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_11_u3zw4z.webp",
     "https://res.cloudinary.com/dqmktpekh/image/upload/v1728919558/last_hmns34.webp",
     "https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/dduwpo8ylppcdijwcjh2.webp",
     "https://res.cloudinary.com/dqmktpekh/image/upload/v1728918858/mxiuihtnrf9vlfo1sse7.webp",
-    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_11_u3zw4z.webp",
   ];
 
   return (
