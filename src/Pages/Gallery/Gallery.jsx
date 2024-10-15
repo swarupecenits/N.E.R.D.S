@@ -1,12 +1,15 @@
-import React, { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Link, Element, animateScroll as scroll } from "react-scroll";
 import "./gradient.css";
 import "./gallery.css";
 import Header from "./header.jsx";
 import "./section.css";
+<<<<<<< HEAD
 import App from "./app.jsx";
 import { Robotron, Session, Projects,Tecnoesis } from "./imagedata.jsx";
+=======
+import App from "./gallery_apy.jsx";
+>>>>>>> 5be8fcb70008606792817de59e27eaa0ae560ae2
 import MobileSlideshow from "./slideshow.jsx";
 import MobileSlideshow1 from "./slideshow1.jsx";
 import MobileSlideshow2 from "./slideshow2.jsx";
@@ -17,16 +20,7 @@ import Glimpse from "./slideonce1.jsx";
 import SmallScreen from "./smallscreen.jsx";
 
 function Gallery() {
-  const [clickedIndex, setClickedIndex] = useState(null);
 
-  const handleImageClick = (index) => {
-    setClickedIndex(index); // Set the clicked image index
-  };
-
-  const images = [
-    "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd",
-    // Add more image URLs as needed
-  ];
 
   const [activeSection, setActiveSection] = useState("third1");
 
@@ -39,7 +33,7 @@ function Gallery() {
             alt="bg-image"
             className="mix-blend-whiten absolute bg-image-img w-[100vw] h-[100vh] object-cover top-0 left-0 z-0"
           />
-          
+
           <YourComponent />
           <SmallScreen />
           <PhotoGallery />
@@ -54,13 +48,12 @@ function Gallery() {
 
         <App />
       </section>
-
+      {/* Tecnoessis */}
       <Header setActiveSection={setActiveSection} />
       <section
         name="third1"
-        className={`third1 overflow-hidden h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32   ${
-          activeSection === "third1" ? "" : "hidden"
-        }`}
+        className={`third1 overflow-hidden h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32   ${activeSection === "third1" ? "" : "hidden"
+          }`}
       >
         <div className=" backdrop-blur-[5px] ">
           <motion.div
@@ -71,11 +64,11 @@ function Gallery() {
           >
             {/* First Image (spans two columns on medium and large screens) */}
             <div
-              className=" sm:block md:block lg:block hidden items item1 z-10 col-span-1 sm:h-50 sm:col-span-2 md:col-span-2 lg:row-span-1 
+              className=" sm:block md:block bg-center lg:block hidden items item1 z-10 col-span-1 sm:h-50 sm:col-span-2 md:col-span-2 lg:row-span-1 
       sm:row-span-1 md:row-span-1 lg:col-span-2 bg-cover col-span-2 row-span-2 sm:ml-0 md:ml-0 lg:ml-0 lg:mr-3 lg:mr-4 "
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_11_u3zw4z.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -94,10 +87,10 @@ function Gallery() {
             <MobileSlideshow />
             {/* Second Image */}
             <div
-              className="items item2 bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-4 "
+              className="items item2 bg-center bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-4 "
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_8_iquk2w.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -116,10 +109,10 @@ function Gallery() {
 
             {/* Third Image (spans one row and two columns on large screens) */}
             <div
-              className="items item3 bg-cover md:row-span-2 rounded-lg hidden md:block lg:block lg:mr-3"
+              className="items item3 bg-center bg-cover md:row-span-2 rounded-lg hidden md:block lg:block lg:mr-3"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_4_fynqri.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -137,26 +130,26 @@ function Gallery() {
             ></div>
 
             {/* Text Item (spans two rows) */}
-            <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-9 mt-72 sm:mt-0 mr-6  c backdrop-blur-[5px] lg:mb-8">
+            <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1  md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-9 mt-72 sm:mt-0 mr-6  c backdrop-blur-[5px] lg:mb-8">
               <p className="text-justify sm:line-clamp-none text-sm md:block hidden line-clamp-2">
-              Robotron is a prominent and highly anticipated module under Tecnoesis, attracting numerous teams to compete with their custom-built robots in a variety of challenging events. Known for its prestige and excitement, Robotron serves as a dynamic platform where participants can showcase their creativity and technical skills by designing robots capable of tackling complex tasks. The competitions rigorously test a robot's abilities in critical areas such as navigation, problem-solving, and adaptability. Teams strive for excellence, as winning Robotron is a highly esteemed achievement within the Tecnoesis community. This event fosters innovation and collaboration, providing participants with a valuable learning experience that pushes the boundaries of robotics and engineering to new heights.
+                Robotron is a prominent and highly anticipated module under Tecnoesis, attracting numerous teams to compete with their custom-built robots in a variety of challenging events. Known for its prestige and excitement, Robotron serves as a dynamic platform where participants can showcase their creativity and technical skills by designing robots capable of tackling complex tasks. The competitions rigorously test a Robots abilities in critical areas such as navigation, problem-solving, and adaptability. Teams strive for excellence, as winning Robotron is a highly esteemed achievement within the Tecnoesis community. This event fosters innovation and collaboration, providing participants with a valuable learning experience that pushes the boundaries of robotics and engineering to new heights.
 
 
               </p>
               <p className="text-justify sm:line-clamp-none text-sm block sm:hidden line-clamp-2">
-              Robotron showcases innovative robots, testing skills in challenging competitions.
+                Robotron showcases innovative robots, testing skills in challenging competitions.
 
 
               </p>
-              
+
             </div>
 
             {/* Fourth Image */}
             <div
-              className="items item5 bg-cover rounded-lg hidden md:block lg:block lg:mr-3 lg:mt-6"
+              className="items item5 bg-cover bg-center rounded-lg hidden md:block lg:block lg:mr-3 lg:mt-6"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917097/WhatsApp_17_w0gh65.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -175,10 +168,10 @@ function Gallery() {
 
             {/* Fifth Image */}
             <div
-              className="items item6 bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
+              className="items item6 bg-cover bg-center rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_4_fynqri.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -197,10 +190,10 @@ function Gallery() {
 
             {/* Sixth Image */}
             <div
-              className="items item7 bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
+              className="items item7 bg-center bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_5_yobcaa.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -220,11 +213,11 @@ function Gallery() {
         </div>
       </section>
 
+      {/* Session */}
       <section
         name="third2"
-        className={`third2 h-[99vh] section overflow-hidden box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32 ${
-          activeSection === "third2" ? "" : "hidden"
-        }`}
+        className={`third2 h-[99vh] section overflow-hidden box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32 ${activeSection === "third2" ? "" : "hidden"
+          }`}
       >
         <div className=" backdrop-blur-[5px]">
           <motion.div
@@ -237,16 +230,16 @@ function Gallery() {
 
             <div className="font-spaced text-white flex-col lg:p-0 justify-around mx-0 box1 lg:row-span-2 md:row-span-1 row-span-2 sm:row-span-1 ml-4 sm:ml-8  text-sm sm:text-[14px] sm:mt-0 mt-20 lg:mt-0 sm:mr-0 mr-20 sm:pl-5 sm:pt-5 mt-48 ">
               <p className="text-justify sm:line-clamp-none line-clamp-2 ">
-              Sessions play a crucial role in enhancing growth and the overall learning process. Weekly classes, workshops, meetings, and conferences provide valuable opportunities for hands-on experience. Organized by NERDS, these events create an engaging environment where participants can interact with industry experts, collaborate on projects, and deepen their understanding of various topics. The practical experience gained through these sessions is vital for developing skills and staying updated with the latest advancements in the field. By fostering a culture of continuous learning, NERDS empowers individuals to thrive.
+                Sessions play a crucial role in enhancing growth and the overall learning process. Weekly classes, workshops, meetings, and conferences provide valuable opportunities for hands-on experience. Organized by NERDS, these events create an engaging environment where participants can interact with industry experts, collaborate on projects, and deepen their understanding of various topics. The practical experience gained through these sessions is vital for developing skills and staying updated with the latest advancements in the field. By fostering a culture of continuous learning, NERDS empowers individuals to thrive.
               </p>
-              
+
             </div>
 
             <div
-              className=" item2 hidden sm:block md:block lg:block box2 row-span-2 bg-cover pl-10 sm:pl-20 gap-0 "
+              className=" item2 hidden bg-center sm:block md:block lg:block box2 row-span-2 bg-cover pl-10 sm:pl-20 gap-0 "
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919448/chaar_dqxhhm.webp')",
                 height: "100%",
                 width: "100%",
 
@@ -267,10 +260,10 @@ function Gallery() {
             ></div>
 
             <div
-              className="items box3 hidden md:block lg:block sm:block bg-cover ml-2 sm:ml-8"
+              className="items box3 hidden md:block bg-center lg:block sm:block bg-cover ml-2 sm:ml-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919558/last_hmns34.webp')",
                 height: "100%",
                 width: "100%",
 
@@ -291,10 +284,10 @@ function Gallery() {
             ></div>
 
             <div
-              className="items box4 hidden md:hidden lg:block col-span-1 sm:col-span-2 lg:col-span-2 bg-cover ml-7 mr-4 sm:mr-8"
+              className="items box4 hidden md:hidden bg-center lg:block col-span-1 sm:col-span-2 lg:col-span-2 bg-cover ml-7 mr-4 sm:mr-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919448/ek_r4xsdb.webp')",
                 height: "100%",
                 width: "100%",
 
@@ -315,10 +308,10 @@ function Gallery() {
             ></div>
 
             <div
-              className="items box5 hidden md:hidden lg:block bg-cover ml-4 sm:ml-8"
+              className="items box5 hidden md:hidden bg-center lg:block bg-cover ml-4 sm:ml-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919448/teen_h1tgkz.webp')",
                 height: "100%",
                 width: "100%",
 
@@ -339,10 +332,10 @@ function Gallery() {
             ></div>
 
             <div
-              className="items box6 hidden md:hidden lg:block bg-cover ml-4 sm:ml-8"
+              className="items box6 hidden md:hidden bg-center lg:block bg-cover ml-4 sm:ml-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919447/saat_gfc8kk.webp')",
                 height: "100%",
                 width: "100%",
 
@@ -363,10 +356,10 @@ function Gallery() {
             ></div>
 
             <div
-              className="items box7 hidden md:hidden lg:block bg-cover ml-4 sm:ml-8 mr-4 sm:mr-8"
+              className="items box7 hidden md:hidden bg-center lg:block bg-cover ml-4 sm:ml-8 mr-4 sm:mr-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919448/do_f8ycnt.webp')",
                 height: "100%",
                 width: "100%",
 
@@ -388,11 +381,11 @@ function Gallery() {
           </motion.div>
         </div>
       </section>
+      {/* Projects */}
       <section
         name="third3"
-        className={`third3  h-[99vh] section overflow-hidden box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32 ${
-          activeSection === "third3" ? "" : "hidden"
-        }`}
+        className={`third3  h-[99vh] section overflow-hidden box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32 ${activeSection === "third3" ? "" : "hidden"
+          }`}
       >
         <div className=" backdrop-blur-[5px] ">
           <motion.div
@@ -404,10 +397,10 @@ function Gallery() {
             {/* First Image (spans two columns on medium and large screens) */}
             <div
               className=" sm:block md:block lg:block hidden items item1 z-10 col-span-1 sm:h-50 sm:col-span-2 md:col-span-2 lg:row-span-1 
-      sm:row-span-1 md:row-span-1 lg:col-span-2 bg-cover col-span-2 row-span-2 sm:ml-0 md:ml-0 lg:ml-0 lg:mr-3 lg:mr-4"
+      sm:row-span-1 md:row-span-1 lg:col-span-2 bg-center bg-cover row-span-2 sm:ml-0 md:ml-0 lg:ml-0 lg:mr-3 "
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/e0nkkschwwk1spyc7qps.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -426,10 +419,10 @@ function Gallery() {
             <MobileSlideshow2/>
             {/* Second Image */}
             <div
-              className="items item2 bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-3 "
+              className="items item2 bg-center bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-3 "
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728918858/mxiuihtnrf9vlfo1sse7.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -448,10 +441,10 @@ function Gallery() {
 
             {/* Third Image (spans one row and two columns on large screens) */}
             <div
-              className="items item3 bg-cover md:row-span-2 rounded-lg hidden md:block lg:block lg:mr-3"
+              className="items item3 bg-center bg-cover md:row-span-2 rounded-lg hidden md:block lg:block lg:mr-3"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919040/jzomx8fdsx4rwampjyfg.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -469,18 +462,18 @@ function Gallery() {
             ></div>
 
             {/* Text Item (spans two rows) */}
-            <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1 sm:text-[14px] md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-9 mt-72 sm:mt-0 mr-6  c backdrop-blur-[5px] lg:mb-2">
+            <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1  md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-9 mt-72 sm:mt-0 mr-6  c backdrop-blur-[5px] lg:mb-2">
               <p className="text-justify sm:line-clamp-none text-sm  line-clamp-2">
-              The NERDS initiative showcases a range of innovative projects aimed at enhancing technology’s accessibility for all users. Arachno Bot, a robotic spider, skillfully navigates complex terrains autonomously, demonstrating advanced mobility. Meanwhile, the Head Motion Controlled Wheelchair empowers users with mobility challenges by allowing them to control movement through simple head gestures. The Quadcopter Drone provides valuable aerial perspectives for both surveillance and recreational purposes, while the Bluetooth Bot illustrates the potential for remote interaction via wireless technology. Together, these projects reflect NERDS' commitment to developing practical tech solutions that significantly enhance user experience.
+                The NERDS initiative showcases a range of innovative projects aimed at enhancing technology’s accessibility for all users. Arachno Bot, a robotic spider, skillfully navigates complex terrains autonomously, demonstrating advanced mobility. Meanwhile, the Head Motion Controlled Wheelchair empowers users with mobility challenges by allowing them to control movement through simple head gestures. The Quadcopter Drone provides valuable aerial perspectives for both surveillance and recreational purposes, while the Bluetooth Bot illustrates the potential for remote interaction via wireless technology. Together, these projects reflect NERDS' commitment to developing practical tech solutions that significantly enhance user experience.
               </p>
             </div>
 
             {/* Fourth Image */}
             <div
-              className="items item5 bg-cover rounded-lg hidden md:block lg:block lg:mr-3 lg:mt-6"
+              className="items item5 bg-center bg-cover rounded-lg hidden md:block lg:block lg:mr-3 lg:mt-6"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/vdqzlatnphdiehsr3kpj.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -499,10 +492,10 @@ function Gallery() {
 
             {/* Fifth Image */}
             <div
-              className="items item6 bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
+              className="items item6 bg-center bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/dduwpo8ylppcdijwcjh2.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -521,10 +514,10 @@ function Gallery() {
 
             {/* Sixth Image */}
             <div
-              className="items item7 bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
+              className="items item7 bg-center bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728918857/f1btwbwlccqh6dl76zy9.webp')",
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -546,9 +539,8 @@ function Gallery() {
 
       <section
         name="third4"
-        className={`third4 h-[99vh] overflow-hidden section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32  ${
-          activeSection === "third4" ? "" : "hidden"
-        }`}
+        className={`third4 h-[99vh] overflow-hidden section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32  ${activeSection === "third4" ? "" : "hidden"
+          }`}
       >
         <div className=" backdrop-blur-[5px]">
           <motion.div
@@ -561,7 +553,7 @@ function Gallery() {
 
             <div className="font-spaced text-white flex-col lg:p-0 justify-around mx-0 box1 lg:row-span-2 md:row-span-1 row-span-2 sm:row-span-1 ml-4 sm:ml-8  text-sm sm:text-[14px] sm:mt-0 mt-36 lg:mt-0 sm:mr-0 mr-20 sm:pl-5 sm:pt-5 ">
               <p className="text-justify sm:line-clamp-none line-clamp-2">
-              Tecnoesis, the annual tech fest of NIT Silchar, is the most prestigious tech event in the entire Northeast. It showcases numerous flagship events, including the renowned Robotron, organized by NERDS. The fest features a wide variety of workshops and activities conducted by NERDS, allowing participants to engage actively with cutting-edge technology and innovation. With its rich blend of competitions, learning opportunities, and hands-on experiences, Tecnoesis attracts tech enthusiasts from across the region, fostering collaboration, creativity, and a deep passion for technology among all participants and attendees.
+                Tecnoesis, the annual tech fest of NIT Silchar, is the most prestigious tech event in the entire Northeast. It showcases numerous flagship events, including the renowned Robotron, organized by NERDS. The fest features a wide variety of workshops and activities conducted by NERDS, allowing participants to engage actively with cutting-edge technology and innovation. With its rich blend of competitions, learning opportunities, and hands-on experiences, Tecnoesis attracts tech enthusiasts from across the region, fostering collaboration, creativity, and a deep passion for technology among all participants and attendees.
               </p>
             </div>
 

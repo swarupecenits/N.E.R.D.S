@@ -39,14 +39,10 @@ const YourComponent = () => {
       <img
         src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ntimquuholtlwaqknngo"
         alt="robot-image"
-        className="mix-blend-whiten main-image-img transform lg:translate-x-[60%] sm:translate-x-[50%] md:translate-x-[80%] translate-y-[-12%] lg:mt-5 z-0 ml-[7.5rem] mb-20 lg:ml-96 md:ml-[-16rem] sm:mt-0 md:mt-0 lg:mt-0 mt-10 hidden sm:block lg:block md:block sm:h-[-70vh] md:h-[90vh] lg:h-[95vh] "
+        className="mix-blend-whiten main-image-img transform lg:translate-x-[60%] sm:translate-x-[50%] md:translate-x-[80%] translate-y-[-12%] z-0 ml-[7.5rem] mb-20 lg:ml-96 md:ml-[-16rem] sm:mt-0 md:mt-0 lg:mt-0 mt-10 hidden sm:block lg:block md:block sm:h-[-70vh] md:h-[90vh] lg:h-[95vh] "
       />
 
-      <img
-        src="src/Pages/Gallery/Rectangle 189.svg"
-        alt="robot-image"
-        className="mix-blend-whiten gradient-img transform hidden sm:block lg:block md:block translate-x-[95%] translate-y-[-45%] z-1 ml-[26%] relative"
-      />
+      
     </motion.div>
   );
 };
