@@ -15,6 +15,7 @@ const MobileSlideshow = () => {
 
   return (
     <div className="grid h-[45vh] w-[68vw] ml-10 mt-64 sm:hidden lg:hidden md:hidden ">
+        <div className='relative grid h-[45vh] w-[68vw] sm:hidden lg:hidden md:hidden bg-white/30 backdrop-blur-md border-2 border-solid border-purple-600 rounded-md shadow-lg'>
       <div
         className="block sm:hidden lg:hidden md:hidden bg-center bg-cover"
         style={{
@@ -32,6 +33,7 @@ const MobileSlideshow = () => {
             "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
         }}
       ></div>
+    </div>
     </div>
   );
 };
