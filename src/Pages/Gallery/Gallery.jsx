@@ -532,7 +532,7 @@ function Gallery() {
           </motion.div>
         </div>
       </section>
-
+{/* Tecnoesis */}
       <section
         name="third4"
         className={`third4 h-[99vh] overflow-hidden section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32  ${activeSection === "third4" ? "" : "hidden"
@@ -554,10 +554,10 @@ function Gallery() {
             </div>
 
             <div
-              className=" item2 hidden sm:block md:block lg:block box2 row-span-2 bg-cover pl-10 sm:pl-20 gap-0 "
+              className=" item2 hidden bg-center sm:block md:block lg:block box2 row-span-2 bg-cover pl-10 sm:pl-20 gap-0 "
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728943839/paas_1_gvr1kr.webp')",
                 height: "100%",
                 width: "100%",
 
@@ -578,10 +578,10 @@ function Gallery() {
             ></div>
 
             <div
-              className="items box3 hidden md:block lg:block sm:block bg-cover ml-2 sm:ml-8"
+              className="items box3 hidden bg-center md:block lg:block sm:block bg-cover ml-2 sm:ml-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728943835/final_hyfrmr.webp')",
                 height: "100%",
                 width: "100%",
 
@@ -602,10 +602,10 @@ function Gallery() {
             ></div>
 
             <div
-              className="items box4 hidden md:hidden lg:block col-span-1 sm:col-span-2 lg:col-span-2 bg-cover ml-7 mr-4 sm:mr-8"
+              className="items box4 bg-center hidden md:hidden lg:block col-span-1 sm:col-span-2 lg:col-span-2 bg-cover ml-7 mr-4 sm:mr-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728943835/9taa_fivcvj.webp')",
                 height: "100%",
                 width: "100%",
 
@@ -629,7 +629,7 @@ function Gallery() {
               className="items box5 hidden md:hidden lg:block bg-cover ml-4 sm:ml-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728943838/eta_antyau.webp')",
                 height: "100%",
                 width: "100%",
 
@@ -650,10 +650,10 @@ function Gallery() {
             ></div>
 
             <div
-              className="items box6 hidden md:hidden lg:block bg-cover ml-4 sm:ml-8"
+              className="items bg-center box6 hidden md:hidden lg:block bg-cover ml-4 sm:ml-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728943835/11taa_ciocrf.webp')",
                 height: "100%",
                 width: "100%",
 
@@ -674,10 +674,10 @@ function Gallery() {
             ></div>
 
             <div
-              className="items box7 hidden md:hidden lg:block bg-cover ml-4 sm:ml-8 mr-4 sm:mr-8"
+              className="items box7 bg-center hidden md:hidden lg:block bg-cover ml-4 sm:ml-8 mr-4 sm:mr-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd')",
+                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728916835/palnoxlnv64vqaszv0hi.webp')",
                 height: "100%",
                 width: "100%",
 
