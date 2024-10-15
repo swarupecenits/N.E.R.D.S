@@ -1,10 +1,10 @@
 // src/components/ImageData.js
 export const Robotron = [
     'https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_4_fynqri.webp',
-    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728157766/rcawmth7hoomfx97knbt.webp',
-    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728281587/ngfjf7ik0edof0u02lp9.jpg',
-    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728143889/wd4lcaneqsckozlzuv8n.webp',
-    'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/oio4um08mvrvae1wvabi',
+    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728943838/eta_antyau.webp',
+    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_5_yobcaa.webp',
+    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728943835/chari_o8e5kj.webp',
+    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728943835/9taa_fivcvj.webp',
   ];
   
   export const Session = [
@@ -15,15 +15,16 @@ export const Robotron = [
   ];
   
   export const Projects = [
-    'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd',
-    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728157766/rcawmth7hoomfx97knbt.webp',
-    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728281587/ngfjf7ik0edof0u02lp9.jpg',
-    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728143889/wd4lcaneqsckozlzuv8n.webp',
+    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/vdqzlatnphdiehsr3kpj.webp',
+    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728918858/mxiuihtnrf9vlfo1sse7.webp',
+    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/e0nkkschwwk1spyc7qps.webp',
+    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/vdqzlatnphdiehsr3kpj.webp',
+    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/dduwpo8ylppcdijwcjh2.webp',
   ];
   export const Tecnoesis = [
-    'https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/tkq4nkjlici6hrllk9qd',
-    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728157766/rcawmth7hoomfx97knbt.webp',
-    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728281587/ngfjf7ik0edof0u02lp9.jpg',
-    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728143889/wd4lcaneqsckozlzuv8n.webp',
+    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_8_iquk2w.webp',
+    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728917097/WhatsApp_14_-_Copy_s7syiq.webp',
+    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_5_yobcaa.webp',
+    'https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_4_fynqri.webp',
   ];
   

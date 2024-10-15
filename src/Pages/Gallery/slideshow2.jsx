@@ -17,7 +17,7 @@ const MobileSlideshow2 = () => {
        
     <div className='grid h-[45vh] w-[68vw] ml-10 mt-40 sm:hidden lg:hidden md:hidden '>
       <div
-        className="block sm:hidden lg:hidden md:hidden bg-cover"
+        className="block sm:hidden lg:hidden md:hidden bg-center bg-cover"
         style={{
           backgroundImage: `url(${Projects[currentIndex]})`,
           border: '3px solid transparent',

@@ -48,20 +48,20 @@ function Gallery() {
       <Header setActiveSection={setActiveSection} />
       <section
         name="third1"
-        className={`third1 overflow-hidden h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32   ${activeSection === "third1" ? "" : "hidden"
+        className={`third1 overflow-hidden h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/folzejptk8mhkttgqrfh')] bg-cover bg-center sm:bg-none mb-32   ${activeSection === "third1" ? "" : "hidden"
           }`}
       >
-        <div className=" backdrop-blur-[5px] ">
+        <div className=" backdrop-blur-[10px] ">
           <motion.div
             initial={{ opacity: 0, translateX: "0%", translateY: "10%" }}
             whileInView={{ opacity: 1, translateX: "0%", translateY: "10%" }}
             transition={{ duration: 2 }}
-            className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:grid-rows-1 md:grid-rows-2 sm:gap-3 md:gap-5  mt-11 lg:ml-20 lg:mt-10 h-[75vh] w-[95vw] items-center  sm:w-[90vw] lg:w-[92vw] pl-4 pr-4 md:w-[90vw] grid-cols-2 grid-rows-3 "
+            className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:grid-rows-1 md:grid-rows-2 sm:gap-3 md:gap-5  mt-11 lg:ml-20 lg:mt-10 h-[75vh] w-[95vw] items-center  sm:w-[90vw] lg:w-[92vw] pl-4 pr-4 md:w-[90vw]  grid-rows-3 "
           >
             {/* First Image (spans two columns on medium and large screens) */}
             <div
               className=" sm:block md:block bg-center lg:block hidden items item1 z-10 col-span-1 sm:h-50 sm:col-span-2 md:col-span-2 lg:row-span-1 
-      sm:row-span-1 md:row-span-1 lg:col-span-2 bg-cover col-span-2 row-span-2 sm:ml-0 md:ml-0 lg:ml-0 lg:mr-3 lg:mr-4 "
+      sm:row-span-1 md:row-span-1 lg:col-span-2 bg-cover  row-span-2 sm:ml-0 md:ml-0 lg:ml-0 lg:mr-3  "
               style={{
                 backgroundImage:
                   "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_11_u3zw4z.webp')",
@@ -212,7 +212,7 @@ function Gallery() {
       {/* Session */}
       <section
         name="third2"
-        className={`third2 h-[99vh] section overflow-hidden box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32 ${activeSection === "third2" ? "" : "hidden"
+        className={`third2 h-[99vh] section overflow-hidden box-border bg-black bg-[url('https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/folzejptk8mhkttgqrfh')] bg-cover bg-center sm:bg-none mb-32 ${activeSection === "third2" ? "" : "hidden"
           }`}
       >
         <div className=" backdrop-blur-[5px]">
@@ -380,7 +380,7 @@ function Gallery() {
       {/* Projects */}
       <section
         name="third3"
-        className={`third3  h-[99vh] section overflow-hidden box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32 ${activeSection === "third3" ? "" : "hidden"
+        className={`third3  h-[99vh] section overflow-hidden box-border bg-black bg-[url('https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/folzejptk8mhkttgqrfh')] bg-cover bg-center sm:bg-none mb-32 ${activeSection === "third3" ? "" : "hidden"
           }`}
       >
         <div className=" backdrop-blur-[5px] ">
@@ -535,7 +535,7 @@ function Gallery() {
 {/* Tecnoesis */}
       <section
         name="third4"
-        className={`third4 h-[99vh] overflow-hidden section box-border bg-black bg-[url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728281517/d1ummrtj3rwlfzkyrhij.jpg')] bg-cover bg-center sm:bg-none mb-32  ${activeSection === "third4" ? "" : "hidden"
+        className={`third4 h-[99vh] overflow-hidden section box-border bg-black bg-[url('https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/folzejptk8mhkttgqrfh')] bg-cover bg-center sm:bg-none mb-32  ${activeSection === "third4" ? "" : "hidden"
           }`}
       >
         <div className=" backdrop-blur-[5px]">

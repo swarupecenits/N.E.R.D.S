@@ -14,9 +14,9 @@ const MobileSlideshow1 = () => {
   }, []);
 
   return (
-    <div className="grid h-[48vh] w-[69vw] mr-20 mt-20 sm:hidden lg:hidden md:hidden block ">
+    <div className="grid h-[48vh] w-[69vw] mr-20 mt-20 sm:hidden lg:hidden md:hidden  ">
       <div
-        className="block sm:hidden lg:hidden md:hidden bg-cover"
+        className="block sm:hidden lg:hidden md:hidden bg-center bg-cover"
         style={{
           backgroundImage: `url(${Session[currentIndex]})`,
           border: "3px solid transparent",

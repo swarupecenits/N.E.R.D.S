@@ -17,7 +17,7 @@ const MobileSlideshow3 = () => {
        
     <div className='grid h-[45vh] w-[68vw] ml-3 mt-12 sm:hidden lg:hidden md:hidden '>
       <div
-        className="block sm:hidden lg:hidden md:hidden bg-cover"
+        className="block sm:hidden lg:hidden md:hidden bg-center bg-cover"
         style={{
           backgroundImage: `url(${Tecnoesis[currentIndex]})`,
           border: '3px solid transparent',
