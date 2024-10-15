@@ -11,7 +11,7 @@ import pc_card_border from "./Assets/pc_card_border.svg"
 import pc_card_border2 from "./Assets/pc_card_border2.svg"
 import links from "./JSON/img_links_for_timeline_cards.json"
 import TextAnimation from "./Animations/TextFlip"
-import ProgressBar from "react-scroll-progress-bar";
+// import ProgressBar from "react-scroll-progress-bar";
 import Button from "./Component/Button"
 import Text from "./Component/Verti-text"
 

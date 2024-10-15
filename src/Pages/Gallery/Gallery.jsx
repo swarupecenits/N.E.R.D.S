@@ -4,12 +4,9 @@ import "./gradient.css";
 import "./gallery.css";
 import Header from "./header.jsx";
 import "./section.css";
-<<<<<<< HEAD
-import App from "./app.jsx";
-import { Robotron, Session, Projects,Tecnoesis } from "./imagedata.jsx";
-=======
 import App from "./gallery_apy.jsx";
->>>>>>> 5be8fcb70008606792817de59e27eaa0ae560ae2
+import { Robotron, Session, Projects,Tecnoesis } from "./imagedata.jsx";
+// import App from "./gallery_apy.jsx";
 import MobileSlideshow from "./slideshow.jsx";
 import MobileSlideshow1 from "./slideshow1.jsx";
 import MobileSlideshow2 from "./slideshow2.jsx";
