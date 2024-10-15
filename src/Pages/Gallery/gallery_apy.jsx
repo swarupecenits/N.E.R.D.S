@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Carousel from "./carousel.jsx";
 import "./gradient.css";
 
@@ -36,14 +36,26 @@ function App() {
   }, []);
 
   const row1 = [
-    "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5",
-    "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/oio4um08mvrvae1wvabi",
+    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/vdqzlatnphdiehsr3kpj.webp",
+    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_8_iquk2w.webp",
+    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_4_fynqri.webp",
+    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728943835/9taa_fivcvj.webp",
   ];
 
   const row2 = [
-    "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/nh2huk5zscjs02prwcv5",
-    "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/oio4um08mvrvae1wvabi",
+    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917097/WhatsApp_17_w0gh65.webp",
+    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728919447/saat_gfc8kk.webp",
+    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728919448/ek_r4xsdb.webp",
+    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728916835/palnoxlnv64vqaszv0hi.webp",
   ];
+
+  const row3 = [
+    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728919558/last_hmns34.webp",
+    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/dduwpo8ylppcdijwcjh2.webp",
+    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728918858/mxiuihtnrf9vlfo1sse7.webp",
+    "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_11_u3zw4z.webp",
+  ];
+
   return (
     <div className="relative w-screen h-screen bg-black">
       {/* Background gradient animation */}
@@ -79,10 +91,10 @@ function App() {
             <MarqueeGroup direction="up" images={row2} />
           </div>
 
-          {/* Additional column scrolling from top to bottom */}
+          {/* Column scrolling from top to bottom */}
           <div className="hidden md:flex flex-col w-48 sm:w-56 lg:w-64 h-[400px] sm:h-[500px] lg:h-[600px] overflow-hidden">
-            <MarqueeGroup direction="down" images={row1} />
-            <MarqueeGroup direction="down" images={row1} />
+            <MarqueeGroup direction="down" images={row3} />
+            <MarqueeGroup direction="down" images={row3} />
           </div>
         </div>
       </div>
