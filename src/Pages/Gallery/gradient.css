@@ -1,0 +1,40 @@
+body{
+    position: relative;
+    scroll-behavior: smooth;
+  }
+ 
+      .items{
+        scale: 1;
+      }
+      .items:hover{
+        scale: 1.1;
+        
+      }
+      
+      @keyframes scrollDown {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(100%);
+        }
+      }
+      
+      @keyframes scrollUp {
+        0% {
+          transform: translateY(100%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      
+      /* Slower animation duration */
+      .animate-scrollDown {
+        animation: scrollDown 20s linear infinite; /* Increase the duration (e.g., 20s) */
+      }
+      
+      .animate-scrollUp {
+        animation: scrollUp 20s linear infinite; /* Increase the duration (e.g., 20s) */
+      }
+      

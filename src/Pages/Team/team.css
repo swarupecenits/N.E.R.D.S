@@ -1,0 +1,456 @@
+/* .gradient-1{
+    top: 0px;
+} */
+.main-heading {
+  font-size: 90px;
+  line-height: 115px;
+}
+.heading-subsection {
+  font-size: 29px;
+  line-height: 27.69px;
+  width: 699px;
+  top: 450px;
+  left: 112px;
+  z-index: 5;
+}
+.meet-heading {
+  width: 520px;
+  height: 100px;
+  top: 210px;
+  left: 112px;
+  z-index: 9;
+}
+.team-heading {
+  width: 1001px;
+  height: 111px;
+  top: 330px;
+  left: 99px;
+  z-index: 1;
+}
+.main-image-img {
+  z-index: 100;
+  left: 575px;
+  margin-top: 2rem;
+  height: 650px;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  object-fit: cover;
+}
+.meetour{
+  font-size: 4.2rem;
+}
+.member{
+  font-size: 4.0rem;
+}
+
+@media screen and (max-width:768px){
+  .meetour{
+    font-size: 3.2rem;
+  }
+  .member{
+    font-size: 2.6rem;
+  }
+  .meet4th{
+    padding-top: 100px;
+  }
+  .meet-heading{
+    top: 380px!important
+  }
+  .team-heading{
+    top: 480px !important;
+  }
+  .heading-subsection{
+    top: 580px !important;
+  }
+}
+@media screen and (max-width: 426px) {
+  .meetour{
+    margin-top: -4.2rem !important;
+    font-size: 1.5rem !important;
+  }
+  .member{
+    margin-top: -0.2rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 1401px) {
+  .main-image-img {
+    left: 450px;
+  }
+}
+@media screen and (max-width: 1243px) {
+  .main-heading {
+    font-size: 75px;
+  }
+  .heading-subsection {
+    font-size: 25px;
+  }
+  .meet4th {
+    margin-top: -100px;
+  }
+  .main-image-img {
+    left: 400px;
+  }
+}
+@media screen and (max-width: 1134px) {
+  .main-heading {
+    font-size: 60px;
+  }
+  .heading-subsection {
+    width: 600px;
+  }
+}
+.firstline,
+.thirdline {
+  width: 80%;
+  background-color: #e80;
+  margin-bottom: 20px;
+  height: 3px;
+}
+.secondline {
+  width: 95%;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  height: 3px;
+}
+@media screen and (max-width: 768px) {
+  .gradient {
+    display: none;
+  }
+  .main-image-img {
+    left: 10px;
+    width: 3000px;
+    height: 700px;
+    overflow: hidden;
+    z-index: 1;
+    left: 0;
+    margin-top: 2rem;
+    object-fit: cover;
+  }
+  .meet-heading {
+    z-index: 20;
+  }
+  .team-heading {
+    z-index: 20;
+  }
+  .heading-subsection {
+    z-index: 20;
+  }
+  /* .firstline,.thirdline{
+    width: 450px;
+   }
+   .secondline{
+    width: 600px;
+   } */
+  .meet-heading {
+    top: 300px;
+  }
+  .team-heading {
+    top: 400px;
+    left: 115px;
+  }
+  .heading-subsection {
+    top: 510px;
+  }
+}
+@media screen and (max-width: 723px) {
+  .meet-heading {
+    left: 100px;
+  }
+  .team-heading {
+    left: 100px;
+  }
+  .heading-subsection {
+    left: 100px;
+  }
+  .main-image-img {
+    width: 1000px;
+    height: 650px;
+    object-fit: cover;
+  }
+}
+@media screen and (max-width: 685px) {
+  .main-heading {
+    font-size: 50px;
+  }
+  .heading-subsection {
+    font-size: 22px;
+    width: 500px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .main-heading {
+    left: 80px;
+  }
+  .heading-subsection {
+    font-size: 20px;
+    left: 80px;
+    width: 450px;
+  }
+  /* .firstline,.thirdline{
+        width: 350px;
+       }
+
+       .secondline{
+        width: 500px;
+       } */
+}
+@media screen and (max-width: 495px) {
+  .main-image-img {
+    width: 400px !important;
+    height: 480px !important;
+    top: -40px;
+    left: 40px;
+  }
+  .main-heading {
+    font-size: 40px !important;
+    left: 45px;
+  }
+  .heading-subsection {
+    font-size: 16px !important;
+    width: 350px;
+    left: 45px;
+  }
+
+@media screen and (max-width: 439px) {
+  .main-image-img{
+    margin-top: 4rem;
+    left: 10px;
+  }
+}
+  /* .firstline,.thirdline{
+        width: 200px;
+       }
+
+       .secondline{
+        width: 350px;
+       } */
+}
+@media (max-width: 768px) {
+  .firstline,
+  .thirdline {
+    width: 60%;
+  }
+  .secondline {
+    width: 75%;
+  }
+}
+
+/* For mobile devices (479px and below) */
+@media (max-width: 479px) {
+  .firstline,
+  .thirdline {
+    width: 40%;
+  }
+  .secondline {
+    width: 55%;
+  }
+  .swiper-container {
+    width: 100%;
+    display: flex; /* Allows children to grow */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide {
+    display: flex; /* Ensure slides can expand */
+    /* align-items: flex-start; Align items to the top */
+    justify-content: center; /* Center content horizontally */
+  }
+  
+  .team-card {
+    /* padding: 1rem;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding in height calculations */
+  }
+  .kardy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Ensures the card is centered */
+  }
+}
+.swiper-container {
+  width: 100%;
+  display: flex; /* Allows children to grow */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex; /* Ensure slides can expand */
+  /* align-items: flex-start; Align items to the top */
+  justify-content: center; /* Center content horizontally */
+}
+
+.team-card {
+  /* padding: 1rem;  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px; /* Adjust as needed */
+  box-sizing: border-box; /* Include padding in height calculations */
+}
+@media screen and (max-width: 549px) {
+  .main-heading,
+  .heading-subsection {
+    left: 40px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .main-heading {
+    font-size: 45px;
+  }
+  .heading-subsection {
+    font-size: 18px;
+    width: 400px;
+  }
+  .swiper-container {
+    width: 100%;
+    display: flex; /* Allows children to grow */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide {
+    display: flex; /* Ensure slides can expand */
+    /* align-items: flex-start; Align items to the top */
+    justify-content: center; /* Center content horizontally */
+  }
+  
+  .team-card {
+    /* padding: 1rem;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding in height calculations */
+  }
+}
+@media screen and (max-width: 446px) {
+  .main-heading {
+    font-size: 40px;
+  }
+  .heading-subsection {
+    font-size: 16px;
+    width: 350px;
+  }
+  .swiper-container {
+    width: 100%;
+    display: flex; /* Allows children to grow */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide {
+    display: flex; /* Ensure slides can expand */
+    /* align-items: flex-start; Align items to the top */
+    justify-content: center; /* Center content horizontally */
+  }
+  
+  .team-card {
+    /* padding: 1rem;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding in height calculations */
+  }
+}
+@media screen and (max-width: 395px) {
+  .main-heading,
+  .heading-subsection {
+    left: 20px;
+  }
+  .swiper-container {
+    width: 100%;
+    display: flex; /* Allows children to grow */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide {
+    display: flex; /* Ensure slides can expand */
+    /* align-items: flex-start; Align items to the top */
+    justify-content: center; /* Center content horizontally */
+  }
+  
+  .team-card {
+    /* padding: 1rem;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding in height calculations */
+  }
+}
+.firstline,
+.thirdline {
+  width: 80%;
+  background-color: #e807b7;
+  margin-bottom: 20px;
+  height: 3px;
+}
+.secondline {
+  width: 95%;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  height: 3px;
+}
+@media (max-width: 768px) {
+  .firstline,
+  .thirdline {
+    width: 60%;
+  }
+  .secondline {
+    width: 75%;
+  }
+}
+
+
+@media (max-width: 479px) {
+  .firstline,
+  .thirdline {
+    width: 40%;
+  }
+  .secondline {
+    width: 55%;
+  }
+  .swiper-container {
+    width: 100%;
+    display: flex; /* Allows children to grow */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide {
+    display: flex; /* Ensure slides can expand */
+    /* align-items: flex-start; Align items to the top */
+    justify-content: center; /* Center content horizontally */
+  }
+  
+  .team-card {
+    /* padding: 1rem;  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px; /* Adjust as needed */
+    box-sizing: border-box; /* Include padding in height calculations */
+  }
+}

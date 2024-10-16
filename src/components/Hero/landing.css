@@ -1,0 +1,149 @@
+@font-face {
+    font-family: "Spaced";
+    src: url(../../assets/Fonts/Spaced\ TTF.ttf);
+}
+@font-face {
+    font-family: "Ethno";
+    src: url(../../assets/Fonts/ethnocentric\ rg\ it.otf);
+}
+.main-div{
+    height: 90vh;
+    background-color: black;
+    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 100px;
+}
+.main-div img{
+    height: 78vh;
+    width: auto;
+    mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  z-index: 0;
+  animation: slideFromBottom 5s ease-in-out forwards;
+}
+@keyframes slideFromBottom {
+    0% {
+        transform: translateY(100%); /* Start from below */
+    }
+    100% {
+        transform: translateY(0); /* End at the original position */
+    }
+}
+.typewriter{
+    font-family: "Spaced";
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffd700;
+    width: 410px;
+    margin-left: 45px;
+    margin-bottom: 1rem;
+}
+.typewriter{
+    position: relative;
+}
+.typewriter::after{
+    content: '|';
+    position: absolute;
+    right: 0;
+    color: #ffd700;
+    background-color: #000000;
+    width: 100%;
+    animation: typing 10s steps(26) alternate infinite,
+                line 1s infinite;
+}
+
+
+@keyframes typing{
+    to{
+        width: 0%;
+    }
+}
+@keyframes line {
+    50%{
+        color: transparent;
+    }
+}
+
+.nerds{
+    width: 100%;
+    font-size: 140px;
+    color: rgb(46, 46, 46);
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    font-family: "Ethno";
+    display: flex;
+    justify-content: space-between;
+    animation: tubelightFlickerSmooth 1.5s ease-in;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+@keyframes tubelightFlickerSmooth {
+    0%, 15%, 30%, 100% {
+        opacity: 1;
+    }
+    5%, 20%, 50%, 70% {
+        opacity: 0.4;
+    }
+    10%, 25%, 55%, 75% {
+        opacity: 0.8;
+    }
+    60%, 90% {
+        opacity: 0.6;
+    }
+}
+@media screen and (max-width: 1034px) {
+    .nerds{
+        font-size: 120px;
+    }
+}
+@media screen and (max-width: 924px) {
+    .nerds{
+        font-size: 100px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .nerds{
+        font-size: 80px;
+    }
+    .main-div img{
+        height: 74vh;
+    }
+    .typewriter{
+        margin-left: 0px;
+    }
+}
+
+
+
+
+@media screen and (max-width: 448px) {
+    .typewriter{
+        font-size: 1.6rem;
+        width: 350px;
+        margin-bottom: 4rem;
+        font-weight: 600;
+        margin-top: -4rem;
+    }
+    .nerds{
+        font-size: 3rem;
+        z-index: 10;
+        bottom: 4.5rem;
+        
+    }   
+
+    .main-div img{
+        margin-bottom: 1.8rem;
+        height: 58vh;
+    }
+
+}

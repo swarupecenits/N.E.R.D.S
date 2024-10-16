@@ -1,0 +1,54 @@
+
+ .active{
+    color: rgb(59, 130, 246);
+    ;
+  } 
+ .hidden {
+    display: none; 
+  }
+  .gallery-container {
+    position: relative;
+  }
+  
+  .items {
+    transition: all 0.3s ease;
+  }
+  .item1{
+    height: 100%;
+  width: 100%;
+  }
+  
+  .blur {
+    filter: blur(5px); 
+  }
+  
+  .opacity-50 {
+    opacity: 0.5; 
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 10; 
+  }
+.main-image-img{
+  transform: translateY(-15%);
+} 
+@media only screen and (max-width: 720px){
+.main-image-img{
+  height: 30vh;
+}  }
+@media only screen and (max-width: 620px){
+ {
+     ;
+  }
+}
+.first{
+  width: 100%;
+  height: 100%;
+}
+
