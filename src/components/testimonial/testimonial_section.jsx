@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import  { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,6 +6,7 @@ import TestimonialCard from "./testimonial_card";
 import TestimonialText from "./testimonial_text";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import "./testimonial_styles.css";
+
 
 const testimonials = [
   {
