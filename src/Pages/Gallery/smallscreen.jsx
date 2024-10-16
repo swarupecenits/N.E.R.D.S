@@ -7,7 +7,7 @@ const SmallScreen = () => {
         initial={{ opacity: 0, translateX: "-35%", translateY: "20%" }}
         whileInView={{ opacity: 1, translateX: "-35%", translateY: "20%" }}
         transition={{ duration: 2 }}
-        className="relative mt-[-8rem] h-[58vh] ml-36 w-[102vw] bg-[url('https://res.cloudinary.com/dehyqj5i3/image/upload/v1728550690/1f33018e-a7e9-451c-91e6-dfd5e2b931c3.png'),_url('src/Pages/Gallery/Rectangle_189.svg')] bg-[length:110%_100%] bg-center bg-no-repeat z-0 overflow-hidden block sm:hidden" // Increase the size here
+        className="relative mt-[-2rem] h-[58vh] ml-36 w-[102vw] bg-[url('https://res.cloudinary.com/djzbq2dgj/image/upload/v1729077865/ribmo9obnfs3bhvpkcw2.svg'),_url('src/Pages/Gallery/Rectangle_189.svg')] bg-[length:110%_100%] bg-center bg-no-repeat z-0 overflow-hidden block sm:hidden" // Increase the size here
       >
       </motion.div>
 
