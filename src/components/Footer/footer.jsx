@@ -64,8 +64,8 @@ function Footer() {
                 </a>
               </p>
               <p className="text-white  font-extralight flex-wrap font-spaced text-sm ">
-                <a href="mailto:nerds.nitsilchar@gmail.com?subject=Hello%20N.E.R.D.S TEAM">
-                  Email- nerds.nitsilchar@gmail.com
+                <a href="mailto:nerds@nits.ac.in?subject=Hello%20N.E.R.D.S TEAM">
+                  Email- nerds@nits.ac.in
                 </a>
               </p>
               <p className="text-white font-extralight font-spaced text-[14px] ">
@@ -193,8 +193,8 @@ function Footer() {
                 </a>
               </p>
               <p className="text-white mt-0 font-spaced text-[14px] w-auto h-[29px] font-bold">
-                <a href="mailto:nerds.nitsilchar@gmail.com?subject=Hello%20N.E.R.D.S TEAM">
-                  Email- nerds.nitsilchar@gmail.com
+                <a href="mailto:nerds@nits.ac.in?subject=Hello%20N.E.R.D.S TEAM">
+                  Email- nerds@nits.ac.in
                 </a>
               </p>
               <p className="text-white mt-0 font-spaced text-[14px] w-auto h-[29px] font-bold">
