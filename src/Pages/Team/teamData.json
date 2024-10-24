@@ -110,6 +110,7 @@
     "linkedin": "https://www.linkedin.com/in/rakibul-islam-midul-1b8a081a9/",
     "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728401811/WhatsApp_Image_2024-10-08_at_16.22.07_dwxbtl.jpg"
   },
+  
   {
     "id": 7,
     "name": "Abhinav Singh",
@@ -652,5 +653,17 @@
     "github": "https://github.com/JACKIE30",
     "linkedin": "https://www.linkedin.com/in/jubaraj-talukdar-7603b1285/?originalSubdomain=in",
     "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728361653/Image_-_Jubaraj_Talukdar_hvqfrx.jpg"
+  },
+  {
+    "id": 80,
+    "name": "Swarup Purkayastha",
+    "team": "3rd Year",
+    "designation": "Core Team",
+    "developer_team": "No",
+    "email": "",
+    "social": "https://www.instagram.com/swarup__purkayastha",
+    "github": "https://github.com/SwarupPurkayastha",
+    "linkedin": "www.linkedin.com/in/swarup-purkayastha",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1729780116/WhatsApp_23_ayvlfv.webp"
   }
 ]
