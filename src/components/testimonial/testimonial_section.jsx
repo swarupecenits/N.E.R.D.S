@@ -39,6 +39,20 @@ const testimonials = [
     ),
   },
   {
+    name: "Sanidhya Kumar Patra",
+    role: "Board Member",
+    image:
+      "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/nt46itz1mt9pnophgkwc", // Replace with actual image link
+    text: (
+      <>
+        <span className="quote">“</span>
+        With Robotics being the future, the club fosters a vibrant community of
+        aspiring engineers, where creativity meets technology.
+        <span className="quote">”</span>
+      </>
+    ),
+  },
+  {
     name: "Swarup Chanda",
     role: "General Secretary",
     image:
@@ -53,6 +67,7 @@ const testimonials = [
       </>
     ),
   },
+  
 ];
 
 const TestimonialSection = () => {

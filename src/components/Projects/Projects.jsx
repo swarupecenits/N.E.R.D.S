@@ -27,14 +27,6 @@ const CustomNextArrow = ({ onClick }) => (
 // Project data example
 const projects = [
   {
-    title: "Arachno Bot",
-    description:
-      "The Spider Bot is a compact, multi-legged robot built using an Arduino Nano. It features precise motor control for smooth movement and agility. Equipped with sensors, the bot can navigate obstacles, offering a blend of mechanical engineering and coding. Ideal for robotics enthusiasts, it demonstrates how compact microcontrollers like the Arduino Nano can create sophisticated, interactive robots.",
-    imageUrl:
-      "https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/dbzvweqw1xwclrijk9rh",
-    link: "https://youtu.be/MOtOSJDkom8?si=BG7DCMavWIUhIVg9",
-  },
-  {
     title: "Head Motion Controlled Wheelchair",
     description:
       "The Head-motion-controlled wheelchair offers an innovative solution for individuals with mobility impairments. Using sensors to detect head movements, the system translates these into directional commands, allowing users to navigate with ease. Powered by microcontrollers and sensor technology, this hands-free design provides greater independence, enhancing accessibility and improving the quality of life for people with limited physical mobility.",
@@ -42,6 +34,15 @@ const projects = [
       "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/e3z5b5s5zihzynxxqi8o",
     link: "#",
   },
+  {
+    title: "Arachno Bot",
+    description:
+      "The Spider Bot is a compact, multi-legged robot built using an Arduino Nano. It features precise motor control for smooth movement and agility. Equipped with sensors, the bot can navigate obstacles, offering a blend of mechanical engineering and coding. Ideal for robotics enthusiasts, it demonstrates how compact microcontrollers like the Arduino Nano can create sophisticated, interactive robots.",
+    imageUrl:
+      "https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/dbzvweqw1xwclrijk9rh",
+    link: "https://youtu.be/MOtOSJDkom8?si=BG7DCMavWIUhIVg9",
+  },
+
   {
     title: "Quadcopter Drone",
     description:
