@@ -11,6 +11,14 @@ import Footer from "./components/Footer/footer";
 import Error from "./Pages/Error/Error";
 import LoadingAnimation from "./components/Loader/Loader"; // Adjust the path as necessary
 
+// ScrollToTop Component to ensure navigation starts from the top
+const ScrollToTop = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return null;
+};
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -26,6 +34,7 @@ function App() {
   return (
     <div className="flex flex-col min-h-screen">
       <Router>
+        <ScrollToTop />
         {loading ? ( // Conditional rendering for loading animation
           <LoadingAnimation />
         ) : (
@@ -41,6 +50,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/gallery" element={<Gallery />} />
+                {/* Catch-all route for 404 page */}
                 <Route path="*" element={<Error />} />
               </Routes>
             </div>

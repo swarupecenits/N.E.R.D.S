@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -44,9 +44,9 @@ function Footer() {
               />
               <p className="text-base text-white font-spaced font-extralight mt-3">
                 Or contact us{" "}
-                <a className="text-blue-500 underline" href="/contact">
+                <Link className="text-blue-500 underline" to="/contact">
                   here
-                </a>
+                </Link>
               </p>
             </div>
 
@@ -174,9 +174,9 @@ function Footer() {
 
               <p className="text-base text-white font-spaced mt-3">
                 Or contact us{" "}
-                <a className="text-blue-500 underline" href="/contact">
+                <Link className="text-blue-500 underline" to="/contact">
                   here
-                </a>
+                </Link>
               </p>
             </div>
 
