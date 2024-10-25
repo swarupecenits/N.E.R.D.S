@@ -184,19 +184,21 @@
     "linkedin": "",
     "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402105/WhatsApp_Image_2024-10-08_at_16.22.08_1_rdkv3d.jpg"
   },
+   
   {
-    "id": 48,
-    "name": "Mahashweta Borgohain",
+    "id": 24,
+    "name": "Reecha Deka",
     "team": "2nd Year",
     "designation": "Junior Member",
     "developer_team": "Yes",
-    "developer_domain": "UI/UX",
-    "email": "mahashwetab27@gmail.com",
-    "social": "https://www.instagram.com/mahashweta_borgohain/",
-    "github": "https://github.com/account",
-    "linkedin": "https://www.linkedin.com/in/mahashweta-borgohain-872378276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727867406/tccxh4z0fnxn8ag1ubsf.webp"
+    "developer_domain": "Web",
+    "email": "reechadeka010@gmail.com",
+    "social": "https://www.instagram.com/_ree.chaa/profilecard/?igsh=MXA1dmIybWJtc2d0NQ==",
+    "github": "https://github.com/rd4554",
+    "linkedin": "https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/xgxuksqi8n7kh4uiofph"
   },
+
 
   {
     "id": 14,
@@ -262,6 +264,19 @@
     "github": "https://github.com/Amita-00",
     "linkedin": "https://www.linkedin.com/in/amita-bhowmik",
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726866/ttrqtabtaz1nskmpap5o.webp"
+  },
+  {
+    "id": 48,
+    "name": "Mahashweta Borgohain",
+    "team": "2nd Year",
+    "designation": "Junior Member",
+    "developer_team": "Yes",
+    "developer_domain": "UI/UX",
+    "email": "mahashwetab27@gmail.com",
+    "social": "https://www.instagram.com/mahashweta_borgohain/",
+    "github": "https://github.com/account",
+    "linkedin": "https://www.linkedin.com/in/mahashweta-borgohain-872378276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727867406/tccxh4z0fnxn8ag1ubsf.webp"
   },
   {
     "id": 12,
@@ -361,20 +376,7 @@
     "linkedin": "https://www.linkedin.com/in/misbahul-karim-29152324a/",
     "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728360661/edited_misba_-_MISBAHUL_KARIM_ujryao.png"
   },
- 
-  {
-    "id": 24,
-    "name": "Reecha Deka",
-    "team": "2nd Year",
-    "designation": "Junior Member",
-    "developer_team": "Yes",
-    "developer_domain": "Web",
-    "email": "reechadeka010@gmail.com",
-    "social": "https://www.instagram.com/saurabhyadav__18/profilecard/?igsh=MTE1bTlvZGhyaTB4Mw==",
-    "github": "https://github.com/rd4554",
-    "linkedin": "https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/xgxuksqi8n7kh4uiofph"
-  },
+
   {
     "id": 25,
     "name": "Saurabh Yadav",
@@ -382,9 +384,9 @@
     "designation": "Junior Member",
     "developer_team": "No",
     "email": "saurabh_ug_23@ei.nits.ac.in",
-    "social": "saurabhyadav__18",
+    "social": "https://www.instagram.com/saurabhyadav__18/profilecard/?igsh=MTE1bTlvZGhyaTB4Mw==",
     "github": "https://github.com/saurabhyadav-18",
-    "linkedin": "https://www.linkedin.com/in/saurabhyadav",
+    "linkedin": "https://www.linkedin.com/in/saurabh-yadav-3814992a6/",
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/s5ycefipo7njo4hike1i"
   },
   {
