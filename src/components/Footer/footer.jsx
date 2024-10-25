@@ -56,7 +56,7 @@ function Footer() {
               </p>
               <p className="text-white leading-7 font-spaced text-sm font-extralight">
                 <a
-                  href="https://www.google.com/maps?q=1600+Amphitheatre+Parkway,+Mountain+View,+CA"
+                  href="https://maps.app.goo.gl/3bCXg1WyDSQ3rduD8"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -186,7 +186,7 @@ function Footer() {
               </p>
               <p className="text-white mt-5 font-spaced text-[14px] w-auto h-[29px] font-bold">
                 <a
-                  href="https://www.google.com/maps?q=1600+Amphitheatre+Parkway,+Mountain+View,+CA"
+                  href="https://maps.app.goo.gl/3bCXg1WyDSQ3rduD8"
                   target="_blank"
                 >
                   NIT Silchar, Silchar, Assam, India- 788010
