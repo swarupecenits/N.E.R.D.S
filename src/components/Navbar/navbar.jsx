@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-
 const links = [
   { name: 'Home', path: '/' },
   { name: 'Event', path: '/event' },
@@ -21,7 +20,10 @@ const Navbar = () => {
   };
 
   const handleLinkClick = (path) => {
-    // Close menu and navigate to the selected path
+    // Scroll to the top of the page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Set loading state and navigate to the selected path
     if (path !== '/') {
       setLoading(true);
     }
@@ -29,12 +31,12 @@ const Navbar = () => {
     setTimeout(() => {
       setLoading(false);
       navigate(path);
-      setIsOpen(false);  // Close the mobile menu after clicking the link
+      setIsOpen(false); // Close the mobile menu after clicking the link
     }, 1000);
   };
 
   return (
-    <nav className="bg-black z-50 text-white sticky top-0"> {/* Sticky Navbar */}
+    <nav className="bg-black z-50 text-white sticky top-0">
       <div className="lg:px-12 sm:px-7 max-w-9xl mx-auto max-h-24 flex justify-between items-center p-6">
         
         <div className="flex items-center">
