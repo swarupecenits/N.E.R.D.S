@@ -110,32 +110,7 @@
     "linkedin": "https://www.linkedin.com/in/rakibul-islam-midul-1b8a081a9/",
     "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728401811/WhatsApp_Image_2024-10-08_at_16.22.07_dwxbtl.jpg"
   },
-  
-  {
-    "id": 7,
-    "name": "Abhinav Singh",
-    "team": "2nd Year",
-    "designation": "Junior Member",
-    "developer_team": "Yes",
-    "developer_domain": "Web",
-    "email": "abhinav8723@gmail.com",
-    "social": "https://www.instagram.com/abhinav_xingh?igsh=MWUzdGJwaHJpa3hu",
-    "github": "https://github.com/abhinav8723",
-    "linkedin": "https://www.linkedin.com/in/abhinav-singh",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726865/vhlc0a5bpvgs5ctzbghp.webp"
-  },
-  {
-    "id": 8,
-    "name": "Abhishek Kumar",
-    "team": "2nd Year",
-    "designation": "Junior Member",
-    "developer_team": "No",
-    "email": "abhishekkr_ug_23@ee.nits.ac.in",
-    "social": "https://www.instagram.com/abhi31an?igsh=aGdrem9wNjJ2ZTNm&utm_source=qr",
-    "github": "https://github.com/abhi31an",
-    "linkedin": "https://www.linkedin.com/in/abhishek-kumar",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726866/jwabhaur1wszlv9vjx5h.webp"
-  },
+
   {
     "id": 39,
     "name": "Anwesha Duara",
@@ -149,17 +124,107 @@
     "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728360594/IMG-20240822-WA0002_-_ECE_070_ANWESHA_DUARA_w90q9d.jpg"
   },
   {
-    "id": 9,
-    "name": "Adarsh Sharma",
+    "id": 35,
+    "name": "Abhishek Kumar Gupta",
+    "team": "3rd Year",
+    "designation": "Arduino Head",
+    "developer_team": "No",
+    "email": "avishekabhishekh@gmail.com",
+    "social": "https://www.instagram.com/abhishekh__19?utm_source=qr&igsh=MTF6bmw0MzR3cDc5bw==",
+    "github": "https://github.com/AbhishekhKumar19",
+    "linkedin": "https://www.linkedin.com/in/abhishekh-gupta-874457258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728360743/IMG_20231113_111823_294_-_Avishek_Gupta_1_m98yts.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Aman Singh",
+    "team": "3rd Year",
+    "designation": "Core Team",
+    "developer_team": "No",
+    "email": "",
+    "social": "",
+    "github": "",
+    "linkedin": "",
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728401997/WhatsApp_Image_2024-10-08_at_16.22.07_1_fcrhpy.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Adarsh Mishra",
+    "team": "3rd Year",
+    "designation": "Core Team",
+    "developer_team": "No",
+    "email": "",
+    "social": "",
+    "github": "",
+    "linkedin": "",
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402029/WhatsApp_Image_2024-10-08_at_16.22.07_2_f9yev6.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Milesh Kumar",
+    "team": "3rd Year",
+    "designation": "Core Team",
+    "developer_team": "No",
+    "email": "",
+    "social": "",
+    "github": "",
+    "linkedin": "",
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402068/WhatsApp_Image_2024-10-08_at_16.22.09_swlxop.jpg"
+  },
+
+  {
+    "id": 40,
+    "name": "Priyanshu Kumar Gupta",
+    "team": "3rd Year",
+    "designation": "Core Team",
+    "developer_team": "No",
+    "email": "",
+    "social": "",
+    "github": "",
+    "linkedin": "",
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402105/WhatsApp_Image_2024-10-08_at_16.22.08_1_rdkv3d.jpg"
+  },
+  {
+    "id": 48,
+    "name": "Mahashweta Borgohain",
     "team": "2nd Year",
     "designation": "Junior Member",
-    "developer_team": "No",
-    "email": "adarsh_ug_23@ece.nits.ac.in",
-    "social": "https://www.instagram.com/hey_adarshsharma?igsh=NjU1bWoxajVodDRx",
-    "github": "https://github.com/AdarshSharma24",
-    "linkedin": "https://www.linkedin.com/in/adarsh-sharma-ba1ab428a",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726867/zocna1qwjbuexcqg0jy3.webp"
+    "developer_team": "Yes",
+    "developer_domain": "UI/UX",
+    "email": "mahashwetab27@gmail.com",
+    "social": "https://www.instagram.com/mahashweta_borgohain/",
+    "github": "https://github.com/account",
+    "linkedin": "https://www.linkedin.com/in/mahashweta-borgohain-872378276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727867406/tccxh4z0fnxn8ag1ubsf.webp"
   },
+
+  {
+    "id": 14,
+    "name": "Ayushman Sagar Baruah",
+    "team": "2nd Year",
+    "designation": "Junior Member",
+    "developer_team": "Yes",
+    "developer_domain": "Web",
+    "email": "ayushmanbaruah0101@gmail.com",
+    "social": "https://www.instagram.com/ayushman___sagar/profilecard/?igsh=aWdyOGFlN3k0a3pv",
+    "github": "https://github.com/Rockjone-pixel",
+    "linkedin": "https://www.linkedin.com/in/ayushman-sagar-baruah-b423b328a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/fq5es2m3mo5shev4eygz.webp"
+  },
+  {
+    "id": 22,
+    "name": "Nishit Baishya",
+    "team": "2nd Year",
+    "designation": "Junior Member",
+    "developer_team": "Yes",
+    "developer_domain": "Web",
+    "email": "nishit_ug_23@ece.nits.ac.in",
+    "social": "https://www.instagram.com/nishit._9?igsh=Z3FyYnUxb3ZobTJk&utm_source=qr",
+    "github": "https://github.com/Ezed9",
+    "linkedin": "https://www.linkedin.com/in/nishit-baishya-7859b928a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/vryzuc9umiwnapohojbp"
+  },
+
   {
     "id": 10,
     "name": "Akshat Anil Dighade",
@@ -171,6 +236,19 @@
     "github": "https://github.com/Auth0x78",
     "linkedin": "https://www.linkedin.com/in/akshat-dighade/",
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726866/als7qgn8sw8jhede6uwr.webp"
+  },
+  {
+    "id": 7,
+    "name": "Abhinav Singh",
+    "team": "2nd Year",
+    "designation": "Junior Member",
+    "developer_team": "Yes",
+    "developer_domain": "Web",
+    "email": "abhinav8723@gmail.com",
+    "social": "https://www.instagram.com/abhinav_xingh?igsh=MWUzdGJwaHJpa3hu",
+    "github": "https://github.com/abhinav8723",
+    "linkedin": "https://www.linkedin.com/in/abhinav-singh",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726865/vhlc0a5bpvgs5ctzbghp.webp"
   },
   {
     "id": 11,
@@ -210,17 +288,16 @@
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726867/wr4otawpkyiu7nkhgbw7.webp"
   },
   {
-    "id": 14,
-    "name": "Ayushman Sagar Baruah",
+    "id": 8,
+    "name": "Abhishek Kumar",
     "team": "2nd Year",
     "designation": "Junior Member",
-    "developer_team": "Yes",
-    "developer_domain": "Web",
-    "email": "ayushmanbaruah0101@gmail.com",
-    "social": "https://www.instagram.com/ayushman___sagar/profilecard/?igsh=aWdyOGFlN3k0a3pv",
-    "github": "https://github.com/Rockjone-pixel",
-    "linkedin": "https://www.linkedin.com/in/ayushman-sagar-baruah-b423b328a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/fq5es2m3mo5shev4eygz.webp"
+    "developer_team": "No",
+    "email": "abhishekkr_ug_23@ee.nits.ac.in",
+    "social": "https://www.instagram.com/abhi31an?igsh=aGdrem9wNjJ2ZTNm&utm_source=qr",
+    "github": "https://github.com/abhi31an",
+    "linkedin": "https://www.linkedin.com/in/abhishek-kumar",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726866/jwabhaur1wszlv9vjx5h.webp"
   },
   {
     "id": 15,
@@ -246,19 +323,6 @@
     "github": "https://github.com/Chirag-Bansal43/",
     "linkedin": "https://www.linkedin.com/in/chirag-bansal",
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/ad9xxuomeaxqvq513yyr.webp"
-  },
-  {
-    "id": 17,
-    "name": "Deepanshu Sharma",
-    "team": "2nd Year",
-    "designation": "Junior Member",
-    "developer_team": "Yes",
-    "developer_domain": "Web",
-    "email": "deepanshu_ug_23@ece.nits.ac.in",
-    "social": "https://www.instagram.com/_dsharmaa?igsh=YzljYTk1ODg3Zg==",
-    "github": "https://github.com/deepanshusharma",
-    "linkedin": "https://www.linkedin.com/in/deepanshu-sharma-2b5a50216",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/vcksenp8bngjukvaf79n.webp"
   },
   {
     "id": 18,
@@ -297,19 +361,7 @@
     "linkedin": "https://www.linkedin.com/in/misbahul-karim-29152324a/",
     "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728360661/edited_misba_-_MISBAHUL_KARIM_ujryao.png"
   },
-  {
-    "id": 22,
-    "name": "Nishit Baishya",
-    "team": "2nd Year",
-    "designation": "Junior Member",
-    "developer_team": "Yes",
-    "developer_domain": "Web",
-    "email": "nishit_ug_23@ece.nits.ac.in",
-    "social": "https://www.instagram.com/nishit._9?igsh=Z3FyYnUxb3ZobTJk&utm_source=qr",
-    "github": "https://github.com/Ezed9",
-    "linkedin": "https://www.linkedin.com/in/nishit-baishya-7859b928a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/vryzuc9umiwnapohojbp"
-  },
+ 
   {
     "id": 24,
     "name": "Reecha Deka",
@@ -410,67 +462,7 @@
     "linkedin": "https://www.linkedin.com/in/yashraj-mishra",
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/vqspobrke3cq1704filx"
   },
-  {
-    "id": 35,
-    "name": "Abhishek Kumar Gupta",
-    "team": "3rd Year",
-    "designation": "Arduino Head",
-    "developer_team": "No",
-    "email": "avishekabhishekh@gmail.com",
-    "social": "https://www.instagram.com/abhishekh__19?utm_source=qr&igsh=MTF6bmw0MzR3cDc5bw==",
-    "github": "https://github.com/AbhishekhKumar19",
-    "linkedin": "https://www.linkedin.com/in/abhishekh-gupta-874457258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728360743/IMG_20231113_111823_294_-_Avishek_Gupta_1_m98yts.jpg"
-  },
-  {
-    "id": 36,
-    "name": "Aman Singh",
-    "team": "3rd Year",
-    "designation": "Core Team",
-    "developer_team": "No",
-    "email": "",
-    "social": "",
-    "github": "",
-    "linkedin": "",
-    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728401997/WhatsApp_Image_2024-10-08_at_16.22.07_1_fcrhpy.jpg"
-  },
-  {
-    "id": 37,
-    "name": "Adarsh Mishra",
-    "team": "3rd Year",
-    "designation": "Core Team",
-    "developer_team": "No",
-    "email": "",
-    "social": "",
-    "github": "",
-    "linkedin": "",
-    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402029/WhatsApp_Image_2024-10-08_at_16.22.07_2_f9yev6.jpg"
-  },
-  {
-    "id": 38,
-    "name": "Milesh Kumar",
-    "team": "3rd Year",
-    "designation": "Core Team",
-    "developer_team": "No",
-    "email": "",
-    "social": "",
-    "github": "",
-    "linkedin": "",
-    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402068/WhatsApp_Image_2024-10-08_at_16.22.09_swlxop.jpg"
-  },
 
-  {
-    "id": 40,
-    "name": "Priyanshu Kumar Gupta",
-    "team": "3rd Year",
-    "designation": "Core Team",
-    "developer_team": "No",
-    "email": "",
-    "social": "",
-    "github": "",
-    "linkedin": "",
-    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402105/WhatsApp_Image_2024-10-08_at_16.22.08_1_rdkv3d.jpg"
-  },
   {
     "id": 41,
     "name": "Anushka Dam",
@@ -495,6 +487,18 @@
     "github": "",
     "linkedin": "",
     "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728360918/1726042686926_beiynl.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Adarsh Sharma",
+    "team": "2nd Year",
+    "designation": "Junior Member",
+    "developer_team": "No",
+    "email": "adarsh_ug_23@ece.nits.ac.in",
+    "social": "https://www.instagram.com/hey_adarshsharma?igsh=NjU1bWoxajVodDRx",
+    "github": "https://github.com/AdarshSharma24",
+    "linkedin": "https://www.linkedin.com/in/adarsh-sharma-ba1ab428a",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726867/zocna1qwjbuexcqg0jy3.webp"
   },
   {
     "id": 43,
@@ -556,19 +560,7 @@
     "linkedin": "https://www.linkedin.com/in/sagnik-das-366a34326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728360969/sagnik_-_Amita_bhowmik_owxv04.jpg"
   },
-  {
-    "id": 48,
-    "name": "Mahashweta Borgohain",
-    "team": "2nd Year",
-    "designation": "Junior Member",
-    "developer_team": "Yes",
-    "developer_domain": "UI/UX",
-    "email": "mahashwetab27@gmail.com",
-    "social": "https://www.instagram.com/mahashweta_borgohain/",
-    "github": "https://github.com/account",
-    "linkedin": "https://www.linkedin.com/in/mahashweta-borgohain-872378276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727867406/tccxh4z0fnxn8ag1ubsf.webp"
-  },
+
   {
     "id": 49,
     "name": "Jyotirmoy Nath",

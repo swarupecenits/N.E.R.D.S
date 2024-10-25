@@ -39,9 +39,10 @@ const Navbar = () => {
     <nav className="bg-black z-50 text-white sticky top-0">
       <div className="lg:px-12 sm:px-7 max-w-9xl mx-auto max-h-24 flex justify-between items-center p-6">
         
-        <div className="flex items-center">
+        <div className="flex cursor-pointer items-center"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/npansp6k2ntw7qeoqoms" alt="NERDS Logo" className="h-16 mr-8" />
-          <span className="hidden md:block text-2xl font-ethenocentric font-semibold">
+          <span className="hidden md:block text-2xl font-ethenocentric font-semibold cursor-pointer">
             <span
               className="hover:[text-shadow:_0_5px_100px_rgba(0,255,255,0.9),_0_0_15px_rgba(0,255,255,1),_0_0_200px_rgba(0,255,255,1),_0_0_100px_rgba(99,102,241,0.8);] hover:text-[#00FFFF]"
             >
@@ -83,7 +84,7 @@ const Navbar = () => {
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
       >
-        <div className="flex items-center justify-between p-4">
+        <div className="flex items-center justify-between p-4 cursor-pointer">
           <Link to="/" onClick={toggleMenu}>
             <img src="https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/npansp6k2ntw7qeoqoms" alt="NERDS Logo" className="h-10 ml-0" />
           </Link>
