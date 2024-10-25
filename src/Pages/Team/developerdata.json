@@ -26,17 +26,17 @@
       "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/fl7s9efn5nrfilh30rrl.webp"
     },
     {
-      "id": 7,
-      "name": "Abhinav Singh",
+      "id": 28,
+      "name": "Sunidhi Chetri",
       "team": "2nd Year",
       "designation": "Web",
       "developer_team": "Yes",
       "developer_domain": "Web",
-      "email": "abhinav8723@gmail.com",
-      "social": "https://www.instagram.com/abhinav_xingh?igsh=MWUzdGJwaHJpa3hu",
-      "github": "https://github.com/abhinav8723",
-      "linkedin": "https://www.linkedin.com/in/abhinav-singh",
-      "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726865/vhlc0a5bpvgs5ctzbghp.webp"
+      "email": "sunidhi_ug_23@ei.nits.ac.in",
+      "social": "https://www.instagram.com/sunidhiyk?igsh=MXdvMWtxY2xyYmZjbA%3D%3D&utm_source=qr",
+      "github": "https://github.com/sunidhiyk",
+      "linkedin": "https://www.linkedin.com/in/sunidhi-chetri",
+      "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/e7y4mcm0izibxucgrx2p"
     },
     {
       "id": 11,
@@ -78,20 +78,6 @@
       "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/edtrt1vujoq7mwla4mrz.webp"
     },
     {
-      "id": 17,
-      "name": "Deepanshu Sharma",
-      "team": "2nd Year",
-      "designation": "Web",
-      "developer_team": "Yes",
-      "developer_domain": "Web",
-      "email": "deepanshu_ug_23@ece.nits.ac.in",
-      "social": "https://www.instagram.com/_dsharmaa?igsh=YzljYTk1ODg3Zg==",
-      "github": "https://github.com/deepanshusharma",
-      "linkedin": "https://www.linkedin.com/in/deepanshu-sharma-2b5a50216",
-      "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/vcksenp8bngjukvaf79n.webp"
-    },
-
-    {
       "id": 22,
       "name": "Nishit Baishya",
       "team": "2nd Year",
@@ -103,6 +89,19 @@
       "github": "https://github.com/Ezed9",
       "linkedin": "https://www.linkedin.com/in/nishit-baishya",
       "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/vryzuc9umiwnapohojbp"
+    },
+    {
+      "id": 17,
+      "name": "Deepanshu Sharma",
+      "team": "2nd Year",
+      "designation": "Web",
+      "developer_team": "Yes",
+      "developer_domain": "Web",
+      "email": "deepanshu_ug_23@ece.nits.ac.in",
+      "social": "https://www.instagram.com/_dsharmaa?igsh=YzljYTk1ODg3Zg==",
+      "github": "https://github.com/deepanshusharma",
+      "linkedin": "https://www.linkedin.com/in/deepanshu-sharma-2b5a50216",
+      "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/vcksenp8bngjukvaf79n.webp"
     },
     {
       "id": 24,
@@ -130,18 +129,32 @@
       "linkedin": "https://www.linkedin.com/in/shouvik-paul",
       "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/gsdg9e3pixxeaczkavch"
     },
+    
     {
-      "id": 28,
-      "name": "Sunidhi Chetri",
+      "id": 7,
+      "name": "Abhinav Singh",
       "team": "2nd Year",
       "designation": "Web",
       "developer_team": "Yes",
       "developer_domain": "Web",
-      "email": "sunidhi_ug_23@ei.nits.ac.in",
-      "social": "https://www.instagram.com/sunidhiyk?igsh=MXdvMWtxY2xyYmZjbA%3D%3D&utm_source=qr",
-      "github": "https://github.com/sunidhiyk",
-      "linkedin": "https://www.linkedin.com/in/sunidhi-chetri",
-      "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/e7y4mcm0izibxucgrx2p"
+      "email": "abhinav8723@gmail.com",
+      "social": "https://www.instagram.com/abhinav_xingh?igsh=MWUzdGJwaHJpa3hu",
+      "github": "https://github.com/abhinav8723",
+      "linkedin": "https://www.linkedin.com/in/abhinav-singh",
+      "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726865/vhlc0a5bpvgs5ctzbghp.webp"
+    },
+    {
+      "id": 48,
+      "name": "Mahashweta Borgohain",
+      "team": "2nd Year",
+      "designation": "UI/UX",
+      "developer_team": "Yes",
+      "developer_domain": "UI/UX",
+      "email": "mahashwetab27@gmail.com",
+      "social": "https://www.instagram.com/mahashweta_borgohain/",
+      "github": "https://github.com/account",
+      "linkedin": "https://www.linkedin.com/in/mahashweta-borgohain-872378276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727867406/tccxh4z0fnxn8ag1ubsf.webp"
     },
     {
       "id": 30,
@@ -169,19 +182,7 @@
       "linkedin": "https://www.linkedin.com/in/anushka-dam-12a109297",
       "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727728954/Anushka_webp_pmqgrz.webp"
     },
-    {
-      "id": 48,
-      "name": "Mahashweta Borgohain",
-      "team": "2nd Year",
-      "designation": "UI/UX",
-      "developer_team": "Yes",
-      "developer_domain": "UI/UX",
-      "email": "mahashwetab27@gmail.com",
-      "social": "https://www.instagram.com/mahashweta_borgohain/",
-      "github": "https://github.com/account",
-      "linkedin": "https://www.linkedin.com/in/mahashweta-borgohain-872378276?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-      "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727867406/tccxh4z0fnxn8ag1ubsf.webp"
-    },
+
     {
       "id": 55,
       "name": "Jubaraj Talukdar",
