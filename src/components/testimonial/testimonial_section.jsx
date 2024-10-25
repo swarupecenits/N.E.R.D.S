@@ -40,7 +40,7 @@ const testimonials = [
   },
   {
     name: "Sanidhya Kumar Patra",
-    role: "Board Member",
+    role: "Vice President",
     image:
       "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/nt46itz1mt9pnophgkwc", // Replace with actual image link
     text: (
