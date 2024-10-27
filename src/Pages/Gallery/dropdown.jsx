@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-export default function TecnoesisButton() {
+export default function TecnoesisButton({setId}) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
 
@@ -41,13 +41,13 @@ export default function TecnoesisButton() {
       {/* Dropdown Content */}
       {dropdownOpen && (
         <div className="absolute top-full mt-1 w-48 bg-slate-900 rounded-lg shadow-lg z-50 ">
-          <a href="#subsection1" className="block px-4 py-2 text-white hover:bg-slate-800 cursor-pointer font-spaced">
+          <a 
+          onClick={() => {setId(2023)}} href="#subsection1" className="block px-4 py-2 text-white hover:bg-slate-800 cursor-pointer font-spaced">
             <span
-            onClick={() => {setId(2023)}}>2023</span>
+            >2023</span>
           </a>
-          <a href="#subsection2" className="block px-4 py-2 text-white hover:bg-slate-800 cursor-pointer font-spaced">
-           <span
-           onClick={() => {setId(2024)}}>2024</span>
+          <a onClick={() => {setId(2024)}} href="#subsection2" className="block px-4 py-2 text-white hover:bg-slate-800 cursor-pointer font-spaced">
+           <span>2024</span>
           </a>
         </div>
       )}

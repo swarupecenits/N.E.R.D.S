@@ -47,7 +47,7 @@ function Gallery() {
         <CaroulApp />
       </section>
       {/* Tecnoessis */}
-      <Header setActiveSection={setActiveSection} />
+      <Header setActiveSection={setActiveSection} setId={setId} />
         <section
           name="third1"
           className={`third1 overflow-hidden h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/folzejptk8mhkttgqrfh')] bg-cover bg-center sm:bg-none mb-32 z-0  ${activeSection === "third1" ? "" : "hidden"
@@ -66,7 +66,7 @@ function Gallery() {
         sm:row-span-1 md:row-span-1 lg:col-span-2 bg-cover  row-span-2 sm:ml-0 md:ml-0 lg:ml-0 lg:mr-3  "
                 style={{
                   backgroundImage:
-                    "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_11_u3zw4z.webp')",
+                    `url(${obj[id].robotron.img1})`,
                   height: "100%",
                   width: "auto",
                   border: "3px solid transparent",
