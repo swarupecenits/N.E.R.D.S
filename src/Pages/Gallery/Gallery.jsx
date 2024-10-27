@@ -88,7 +88,7 @@ function Gallery() {
                 className="items item2 bg-center bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-4 "
                 style={{
                   backgroundImage:
-                    "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_8_iquk2w.webp)",
+                    "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_8_iquk2w.webp')",
                   height: "100%",
                   width: "auto",
                   border: "3px solid transparent",
