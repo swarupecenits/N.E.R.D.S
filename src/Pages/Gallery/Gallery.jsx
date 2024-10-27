@@ -5,7 +5,6 @@ import "./gallery.css";
 import Header from "./header.jsx";
 import "./section.css";
 import CaroulApp from "./gallery_apy.jsx";
-// import { Robotron, Session, Projects,Tecnoesis } from "./imagedata.jsx";
 import MobileSlideshow from "./slideshow.jsx";
 import MobileSlideshow1 from "./slideshow1.jsx";
 import MobileSlideshow2 from "./slideshow2.jsx";
@@ -14,9 +13,10 @@ import YourComponent from "./translate.jsx";
 import PhotoGallery from "./slideonce.jsx";
 import Glimpse from "./slideonce1.jsx";
 import SmallScreen from "./smallscreen.jsx";
+import TecnoesisButton from "./dropdown.jsx";
 
 function Gallery() {
-
+  const [id, setId] = useState(2023);
 
   const [activeSection, setActiveSection] = useState("third1");
 
@@ -46,168 +46,168 @@ function Gallery() {
       </section>
       {/* Tecnoessis */}
       <Header setActiveSection={setActiveSection} />
-      <section
-        name="third1"
-        className={`third1 overflow-hidden h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/folzejptk8mhkttgqrfh')] bg-cover bg-center sm:bg-none mb-32   ${activeSection === "third1" ? "" : "hidden"
-          }`}
-      >
-        <div className=" backdrop-blur-[10px] ">
-          <motion.div
-            initial={{ opacity: 0, translateX: "0%", translateY: "10%" }}
-            whileInView={{ opacity: 1, translateX: "0%", translateY: "10%" }}
-            transition={{ duration: 2 }}
-            className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:grid-rows-1 md:grid-rows-2 sm:gap-3 md:gap-5  mt-11 lg:ml-20 lg:mt-10 h-[75vh] w-[95vw] items-center  sm:w-[90vw] lg:w-[92vw] pl-4 pr-4 md:w-[90vw]  grid-rows-3 "
-          >
-            {/* First Image (spans two columns on medium and large screens) */}
-            <div
-              className=" sm:block md:block bg-center lg:block hidden items item1 z-10 col-span-1 sm:h-50 sm:col-span-2 md:col-span-2 lg:row-span-1 
-      sm:row-span-1 md:row-span-1 lg:col-span-2 bg-cover  row-span-2 sm:ml-0 md:ml-0 lg:ml-0 lg:mr-3  "
-              style={{
-                backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_11_u3zw4z.webp')",
-                height: "100%",
-                width: "auto",
-                border: "3px solid transparent",
-                transition:
-                  "border-image 0.5s ease-in-out, border-radius 0.5s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.borderImage =
-                  "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.borderImage =
-                  "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
-              }}
-            ></div>
-            <MobileSlideshow />
-            {/* Second Image */}
-            <div
-              className="items item2 bg-center bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-4 "
-              style={{
-                backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_8_iquk2w.webp')",
-                height: "100%",
-                width: "auto",
-                border: "3px solid transparent",
-                transition:
-                  "border-image 0.5s ease-in-out, border-radius 0.5s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.borderImage =
-                  "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.borderImage =
-                  "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
-              }}
-            ></div>
+        <section
+          name="third1"
+          className={`third1 overflow-hidden h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/folzejptk8mhkttgqrfh')] bg-cover bg-center sm:bg-none mb-32 z-0  ${activeSection === "third1" ? "" : "hidden"
+            }`}
+        >
+          <div >
+            <motion.div
+              initial={{ opacity: 0, translateX: "0%", translateY: "10%" }}
+              whileInView={{ opacity: 1, translateX: "0%", translateY: "10%" }}
+              transition={{ duration: 2 }}
+              className="container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 sm:grid-rows-1 md:grid-rows-2 sm:gap-3 md:gap-5  mt-11 lg:ml-20 lg:mt-10 h-[75vh] w-[95vw] items-center  sm:w-[90vw] lg:w-[92vw] pl-4 pr-4 md:w-[90vw]  grid-rows-3 "
+            >
+              {/* First Image (spans two columns on medium and large screens) */}
+              <div
+                className=" sm:block md:block bg-center lg:block hidden items item1 z-10 col-span-1 sm:h-50 sm:col-span-2 md:col-span-2 lg:row-span-1 
+        sm:row-span-1 md:row-span-1 lg:col-span-2 bg-cover  row-span-2 sm:ml-0 md:ml-0 lg:ml-0 lg:mr-3  "
+                style={{
+                  backgroundImage:
+                    "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_11_u3zw4z.webp')",
+                  height: "100%",
+                  width: "auto",
+                  border: "3px solid transparent",
+                  transition:
+                    "border-image 0.5s ease-in-out, border-radius 0.5s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.borderImage =
+                    "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.borderImage =
+                    "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
+                }}
+              ></div>
+              <MobileSlideshow />
+              {/* Second Image */}
+              <div
+                className="items item2 bg-center bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-4 "
+                style={{
+                  backgroundImage:
+                    "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_8_iquk2w.webp')",
+                  height: "100%",
+                  width: "auto",
+                  border: "3px solid transparent",
+                  transition:
+                    "border-image 0.5s ease-in-out, border-radius 0.5s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.borderImage =
+                    "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.borderImage =
+                    "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
+                }}
+              ></div>
 
-            {/* Third Image (spans one row and two columns on large screens) */}
-            <div
-              className="items item3 bg-center bg-cover md:row-span-2 rounded-lg hidden md:block lg:block lg:mr-3"
-              style={{
-                backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_4_fynqri.webp')",
-                height: "100%",
-                width: "auto",
-                border: "3px solid transparent",
-                transition:
-                  "border-image 0.5s ease-in-out, border-radius 0.5s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.borderImage =
-                  "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.borderImage =
-                  "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
-              }}
-            ></div>
+              {/* Third Image (spans one row and two columns on large screens) */}
+              <div
+                className="items item3 bg-center bg-cover md:row-span-2 rounded-lg hidden md:block lg:block lg:mr-3"
+                style={{
+                  backgroundImage:
+                    "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_4_fynqri.webp')",
+                  height: "100%",
+                  width: "auto",
+                  border: "3px solid transparent",
+                  transition:
+                    "border-image 0.5s ease-in-out, border-radius 0.5s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.borderImage =
+                    "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.borderImage =
+                    "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
+                }}
+              ></div>
 
-            {/* Text Item (spans two rows) */}
-            <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1  md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-9 mt-72 sm:mt-0 mr-6  c backdrop-blur-[5px] lg:mb-8">
-              <p className="text-justify sm:line-clamp-none text-sm md:block hidden line-clamp-2">
-                Robotron is a prominent and highly anticipated module under Tecnoesis, attracting numerous teams to compete with their custom-built robots in a variety of challenging events. Known for its prestige and excitement, Robotron serves as a dynamic platform where participants can showcase their creativity and technical skills by designing robots capable of tackling complex tasks. The competitions rigorously test a Robots abilities in critical areas such as navigation, problem-solving, and adaptability. Teams strive for excellence, as winning Robotron is a highly esteemed achievement within the Tecnoesis community. This event fosters innovation and collaboration, providing participants with a valuable learning experience that pushes the boundaries of robotics and engineering to new heights.
-
-
-              </p>
-              <p className="text-justify sm:line-clamp-none text-sm block sm:hidden line-clamp-2">
-                Robotron showcases innovative robots, testing skills in challenging competitions.
+              {/* Text Item (spans two rows) */}
+              <div className="font-spaced items text-white flex-col item4 flex justify-around sm:text-[14px] text-sm box-border lg:col-span-1 md:col-span-1 sm:col-span-1 md:row-span-2 rounded-lg md:mt-8 grid-col col-span-2 row-span-1  md:text-[14px] lg:text-[14px] sm:ml-0 md:ml-0 lg:ml-0 ml-9 mt-72 sm:mt-0 mr-6  c backdrop-blur-[5px] lg:mb-8">
+                <p className="text-justify sm:line-clamp-none text-sm md:block hidden line-clamp-2">
+                  Robotron is a prominent and highly anticipated module under Tecnoesis, attracting numerous teams to compete with their custom-built robots in a variety of challenging events. Known for its prestige and excitement, Robotron serves as a dynamic platform where participants can showcase their creativity and technical skills by designing robots capable of tackling complex tasks. The competitions rigorously test a Robots abilities in critical areas such as navigation, problem-solving, and adaptability. Teams strive for excellence, as winning Robotron is a highly esteemed achievement within the Tecnoesis community. This event fosters innovation and collaboration, providing participants with a valuable learning experience that pushes the boundaries of robotics and engineering to new heights.
 
 
-              </p>
+                </p>
+                <p className="text-justify sm:line-clamp-none text-sm block sm:hidden line-clamp-2">
+                  Robotron showcases innovative robots, testing skills in challenging competitions.
 
-            </div>
 
-            {/* Fourth Image */}
-            <div
-              className="items item5 bg-cover bg-center rounded-lg hidden md:block lg:block lg:mr-3 lg:mt-6"
-              style={{
-                backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917097/WhatsApp_17_w0gh65.webp')",
-                height: "100%",
-                width: "auto",
-                border: "3px solid transparent",
-                transition:
-                  "border-image 0.5s ease-in-out, border-radius 0.5s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.borderImage =
-                  "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.borderImage =
-                  "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
-              }}
-            ></div>
+                </p>
 
-            {/* Fifth Image */}
-            <div
-              className="items item6 bg-cover bg-center rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
-              style={{
-                backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_4_fynqri.webp')",
-                height: "100%",
-                width: "auto",
-                border: "3px solid transparent",
-                transition:
-                  "border-image 0.5s ease-in-out, border-radius 0.5s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.borderImage =
-                  "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.borderImage =
-                  "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
-              }}
-            ></div>
+              </div>
 
-            {/* Sixth Image */}
-            <div
-              className="items item7 bg-center bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
-              style={{
-                backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_5_yobcaa.webp')",
-                height: "100%",
-                width: "auto",
-                border: "3px solid transparent",
-                transition:
-                  "border-image 0.5s ease-in-out, border-radius 0.5s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.borderImage =
-                  "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.borderImage =
-                  "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
-              }}
-            ></div>
-          </motion.div>
-        </div>
-      </section>
+              {/* Fourth Image */}
+              <div
+                className="items item5 bg-cover bg-center rounded-lg hidden md:block lg:block lg:mr-3 lg:mt-6"
+                style={{
+                  backgroundImage:
+                    "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917097/WhatsApp_17_w0gh65.webp')",
+                  height: "100%",
+                  width: "auto",
+                  border: "3px solid transparent",
+                  transition:
+                    "border-image 0.5s ease-in-out, border-radius 0.5s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.borderImage =
+                    "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.borderImage =
+                    "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
+                }}
+              ></div>
+
+              {/* Fifth Image */}
+              <div
+                className="items item6 bg-cover bg-center rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
+                style={{
+                  backgroundImage:
+                    "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_4_fynqri.webp')",
+                  height: "100%",
+                  width: "auto",
+                  border: "3px solid transparent",
+                  transition:
+                    "border-image 0.5s ease-in-out, border-radius 0.5s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.borderImage =
+                    "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.borderImage =
+                    "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
+                }}
+              ></div>
+
+              {/* Sixth Image */}
+              <div
+                className="items item7 bg-center bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
+                style={{
+                  backgroundImage:
+                    "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_5_yobcaa.webp')",
+                  height: "100%",
+                  width: "auto",
+                  border: "3px solid transparent",
+                  transition:
+                    "border-image 0.5s ease-in-out, border-radius 0.5s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.borderImage =
+                    "linear-gradient(91.17deg, rgba(96, 165, 250, 0.58) 23.6%, rgba(255, 255, 255, 0.8) 89.27%) 1";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.borderImage =
+                    "linear-gradient(91.19deg, rgba(0, 0, 0,1) 11.59%, rgba(0, 0, 0, 01) 77.23%) 1";
+                }}
+              ></div>
+            </motion.div>
+          </div>
+        </section>
 
       {/* Session */}
       <section
@@ -215,7 +215,7 @@ function Gallery() {
         className={`third2 h-[99vh] section overflow-hidden box-border bg-black bg-[url('https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/folzejptk8mhkttgqrfh')] bg-cover bg-center sm:bg-none mb-32 ${activeSection === "third2" ? "" : "hidden"
           }`}
       >
-        <div className=" backdrop-blur-[5px]">
+        <div >
           <motion.div
             initial={{ opacity: 0, translateX: "3%", translateY: "10%" }}
             whileInView={{ opacity: 1, translateX: "3%", translateY: "10%" }}
@@ -383,7 +383,7 @@ function Gallery() {
         className={`third3  h-[99vh] section overflow-hidden box-border bg-black bg-[url('https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/folzejptk8mhkttgqrfh')] bg-cover bg-center sm:bg-none mb-32 ${activeSection === "third3" ? "" : "hidden"
           }`}
       >
-        <div className=" backdrop-blur-[5px] ">
+        <div  >
           <motion.div
             initial={{ opacity: 0, translateX: "0%", translateY: "11%" }}
             whileInView={{ opacity: 1, translateX: "0%", translateY: "11%" }}
@@ -538,7 +538,7 @@ function Gallery() {
         className={`third4 h-[99vh] overflow-hidden section box-border bg-black bg-[url('https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/folzejptk8mhkttgqrfh')] bg-cover bg-center sm:bg-none mb-32  ${activeSection === "third4" ? "" : "hidden"
           }`}
       >
-        <div className=" backdrop-blur-[5px]">
+        <div >
           <motion.div
             initial={{ opacity: 0, translateX: "3%", translateY: "9%" }}
             whileInView={{ opacity: 1, translateX: "3%", translateY: "9%" }}
@@ -699,7 +699,13 @@ function Gallery() {
           </motion.div>
         </div>
       </section>
+
+
+
+      {/* Session */}
+
     </>
   );
 }
 export default Gallery;
+
