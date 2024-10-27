@@ -88,7 +88,7 @@ function Gallery() {
                 className="items item2 bg-center bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-4 "
                 style={{
                   backgroundImage:
-                    "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_8_iquk2w.webp')",
+                    `url(${obj[id].robotron.img2})`,
                   height: "100%",
                   width: "auto",
                   border: "3px solid transparent",
@@ -110,7 +110,7 @@ function Gallery() {
                 className="items item3 bg-center bg-cover md:row-span-2 rounded-lg hidden md:block lg:block lg:mr-3"
                 style={{
                   backgroundImage:
-                    "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_4_fynqri.webp')",
+                    `url(${obj[id].robotron.img3})`,
                   height: "100%",
                   width: "auto",
                   border: "3px solid transparent",
@@ -147,7 +147,7 @@ function Gallery() {
                 className="items item5 bg-cover bg-center rounded-lg hidden md:block lg:block lg:mr-3 lg:mt-6"
                 style={{
                   backgroundImage:
-                    "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917097/WhatsApp_17_w0gh65.webp')",
+                    `url(${obj[id].robotron.img4})`,
                   height: "100%",
                   width: "auto",
                   border: "3px solid transparent",
@@ -169,7 +169,7 @@ function Gallery() {
                 className="items item6 bg-cover bg-center rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
                 style={{
                   backgroundImage:
-                    "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_4_fynqri.webp')",
+                    `url(${obj[id].robotron.img5})`,
                   height: "100%",
                   width: "auto",
                   border: "3px solid transparent",
@@ -191,7 +191,7 @@ function Gallery() {
                 className="items item7 bg-center bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
                 style={{
                   backgroundImage:
-                    "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_5_yobcaa.webp')",
+                   `url(${obj[id].robotron.img6})`,
                   height: "100%",
                   width: "auto",
                   border: "3px solid transparent",
@@ -237,7 +237,7 @@ function Gallery() {
               className=" item2 hidden bg-center sm:block md:block lg:block box2 row-span-2 bg-cover pl-10 sm:pl-20 gap-0 "
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919448/chaar_dqxhhm.webp')",
+                  `url(${obj[id].session.img1})`,
                 height: "100%",
                 width: "100%",
 
@@ -261,7 +261,7 @@ function Gallery() {
               className="items box3 hidden md:block bg-center lg:block sm:block bg-cover ml-2 sm:ml-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919558/last_hmns34.webp')",
+                  `url(${obj[id].session.img2})`,
                 height: "100%",
                 width: "100%",
 
@@ -285,7 +285,7 @@ function Gallery() {
               className="items box4 hidden md:hidden bg-center lg:block col-span-1 sm:col-span-2 lg:col-span-2 bg-cover ml-7 mr-4 sm:mr-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919448/ek_r4xsdb.webp')",
+                  `url(${obj[id].session.img3})`,
                 height: "100%",
                 width: "100%",
 
@@ -309,7 +309,7 @@ function Gallery() {
               className="items box5 hidden md:hidden bg-center lg:block bg-cover ml-4 sm:ml-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919448/teen_h1tgkz.webp')",
+                  `url(${obj[id].session.img4})`,
                 height: "100%",
                 width: "100%",
 
@@ -333,7 +333,7 @@ function Gallery() {
               className="items box6 hidden md:hidden bg-center lg:block bg-cover ml-4 sm:ml-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919447/saat_gfc8kk.webp')",
+                 `url(${obj[id].session.img5})`,
                 height: "100%",
                 width: "100%",
 
@@ -357,7 +357,7 @@ function Gallery() {
               className="items box7 hidden md:hidden bg-center lg:block bg-cover ml-4 sm:ml-8 mr-4 sm:mr-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919448/do_f8ycnt.webp')",
+                `url(${obj[id].session.img6})`,
                 height: "100%",
                 width: "100%",
 
@@ -398,7 +398,7 @@ function Gallery() {
       sm:row-span-1 md:row-span-1 lg:col-span-2 bg-center bg-cover row-span-2 sm:ml-0 md:ml-0 lg:ml-0 lg:mr-3 "
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/e0nkkschwwk1spyc7qps.webp')",
+                  `url(${obj[id].projects.img1})`,
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -420,7 +420,7 @@ function Gallery() {
               className="items item2 bg-center bg-cover rounded-lg hidden sm:block md:block lg:block lg:mr-3 "
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728918858/mxiuihtnrf9vlfo1sse7.webp')",
+                  `url(${obj[id].projects.img2})`,
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -442,7 +442,7 @@ function Gallery() {
               className="items item3 bg-center bg-cover md:row-span-2 rounded-lg hidden md:block lg:block lg:mr-3"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728919040/jzomx8fdsx4rwampjyfg.webp')",
+                  `url(${obj[id].projects.img3})`,
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -471,7 +471,7 @@ function Gallery() {
               className="items item5 bg-center bg-cover rounded-lg hidden md:block lg:block lg:mr-3 lg:mt-6"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/vdqzlatnphdiehsr3kpj.webp')",
+                `url(${obj[id].projects.img4})`,
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -493,7 +493,7 @@ function Gallery() {
               className="items item6 bg-center bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/dduwpo8ylppcdijwcjh2.webp')",
+                 `url(${obj[id].projects.img5})`,
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -515,7 +515,7 @@ function Gallery() {
               className="items item7 bg-center bg-cover rounded-lg hidden md:hidden lg:block lg:mr-3 lg:mt-6"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728918857/f1btwbwlccqh6dl76zy9.webp')",
+                 `url(${obj[id].projects.img6})`,
                 height: "100%",
                 width: "auto",
                 border: "3px solid transparent",
@@ -559,7 +559,7 @@ function Gallery() {
               className=" item2 hidden bg-center sm:block md:block lg:block box2 row-span-2 bg-cover pl-10 sm:pl-20 gap-0 "
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728943839/paas_1_gvr1kr.webp')",
+                  `url(${obj[id].tecnoesis.img1})`,
                 height: "100%",
                 width: "100%",
 
@@ -583,7 +583,7 @@ function Gallery() {
               className="items box3 hidden bg-center md:block lg:block sm:block bg-cover ml-2 sm:ml-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728943835/final_hyfrmr.webp')",
+                  `url(${obj[id].tecnoesis.img2})`,
                 height: "100%",
                 width: "100%",
 
@@ -607,7 +607,7 @@ function Gallery() {
               className="items box4 bg-center hidden md:hidden lg:block col-span-1 sm:col-span-2 lg:col-span-2 bg-cover ml-7 mr-4 sm:mr-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728943835/9taa_fivcvj.webp')",
+                  `url(${obj[id].tecnoesis.img3})`,
                 height: "100%",
                 width: "100%",
 
@@ -631,7 +631,7 @@ function Gallery() {
               className="items box5 hidden md:hidden lg:block bg-cover ml-4 sm:ml-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728943838/eta_antyau.webp')",
+                `url(${obj[id].tecnoesis.img4})`,
                 height: "100%",
                 width: "100%",
 
@@ -655,7 +655,7 @@ function Gallery() {
               className="items bg-center box6 hidden md:hidden lg:block bg-cover ml-4 sm:ml-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728943835/11taa_ciocrf.webp')",
+                  `url(${obj[id].tecnoesis.img5})`,
                 height: "100%",
                 width: "100%",
 
@@ -679,7 +679,7 @@ function Gallery() {
               className="items box7 bg-center hidden md:hidden lg:block bg-cover ml-4 sm:ml-8 mr-4 sm:mr-8"
               style={{
                 backgroundImage:
-                  "url('https://res.cloudinary.com/dqmktpekh/image/upload/v1728916835/palnoxlnv64vqaszv0hi.webp')",
+                  `url(${obj[id].tecnoesis.img6})`,
                 height: "100%",
                 width: "100%",
 
