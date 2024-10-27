@@ -126,7 +126,7 @@ const Header = ({ setActiveSection, setId }) => {
         className="cursor-pointer"
       >
         <button
-          onClick={() => setActiveSection("third1")}
+          onClick={() => {setActiveSection("third1"); setId(2023)}}
           className="mt-5 relative inline-flex h-10 active:scale-95 transition overflow-hidden rounded-lg p-[1px] focus:outline-none group"
         >
            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)] transition-all duration-300 ease-out group-hover:inset-0"></span>
@@ -148,7 +148,7 @@ const Header = ({ setActiveSection, setId }) => {
         className="cursor-pointer"
       >
         <button
-          onClick={() => setActiveSection("third2")}
+          onClick={() => {setActiveSection("third2"); setId(2023)}}
           className="mt-5 relative inline-flex h-10 active:scale-95 transition overflow-hidden rounded-lg p-[1px] focus:outline-none group"
         >
           <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)] transition-all duration-300 ease-out group-hover:inset-0"></span>
@@ -170,7 +170,7 @@ const Header = ({ setActiveSection, setId }) => {
         className="cursor-pointer"
       >
         <button
-          onClick={() => setActiveSection("third3")}
+          onClick={() => {setActiveSection("third3"); setId(2023)}}
           className="mt-5 relative inline-flex h-10 active:scale-95 transition overflow-hidden rounded-lg p-[1px] focus:outline-none group"
         >
            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)] transition-all duration-300 ease-out group-hover:inset-0"></span>
@@ -192,7 +192,7 @@ const Header = ({ setActiveSection, setId }) => {
         className="cursor-pointer"
       >
         <button
-          onClick={() => setActiveSection("third4")}
+          onClick={() => {setActiveSection("third4"); setId(2023)}}
           className="mt-5 relative inline-flex h-10 active:scale-95 transition overflow-hidden rounded-lg p-[1px] focus:outline-none group "
         >
            <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)] transition-all duration-300 ease-out group-hover:inset-0"></span>
