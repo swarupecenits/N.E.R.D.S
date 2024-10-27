@@ -47,7 +47,7 @@ function Gallery() {
         <CaroulApp />
       </section>
       {/* Tecnoessis */}
-      <Header setActiveSection={setActiveSection} setId={setId} />
+      <Header setActiveSection={setActiveSection} setId={setId} id={id}/>
         <section
           name="third1"
           className={`third1 overflow-hidden h-[99vh] section box-border bg-black bg-[url('https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/folzejptk8mhkttgqrfh')] bg-cover bg-center sm:bg-none mb-32 z-0  ${activeSection === "third1" ? "" : "hidden"

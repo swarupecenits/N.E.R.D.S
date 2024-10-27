@@ -2,7 +2,7 @@ import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 import TecnoesisButton from "./dropdown.jsx";
 
-const Header = ({ setActiveSection, setId }) => {
+const Header = ({ setActiveSection, setId, id }) => {
   return (
     <>
      <motion.div
@@ -203,7 +203,7 @@ const Header = ({ setActiveSection, setId }) => {
       </Link>
     </div>
     <div className="z-50">
-     <TecnoesisButton setId={setId}/>
+     <TecnoesisButton setId={setId} id={id}/>
      
     </div>
     
