@@ -42,10 +42,12 @@ export default function TecnoesisButton() {
       {dropdownOpen && (
         <div className="absolute top-full mt-1 w-48 bg-slate-900 rounded-lg shadow-lg z-50 ">
           <a href="#subsection1" className="block px-4 py-2 text-white hover:bg-slate-800 cursor-pointer font-spaced">
-            2023
+            <span
+            onClick={() => {setId(2023)}}>2023</span>
           </a>
           <a href="#subsection2" className="block px-4 py-2 text-white hover:bg-slate-800 cursor-pointer font-spaced">
-           2024
+           <span
+           onClick={() => {setId(2024)}}>2024</span>
           </a>
         </div>
       )}
