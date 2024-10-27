@@ -14,9 +14,11 @@ import PhotoGallery from "./slideonce.jsx";
 import Glimpse from "./slideonce1.jsx";
 import SmallScreen from "./smallscreen.jsx";
 import TecnoesisButton from "./dropdown.jsx";
+import pic from "./JSON/Year-wise-pic.json"
 
 function Gallery() {
   const [id, setId] = useState(2023);
+  const obj = {...pic}
 
   const [activeSection, setActiveSection] = useState("third1");
 
