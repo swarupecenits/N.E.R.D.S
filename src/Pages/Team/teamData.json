@@ -328,18 +328,6 @@
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/edtrt1vujoq7mwla4mrz.webp"
   },
   {
-    "id": 16,
-    "name": "Chirag Bansal",
-    "team": "2nd Year",
-    "designation": "Junior Member",
-    "developer_team": "No",
-    "email": "chirag_ug_23@ece.nits.ac.in",
-    "social": "https://www.instagram.com/chiragbansal422/",
-    "github": "https://github.com/Chirag-Bansal43/",
-    "linkedin": "https://www.linkedin.com/in/chirag-bansal",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/ad9xxuomeaxqvq513yyr.webp"
-  },
-  {
     "id": 18,
     "name": "Dibya Roy",
     "team": "2nd Year",
@@ -376,19 +364,6 @@
     "linkedin": "https://www.linkedin.com/in/misbahul-karim-29152324a/",
     "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728360661/edited_misba_-_MISBAHUL_KARIM_ujryao.png"
   },
-
-  {
-    "id": 25,
-    "name": "Saurabh Yadav",
-    "team": "2nd Year",
-    "designation": "Junior Member",
-    "developer_team": "No",
-    "email": "saurabh_ug_23@ei.nits.ac.in",
-    "social": "https://www.instagram.com/saurabhyadav__18/profilecard/?igsh=MTE1bTlvZGhyaTB4Mw==",
-    "github": "https://github.com/saurabhyadav-18",
-    "linkedin": "https://www.linkedin.com/in/saurabh-yadav-3814992a6/",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/s5ycefipo7njo4hike1i"
-  },
   {
     "id": 26,
     "name": "Shouvik Paul",
@@ -402,18 +377,7 @@
     "linkedin": "https://www.linkedin.com/in/shouvikpaul-nits/",
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/gsdg9e3pixxeaczkavch"
   },
-  {
-    "id": 27,
-    "name": "Shrish Lahiri",
-    "team": "2nd Year",
-    "designation": "Junior Member",
-    "developer_team": "No",
-    "email": "shrish.lahiri2005@gmail.com",
-    "social": "https://www.instagram.com/shrish_lahiri/",
-    "github": "https://github.com/Shrish-Lahiri",
-    "linkedin": "https://www.linkedin.com/in/shrish-lahiri-8b6915273/",
-    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1729017037/WhatsApp_Image_2024-10-15_at_23.29.16_vhbxtk.jpg"
-  },
+
   {
     "id": 28,
     "name": "Sunidhi Chetri",
@@ -477,18 +441,6 @@
     "github": "https://github.com/Anushkadam4",
     "linkedin": "https://www.linkedin.com/in/anushka-dam-12a109297",
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727728954/Anushka_webp_pmqgrz.webp"
-  },
-  {
-    "id": 42,
-    "name": "Kunaljit Kashyap",
-    "team": "2nd Year",
-    "designation": "Junior Member",
-    "developer_team": "No",
-    "email": "yashrajmishra067@gmail.com",
-    "social": "",
-    "github": "",
-    "linkedin": "",
-    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728360918/1726042686926_beiynl.jpg"
   },
   {
     "id": 9,
@@ -588,30 +540,6 @@
     "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728403944/WhatsApp_Image_2024-10-08_at_21.41.50_zpfrdd.jpg"
   },
   {
-    "id": 51,
-    "name": "Joyoti Nath",
-    "team": "2nd Year",
-    "designation": "Junior Member",
-    "developer_team": "No",
-    "email": "",
-    "social": "",
-    "github": "",
-    "linkedin": "",
-    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728403944/WhatsApp_Image_2024-10-08_at_21.41.39_gnq9vk.jpg"
-  },
-  {
-    "id": 52,
-    "name": "Angshuman Bora",
-    "team": "2nd Year",
-    "designation": "Junior Member",
-    "developer_team": "No",
-    "email": "",
-    "social": "",
-    "github": "",
-    "linkedin": "",
-    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402707/WhatsApp_Image_2024-10-08_at_21.21.21_f17z12.jpg"
-  },
-  {
     "id": 53,
     "name": "Prantic Dev Nath",
     "team": "2nd Year",
@@ -623,18 +551,7 @@
     "linkedin": "https://www.linkedin.com/in/prantic-dev-nath",
     "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728361507/IMG_20241001_101916_-_Prantic_Dev_Nath_rkgqvn.jpg"
   },
-  {
-    "id": 54,
-    "name": "Sanjeev Choudhary",
-    "team": "2nd Year",
-    "designation": "Junior Member",
-    "developer_team": "No",
-    "email": "",
-    "social": "",
-    "github": "",
-    "linkedin": "",
-    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728402409/WhatsApp_Image_2024-10-08_at_21.14.18_e6ckka.jpg"
-  },
+  
   {
     "id": 55,
     "name": "Jubaraj Talukdar",
