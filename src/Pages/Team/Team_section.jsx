@@ -44,18 +44,20 @@ const Team = () => {
   return (
     <>
       <div className="text-center mt-8">
-        <label htmlFor="year-select" className="text-white mr-4">Select Year:</label>
-        <select
-          id="year-select"
-          value={selectedYear}
-          onChange={(e) => setSelectedYear(e.target.value)}
-          className="p-2 rounded bg-gray-800 text-white"
-        >
-          <option value="2023">2023</option>
-          <option value="2024">2024</option>
-          <option value="2025">2025</option>
-        </select>
-      </div>
+  <label htmlFor="year-select" className="text-white font-ethenocentric mr-4">
+    Select Year:
+  </label>
+  <select
+    id="year-select"
+    value={selectedYear}
+    onChange={(e) => setSelectedYear(e.target.value)}
+    className="p-2 rounded bg-gray-800 text-white font-ethenocentric"
+  >
+    <option className="font-ethenocentric" value="2023">2023</option>
+    <option className="font-ethenocentric" value="2024">2024</option>
+    <option className="font-ethenocentric" value="2025">2025</option>
+  </select>
+</div>
 
       {[{ title: "FOURTH YEAR MEMBERS", members: fourthYearMembers },
         { title: "THIRD YEAR MEMBERS", members: thirdYearMembers },

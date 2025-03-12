@@ -5,7 +5,7 @@ import "./gallery.css";
 import Header from "./header.jsx";
 import "./section.css";
 import CaroulApp from "./gallery_apy.jsx";
-// import { Robotron, Session, Projects,Tecnoesis } from "./imagedata.jsx";
+import { Robotron, Session, Projects,Tecnoesis } from "./imagedata.jsx";
 import MobileSlideshow from "./slideshow.jsx";
 import MobileSlideshow1 from "./slideshow1.jsx";
 import MobileSlideshow2 from "./slideshow2.jsx";
@@ -44,6 +44,14 @@ function Gallery() {
 
         <CaroulApp />
       </section>
+      <div class="year-dropdown-container">
+    <label for="year-select">Select Year:</label>
+    <select id="year-select">
+        <option value="2023">2023</option>
+        <option value="2024" selected>2024</option>
+        <option value="2025">2025</option>
+    </select>
+</div>
       {/* Tecnoessis */}
       <Header setActiveSection={setActiveSection} />
       <section
@@ -208,6 +216,8 @@ function Gallery() {
           </motion.div>
         </div>
       </section>
+
+      
 
       {/* Session */}
       <section
