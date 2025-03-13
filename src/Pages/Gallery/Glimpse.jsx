@@ -1,23 +1,28 @@
 import { useRef } from "react";
 import Slider from "react-slick";
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import useWindowSize from "./useWindowSize";
 
 const Glimpse = () => {
-  const sliderRef = useRef(null);
+  const sliderRef1 = useRef(null);
+  const sliderRef2 = useRef(null);
   const { width } = useWindowSize();
 
-  const settings = {
+  const settings1 = {
     dots: false,
     infinite: true,
-    speed: 800,
+    speed: 600, // Faster transition speed
     slidesToShow: width < 640 ? 1 : width < 1024 ? 2 : 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2500,
-    arrows: false,
+    autoplaySpeed: 1500, // Increased autoplay speed
+    arrows: false, // Removed arrows
     centerMode: true,
     centerPadding: "40px",
+  };
+
+  const settings2 = {
+    ...settings1,
+    rtl: true, // Second row moves in the opposite direction
   };
 
   const photos = [
@@ -28,15 +33,13 @@ const Glimpse = () => {
     "https://images.unsplash.com/photo-1531482615713-2afd69097998"
   ];
 
-  const handleNext = () => sliderRef.current.slickNext();
-  const handlePrev = () => sliderRef.current.slickPrev();
-
   return (
     <div className="w-full p-6 sm:p-10 relative flex flex-col items-center bg-black min-h-screen">
       <h1 className="text-white text-4xl md:text-5xl font-bold mb-10">Glimpse</h1>
 
-      <div className="relative w-full max-w-[1700px] flex justify-center">
-        <Slider ref={sliderRef} {...settings} className="w-full">
+      {/* First Row */}
+      <div className="relative w-full max-w-[1700px] flex justify-center mb-6">
+        <Slider ref={sliderRef1} {...settings1} className="w-full">
           {photos.map((photo, index) => (
             <div key={index} className="px-4 flex justify-center">
               <div className="overflow-hidden rounded-2xl shadow-xl group">
@@ -49,21 +52,23 @@ const Glimpse = () => {
             </div>
           ))}
         </Slider>
+      </div>
 
-        {/* Navigation Buttons */}
-        <button
-          onClick={handlePrev}
-          className="absolute left-2 sm:left-6 top-[50%] -translate-y-1/2 text-white p-2 sm:p-3 rounded-full bg-gray-900/60 hover:bg-gray-900/80 transition"
-        >
-          <IoIosArrowBack size={40} />
-        </button>
-
-        <button
-          onClick={handleNext}
-          className="absolute right-2 sm:right-6 top-[50%] -translate-y-1/2 text-white p-2 sm:p-3 rounded-full bg-gray-900/60 hover:bg-gray-900/80 transition"
-        >
-          <IoIosArrowForward size={40} />
-        </button>
+      {/* Second Row (Opposite Direction) */}
+      <div className="relative w-full max-w-[1700px] flex justify-center">
+        <Slider ref={sliderRef2} {...settings2} className="w-full">
+          {photos.map((photo, index) => (
+            <div key={index} className="px-4 flex justify-center">
+              <div className="overflow-hidden rounded-2xl shadow-xl group">
+                <img
+                  src={photo}
+                  alt={`Gallery ${index + 1}`}
+                  className="w-full h-auto aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );
