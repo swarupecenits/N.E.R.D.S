@@ -1,7 +1,7 @@
 import Glimpse from "./Glimpse";
 import SmallScreen from "./SmallScreen";
 import LargeScreen from "./LargeScreen";
-import Grid from "./Grid";
+import Grid from "./grid";
 
 const GalleryPage = () => {
   const images = [
