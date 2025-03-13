@@ -1,0 +1,23 @@
+{
+    "images": [
+      { "url": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0", "year": "2023", "event": "TechFest" },
+      { "url": "https://images.unsplash.com/photo-1518779578993-ec3579fee39f", "year": "2023", "event": "TechFest" },
+      { "url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4", "year": "2023", "event": "TechFest" },
+      { "url": "https://images.unsplash.com/photo-1494178270175-e96de2971df9", "year": "2023", "event": "TechFest" },
+      
+      { "url": "https://images.unsplash.com/photo-1518770660439-4636190af475", "year": "2022", "event": "Hackathon" },
+      { "url": "https://images.unsplash.com/photo-1516321497487-e288fb19713f", "year": "2022", "event": "Hackathon" },
+      { "url": "https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5", "year": "2022", "event": "Hackathon" },
+      { "url": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d", "year": "2022", "event": "Hackathon" },
+      
+      { "url": "https://images.unsplash.com/photo-1516251193007-45ef944ab0c6", "year": "2024", "event": "Robotics" },
+      { "url": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18f8", "year": "2024", "event": "Robotics" },
+      { "url": "https://images.unsplash.com/photo-1535378620161-850c3b3c7dbb", "year": "2024", "event": "Robotics" },
+      { "url": "https://images.unsplash.com/photo-1531482615713-2afd69097998", "year": "2024", "event": "Robotics" },
+  
+      { "url": "https://images.unsplash.com/photo-1478479405421-ce83c92fbf37", "year": "2021", "event": "AI Summit" },
+      { "url": "https://images.unsplash.com/photo-1507136566006-cfc505b114fc", "year": "2021", "event": "AI Summit" },
+      { "url": "https://images.unsplash.com/photo-1521747116042-5a810fda9664", "year": "2021", "event": "AI Summit" },
+      { "url": "https://images.unsplash.com/photo-1518704618243-b7b10907a11a", "year": "2021", "event": "AI Summit" }
+    ]
+  }
