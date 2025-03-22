@@ -35,7 +35,7 @@ const Glimpse = () => {
 
   return (
     <div className="w-full p-6 sm:p-10 relative flex flex-col items-center bg-black min-h-screen">
-      <h1 className="text-white text-4xl md:text-5xl font-bold mb-10">Glimpse</h1>
+      <h1 className="text-white text-4xl md:text-5xl font-bold mb-10 font-ethenocentric">Glimpse</h1>
 
       {/* First Row */}
       <div className="relative w-full max-w-[1700px] flex justify-center mb-6">

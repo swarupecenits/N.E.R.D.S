@@ -24,17 +24,17 @@ const Grid = () => {
     "col-span-1 row-span-1", // Small square
     "col-span-2 row-span-1", // Big landscape
     "col-span-1 row-span-2", // Small portrait
-    "col-span-2 row-span-2"  // Big portrait
+    "col-span-2 row-span-2", // Big portrait
   ];
 
   return (
-    <section className="w-full max-w-6xl px-4 sm:px-6">
-      <h2 className="text-3xl font-semibold text-center mb-6">Gallery</h2>
+    <section className="grid-bg w-full max-w-6xl px-4 sm:px-6">
+      <h2 className="text-3xl font-semibold text-center mb-6 font-spaced text-white">Gallery</h2>
 
       {/* Sorting Dropdowns */}
       <div className="flex flex-col sm:flex-row sm:justify-center gap-4 mb-6">
         <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-          <label className="text-white">Sort by Year:</label>
+          <label className="text-white font-spaced">Sort by Year:</label>
           <select
             value={selectedYear}
             onChange={(e) => setSelectedYear(e.target.value)}
@@ -49,7 +49,7 @@ const Grid = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-          <label className="text-white">Sort by Event:</label>
+          <label className="text-white font-spaced">Sort by Event:</label>
           <select
             value={selectedEvent}
             onChange={(e) => setSelectedEvent(e.target.value)}
