@@ -1,5 +1,6 @@
 import { useState } from "react";
 import imagesData from "./images.json";
+import './styles.css';
 
 const Grid = () => {
   const [selectedYear, setSelectedYear] = useState("All");
@@ -12,92 +13,132 @@ const Grid = () => {
   const years = ["All", ...new Set(images.map((img) => img.year))];
   const events = ["All", ...new Set(images.map((img) => img.event))];
 
-  // Filter images based on dropdown selection
+  // Filter images
   const filteredImages = images.filter(
     (img) =>
       (selectedYear === "All" || img.year === selectedYear) &&
       (selectedEvent === "All" || img.event === selectedEvent)
   );
 
-  // Different size variations for desktop
-  const sizes = [
-    "col-span-1 row-span-1", // Small square
-    "col-span-2 row-span-1", // Big landscape
-    "col-span-1 row-span-2", // Small portrait
-    "col-span-2 row-span-2", // Big portrait
-  ];
-
   return (
-    <section className="grid-bg w-full max-w-6xl px-4 sm:px-6">
-      <h2 className="text-3xl font-semibold text-center mb-6 font-spaced text-white">Gallery</h2>
+    <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-8">
+      {/* Gradient Heading */}
+      <h1 className="text-white text-4xl md:text-5xl font-bold mb-10 font-ethenocentric
+    bg-gradient-to-r from-purple-300 via-pink-300 to-blue-300 bg-clip-text text-transparent
+    transition-all duration-500 hover:opacity-90 enhanced-glow hover:scale-105 text-center">
+  Gallery
+</h1>
 
-      {/* Sorting Dropdowns */}
-      <div className="flex flex-col sm:flex-row sm:justify-center gap-4 mb-6">
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-          <label className="text-white font-spaced">Sort by Year:</label>
+      {/* Enhanced Filter Controls */}
+      <div className="mb-12 flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="w-full sm:w-64 relative">
           <select
             value={selectedYear}
             onChange={(e) => setSelectedYear(e.target.value)}
-            className="px-4 py-2 bg-gray-800 text-white rounded-md"
+            className="w-full pl-4 pr-10 py-3.5 bg-gray-800/70 backdrop-blur-sm rounded-xl
+                     border border-gray-600 text-gray-200 focus:ring-2 focus:border-gray-500
+                     focus:ring-purple-500 transition-all appearance-none
+                     hover:border-gray-500 cursor-pointer"
           >
-            {years.map((year, idx) => (
-              <option key={idx} value={year}>
-                {year}
-              </option>
+            <option value="All" className="bg-gray-800">All Years</option>
+            {years.filter(y => y !== "All").map((year) => (
+              <option key={year} value={year} className="bg-gray-800">{year}</option>
             ))}
           </select>
+          <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <span className="absolute -top-2 left-3 px-1 text-xs font-medium text-gray-400 bg-gray-900/80">
+            Year
+          </span>
         </div>
 
-        <div className="flex flex-col sm:flex-row sm:items-center gap-2">
-          <label className="text-white font-spaced">Sort by Event:</label>
+        <div className="w-full sm:w-64 relative">
           <select
             value={selectedEvent}
             onChange={(e) => setSelectedEvent(e.target.value)}
-            className="px-4 py-2 bg-gray-800 text-white rounded-md"
+            className="w-full pl-4 pr-10 py-3.5 bg-gray-800/70 backdrop-blur-sm rounded-xl
+                     border border-gray-600 text-gray-200 focus:ring-2 focus:border-gray-500
+                     focus:ring-purple-500 transition-all appearance-none
+                     hover:border-gray-500 cursor-pointer"
           >
-            {events.map((event, idx) => (
-              <option key={idx} value={event}>
-                {event}
-              </option>
+            <option value="All" className="bg-gray-800">All Events</option>
+            {events.filter(e => e !== "All").map((event) => (
+              <option key={event} value={event} className="bg-gray-800">{event}</option>
             ))}
           </select>
+          <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+            <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+          <span className="absolute -top-2 left-3 px-1 text-xs font-medium text-gray-400 bg-gray-900/80">
+            Event
+          </span>
         </div>
       </div>
 
-      {/* Grid Layout */}
-      <div
-        className="
-          grid gap-2 
-          grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4
-          auto-rows-[120px] sm:auto-rows-[150px] md:auto-rows-[200px] lg:auto-rows-[250px]
-        "
-      >
-        {filteredImages.map((img, index) => (
-          <div
-            key={index}
-            className={`relative overflow-hidden rounded-lg shadow-md transition-transform duration-300 ease-in-out hover:scale-105
-              ${sizes[index % sizes.length]} sm:${sizes[index % sizes.length]}
-            `}
+      {/* Masonry Grid */}
+      <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+        {filteredImages.map((img) => (
+          <div 
+            key={img.id}
+            className="relative break-inside-avoid group cursor-pointer"
             onClick={() => setModalImage(img.url)}
           >
-            <img
-              src={img.url}
-              alt={`${img.event} - ${img.year}`}
-              className="w-full h-full object-cover cursor-pointer"
-              loading="lazy"
-              onError={(e) => (e.target.src = "https://via.placeholder.com/300")}
-            />
+            <div className="relative overflow-hidden rounded-2xl transition-all
+                           duration-300 hover:scale-[1.02] hover:shadow-xl
+                           hover:shadow-purple-900/20">
+              <img
+                src={img.url}
+                alt={`${img.event} ${img.year}`}
+                className="w-full h-auto object-cover rounded-2xl"
+                loading="lazy"
+                style={{ aspectRatio: img.aspectRatio || '3/4' }}
+                onError={(e) => e.target.src = 'https://via.placeholder.com/300'}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70
+                             via-transparent to-transparent opacity-0
+                             group-hover:opacity-100 transition-opacity">
+                <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-5
+                               opacity-0 group-hover:translate-y-0 group-hover:opacity-100
+                               transition-all duration-300">
+                  <h3 className="text-lg font-semibold text-white">{img.event}</h3>
+                  <p className="text-sm text-gray-300">{img.year}</p>
+                </div>
+              </div>
+            </div>
           </div>
         ))}
       </div>
 
-      {/* Modal for Enlarged Image */}
+      {/* Image Modal */}
       {modalImage && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-          onClick={() => setModalImage(null)}
-        >
-          <img src={modalImage} alt="Enlarged" className="max-w-[90%] max-h-[90%] rounded-lg" />
+        <div className="fixed inset-0 bg-black/95 backdrop-blur-xl z-50 flex
+                       items-center justify-center p-4 animate-fadeIn"
+             onClick={() => setModalImage(null)}>
+          <div className="relative max-w-6xl max-h-[90vh] rounded-2xl overflow-hidden">
+            <img
+              src={modalImage}
+              alt="Enlarged view"
+              className="w-full h-full object-contain"
+            />
+            <button
+              className="absolute top-4 right-4 p-2 bg-black/50 rounded-full
+                        hover:bg-black/80 transition-colors"
+              onClick={(e) => {
+                e.stopPropagation();
+                setModalImage(null);
+              }}>
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                   viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
         </div>
       )}
     </section>

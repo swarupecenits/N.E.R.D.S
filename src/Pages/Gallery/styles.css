@@ -1,0 +1,75 @@
+/* ================ Animations ================ */
+@keyframes enhanced-glow {
+    0%, 100% {
+      text-shadow: 
+        0 0 15px rgba(192, 132, 252, 0.25),
+        0 0 25px rgba(255, 51, 204, 0.15);
+    }
+    50% {
+      text-shadow: 
+        0 0 25px rgba(192, 132, 252, 0.4),
+        0 0 35px rgba(255, 51, 204, 0.25);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* ================ Utility Classes ================ */
+  .enhanced-glow {
+    animation: enhanced-glow 3s ease-in-out infinite;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: auto;
+  }
+  
+  .enhanced-glow:hover {
+    animation-duration: 2s;
+    opacity: 0.92;
+    filter: brightness(1.08);
+  }
+  
+  .animate-fadeIn {
+    animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity;
+  }
+  
+  .break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  /* ================ Masonry Layout ================ */
+  @supports not (grid-template-rows: masonry) {
+    .columns-1 { column-count: 1 }
+    .columns-2 { column-count: 2 }
+    .columns-3 { column-count: 3 }
+    .columns-4 { column-count: 4 }
+  }
+  
+  /* ================ Form Elements ================ */
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  select::-ms-expand {
+    display: none;
+  }
+  
+  select:focus {
+    outline: 2px solid transparent;
+    box-shadow: 0 0 0 3px rgba(192, 132, 252, 0.5);
+  }
+  
+  /* ================ Performance Optimizations ================ */
+  @media (prefers-reduced-motion: reduce) {
+    .enhanced-glow,
+    .animate-fadeIn {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
