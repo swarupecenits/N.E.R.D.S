@@ -51,12 +51,15 @@ const GalleryPage = () => {
         <SmallScreen />
       </section>
 
-      <section className="w-full mb-16">
+      {/* Adjusted margin to reduce gap in mobile view */}
+      <section className="w-full mb-8 sm:mb-16">
         <Glimpse />
       </section>
 
-      {/* Gallery Grid */}
-      <Grid images={images} />
+      {/* Grid with mt-0 for mobile to reduce gap */}
+      <div className="w-full -mt-12 sm:mt-6">
+        <Grid images={images} />
+      </div>
     </div>
   );
 };
