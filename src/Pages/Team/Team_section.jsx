@@ -53,7 +53,6 @@ const Team = () => {
     onChange={(e) => setSelectedYear(e.target.value)}
     className="p-2 rounded bg-gray-800 text-white font-ethenocentric"
   >
-    <option className="font-ethenocentric" value="2023">2023</option>
     <option className="font-ethenocentric" value="2024">2024</option>
     <option className="font-ethenocentric" value="2025">2025</option>
   </select>

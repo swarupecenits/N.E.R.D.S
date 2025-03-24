@@ -29,7 +29,7 @@ const Grid = () => {
   Gallery
 </h1>
 
-      {/* Enhanced Filter Controls */}
+      {/* Filter Controls */}
       <div className="mb-12 flex flex-col sm:flex-row gap-4 justify-center">
         <div className="w-full sm:w-64 relative">
           <select
@@ -40,9 +40,9 @@ const Grid = () => {
                      focus:ring-purple-500 transition-all appearance-none
                      hover:border-gray-500 cursor-pointer"
           >
-            <option value="All" className="bg-gray-800">All Years</option>
+            <option value="All">All Years</option>
             {years.filter(y => y !== "All").map((year) => (
-              <option key={year} value={year} className="bg-gray-800">{year}</option>
+              <option key={year} value={year}>{year}</option>
             ))}
           </select>
           <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
@@ -64,9 +64,9 @@ const Grid = () => {
                      focus:ring-purple-500 transition-all appearance-none
                      hover:border-gray-500 cursor-pointer"
           >
-            <option value="All" className="bg-gray-800">All Events</option>
+            <option value="All">All Events</option>
             {events.filter(e => e !== "All").map((event) => (
-              <option key={event} value={event} className="bg-gray-800">{event}</option>
+              <option key={event} value={event}>{event}</option>
             ))}
           </select>
           <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
@@ -84,7 +84,7 @@ const Grid = () => {
       <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
         {filteredImages.map((img) => (
           <div 
-            key={img.id}
+            key={img.url}
             className="relative break-inside-avoid group cursor-pointer"
             onClick={() => setModalImage(img.url)}
           >
@@ -106,7 +106,15 @@ const Grid = () => {
                                opacity-0 group-hover:translate-y-0 group-hover:opacity-100
                                transition-all duration-300">
                   <h3 className="text-lg font-semibold text-white">{img.event}</h3>
-                  <p className="text-sm text-gray-300">{img.year}</p>
+                  <div className="flex items-center gap-1.5 mt-1">
+                    <p className="text-sm text-gray-300">{img.year}</p>
+                    {img.month && (
+                      <>
+                        <span className="text-gray-500">•</span>
+                        <p className="text-sm text-gray-400">{img.month}</p>
+                      </>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

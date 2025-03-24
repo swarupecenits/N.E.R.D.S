@@ -31,6 +31,8 @@ const EventCardSlider = () => {
     { image: 'https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/ejvo2heqqdqkel0222bc' },
     { image: 'https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/i2yqgni8i4zbdfjiu4yq' },
     { image: 'https://res.cloudinary.com/dqmktpekh/image/upload/v1728847659/gsmdqf0bk4hkhevnxzfe.webp' },
+    { image: 'https://res.cloudinary.com/diabjuzqc/image/upload/v1742846869/2bee4354-a622-4cc1-8f95-eff255b4c6f7_qgcwft.jpg' },
+
   ];
 
   return (
