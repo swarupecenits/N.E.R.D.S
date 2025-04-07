@@ -59,6 +59,15 @@ const projects = [
       "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ea9y3xi7we9gonc2qudy",
     link: "https://youtu.be/KyjrGN9ZTPg?si=oehFA-BAHmJJ5sR_",
   },
+  // Add this object inside the `projects` array
+{
+  title: "Self Balancing Bot",
+  description:
+    "The Self Balancing Bot is a two-wheeled robot that uses a combination of sensors and control algorithms to maintain its balance autonomously. Powered by an MPU6050 gyroscope and accelerometer, along with PID control logic, it adjusts motor speed and direction in real time to stay upright. This project is ideal for learning control systems, embedded programming, and real-world applications of robotics and physics.",
+  imageUrl:
+    "https://res.cloudinary.com/diabjuzqc/image/upload/v1744056534/image_l0t8z0.png", // Replace with actual Cloudinary image URL
+  link: "#", // Optional: Add a video or GitHub repo if available
+}
 ];
 
 const Projects = () => {
