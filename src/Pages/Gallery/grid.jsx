@@ -24,10 +24,10 @@ const Grid = () => {
     <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 py-8">
       {/* Gradient Heading */}
       <h1 className="text-white text-4xl md:text-5xl font-bold mb-10 font-ethenocentric
-    bg-gradient-to-r from-purple-300 via-pink-300 to-blue-300 bg-clip-text text-transparent
-    transition-all duration-500 hover:opacity-90 enhanced-glow hover:scale-105 text-center">
-  Gallery
-</h1>
+        bg-gradient-to-r from-purple-300 via-pink-300 to-blue-300 bg-clip-text text-transparent
+        transition-all duration-500 hover:opacity-90 enhanced-glow hover:scale-105 text-center">
+        Gallery
+      </h1>
 
       {/* Filter Controls */}
       <div className="mb-12 flex flex-col sm:flex-row gap-4 justify-center">
@@ -80,12 +80,12 @@ const Grid = () => {
         </div>
       </div>
 
-      {/* Masonry Grid */}
-      <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+      {/* Responsive Grid Layout */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {filteredImages.map((img) => (
-          <div 
+          <div
             key={img.url}
-            className="relative break-inside-avoid group cursor-pointer"
+            className="relative group cursor-pointer"
             onClick={() => setModalImage(img.url)}
           >
             <div className="relative overflow-hidden rounded-2xl transition-all
