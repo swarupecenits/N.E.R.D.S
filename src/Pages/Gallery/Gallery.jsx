@@ -5,14 +5,7 @@ import LargeScreen from "./largescreen";
 import Grid from "./grid";
 
 const GalleryPage = () => {
-  const images = [
-    "https://res.cloudinary.com/diabjuzqc/image/upload/v1727812041/cld-sample-3.jpg",
-    "https://res.cloudinary.com/diabjuzqc/image/upload/v1727812041/cld-sample-3.jpg",
-    "https://res.cloudinary.com/diabjuzqc/image/upload/v1727812041/cld-sample-3.jpg",
-    "https://res.cloudinary.com/diabjuzqc/image/upload/v1727812041/cld-sample-3.jpg",
-    "https://res.cloudinary.com/diabjuzqc/image/upload/v1727812041/cld-sample-3.jpg",
-    "https://res.cloudinary.com/diabjuzqc/image/upload/v1727812041/cld-sample-3.jpg",
-  ];
+  const images = [];
 
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
