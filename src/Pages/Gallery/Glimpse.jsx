@@ -32,6 +32,9 @@ const Glimpse = () => {
     "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_8_iquk2w.webp",
     "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_4_fynqri.webp",
     "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917097/WhatsApp_17_w0gh65.webp",
+    "https://res.cloudinary.com/diabjuzqc/image/upload/v1744131264/PHOTO-2025-04-08-15-04-24_gekchz.jpg",
+    
+
   ];
 
   const photosRow2 = [
@@ -39,6 +42,7 @@ const Glimpse = () => {
     "https://res.cloudinary.com/dqmktpekh/image/upload/v1728919448/chaar_dqxhhm.webp",
     "https://res.cloudinary.com/dqmktpekh/image/upload/v1728919558/last_hmns34.webp",
     "https://res.cloudinary.com/dqmktpekh/image/upload/v1728919448/ek_r4xsdb.webp",
+    "https://res.cloudinary.com/diabjuzqc/image/upload/v1744131267/PHOTO-2025-03-28-21-30-46_tgykio.jpg",
   ];
 
   return (
