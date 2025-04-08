@@ -20,7 +20,7 @@ const LargeScreen = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 2 }}
-        className="absolute inset-0 bg-[url('https://res.cloudinary.com/dehyqj5i3/image/upload/v1728550690/1f33018e-a7e9-451c-91e6-dfd5e2b931c3.png'),_url('src/Pages/Gallery/Rectangle_189.svg')] bg-contain bg-right bg-no-repeat z-10"
+        className="absolute inset-0 bg-[url('https://res.cloudinary.com/dehyqj5i3/image/upload/v1728550690/1f33018e-a7e9-451c-91e6-dfd5e2b931c3.png'),_url('src/Pages/Gallery/Rectangle_189.svg')] bg-contain bg-right bg-no-repeat z-10 right-20"
       />
 
       {/* Text Container */}
