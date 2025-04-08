@@ -30,17 +30,17 @@ const LargeScreen = () => {
         transition={{ duration: 2 }}
         className="absolute top-[30%] left-10 z-20 text-left"
       >
-        <div className="px-2">
-          <p className="font-ethenocentric font-normal text-[55px] drop-shadow-sm bg-gradient-to-r from-white via-pink-200 to-black bg-clip-text text-transparent">
-            PHOTO
-          </p>
-          <p className="font-ethenocentric font-normal text-[55px] mt-4 bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent">
-            GALLERY
-          </p>
-          <p className="font-spaced font-bold text-[30px] mt-3 bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent">
-            A journey through timeless images.
-          </p>
-        </div>
+       <div className="px-2 leading-[1.1]">
+  <p className="font-ethenocentric font-normal text-[55px] drop-shadow-sm bg-gradient-to-r from-white via-pink-200 to-black bg-clip-text text-transparent">
+    PHOTO
+  </p>
+  <p className="font-ethenocentric font-normal text-[55px] mt-1 bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent">
+    GALLERY
+  </p>
+  <p className="font-spaced font-bold text-[30px] mt-1 bg-gradient-to-r from-white via-pink-200 to-blue-400 bg-clip-text text-transparent">
+    A journey through timeless images.
+  </p>
+</div>
       </motion.div>
     </div>
   );
