@@ -43,21 +43,35 @@ const Team = () => {
 
   return (
     <>
-      <div className="text-center mt-4">
-        <label htmlFor="year-select" className="text-white font-ethenocentric">
-          Select Year:
-        </label>
-        <select
-          id="year-select"
-          value={selectedYear}
-          onChange={(e) => setSelectedYear(e.target.value)}
-          className="p-2 rounded bg-gray-800 text-white font-ethenocentric mt-2"
+     <div className="text-center mt-4 mb-8">
+  <div className="inline-flex items-center gap-4">
+    <label htmlFor="year-select" className="text-white font-ethenocentric text-lg">
+      Select Year:
+    </label>
+    <div className="relative">
+      <select
+        id="year-select"
+        value={selectedYear}
+        onChange={(e) => setSelectedYear(e.target.value)}
+        className="appearance-none p-2 pr-8 rounded bg-gray-800 text-white font-ethenocentric"
+      >
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+      </select>
+      <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center">
+        <svg
+          className="w-4 h-4 text-white"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
         >
-          <option className="font-ethenocentric" value="2024">2024</option>
-          <option className="font-ethenocentric" value="2025">2025</option>
-        </select>
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
       </div>
-
+    </div>
+  </div>
+</div>
       {[{ title: "FOURTH YEAR MEMBERS", members: fourthYearMembers },
         { title: "THIRD YEAR MEMBERS", members: thirdYearMembers },
         { title: "SECOND YEAR MEMBERS", members: secondYearMembers }].map((section, idx) => (
