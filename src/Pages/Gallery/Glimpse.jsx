@@ -33,6 +33,7 @@ const Glimpse = () => {
     "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_4_fynqri.webp",
     "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917097/WhatsApp_17_w0gh65.webp",
     "https://res.cloudinary.com/diabjuzqc/image/upload/v1744131264/PHOTO-2025-04-08-15-04-24_gekchz.jpg",
+    "https://res.cloudinary.com/diabjuzqc/image/upload/v1744229322/PHOTO-2025-01-13-18-54-17_hmv3vh.jpg",
     
 
   ];

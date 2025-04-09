@@ -43,25 +43,25 @@ const Team = () => {
 
   return (
     <>
-      <div className="text-center mt-8">
-  <label htmlFor="year-select" className="text-white font-ethenocentric mr-4">
-    Select Year:
-  </label>
-  <select
-    id="year-select"
-    value={selectedYear}
-    onChange={(e) => setSelectedYear(e.target.value)}
-    className="p-2 rounded bg-gray-800 text-white font-ethenocentric"
-  >
-    <option className="font-ethenocentric" value="2024">2024</option>
-    <option className="font-ethenocentric" value="2025">2025</option>
-  </select>
-</div>
+      <div className="text-center mt-4">
+        <label htmlFor="year-select" className="text-white font-ethenocentric">
+          Select Year:
+        </label>
+        <select
+          id="year-select"
+          value={selectedYear}
+          onChange={(e) => setSelectedYear(e.target.value)}
+          className="p-2 rounded bg-gray-800 text-white font-ethenocentric mt-2"
+        >
+          <option className="font-ethenocentric" value="2024">2024</option>
+          <option className="font-ethenocentric" value="2025">2025</option>
+        </select>
+      </div>
 
       {[{ title: "FOURTH YEAR MEMBERS", members: fourthYearMembers },
         { title: "THIRD YEAR MEMBERS", members: thirdYearMembers },
         { title: "SECOND YEAR MEMBERS", members: secondYearMembers }].map((section, idx) => (
-        <div key={idx} className="text-center" style={{ marginTop: "250px" }}>
+        <div key={idx} className="text-center mt-24">
           <h1 className="font-ethenocentric text-5xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent meetour">
             MEET OUR
           </h1>
@@ -98,7 +98,7 @@ const Team = () => {
         </div>
       ))}
 
-      <div className="text-center" style={{ marginTop: "250px" }}>
+      <div className="text-center mt-24">
         <h1 className="font-ethenocentric text-4xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent meetour">
           MEET OUR
         </h1>
