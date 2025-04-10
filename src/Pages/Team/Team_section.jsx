@@ -9,18 +9,16 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import data from "./teamData.json";
-import datas from "./developerdata.json"
+import datas from "./developerdata.json";
 
 const Team = () => {
   const [isLaptopView, setIsLaptopView] = useState(window.innerWidth >= 1024);
-
   const [teamData, setTeamData] = useState([]);
-  const [developerData, setDeveloperData]=useState([])
+  const [developerData, setDeveloperData] = useState([]);
+  const [selectedYear, setSelectedYear] = useState("2024"); // Default selected year set to 2024
 
   useEffect(() => {
     setTeamData(data);
-  }, []);
-  useEffect(() => {
     setDeveloperData(datas);
   }, []);
 
@@ -37,161 +35,89 @@ const Team = () => {
     };
   }, []);
 
-
-
-  const fourthYearMembers = teamData.filter((member) => member.team === "4th Year");
-  const thirdYearMembers = teamData.filter((member) => member.team === "3rd Year");
-  const secondYearMembers = teamData.filter((member) => member.team === "2nd Year");
+  const filteredTeamData = teamData.filter((member) => member.year === selectedYear);
+  const fourthYearMembers = filteredTeamData.filter((member) => member.team === "4th Year");
+  const thirdYearMembers = filteredTeamData.filter((member) => member.team === "3rd Year");
+  const secondYearMembers = filteredTeamData.filter((member) => member.team === "2nd Year");
   const developers = developerData.filter((member) => member.developer_team === "Yes");
 
   return (
     <>
-      <div className="text-center meet4th">
-        <h1 className="font-ethenocentric text-5xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent meetour">
-          MEET OUR
-        </h1>
-        <h1 className="  font-ethenocentric text-4xl mt-3 bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent member">
-          FOURTH YEAR MEMBER
-        </h1>
-      </div>
-      <Swiper
-        navigation
-        pagination={false}
-        grabCursor={true}
-        spaceBetween={20}
-        slidesPerView={1}
-        breakpoints={{
-          640: { slidesPerView: 1, spaceBetween: 10 },
-          768: { slidesPerView: 2, spaceBetween: 20 },
-          1024: { slidesPerView: 3, spaceBetween: 30 },
-        }}
-        modules={[Navigation, Pagination]}
+     <div className="text-center mt-4 mb-8">
+  <div className="inline-flex items-center gap-4">
+    <label htmlFor="year-select" className="text-white font-ethenocentric text-lg">
+      Select Year:
+    </label>
+    <div className="relative">
+      <select
+        id="year-select"
+        value={selectedYear}
+        onChange={(e) => setSelectedYear(e.target.value)}
+        className="appearance-none p-2 pr-8 rounded bg-gray-800 text-white font-ethenocentric"
       >
-        {fourthYearMembers.map((member, index) => (
-          <SwiperSlide key={index}>
-            <TeamCard className="kardy" member={member} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div
-        className="grid place-items-center"
-        style={{
-          marginTop: "84px",
-          marginBottom: "30px",
-        }}
-      >
-        <hr className="firstline" />
-        <hr className="secondline" />
-        <hr className="thirdline" />
-      </div>
-
-
-
-
-      <div className="text-center" style={{ marginTop: "250px" }}>
-        <h1 className="font-ethenocentric text-5xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent meetour">
-          MEET OUR
-        </h1>
-        <h1 className="font-ethenocentric text-4xl mt-3 bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent member">
-          THIRD YEAR MEMBER
-        </h1>
-      </div>
-
-      {isLaptopView ? (
-        <div className="grid grid-cols-1 mt-8 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-6">
-          {thirdYearMembers.map((member, index) => (
-            <TeamCard key={index} member={member} />
-          ))}
-        </div>
-      ) : (
-        <Swiper
-          navigation
-          pagination={false}
-          grabCursor={true}
-          spaceBetween={20}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 1, spaceBetween: 10 },
-            768: { slidesPerView: 2, spaceBetween: 20 },
-            1024: { slidesPerView: 3, spaceBetween: 30 },
-          }}
-          modules={[Navigation, Pagination, EffectCoverflow]}
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+      </select>
+      <div className="pointer-events-none absolute inset-y-0 right-2 flex items-center">
+        <svg
+          className="w-4 h-4 text-white"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
         >
-          {thirdYearMembers.map((member, index) => (
-            <SwiperSlide key={index}>
-              <TeamCard member={member} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      )}
-
-<div
-        className="grid place-items-center"
-        style={{
-          marginTop: "84px",
-          marginBottom: "30px",
-        }}
-      >
-        <hr className="firstline" />
-        <hr className="secondline" />
-        <hr className="thirdline" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
       </div>
-
-      <div className="text-center" style={{ marginTop: "250px" }}>
-        <h1 className="font-ethenocentric text-5xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent meetour">
-          MEET OUR
-        </h1>
-        <h1 className="font-ethenocentric text-4xl mt-3 bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent member">
-          SECOND YEAR MEMBER
-        </h1>
-      </div>
-
-      {isLaptopView ? (
-        <div className="grid grid-cols-1 mt-8 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-6">
-          {secondYearMembers.map((member, index) => (
-            <TeamCard key={index} member={member} />
-          ))}
+    </div>
+  </div>
+</div>
+      {[{ title: "FOURTH YEAR MEMBERS", members: fourthYearMembers },
+        { title: "THIRD YEAR MEMBERS", members: thirdYearMembers },
+        { title: "SECOND YEAR MEMBERS", members: secondYearMembers }].map((section, idx) => (
+        <div key={idx} className="text-center mt-24">
+          <h1 className="font-ethenocentric text-5xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent meetour">
+            MEET OUR
+          </h1>
+          <h1 className="font-ethenocentric text-4xl mt-3 bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent member">
+            {section.title} ({selectedYear})
+          </h1>
+          {isLaptopView ? (
+            <div className="grid grid-cols-1 mt-8 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-6">
+              {section.members.map((member, index) => (
+                <TeamCard key={index} member={member} />
+              ))}
+            </div>
+          ) : (
+            <Swiper
+              navigation
+              pagination={false}
+              grabCursor={true}
+              spaceBetween={20}
+              slidesPerView={1}
+              breakpoints={{
+                640: { slidesPerView: 1, spaceBetween: 10 },
+                768: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 3, spaceBetween: 30 },
+              }}
+              modules={[Navigation, Pagination, EffectCoverflow]}
+            >
+              {section.members.map((member, index) => (
+                <SwiperSlide key={index}>
+                  <TeamCard member={member} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
         </div>
-      ) : (
-        <Swiper
-          navigation
-          pagination={false}
-          grabCursor={true}
-          spaceBetween={20}
-          slidesPerView={1}
-          breakpoints={{
-            640: { slidesPerView: 1, spaceBetween: 10 },
-            768: { slidesPerView: 2, spaceBetween: 20 },
-            1024: { slidesPerView: 3, spaceBetween: 30 },
-          }}
-          modules={[Navigation, Pagination, EffectCoverflow]}
-        >
-          {secondYearMembers.map((member, index) => (
-            <SwiperSlide key={index}>
-              <TeamCard member={member} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+      ))}
 
-      )}
-      <div
-        className="grid place-items-center"
-        style={{
-          marginTop: "84px",
-          marginBottom: "30px",
-        }}
-      >
-        <hr className="firstline" />
-        <hr className="secondline" />
-        <hr className="thirdline" />
-      </div>
-
-      <div className="text-center" style={{ marginTop: "250px" }}>
+      <div className="text-center mt-24">
         <h1 className="font-ethenocentric text-4xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent meetour">
           MEET OUR
         </h1>
         <h1 className="font-ethenocentric text-4xl mt-3 bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent member">
-        DEVELOPERS
+          DEVELOPERS
         </h1>
       </div>
 
@@ -221,9 +147,7 @@ const Team = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-
       )}
-
     </>
   );
 };

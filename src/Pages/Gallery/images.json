@@ -1,0 +1,32 @@
+{
+  "images": [
+    { "url": "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_4_fynqri.webp", "year": "2024", "event": "Robotron", "month": "October" },
+    { "url": "https://res.cloudinary.com/dqmktpekh/image/upload/v1728943838/eta_antyau.webp", "year": "2024", "event": "Robotron", "month": "October" },
+    { "url": "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917103/WhatsApp_5_yobcaa.webp", "year": "2024", "event": "Robotron", "month": "October" },
+    { "url": "https://res.cloudinary.com/dqmktpekh/image/upload/v1728943835/chari_o8e5kj.webp", "year": "2024", "event": "Robotron", "month": "October" },
+
+    { "url": "https://res.cloudinary.com/dqmktpekh/image/upload/v1728919558/last_hmns34.webp", "year": "2024", "event": "Session", "month": "January" },
+    { "url": "https://res.cloudinary.com/dqmktpekh/image/upload/v1728919449/paas_mg4xcg.webp", "year": "2024", "event": "Session", "month": "February" },
+    { "url": "https://res.cloudinary.com/dqmktpekh/image/upload/v1728919448/teen_h1tgkz.webp", "year": "2024", "event": "Session", "month": "January" },
+    { "url": "https://res.cloudinary.com/dqmktpekh/image/upload/v1728919448/chaar_dqxhhm.webp", "year": "2024", "event": "Session", "month": "February" },
+
+    { "url": "https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/vdqzlatnphdiehsr3kpj.webp", "year": "2024", "event": "Projects", "month": "February" },
+    { "url": "https://res.cloudinary.com/dqmktpekh/image/upload/v1728918858/mxiuihtnrf9vlfo1sse7.webp", "year": "2024", "event": "Projects", "month": "January" },
+    { "url": "https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/e0nkkschwwk1spyc7qps.webp", "year": "2024", "event": "Projects", "month": "February" },
+    { "url": "https://res.cloudinary.com/dqmktpekh/image/upload/v1728834448/dduwpo8ylppcdijwcjh2.webp", "year": "2024", "event": "Projects", "month": "January" },
+
+    { "url": "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917098/WhatsApp_8_iquk2w.webp", "year": "2024", "event": "Tecnoesis", "month": "October" },
+    { "url": "https://res.cloudinary.com/dqmktpekh/image/upload/v1728917097/WhatsApp_14_-_Copy_s7syiq.webp", "year": "2024", "event": "Tecnoesis", "month": "October" },
+    { "url": "https://res.cloudinary.com/diabjuzqc/image/upload/v1744131264/PHOTO-2025-04-08-15-05-46_pkxppp.jpg", "year": "2024", "event": "Tecnoesis", "month": "October" },
+    { "url": "https://res.cloudinary.com/diabjuzqc/image/upload/v1744131264/PHOTO-2025-04-08-15-04-24_gekchz.jpg", "year": "2024", "event": "Tecnoesis", "month": "October" },
+
+    { "url": "https://res.cloudinary.com/djqzpak1s/image/upload/v1744056187/IMG-20250330-WA0249_ltpnsw.jpg", "year": "2025", "event": "Krittim", "month": "March" },
+    { "url": "https://res.cloudinary.com/djqzpak1s/image/upload/v1744056347/IMG-20250330-WA0267_fftby6.jpg", "year": "2025", "event": "Krittim", "month": "March" },
+    { "url": "https://res.cloudinary.com/djqzpak1s/image/upload/v1744056453/IMG-20250330-WA0100_seig0v.jpg", "year": "2025", "event": "Krittim", "month": "March" },
+    { "url": "https://res.cloudinary.com/djqzpak1s/image/upload/v1744057238/IMG-20250330-WA0231_uqupbk.jpg", "year": "2025", "event": "Krittim", "month": "March" },
+    { "url": "https://res.cloudinary.com/djqzpak1s/image/upload/v1744057816/IMG-20250330-WA0296_awy1cg.jpg", "year": "2025", "event": "Krittim", "month": "March" },
+    { "url": "https://res.cloudinary.com/diabjuzqc/image/upload/v1744059608/PHOTO-2025-04-08-02-26-14_r5jatn.jpg", "year": "2025", "event": "Krittim", "month": "March" },
+    { "url": "https://res.cloudinary.com/diabjuzqc/image/upload/v1744059621/PHOTO-2025-04-08-02-26-20_s47iwk.jpg", "year": "2025", "event": "Krittim", "month": "March" },
+    { "url": "https://res.cloudinary.com/diabjuzqc/image/upload/v1744059796/PHOTO-2025-04-08-02-26-27_xffab2.jpg", "year": "2025", "event": "Krittim", "month": "March" }
+  ]
+}
