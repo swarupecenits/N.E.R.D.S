@@ -118,6 +118,17 @@ function Footer() {
                   style={{ height: '23px' }}
                 />
               </a>
+              <a
+                target="_blank"
+                href="https://medium.com/@nerds_86525"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Medium_logo_Monogram.svg/1200px-Medium_logo_Monogram.svg.png"
+                  alt="Medium"
+                  style={{ height: '23px' }}
+                />
+              </a>
             </div>
           </div>
           <div className="mt-10 font-spaced text-center">
@@ -204,7 +215,7 @@ function Footer() {
 
             <div
               id="icons"
-              className="mt-9 flex flex-col w-[26px] h-[140px] mr-[110px]"
+              className="mt-4 flex flex-col w-[26px] min-h-[26px] sm:mr-[110px]"
             >
               <div>
                 <a
@@ -219,7 +230,7 @@ function Footer() {
                   />
                 </a>
               </div>
-              <div className="mt-6">
+              <div className="mt-4 sm:mt-6">
                 <a
                   target="_blank"
                   href="https://www.instagram.com/nerds.nitsilchar?igsh=MTM0MjFpZjF6M3Zucg=="
@@ -232,7 +243,7 @@ function Footer() {
                   />
                 </a>
               </div>
-              <div className="mt-6">
+              <div className="mt-4 sm:mt-6">
                 <a
                   target="_blank"
                   href="https://www.linkedin.com/company/n-e-r-d-s-nits/"
@@ -240,12 +251,25 @@ function Footer() {
                 >
                   <img
                     src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/t1gyihfapsxp6huydy8x"
-                    alt="Linkedin"
+                    alt="LinkedIn"
                     style={{ height: '26px' }}
                   />
                 </a>
               </div>
-              <div className="mt-6">
+              <div className="mt-4 sm:mt-6">
+                <a
+                  target="_blank"
+                  href="https://medium.com/@nerds_86525"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Medium_logo_Monogram.svg/1200px-Medium_logo_Monogram.svg.png"
+                    alt="Medium"
+                    style={{ height: '26px' }}
+                  />
+                </a>
+              </div>
+              <div className="mt-4 sm:mt-6">
                 <a
                   target="_blank"
                   href="https://www.youtube.com/@NERDSRoboticsNITS"
