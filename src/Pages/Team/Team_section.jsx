@@ -15,7 +15,7 @@ const Team = () => {
   const [isLaptopView, setIsLaptopView] = useState(window.innerWidth >= 1024);
   const [teamData, setTeamData] = useState([]);
   const [developerData, setDeveloperData] = useState([]);
-  const [selectedYear, setSelectedYear] = useState("2024"); // Default selected year set to 2024
+  const [selectedYear, setSelectedYear] = useState("2025"); // Default selected year set to 2024
 
   useEffect(() => {
     setTeamData(data);

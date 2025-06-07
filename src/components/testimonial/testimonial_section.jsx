@@ -24,50 +24,57 @@ const testimonials = [
     ),
   },
   {
-    name: "Ayush Maurya",
-    role: "President",
-    image:
-      "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/xei3psbuveqvu8vgb0hx.webp",
-    text: (
-      <>
-        <span className="quote">“</span>
-        Our mission is not just to build robots but to aim for excellence in
-        hackathons, participate in various national and international events,
-        and foster ideas for future tech startups.
-        <span className="quote">”</span>
-      </>
-    ),
-  },
-  {
-    name: "Sanidhya Kumar Patra",
-    role: "Vice President",
-    image:
-      "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/nt46itz1mt9pnophgkwc", // Replace with actual image link
-    text: (
-      <>
-        <span className="quote">“</span>
-        With Robotics being the future, the club fosters a vibrant community of
-        aspiring engineers, where creativity meets technology.
-        <span className="quote">”</span>
-      </>
-    ),
-  },
-  {
     name: "Swarup Chanda",
-    role: "General Secretary",
-    image:
-      "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/ucr0cfbfdfdytnm9hhrh",
+    role: "President",
+    image: "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/ucr0cfbfdfdytnm9hhrh",
     text: (
       <>
         <span className="quote">“</span>
-        Joining NIT Silchar's Robotics Club transformed my skills and
-        creativity, offering hands-on experience and a collaborative community
-        passionate about robotics.
+        As President, my vision is to cultivate a culture where creativity meets cutting-edge technology.
+        At N.E.R.D.S, we're building not just machines but confident, capable engineers ready to shape tomorrow.
         <span className="quote">”</span>
       </>
     ),
   },
-  
+  {
+    name: "Md. Fayjan",
+    role: "Vice President",
+    image: "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/fl7s9efn5nrfilh30rrl.webp",
+    text: (
+      <>
+        <span className="quote">“</span>
+        N.E.R.D.S has been a launchpad for turning concepts into reality.
+        From soldering our first circuits to presenting innovations on big stages, this journey has been one of learning, resilience, and growth.
+        <span className="quote">”</span>
+      </>
+    ),
+  },
+  {
+    name: "Anwesha Duara",
+    role: "Vice President",
+    image: "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728360594/IMG-20240822-WA0002_-_ECE_070_ANWESHA_DUARA_w90q9d.jpg",
+    text: (
+      <>
+        <span className="quote">“</span>
+        Being part of N.E.R.D.S has empowered me to explore robotics through collaboration and creativity.
+        The club’s spirit of innovation has inspired me to push boundaries and lead by example.
+        <span className="quote">”</span>
+      </>
+    ),
+  },
+  {
+    name: "Adarsh Sharma",
+    role: "General Secretary",
+    image: "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726867/zocna1qwjbuexcqg0jy3.webp",
+    text: (
+      <>
+        <span className="quote">"</span>
+        N.E.R.D.S has been instrumental in shaping my technical journey, providing a platform where ideas transform into reality.
+        The collaborative environment and hands-on projects have been pivotal in developing both my technical and leadership skills.
+        <span className="quote">"</span>
+      </>
+    ),
+  },
 ];
 
 const TestimonialSection = () => {
