@@ -219,7 +219,7 @@ function Footer() {
                   </p>
                 </div>
 
-                <div id="socials" className="flex flex-col gap-6 mt-4">
+                <div id="socials" className="flex flex-col gap-10 mt-4">
                   <a
                     target="_blank"
                     href="https://www.facebook.com/roboticsclub.nits?mibextid=ZbWKwL"
