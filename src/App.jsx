@@ -10,6 +10,7 @@ import Navbar from "./components/Navbar/navbar";
 import Footer from "./components/Footer/footer";
 import Error from "./Pages/Error/Error";
 import LoadingAnimation from "./components/Loader/Loader"; // Adjust the path as necessary
+import Merch from "./Pages/Merch/Merch";
 
 // ScrollToTop Component to ensure navigation starts from the top
 const ScrollToTop = () => {
@@ -50,6 +51,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/gallery" element={<Gallery />} />
+                <Route path="/merch" element={<Merch />} />
                 {/* Catch-all route for 404 page */}
                 <Route path="*" element={<Error />} />
               </Routes>

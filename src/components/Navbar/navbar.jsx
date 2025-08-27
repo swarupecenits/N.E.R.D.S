@@ -6,6 +6,7 @@ const links = [
   { name: 'Event', path: '/event' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Team', path: '/team' },
+  { name: 'Merch', path: '/merch' },
   { name: 'Contact', path: '/contact' },
 ];
 
