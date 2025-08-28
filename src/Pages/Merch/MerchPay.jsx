@@ -1,265 +1,175 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import qrImage from "../../assets/upi-qr.png";
-import oversizeChart from "../../assets/Oversize_chart.jpg";
-import regularChart from "../../assets/Regular_chart.jpg";
 
-const TShirtForm = () => {
-  const navigate = useNavigate();
-
-  const [formData, setFormData] = useState({
+export default function TshirtForm() {
+  const [form, setForm] = useState({
     name: "",
-    fromNITSilchar: "",
-    scholarId: "",
+    email: "",
+    fromNITSilchar: "Yes",
+    type: "T-Shirt",
     size: "",
-    type: "",
-    wantNameInTShirt: "",
-    nameInTShirt: "",
-    address: "",
-    phone: "",
-    screenshot: null,
+    rollNo: "",
+    wantNameInTShirt: "No",
   });
 
-  const [status, setStatus] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (files) {
-      setFormData({ ...formData, [name]: files[0] });
-    } else {
-      setFormData({ ...formData, [name]: value });
-    }
-  };
-
-  const validate = () => {
-    if (!formData.name) return "Name is required";
-    if (!formData.fromNITSilchar) return "Select NIT Silchar option";
-    if (formData.fromNITSilchar === "Yes" && !formData.scholarId)
-      return "Scholar ID required for NIT Silchar students";
-    if (!formData.type) return "Select T-Shirt type";
-    if (!formData.size) return "Select T-Shirt size";
-    if (!formData.wantNameInTShirt) return "Select if you want name on T-Shirt";
-    if (
-      formData.wantNameInTShirt === "Yes" &&
-      (!formData.nameInTShirt || formData.nameInTShirt.length > 7)
-    )
-      return "Enter valid name (max 7 letters)";
-    if (!formData.address) return "Enter address";
-    if (!formData.phone || !/^\d{10}$/.test(formData.phone))
-      return "Enter valid 10-digit phone number";
-    if (!formData.screenshot) return "Upload payment screenshot";
-    return null;
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const error = validate();
-    if (error) {
-      setStatus("❌ " + error);
-      return;
-    }
-
     try {
-      setStatus("Submitting...");
-      const form = new FormData();
-      for (let key in formData) {
-        form.append(key, formData[key]);
-      }
-
-      const response = await fetch("YOUR_GOOGLE_SCRIPT_URL", {
-        method: "POST",
-        body: form,
-      });
-
-      if (response.ok) {
-        setStatus("✅ Submitted successfully!");
-        setTimeout(() => navigate("/thank-you"), 1000);
+      const res = await fetch(
+        "https://script.google.com/macros/s/YOUR_DEPLOYED_SCRIPT_URL/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(form),
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+      if (res.ok) {
+        setSubmitted(true);
+        setForm({
+          name: "",
+          email: "",
+          fromNITSilchar: "Yes",
+          type: "T-Shirt",
+          size: "",
+          rollNo: "",
+          wantNameInTShirt: "No",
+        });
       } else {
-        setStatus("❌ Error submitting form");
+        alert("Something went wrong!");
       }
     } catch (err) {
-      setStatus("❌ Network error");
+      console.error(err);
+      alert("Error submitting form!");
     }
   };
 
+  if (submitted) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-black text-white">
+        <h1 className="text-2xl font-bold">✅ Form Submitted Successfully!</h1>
+      </div>
+    );
+  }
+
+  const inputStyle =
+    "w-full p-2 rounded-xl bg-white/10 text-gray-100 placeholder-gray-400 outline-none focus:ring-2 focus:ring-purple-400 transition";
+  const labelStyle = "block text-sm font-semibold mb-1";
+
   return (
-    <div className="p-6 max-w-lg mx-auto">
-      <h2 className="text-2xl font-bold mb-4">T-Shirt Order Form</h2>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-black text-white p-4">
+      <form
+        onSubmit={handleSubmit}
+        className="w-full max-w-lg bg-white/10 p-8 rounded-2xl shadow-lg space-y-4"
+      >
+        <h1 className="text-3xl font-bold text-center mb-6">
+          T-Shirt Order Form
+        </h1>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         {/* Name */}
-        <input
-          type="text"
-          name="name"
-          placeholder="Full Name"
-          value={formData.name}
-          onChange={handleChange}
-          className="border p-2 rounded"
-          required
-        />
-
-        {/* NIT Silchar option */}
-        <select
-          name="fromNITSilchar"
-          value={formData.fromNITSilchar}
-          onChange={handleChange}
-          className="border p-2 rounded"
-          required
-        >
-          <option value="">Are you from NIT Silchar?</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
-
-        {formData.fromNITSilchar === "Yes" && (
+        <label className={labelStyle}>
+          Name
           <input
-            type="text"
-            name="scholarId"
-            placeholder="Scholar ID"
-            value={formData.scholarId}
-            onChange={handleChange}
-            className="border p-2 rounded"
+            className={inputStyle}
+            name="name"
+            value={form.name}
+            onChange={handleInput}
             required
           />
-        )}
+        </label>
 
-        {/* Move Type BEFORE Size */}
-        <select
-          name="type"
-          value={formData.type}
-          onChange={handleChange}
-          className="border p-2 rounded"
-          required
-        >
-          <option value="">T-Shirt Type</option>
-          <option value="Oversize">Oversize</option>
-          <option value="Regular">Regular</option>
-        </select>
+        {/* Email */}
+        <label className={labelStyle}>
+          Email
+          <input
+            type="email"
+            className={inputStyle}
+            name="email"
+            value={form.email}
+            onChange={handleInput}
+            required
+          />
+        </label>
 
-        {/* Conditional Size Chart */}
-        {formData.type === "Oversize" && (
-          <img
-            src={oversizeChart}
-            alt="Oversize Size Chart"
-            className="w-full max-w-md mx-auto rounded shadow"
-          />
-        )}
-        {formData.type === "Regular" && (
-          <img
-            src={regularChart}
-            alt="Regular Size Chart"
-            className="w-full max-w-md mx-auto rounded shadow"
-          />
-        )}
+        {/* From NIT Silchar */}
+        <label className={labelStyle}>
+          From NIT Silchar?
+          <select
+            className={`${inputStyle} text-gray-900 bg-white`}
+            name="fromNITSilchar"
+            value={form.fromNITSilchar}
+            onChange={handleInput}
+          >
+            <option className="text-black bg-white">Yes</option>
+            <option className="text-black bg-white">No</option>
+          </select>
+        </label>
+
+        {/* Type */}
+        <label className={labelStyle}>
+          Type
+          <select
+            className={`${inputStyle} text-gray-900 bg-white`}
+            name="type"
+            value={form.type}
+            onChange={handleInput}
+          >
+            <option className="text-black bg-white">T-Shirt</option>
+            <option className="text-black bg-white">Hoodie</option>
+          </select>
+        </label>
 
         {/* Size */}
-        <select
-          name="size"
-          value={formData.size}
-          onChange={handleChange}
-          className="border p-2 rounded"
-          required
-        >
-          <option value="">Select T-Shirt Size</option>
-          <option value="S">S</option>
-          <option value="M">M</option>
-          <option value="L">L</option>
-          <option value="XL">XL</option>
-          <option value="XXL">XXL</option>
-        </select>
-
-        {/* Name in T-Shirt */}
-        <select
-          name="wantNameInTShirt"
-          value={formData.wantNameInTShirt}
-          onChange={handleChange}
-          className="border p-2 rounded"
-          required
-        >
-          <option value="">Do you want your name on T-Shirt?</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
-
-        {formData.wantNameInTShirt === "Yes" && (
+        <label className={labelStyle}>
+          Size
           <input
-            type="text"
-            name="nameInTShirt"
-            placeholder="Name on T-Shirt (max 7 letters)"
-            value={formData.nameInTShirt}
-            onChange={handleChange}
-            className="border p-2 rounded"
-            maxLength={7}
+            className={inputStyle}
+            name="size"
+            value={form.size}
+            onChange={handleInput}
             required
           />
-        )}
+        </label>
 
-        {/* Address */}
-        <input
-          type="text"
-          name="address"
-          placeholder={
-            formData.fromNITSilchar === "Yes" ? "Hostel No." : "Full Address"
-          }
-          value={formData.address}
-          onChange={handleChange}
-          className="border p-2 rounded"
-          required
-        />
+        {/* Roll Number */}
+        <label className={labelStyle}>
+          Roll No.
+          <input
+            className={inputStyle}
+            name="rollNo"
+            value={form.rollNo}
+            onChange={handleInput}
+            required
+          />
+        </label>
 
-        {/* Phone */}
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Phone Number (10 digits)"
-          value={formData.phone}
-          onChange={handleChange}
-          className="border p-2 rounded"
-          required
-        />
-
-        {/* Payment Section */}
-        <div className="border p-4 rounded bg-gray-50">
-          <h3 className="font-bold mb-2">Payment</h3>
-          <a
-            href="upi://pay?pa=your-upi-id@upi&pn=RoboticsClub&am=499&cu=INR"
-            target="_blank"
-            rel="noreferrer"
-            className="bg-green-600 text-white px-4 py-2 rounded inline-block mb-3"
+        {/* Want Name Printed? */}
+        <label className={labelStyle}>
+          Want Name Printed?
+          <select
+            className={`${inputStyle} text-gray-900 bg-white`}
+            name="wantNameInTShirt"
+            value={form.wantNameInTShirt}
+            onChange={handleInput}
           >
-            Pay Now (UPI Link)
-          </a>
+            <option className="text-black bg-white">No</option>
+            <option className="text-black bg-white">Yes</option>
+          </select>
+        </label>
 
-          <p className="text-sm text-gray-600 mb-2">
-            If link doesn’t work, scan this QR:
-          </p>
-          <img src={qrImage} alt="UPI QR" className="w-48 mx-auto mb-3" />
-
-          <label className="block text-sm font-medium mb-1">
-            Upload Payment Screenshot
-          </label>
-          <input
-            type="file"
-            name="screenshot"
-            accept="image/*"
-            onChange={handleChange}
-            className="border p-2 rounded"
-            required
-          />
-        </div>
-
+        {/* Submit */}
         <button
           type="submit"
-          className="bg-blue-600 text-white p-2 rounded hover:bg-blue-700 disabled:bg-gray-400"
-          disabled={!formData.screenshot}
+          className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-xl font-bold transition"
         >
-          Final Submit
+          Submit
         </button>
       </form>
-
-      <p className="mt-2 text-sm">{status}</p>
     </div>
   );
-};
-
-export default TShirtForm;
+}
