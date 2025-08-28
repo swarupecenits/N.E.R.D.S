@@ -88,11 +88,11 @@
 }
 
 .home-content {
-  @apply flex-1 xl:justify-center justify-start flex flex-col gap-3.5;
+  @apply flex-1 xl:justify-center font-spaced justify-start flex flex-col gap-3.5;
 }
 
 .head-text {
-  @apply xl:text-[7.5rem] text-[4rem] xl:leading-[8rem] leading-[4.8rem] font-black text-slate-200;
+  @apply xl:text-[6rem] font-ethenocentric text-[3rem] xl:leading-[8rem] leading-[4.8rem] font-black text-slate-200;
 }
 
 
