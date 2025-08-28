@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { ChevronDownIcon } from "lucide-react";
+import { useState } from 'react';
+import { ChevronDownIcon } from 'lucide-react';
+import Merch_form_landing from './Merch_form_landing'
 
 function Merch_form_ui() {
   const [formData, setFormData] = useState({
@@ -49,7 +50,8 @@ function Merch_form_ui() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen w-full">
+    <div className="bg-gradient-to-br from-black to-black min-h-screen w-full">
+        <Merch_form_landing/>
       {/* Background patterns */}
       <div className="fixed inset-0 z-0 opacity-5">
         <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-blue-400 blur-3xl"></div>
@@ -74,6 +76,7 @@ function Merch_form_ui() {
       </div>
 
       <main className="relative z-10 w-full max-w-4xl mx-auto px-4 py-8">
+<<<<<<< HEAD
         {/* Hero Section */}
         <section className="form-section min-h-screen flex flex-col justify-center items-center">
           <div className="text-center mb-8">
@@ -98,6 +101,9 @@ function Merch_form_ui() {
             </button>
           </div>
         </section>
+=======
+
+>>>>>>> 28a038cf782842cc575c1dd42512dc64e31955f1
 
         {/* Personal Details Section */}
         <section className="form-section min-h-screen py-16 flex flex-col justify-center">
