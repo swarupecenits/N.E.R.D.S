@@ -26,6 +26,14 @@ const CustomNextArrow = ({ onClick }) => (
 
 // Project data example
 const projects = [
+    {
+    title: "Arachno Bot",
+    description:
+      "The Spider Bot is a compact, multi-legged robot built using an Arduino Nano. It features precise motor control for smooth movement and agility. Equipped with sensors, the bot can navigate obstacles, offering a blend of mechanical engineering and coding. Ideal for robotics enthusiasts, it demonstrates how compact microcontrollers like the Arduino Nano can create sophisticated, interactive robots.",
+    imageUrl:
+      "https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/dbzvweqw1xwclrijk9rh",
+    link: "https://youtu.be/MOtOSJDkom8?si=BG7DCMavWIUhIVg9",
+  },
   {
     title: "Head Motion Controlled Wheelchair",
     description:
@@ -34,14 +42,7 @@ const projects = [
       "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/e3z5b5s5zihzynxxqi8o",
     link: "#",
   },
-  {
-    title: "Arachno Bot",
-    description:
-      "The Spider Bot is a compact, multi-legged robot built using an Arduino Nano. It features precise motor control for smooth movement and agility. Equipped with sensors, the bot can navigate obstacles, offering a blend of mechanical engineering and coding. Ideal for robotics enthusiasts, it demonstrates how compact microcontrollers like the Arduino Nano can create sophisticated, interactive robots.",
-    imageUrl:
-      "https://res.cloudinary.com/diabjuzqc/image/upload/f_auto,q_auto/dbzvweqw1xwclrijk9rh",
-    link: "https://youtu.be/MOtOSJDkom8?si=BG7DCMavWIUhIVg9",
-  },
+
 
   {
     title: "Quadcopter Drone",
@@ -59,7 +60,14 @@ const projects = [
       "https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/ea9y3xi7we9gonc2qudy",
     link: "https://youtu.be/KyjrGN9ZTPg?si=oehFA-BAHmJJ5sR_",
   },
-  // Add this object inside the `projects` array
+{
+  title: "17-DOF Humanoid Robot",
+  description:
+    "The 17-DOF Humanoid Robot is a sophisticated bipedal platform designed to mimic human-like movements with 17 degrees of freedom. Equipped with precise servo motors and controlled through advanced kinematics, it can walk, gesture, and perform complex actions. This project provides hands-on experience in robotics, motion planning, and embedded programming, making it perfect for exploring the intersection of mechanics, electronics, and AI-driven control systems.",
+  imageUrl:
+    "https://res.cloudinary.com/dagggqd6g/image/upload/v1756380682/Blue_Futuristic_Technology_Presentation_20250828_165811_0000_qc1ldy.png", // Replace with actual Cloudinary image URL
+  link: "#", // Optional: Add a video or GitHub repo if available
+},
 {
   title: "Self Balancing Bot",
   description:
@@ -67,7 +75,8 @@ const projects = [
   imageUrl:
     "https://res.cloudinary.com/diabjuzqc/image/upload/v1744056534/image_l0t8z0.png", // Replace with actual Cloudinary image URL
   link: "#", // Optional: Add a video or GitHub repo if available
-}
+},
+
 ];
 
 const Projects = () => {
