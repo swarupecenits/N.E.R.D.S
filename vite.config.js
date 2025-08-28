@@ -5,14 +5,5 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.glb'], // Added support for .glb files
-  server: {
-    proxy: {
-      '/gs-proxy': {
-        target: 'https://script.google.com',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/gs-proxy/, ''),
-        secure: false,
-      },
-    },
-  },
+  // Proxy removed for production deployment
 });

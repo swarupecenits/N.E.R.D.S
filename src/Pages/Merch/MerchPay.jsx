@@ -18,7 +18,7 @@ function MerchPay() {
   const [currentSection, setCurrentSection] = useState(0);
 
   // Change this to your actual deployed Apps Script Web App URL
-const SCRIPT_URL = "/gs-proxy/macros/s/AKfycbxm00d8wdRwX_LqEptIlzcyA0xx2zTOn6eHWRg7XMmwFpgB71Ja7UJQ-6scVfXBCfE/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxm00d8wdRwX_LqEptIlzcyA0xx2zTOn6eHWRg7XMmwFpgB71Ja7UJQ-6scVfXBCfE/exec";
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
