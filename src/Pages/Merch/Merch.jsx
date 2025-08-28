@@ -50,7 +50,7 @@ const Merch = () => {
                                     className="flex flex-col gap-5"
                                 >
                                     <p className="max-w-md font-normal text-gray-300 text-base">
-                                        Create your unique and exclusive shirt with our state-of-the-art 3D customization tool. <strong>Unleash your creativity</strong> and define your own style.
+                                        Our exclusive Robotics Club T-shirts are more than just apparel — they represent innovation, teamwork, and the spirit of creation.  <strong>Designed for makers, coders, and dreamers,</strong> these tees let you showcase your love for robotics both inside and outside the lab.
                                     </p>
                                     <FancyButton
                                         title1="CUSTOMIZE"
