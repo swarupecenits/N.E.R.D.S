@@ -9,7 +9,7 @@
     "email": "swarupchanda1963@gmail.com",
     "social": "https://www.instagram.com/this_is_swarup_?igsh=MXA4MzE4bnJ3YWs0Mg==",
     "github": "https://github.com/swarupecenits",
-    "linkedin": "https://www.linkedin.com/in/swarup-chanda",
+    "linkedin": "https://www.linkedin.com/in/swarup-chanda-23053724a/",
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/ucr0cfbfdfdytnm9hhrh",
     "year": "2025"
   },
@@ -34,10 +34,36 @@
     "developer_team": "Yes",
     "developer_domain": "Web",
     "email": "himdfayzan1735@gmail.com",
-    "social": "https://www.facebook.com/md.fayzan.79/",
+    "social": "https://www.instagram.com/md_fayjan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
     "github": "https://github.com/fayjan",
     "linkedin": "https://www.linkedin.com/in/md-fayjan-1ba784256/",
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/fl7s9efn5nrfilh30rrl.webp",
+    "year": "2025"
+  },
+  {
+    "id": 2003,
+    "name": "Hraday Sadrani",
+    "team": "4th Year",
+    "designation": "Board Member",
+    "developer_team": "No",
+    "email": "sadranih_ug_22@ee.nits.ac.in",
+    "social": "https://www.instagram.com/hraday_sadrani/",
+    "github": "https://github.com/hradaysadrani",
+    "linkedin": "https://www.linkedin.com/in/hradaysadrani/",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726869/tlwygilatnshkvci3ygf.webp",
+    "year": "2025"
+  },
+  {
+    "id": 2003,
+    "name": "MD Rakibul Islam Midul",
+    "team": "4th Year",
+    "designation": "Board Member",
+    "developer_team": "No",
+    "email": "",
+    "social": "",
+    "github": "",
+    "linkedin": "https://www.linkedin.com/in/rakibul-islam-midul-1b8a081a9/",
+    "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728401811/WhatsApp_Image_2024-10-08_at_16.22.07_dwxbtl.jpg",
     "year": "2025"
   },
   {
@@ -146,17 +172,30 @@
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/pbhpx7qnmv656drwfzck",
     "year": "2025"
   },
-  {
-    "id": 2013,
-    "name": "Uddhav Saikia",
+    {
+    "id": 2022,
+    "name": "Chaman Laguri",
     "team": "3rd Year",
-    "designation": "Event Management Head",
+    "designation": "IoT Head",
     "developer_team": "No",
-    "email": "uddhav_ug_23@ece.nits.ac.in",
-    "social": "https://www.instagram.com/inspiral_40mg?igsh=ZHI4b2VnN2lpbHQ=",
-    "github": "https://github.com/uddhav-saikia",
-    "linkedin": "https://www.linkedin.com/in/uddhav-saikia",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/k2yomc69l9anp0dxcnyu",
+    "email": "",
+    "social": "https://www.instagram.com/chamanlaguri",
+    "github": "https://github.com/Chaman25-design",
+    "linkedin": "https://www.linkedin.com/in/chaman-laguri-84853028b",
+    "image_id": "https://res.cloudinary.com/diabjuzqc/image/upload/v1749237795/IMG_20250606_002628_h4ujyb.jpg",
+    "year": "2025"
+  },
+    {
+    "id": 2020,
+    "name": "Abhishek Kumar",
+    "team": "3rd Year",
+    "designation": "Aero Head",
+    "developer_team": "No",
+    "email": "abhishekkr_ug_23@ee.nits.ac.in",
+    "social": "https://www.instagram.com/abhi31an?igsh=aGdrem9wNjJ2ZTNm&utm_source=qr",
+    "github": "https://github.com/Abhishek31an",
+    "linkedin": "https://www.linkedin.com/in/abhishek-kumar-422704292",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726866/jwabhaur1wszlv9vjx5h.webp",
     "year": "2025"
   },
   {
@@ -225,19 +264,7 @@
     "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728361507/IMG_20241001_101916_-_Prantic_Dev_Nath_rkgqvn.jpg",
     "year": "2025"
   },
-  {
-    "id": 2020,
-    "name": "Abhishek Kumar",
-    "team": "3rd Year",
-    "designation": "Aero Head",
-    "developer_team": "No",
-    "email": "abhishekkr_ug_23@ee.nits.ac.in",
-    "social": "https://www.instagram.com/abhi31an?igsh=aGdrem9wNjJ2ZTNm&utm_source=qr",
-    "github": "https://github.com/Abhishek31an",
-    "linkedin": "https://www.linkedin.com/in/abhishek-kumar-422704292",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726866/jwabhaur1wszlv9vjx5h.webp",
-    "year": "2025"
-  },
+
   {
     "id": 2021,
     "name": "Sunidhi Chetri",
@@ -251,19 +278,7 @@
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/e7y4mcm0izibxucgrx2p",
     "year": "2025"
   },
-  {
-    "id": 2022,
-    "name": "Chaman Laguri",
-    "team": "3rd Year",
-    "designation": "Iot Head",
-    "developer_team": "No",
-    "email": "",
-    "social": "https://www.instagram.com/chamanlaguri",
-    "github": "https://github.com/Chaman25-design",
-    "linkedin": "https://www.linkedin.com/in/chaman-laguri-84853028b",
-    "image_id": "https://res.cloudinary.com/diabjuzqc/image/upload/v1749237795/IMG_20250606_002628_h4ujyb.jpg",
-    "year": "2025"
-  },
+
   {
     "id": 2023,
     "name": "Hrishikesh Kashyap",
