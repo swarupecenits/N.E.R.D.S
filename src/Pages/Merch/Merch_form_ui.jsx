@@ -76,34 +76,6 @@ function Merch_form_ui() {
       </div>
 
       <main className="relative z-10 w-full max-w-4xl mx-auto px-4 py-8">
-<<<<<<< HEAD
-        {/* Hero Section */}
-        <section className="form-section min-h-screen flex flex-col justify-center items-center">
-          <div className="text-center mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
-              Merchandise Order
-            </h1>
-            <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
-              NIT Silchar / External
-            </h2>
-            <p className="mt-6 text-gray-600 max-w-md mx-auto">
-              Fill in your details and place your order for our exclusive
-              merchandise. Scroll down to begin.
-            </p>
-          </div>
-          <div className="mt-12 animate-bounce">
-            <button
-              onClick={() => scrollToSection(1)}
-              className="p-2 rounded-full bg-white bg-opacity-50 backdrop-blur-sm shadow-lg"
-              aria-label="Scroll down"
-            >
-              <ChevronDownIcon className="w-8 h-8 text-blue-500" />
-            </button>
-          </div>
-        </section>
-=======
-
->>>>>>> 28a038cf782842cc575c1dd42512dc64e31955f1
 
         {/* Personal Details Section */}
         <section className="form-section min-h-screen py-16 flex flex-col justify-center">
