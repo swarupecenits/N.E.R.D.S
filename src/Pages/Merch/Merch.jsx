@@ -6,10 +6,10 @@ import Shirt from '../../components/tshirt_canvas/Shirt';
 import Backdrop from '../../components/tshirt_canvas/Backdrop';
 import CameraRig from '../../components/tshirt_canvas/CameraRig';
 import { Environment, Center } from '@react-three/drei';
-const ShirtModel = () => {
-    const { scene } = useGLTF('/shirt_baked.glb');
-    return <primitive object={scene} scale={7.5} />; // Increased scale from 1.5 to 2.5
-};
+// const ShirtModel = () => {
+//     const { scene } = useGLTF('/shirt_baked.glb');
+//     return <primitive object={scene} scale={7.5} />; // Increased scale from 1.5 to 2.5
+// };
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSnapshot } from 'valtio';
 import {

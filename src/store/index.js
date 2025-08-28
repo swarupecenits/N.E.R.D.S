@@ -6,8 +6,8 @@ const state = proxy({
   color1: '#EFBD48',
   isLogoTexture: false,
   isFullTexture: false,
-  logoDecal: './src/assets/tshirt/ai.png',
-  fullDecal: './src/assets/tshirt/ai.png',
+  logoDecal: '/tshirt/ai.png',
+  fullDecal: '/tshirt/ai.png',
   modelPath: './src/assets/tshirt/shirt_baked.glb',
 });
 
