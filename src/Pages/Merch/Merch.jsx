@@ -1,9 +1,10 @@
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
-import { useState, useRef } from 'react';
-import gridBackground from '../../assets/tshirt/grid.svg';
+import { useState, useRef, useEffect } from 'react';
+import gridBackground from '/grid.svg';
 import { FancyButton } from '../../components/FancyButton';
 import Shirt from '../../components/tshirt_canvas/Shirt';
+import Tshirt_Loader from '../../components/Tshirt_Loader';
 import CameraRig from '../../components/tshirt_canvas/CameraRig';
 import { Environment, Center } from '@react-three/drei';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -20,7 +21,13 @@ const Merch = () => {
     const snap = useSnapshot(state);
 
     const [isDragging, setIsDragging] = useState(false);
+    const [loading, setLoading] = useState(true);
     const canvasRef = useRef();
+    // Show loader for at least 1s, then show model
+    useEffect(() => {
+        const timer = setTimeout(() => setLoading(false), 1000);
+        return () => clearTimeout(timer);
+    }, []);
 
     // Handlers to toggle dragging state
     const handlePointerDown = () => setIsDragging(true);
@@ -69,46 +76,52 @@ const Merch = () => {
                 </AnimatePresence>
             </div>
 
-            {/* Right Side 3D Model */}
+            {/* Right Side 3D Model or Loader */}
             <div className="w-full md:w-1/2 z-10 min-h-[300px] h-[50vh] md:h-full flex items-center justify-center">
-                <Canvas
-                    ref={canvasRef}
-                    shadows
-                    camera={{ position: [0, 0, 2.2], fov: 25 }}
-                    gl={{ preserveDrawingBuffer: true }}
-                    className="w-full h-full min-h-[300px] max-w-full transition-all ease-in"
-                    onPointerDown={handlePointerDown}
-                    onPointerUp={handlePointerUp}
-                    onPointerLeave={handlePointerLeave}
-                >
-                    <ambientLight intensity={0.5} />
-                    <Environment preset="city" />
-                    {/* OrbitControls only enabled while dragging */}
-                    <OrbitControls
-                        makeDefault
-                        enableZoom={false}
-                        enablePan={false}
-                        minPolarAngle={Math.PI / 2}
-                        maxPolarAngle={Math.PI / 2}
-                        minDistance={5.2}
-                        maxDistance={5.2}
-                        enableDamping={true}
-                        dampingFactor={0.15}
-                    />
-                    {/* CameraRig only enabled when not dragging */}
-                    {!isDragging ? (
-                        <CameraRig>
+                {loading ? (
+                    <Tshirt_Loader />
+                ) : null}
+                {!loading && (
+                    <Canvas
+                        ref={canvasRef}
+                        shadows
+                        camera={{ position: [0, 0, 2.2], fov: 25 }}
+                        gl={{ preserveDrawingBuffer: true }}
+                        className="w-full h-full min-h-[300px] max-w-full transition-all ease-in"
+                        onPointerDown={handlePointerDown}
+                        onPointerUp={handlePointerUp}
+                        onPointerLeave={handlePointerLeave}
+                    >
+                        <ambientLight intensity={0.5} />
+                        <Environment preset="city" />
+                        {/* OrbitControls only enabled while dragging */}
+                        <OrbitControls
+                            makeDefault
+                            enableZoom={false}
+                            enablePan={false}
+                            minPolarAngle={Math.PI / 2}
+                            maxPolarAngle={Math.PI / 2}
+                            minDistance={5.2}
+                            maxDistance={5.2}
+                            enableDamping={true}
+                            dampingFactor={0.15}
+                        />
+                        {/* CameraRig only enabled when not dragging */}
+                        {!isDragging ? (
+                            <CameraRig>
+                                <Center>
+                                    <Shirt />
+                                </Center>
+                            </CameraRig>
+                        ) : (
                             <Center>
                                 <Shirt />
                             </Center>
-                        </CameraRig>
-                    ) : (
-                        <Center>
-                            <Shirt />
-                        </Center>
-                    )}
-                </Canvas>
+                        )}
+                    </Canvas>
+                )}
             </div>
+
         </div>
     );
 };
