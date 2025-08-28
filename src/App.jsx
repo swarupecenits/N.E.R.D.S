@@ -11,6 +11,7 @@ import Footer from "./components/Footer/footer";
 import Error from "./Pages/Error/Error";
 import LoadingAnimation from "./components/Loader/Loader"; // Adjust the path as necessary
 import Merch from "./Pages/Merch/Merch";
+import Merch_form_ui from "./Pages/Merch/Merch_form_ui";
 
 // ScrollToTop Component to ensure navigation starts from the top
 const ScrollToTop = () => {
@@ -52,6 +53,7 @@ function App() {
                 <Route path="/team" element={<Team />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/merch" element={<Merch />} />
+                <Route path="/merch_details" element={<Merch_form_ui/>} />
                 {/* Catch-all route for 404 page */}
                 <Route path="*" element={<Error />} />
               </Routes>
