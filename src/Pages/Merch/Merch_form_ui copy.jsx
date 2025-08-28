@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import { ChevronDownIcon } from 'lucide-react';
-import Merch_form_landing from './Merch_form_landing'
-
 function Merch_form_ui() {
   const [formData, setFormData] = useState({
     name: '',
@@ -46,8 +44,7 @@ function Merch_form_ui() {
     }
   }
   return (
-    <div className="bg-gradient-to-br from-black to-black min-h-screen w-full">
-        <Merch_form_landing/>
+    <div className="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen w-full">
       {/* Background patterns */}
       <div className="fixed inset-0 z-0 opacity-5">
         <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-blue-400 blur-3xl"></div>
@@ -68,7 +65,30 @@ function Merch_form_ui() {
       </div>
 
       <main className="relative z-10 w-full max-w-4xl mx-auto px-4 py-8">
-
+        {/* Header Section */}
+        <section className="form-section min-h-screen flex flex-col justify-center items-center">
+          <div className="text-center mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
+              NERDS Robotics Club
+            </h1>
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
+              T-Shirt Order Form
+            </h2>
+            <p className="mt-6 text-gray-600 max-w-md mx-auto">
+              Complete the form below to order your exclusive robotics club
+              t-shirt. Scroll down to get started.
+            </p>
+          </div>
+          <div className="mt-12 animate-bounce">
+            <button
+              onClick={() => scrollToSection(1)}
+              className="p-2 rounded-full bg-white bg-opacity-50 backdrop-blur-sm shadow-lg"
+              aria-label="Scroll down"
+            >
+              <ChevronDownIcon className="w-8 h-8 text-blue-500" />
+            </button>
+          </div>
+        </section>
 
         {/* Personal Details Section */}
         <section className="form-section min-h-screen py-16 flex flex-col justify-center">
