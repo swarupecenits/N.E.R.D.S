@@ -48,56 +48,58 @@ const Team = () => {
   return (
     <>
       {/* Landing Section */}
-      <div className="overflow-hidden">
-        <div className="bg-black main-section relative">
-          <div className="content-section" ref={contentRef}>
-            <h1
-              className={`mt-[-2.5rem] font-ethenocentric font-xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading absolute transition-opacity duration-1000 ${
-                isVisible ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              MEET
-            </h1>
-            <h1
-              className={`font-ethenocentric mt-[-4.8rem] font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading team-heading absolute transition-opacity duration-1000 ${
-                isVisible ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              OUR TEAM
-            </h1>
-            <p
-              className={`font-spaced mt-[-5.5rem] text-white font-normal heading-subsection absolute transition-opacity duration-1000 ${
-                isVisible ? "opacity-100" : "opacity-0"
-              }`}
-            >
-              Our team is the backbone of our club. We have got some of the coolest minds of this college.
-            </p>
-          </div>
-          <div className="main-image" ref={imageRef}>
-            <img
-              src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/txdg7c0ofspqdw5qajni"
-              alt="robot-image"
-              className={`mix-blend-whiten z-10 sm:self-center sm:justify-center sm:flex absolute main-image-img transition-opacity duration-1000 ${
-                isVisible ? "opacity-100" : "opacity-0"
-              }`}
-            />
-          </div>
-        </div>
-        <div className="min-h-screen flex items-center justify-center bg-black">
+      <div className="overflow-hidden  ">
+    <div className="bg-black main-section relative overflow-hidden" style={{ minHeight: '90vh', height: '90vh' }}>
+          {/* Gradient Background */}
           <div
             className="bg-[conic-gradient(from_134.62deg_at_50%_50%,_#111111_0deg,_#13040A_62.55deg,_#100429_189.91deg,_#f30066_205.08deg,_#111111_310.73deg,_#530ced_360deg)] h-[700px] w-[700px] rounded-full opacity-30 blur-3xl animate-gradient z-0 gradient"
             style={{
               width: "665px",
               height: "766px",
               top: "151px",
-              left: "1033.16px",
+              left: "50%",
               opacity: "31%",
               backdropFilter: "blur(195px)",
-              transform: `rotate(${rotation}deg)`,
+              transform: `translateX(-50%) rotate(${rotation}deg)` ,
+              position: "absolute",
+              zIndex: 0,
               transition: "transform 0.05s linear",
             }}
           ></div>
+          <div className="content-section relative z-10" ref={contentRef}>
+            <h1
+              className={`mt-20 sm:mt-[-2.5rem] font-ethenocentric font-xl bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading meet-heading absolute transition-opacity duration-1000 ${
+                isVisible ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              MEET
+            </h1>
+            <h1
+              className={`font-ethenocentric mt-7 sm:mt-[-4.8rem] font-normal bg-gradient-to-b from-[#ffffff] to-[#068bf7] bg-clip-text text-transparent main-heading team-heading absolute transition-opacity duration-1000 ${
+                isVisible ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              OUR TEAM
+            </h1>
+            <p
+              className={`font-spaced mt-6 sm:mt-[-5.5rem] text-white font-normal heading-subsection absolute transition-opacity duration-1000 ${
+                isVisible ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              Our team is the backbone of our club. We have got some of the coolest minds of this college.
+            </p>
+          </div>
+          <div className="main-image py-60 relative z-10" ref={imageRef}>
+            <img
+              src="https://res.cloudinary.com/dagggqd6g/image/upload/f_auto,q_auto/txdg7c0ofspqdw5qajni"
+              alt="robot-image"
+              className={`mix-blend-whiten z-10  sm:self-center sm:justify-center sm:flex absolute main-image-img transition-opacity duration-1000 ${
+                isVisible ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          </div>
         </div>
+       
       </div>
 
       {/* Team-Details Section */}

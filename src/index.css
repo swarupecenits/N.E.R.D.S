@@ -92,7 +92,7 @@
 }
 
 .head-text {
-  @apply xl:text-[6rem] font-ethenocentric text-[3rem] xl:leading-[8rem] leading-[4.8rem] font-black text-slate-200;
+  @apply xl:text-[6rem] font-ethenocentric text-[3rem] xl:leading-[7rem] leading-[4.2rem] font-black text-slate-200;
 }
 
 

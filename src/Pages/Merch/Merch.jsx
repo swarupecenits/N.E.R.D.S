@@ -35,7 +35,7 @@ const Merch = () => {
             ></div>
 
             {/* Left Side Animated Intro */}
-            <div className="w-full md:w-1/2 flex flex-col justify-center items-start z-10 px-4 py-8 md:px-16 md:py-0 min-h-[50vh] md:min-h-0">
+            <div className="w-full md:w-1/2 flex flex-col justify-center items-start z-10 px-4 py-10 md:px-16 md:py-0 min-h-[50vh] md:min-h-0">
                 <AnimatePresence>
                     {snap.intro && (
                         <motion.section className="home" {...slideAnimation('left')}>
