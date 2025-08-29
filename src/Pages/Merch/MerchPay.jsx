@@ -18,10 +18,10 @@ function MerchPay() {
   });
   // Dynamically determine UPI amount based on selection
   let upiAmount = 0;
-  if (formData.type === "Hoodie" && formData.wantName === "Yes") upiAmount = 500;
-  else if (formData.type === "Hoodie" && formData.wantName === "No") upiAmount = 450;
-  else if (formData.type === "T-Shirt" && formData.wantName === "Yes") upiAmount = 400;
-  else if (formData.type === "T-Shirt" && formData.wantName === "No") upiAmount = 350;
+  if (formData.type === "Hoodie" && formData.wantName === "Yes") upiAmount = 489;
+  else if (formData.type === "Hoodie" && formData.wantName === "No") upiAmount = 479;
+  else if (formData.type === "T-Shirt" && formData.wantName === "Yes") upiAmount = 409;
+  else if (formData.type === "T-Shirt" && formData.wantName === "No") upiAmount = 399;
   // UPI link
   const upiLink = `upi://pay?pa=swarupchanda1963-1@okhdfcbank&pn=Swarup%20Chanda&am=${upiAmount}&cu=INR`;
   const [fileUrl, setFileUrl] = useState("");
