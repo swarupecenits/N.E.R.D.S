@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { MultiStepLoader } from "../../components/Merch_components/multi-step-loader";
 import { ChevronDownIcon } from "lucide-react";
+import Merch_form_landing from './Merch_form_landing'
 
 function MerchPay() {
   const [formData, setFormData] = useState({
@@ -18,9 +20,11 @@ function MerchPay() {
   const [uploading, setUploading] = useState(false);
 
   const [currentSection, setCurrentSection] = useState(0);
+  const [submitting, setSubmitting] = useState(false);
+  const [modal, setModal] = useState({ open: false, message: "", success: false });
 
   // Change this to your actual deployed Apps Script Web App URL
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9kL0ruKR4lyjxhwWhnw9VG42O-ts8-SxYk-sjMVycqKV0vU3gw/exec";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9kL0ruKR4lyjxhwWhnw9VG42O-ts8-SxYk-sjMVycqKV0vU3gw/exec";
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -65,53 +69,55 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
     };
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.paymentProofLink) {
-      alert("Please upload payment proof before submitting.");
+      setModal({ open: true, message: "Please upload payment proof before submitting.", success: false });
       return;
     }
-    const timestamp = new Date().toISOString();
-    const params = new URLSearchParams();
-    params.append("Timestamp", timestamp);
-    params.append("Name", formData.name);
-    params.append("IsNITS", formData.fromNITSilchar);
-    params.append("ScholarId", formData.fromNITSilchar === "Yes" ? formData.scholarId : "0000000");
-    params.append("Type", formData.type);
-    params.append("Size", formData.size);
-    params.append("WantName", formData.wantName);
-    params.append("NameOnTShirt", formData.wantName === "Yes" ? formData.nameInTShirt : "");
-    params.append("Address", formData.address);
-    params.append("Phone", formData.phone);
-    params.append("ScreenshotLink", formData.paymentProofLink);
-    fetch(SCRIPT_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      body: params.toString()
-    })
-      .then(res => res.text())
-      .then(response => {
-        alert(response);
-        setFormData({
-          name: "",
-          fromNITSilchar: "No",
-          scholarId: "",
-          type: "",
-          size: "",
-          wantName: "No",
-          nameInTShirt: "",
-          address: "",
-          phone: "",
-          paymentProofLink: "",
-        });
-        setFileUrl("");
-      })
-      .catch(err => {
-        alert("Error submitting form.");
-        console.error(err);
+    setSubmitting(true);
+    try {
+      const timestamp = new Date().toISOString();
+      const params = new URLSearchParams();
+      params.append("Timestamp", timestamp);
+      params.append("Name", formData.name);
+      params.append("IsNITS", formData.fromNITSilchar);
+      params.append("ScholarId", formData.fromNITSilchar === "Yes" ? formData.scholarId : "0000000");
+      params.append("Type", formData.type);
+      params.append("Size", formData.size);
+      params.append("WantName", formData.wantName);
+      params.append("NameOnTShirt", formData.wantName === "Yes" ? formData.nameInTShirt : "");
+      params.append("Address", formData.address);
+      params.append("Phone", formData.phone);
+      params.append("ScreenshotLink", formData.paymentProofLink);
+      const res = await fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: params.toString()
       });
+      const response = await res.text();
+      setModal({ open: true, message: response, success: true });
+      setFormData({
+        name: "",
+        fromNITSilchar: "No",
+        scholarId: "",
+        type: "",
+        size: "",
+        wantName: "No",
+        nameInTShirt: "",
+        address: "",
+        phone: "",
+        paymentProofLink: "",
+      });
+      setFileUrl("");
+    } catch (err) {
+      setModal({ open: true, message: "Error submitting form.", success: false });
+      console.error(err);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
 
@@ -124,65 +130,74 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
   };
 
   return (
-    <div className="bg-gradient-to-br from-slate-50 to-blue-50 min-h-screen w-full">
-      {/* Background patterns */}
-      <div className="fixed inset-0 z-0 opacity-5">
-        <div className="absolute top-20 left-20 w-40 h-40 rounded-full bg-blue-400 blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-60 h-60 rounded-full bg-purple-400 blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-cyan-400 blur-3xl"></div>
-      </div>
+    <div className="bg-black min-h-screen w-full font-sans relative overflow-x-hidden">
+      {/* Modal for alerts */}
+      {modal.open && (
+        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <div className={`max-w-md w-full rounded-2xl shadow-2xl p-8 border-2 ${modal.success ? 'border-cyan-400 bg-gradient-to-br from-cyan-900/90 to-cyan-700/80' : 'border-fuchsia-400 bg-gradient-to-br from-fuchsia-900/90 to-fuchsia-700/80'} animate-fade-in`}>
+            <div className="flex flex-col items-center gap-4">
+              <div className={`rounded-full p-3 ${modal.success ? 'bg-cyan-400/20' : 'bg-fuchsia-400/20'}`}> 
+                {modal.success ? (
+                  <svg className="w-10 h-10 text-cyan-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                ) : (
+                  <svg className="w-10 h-10 text-fuchsia-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+                )}
+              </div>
+              <div className="text-center">
+                <h3 className={`text-xl font-bold mb-2 ${modal.success ? 'text-cyan-200' : 'text-fuchsia-200'}`}>{modal.success ? 'Order Status' : 'Error'}</h3>
+                <p className="text-base text-white whitespace-pre-line">{modal.message}</p>
+              </div>
+              <button
+                onClick={() => setModal({ ...modal, open: false })}
+                className={`mt-4 px-6 py-2 rounded-lg font-semibold shadow transition-all duration-200 ${modal.success ? 'bg-cyan-400 text-cyan-900 hover:bg-cyan-300' : 'bg-fuchsia-400 text-fuchsia-900 hover:bg-fuchsia-300'}`}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+      {/* Loader overlay */}
+      <MultiStepLoader
+        loadingStates={[
+          { text: "Placing your order..." },
+          { text: "Processing payment..." },
+          { text: "Finalizing..." },
+        ]}
+        loading={submitting}
+        duration={1200}
+        loop={true}
+      />
+      <Merch_form_landing />
 
-      {/* Navigation dots */}
-      <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden md:flex flex-col gap-4">
+
+      {/* Navigation dots with neon effect */}
+      <div className="fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden md:flex flex-col gap-4">
         {[0, 1, 2, 3, 4].map((index) => (
           <button
             key={index}
             onClick={() => scrollToSection(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              currentSection === index
-                ? "bg-blue-500 scale-150"
-                : "bg-gray-300 hover:bg-gray-400"
-            }`}
+            className={`w-3 h-3 rounded-full border-2 border-cyan-400 shadow-[0_0_8px_2px_#22d3ee] transition-all duration-300 ${currentSection === index
+                ? "bg-cyan-400 scale-150 shadow-[0_0_16px_4px_#22d3ee]"
+                : "bg-slate-700 hover:bg-cyan-500"
+              }`}
             aria-label={`Navigate to section ${index + 1}`}
           />
         ))}
       </div>
 
-      <main className="relative z-10 w-full max-w-4xl mx-auto px-4 py-8">
-        {/* Hero Section */}
-        <section className="form-section min-h-screen flex flex-col justify-center items-center">
-          <div className="text-center mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
-              Merchandise Order
-            </h1>
-            <h2 className="text-3xl md:text-4xl font-semibold text-gray-800">
-              NIT Silchar / External
-            </h2>
-            <p className="mt-6 text-gray-600 max-w-md mx-auto">
-              Fill in your details and place your order for our exclusive
-              merchandise. Scroll down to begin.
-            </p>
-          </div>
-          <div className="mt-12 animate-bounce">
-            <button
-              onClick={() => scrollToSection(1)}
-              className="p-2 rounded-full bg-white bg-opacity-50 backdrop-blur-sm shadow-lg"
-              aria-label="Scroll down"
-            >
-              <ChevronDownIcon className="w-8 h-8 text-blue-500" />
-            </button>
-          </div>
-        </section>
+      <main className="relative z-10 w-full max-w-3xl mx-auto px-4 py-8">
 
         {/* Personal Details Section */}
         <section className="form-section min-h-screen py-16 flex flex-col justify-center">
-          <div className="bg-white bg-opacity-70 backdrop-blur-md rounded-2xl shadow-xl p-8 mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 border-b border-gray-200 pb-4">
+          <div className="bg-gradient-to-br from-[#1e293b]/80 to-[#0f172a]/90 border border-cyan-400/30 shadow-[0_8px_32px_0_#22d3ee33] rounded-3xl backdrop-blur-xl p-8 mb-8 relative overflow-hidden">
+            <div className="absolute -top-8 -right-8 w-32 h-32 bg-cyan-400 opacity-10 rounded-full blur-2xl animate-pulse" />
+            <h2 className="text-2xl md:text-3xl font-extrabold text-cyan-300 mb-6 border-b border-cyan-700 pb-4 tracking-wide drop-shadow-lg">
               Personal Details
             </h2>
             <div className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-slate-200 mb-1">
                   Full Name
                 </label>
                 <input
@@ -190,21 +205,21 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
                   name="name"
                   value={formData.name}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-xl border border-cyan-700 bg-[#0f172a]/60 text-cyan-100 focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-all placeholder:text-cyan-400/60 shadow-inner"
                   placeholder="Enter your full name"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-slate-200 mb-1">
                   From NIT Silchar?
                 </label>
                 <select
                   name="fromNITSilchar"
                   value={formData.fromNITSilchar}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-xl border border-cyan-700 bg-[#0f172a]/60 text-cyan-100 focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-all"
                 >
                   <option value="Yes">Yes</option>
                   <option value="No">No</option>
@@ -213,7 +228,7 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
 
               {formData.fromNITSilchar === "Yes" && (
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-slate-200 mb-1">
                     Scholar ID
                   </label>
                   <input
@@ -221,7 +236,7 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
                     name="scholarId"
                     value={formData.scholarId}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 rounded-xl border border-cyan-700 bg-[#0f172a]/60 text-cyan-100 focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-all placeholder:text-cyan-400/60 shadow-inner"
                     placeholder="Enter Scholar ID"
                     required
                   />
@@ -229,7 +244,7 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
               )}
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-slate-200 mb-1">
                   Phone Number
                 </label>
                 <input
@@ -238,21 +253,21 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
                   value={formData.phone}
                   onChange={handleInputChange}
                   pattern="[0-9]{10,15}"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-xl border border-cyan-700 bg-[#0f172a]/60 text-cyan-100 focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-all placeholder:text-cyan-400/60 shadow-inner"
                   placeholder="Enter your phone number"
                   required
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-slate-200 mb-1">
                   Address
                 </label>
                 <textarea
                   name="address"
                   value={formData.address}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-xl border border-cyan-700 bg-[#0f172a]/60 text-cyan-100 focus:ring-2 focus:ring-cyan-400 focus:border-cyan-400 transition-all placeholder:text-cyan-400/60 shadow-inner"
                   placeholder={
                     formData.fromNITSilchar === "Yes"
                       ? "Enter Hostel Number"
@@ -265,8 +280,8 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
           </div>
           <div className="flex justify-center mt-8">
             <button
-              onClick={() => scrollToSection(2)}
-              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg shadow-lg"
+              onClick={() => scrollToSection(1)}
+              className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-cyan-400/40 hover:scale-105 transition-all duration-200 tracking-wide border border-cyan-400/40"
             >
               Continue to Merchandise Selection
             </button>
@@ -275,32 +290,142 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
 
         {/* Merchandise Section */}
         <section className="form-section min-h-screen py-16 flex flex-col justify-center">
-          <div className="bg-white bg-opacity-70 backdrop-blur-md rounded-2xl shadow-xl p-8 mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 border-b border-gray-200 pb-4">
+          <div className="bg-gradient-to-br from-[#1e293b]/80 to-[#0f172a]/90 border border-fuchsia-400/30 shadow-[0_8px_32px_0_#a21caf33] rounded-3xl backdrop-blur-xl p-8 mb-8 relative overflow-hidden">
+            <div className="absolute -top-8 -left-8 w-32 h-32 bg-fuchsia-400 opacity-10 rounded-full blur-2xl animate-pulse" />
+            <h2 className="text-2xl md:text-3xl font-extrabold text-fuchsia-300 mb-6 border-b border-fuchsia-700 pb-4 tracking-wide drop-shadow-lg">
               Merchandise Selection
             </h2>
             <div className="space-y-6">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-slate-200 mb-1">
                   Type
                 </label>
                 <select
                   name="type"
                   value={formData.type}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-xl border border-fuchsia-700 bg-[#0f172a]/60 text-fuchsia-100 focus:ring-2 focus:ring-fuchsia-400 focus:border-fuchsia-400 transition-all"
                 >
                   <option value="">Select Type</option>
-                  <option value="T-Shirt">T-Shirt</option>
-                  <option value="Hoodie">Hoodie</option>
+                  <option value="T-Shirt">Regular-sized</option>
+                  <option value="Hoodie">Over-sized</option>
                 </select>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-slate-200 mb-1">
                   Size
                 </label>
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+                {/* Size Chart Tables */}
+                <div className="mb-4">
+                  {formData.type === "T-Shirt" && (
+                    <div className="w-full overflow-x-auto animate-fade-in">
+                      <table className="w-full text-xs md:text-sm text-cyan-100 border-separate border-spacing-y-1 bg-[#0f172a]/80 rounded-xl shadow-lg">
+                        <caption className="text-cyan-300 font-bold mb-2 text-base md:text-lg">Regular-sized Size Chart (in inches)</caption>
+                        <thead>
+                          <tr className="bg-cyan-900/60">
+                            <th className="px-3 py-2 rounded-tl-xl">Size</th>
+                            <th className="px-3 py-2">Chest</th>
+                            <th className="px-3 py-2">Length</th>
+                            <th className="px-3 py-2 rounded-tr-xl">Sleeve</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="hover:bg-cyan-800/30">
+                            <td className="px-6 py-2">S</td>
+                            <td className="px-6 py-2">38</td>
+                            <td className="px-6 py-2">26</td>
+                            <td className="px-6 py-2">7</td>
+                          </tr>
+                          <tr className="hover:bg-cyan-800/30">
+                            <td className="px-6 py-2">M</td>
+                            <td className="px-6 py-2">40</td>
+                            <td className="px-6 py-2">27</td>
+                            <td className="px-6 py-2">7.5</td>
+                          </tr>
+                          <tr className="hover:bg-cyan-800/30">
+                            <td className="px-6 py-2">L</td>
+                            <td className="px-6 py-2">42</td>
+                            <td className="px-6 py-2">28</td>
+                            <td className="px-6 py-2">8</td>
+                          </tr>
+                          <tr className="hover:bg-cyan-800/30">
+                            <td className="px-6 py-2">XL</td>
+                            <td className="px-6 py-2">44</td>
+                            <td className="px-6 py-2">29</td>
+                            <td className="px-6 py-2">8.5</td>
+                          </tr>
+                          <tr className="hover:bg-cyan-800/30">
+                            <td className="px-6 py-2">XXL</td>
+                            <td className="px-6 py-2">46</td>
+                            <td className="px-6 py-2">30</td>
+                            <td className="px-6 py-2">9</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                  {formData.type === "Hoodie" && (
+                    <div className="w-full overflow-x-auto animate-fade-in">
+                      <table className="w-full text-xs md:text-sm text-fuchsia-100 border-separate border-spacing-y-1 bg-[#1e193b]/80 rounded-xl shadow-lg">
+                        <caption className="text-fuchsia-300 font-bold mb-2 text-base md:text-lg">Over-sized Size Chart (in inches)</caption>
+                        <thead>
+                          <tr className="bg-fuchsia-900/60">
+                            <th className="px-3 py-2 rounded-tl-xl">Size</th>
+                            <th className="px-3 py-2">Chest</th>
+                            <th className="px-3 py-2">Body Length</th>
+                            <th className="px-3 py-2">Sleeve Length</th>
+                            <th className="px-3 py-2">Sleeve Open</th>
+                            <th className="px-3 py-2 rounded-tr-xl">Shoulder</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr className="hover:bg-fuchsia-800/30">
+                            <td className="px-6 py-2">S</td>
+                            <td className="px-6 py-2">21</td>
+                            <td className="px-6 py-2">26.5</td>
+                            <td className="px-6 py-2">9.5</td>
+                            <td className="px-6 py-2">7.5</td>
+                            <td className="px-6 py-2">20</td>
+                          </tr>
+                          <tr className="hover:bg-fuchsia-800/30">
+                            <td className="px-6 py-2">M</td>
+                            <td className="px-6 py-2">22</td>
+                            <td className="px-6 py-2">27.5</td>
+                            <td className="px-6 py-2">10</td>
+                            <td className="px-6 py-2">8</td>
+                            <td className="px-6 py-2">21</td>
+                          </tr>
+                          <tr className="hover:bg-fuchsia-800/30">
+                            <td className="px-6 py-2">L</td>
+                            <td className="px-6 py-2">23</td>
+                            <td className="px-6 py-2">28.5</td>
+                            <td className="px-6 py-2">10.5</td>
+                            <td className="px-6 py-2">8.5</td>
+                            <td className="px-6 py-2">22</td>
+                          </tr>
+                          <tr className="hover:bg-fuchsia-800/30">
+                            <td className="px-6 py-2">XL</td>
+                            <td className="px-6 py-2">24</td>
+                            <td className="px-6 py-2">29.5</td>
+                            <td className="px-6 py-2">11</td>
+                            <td className="px-6 py-2">9</td>
+                            <td className="px-6 py-2">23</td>
+                          </tr>
+                          <tr className="hover:bg-fuchsia-800/30">
+                            <td className="px-6 py-2">XXL</td>
+                            <td className="px-6 py-2">25</td>
+                            <td className="px-6 py-2">30.5</td>
+                            <td className="px-6 py-2">11</td>
+                            <td className="px-6 py-2">9</td>
+                            <td className="px-6 py-2">23</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mt-2">
                   {["S", "M", "L", "XL", "XXL"].map((size) => (
                     <label key={size} className="cursor-pointer">
                       <input
@@ -312,18 +437,16 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
                         className="sr-only"
                       />
                       <div
-                        className={`flex items-center justify-center p-4 rounded-lg border-2 transition-all ${
-                          formData.size === size
-                            ? "border-blue-500 bg-blue-50"
-                            : "border-gray-200 bg-white hover:border-gray-300"
-                        }`}
+                        className={`flex items-center justify-center p-4 rounded-xl border-2 transition-all duration-200 shadow-inner ${formData.size === size
+                            ? (formData.type === "T-Shirt" ? "border-fuchsia-400 bg-fuchsia-900/30 shadow-[0_0_16px_2px_#a21caf55] scale-105" : "border-cyan-400 bg-cyan-900/30 shadow-[0_0_16px_2px_#22d3ee55] scale-105")
+                            : (formData.type === "T-Shirt" ? "border-fuchsia-900 bg-[#0f172a]/60 hover:border-fuchsia-400" : "border-cyan-900 bg-[#0f172a]/60 hover:border-cyan-400")
+                          }`}
                       >
                         <span
-                          className={`font-bold ${
-                            formData.size === size
-                              ? "text-blue-600"
-                              : "text-gray-700"
-                          }`}
+                          className={`font-bold text-lg tracking-wider ${formData.size === size
+                              ? (formData.type === "T-Shirt" ? "text-fuchsia-200" : "text-cyan-200")
+                              : (formData.type === "T-Shirt" ? "text-fuchsia-400/70" : "text-cyan-400/70")
+                            }`}
                         >
                           {size}
                         </span>
@@ -334,14 +457,14 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-slate-200 mb-1">
                   Want Name in T-Shirt?
                 </label>
                 <select
                   name="wantName"
                   value={formData.wantName}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-black focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-3 rounded-xl border border-fuchsia-700 bg-[#0f172a]/60 text-fuchsia-100 focus:ring-2 focus:ring-fuchsia-400 focus:border-fuchsia-400 transition-all"
                 >
                   <option value="Yes">Yes</option>
                   <option value="No">No</option>
@@ -350,7 +473,7 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
 
               {formData.wantName === "Yes" && (
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-fuchsia-200 mb-1">
                     Name in T-Shirt
                   </label>
                   <input
@@ -358,7 +481,7 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
                     name="nameInTShirt"
                     value={formData.nameInTShirt}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-3 rounded-xl border border-fuchsia-700 bg-[#0f172a]/60 text-fuchsia-100 focus:ring-2 focus:ring-fuchsia-400 focus:border-fuchsia-400 transition-all placeholder:text-fuchsia-400/60 shadow-inner"
                     placeholder="Enter name to be printed"
                   />
                 </div>
@@ -367,8 +490,8 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
           </div>
           <div className="flex justify-center mt-8">
             <button
-              onClick={() => scrollToSection(3)}
-              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg shadow-lg"
+              onClick={() => scrollToSection(2)}
+              className="px-8 py-3 bg-gradient-to-r from-fuchsia-400 to-cyan-400 text-white font-semibold rounded-xl shadow-lg hover:shadow-fuchsia-400/40 hover:scale-105 transition-all duration-200 tracking-wide border border-fuchsia-400/40"
             >
               Continue to Payment
             </button>
@@ -377,34 +500,59 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
 
         {/* Payment Section */}
         <section className="form-section min-h-screen py-16 flex flex-col justify-center">
-          <div className="bg-white bg-opacity-70 backdrop-blur-md rounded-2xl shadow-xl p-8 mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 border-b border-gray-200 pb-4">
+          <div className="bg-gradient-to-br from-[#1e293b]/80 to-[#0f172a]/90 border border-cyan-400/30 shadow-[0_8px_32px_0_#22d3ee33] rounded-3xl backdrop-blur-xl p-8 mb-8 relative overflow-hidden">
+            <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-cyan-400 opacity-10 rounded-full blur-2xl animate-pulse" />
+            <h2 className="text-2xl md:text-3xl font-extrabold text-cyan-300 mb-6 border-b border-cyan-700 pb-4 tracking-wide drop-shadow-lg">
               Payment
             </h2>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-3">
-                Upload Payment Proof
-              </label>
-              <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
-                <input
-                  type="file"
-                  accept="application/pdf,image/*"
-                  onChange={uploader}
-                  required={!fileUrl}
+            <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
+              {/* QR Code and UPI Pay */}
+              <div className="flex-1 flex flex-col items-center justify-center">
+                <img
+                  src="/tshirt/qr_code.png"
+                  alt="Payment QR Code"
+                  className="w-48 h-48 rounded-xl shadow-lg border-2 border-cyan-400 mb-4 bg-white object-contain"
                 />
-                {uploading && <span className="text-blue-600">Uploading...</span>}
-                {fileUrl && (
-                  <span className="text-green-600">
-                    Uploaded! <a href={fileUrl} target="_blank" rel="noopener noreferrer" className="underline text-blue-500">View File</a>
-                  </span>
-                )}
+                <p className="text-cyan-200 text-sm mb-2 text-center">Scan this QR code to pay via any UPI app</p>
+                <a
+                  href="upi://pay?pa=nerds@upi&pn=N.E.R.D.S.&am=499&cu=INR"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-cyan-400/40 hover:scale-105 transition-all duration-200 border border-cyan-400/40 mb-2"
+                >Pay Now
+                  <img src="/tshirt/UPI-Logo-vector.svg" alt="UPI Logo" className="w-8 h-8 bg-transparent rounded p-1" />
+
+                </a>
+                <p className="text-xs text-cyan-400 text-center">Or click Pay Now to pay via any UPI app</p>
+              </div>
+              {/* Upload Section */}
+              <div className="flex-1 flex flex-col items-center justify-center mt-6 md:mt-0">
+                <label className="block text-sm font-medium text-cyan-200 mb-3 text-center">
+                  Upload Payment Receipt Screenshot <span className="text-cyan-400">*</span>
+                </label>
+                <div className="border-2 border-dashed border-cyan-400/40 rounded-xl text-cyan-200 p-6 text-center bg-[#0f172a]/40 shadow-inner">
+                  <input
+                    type="file"
+                    accept="application/pdf,image/*"
+                    onChange={uploader}
+                    required={!fileUrl}
+                    className="mb-2"
+                  />
+                  {uploading && <span className="text-cyan-400 animate-pulse">Uploading...</span>}
+                  {fileUrl && (
+                    <span className="text-green-400">
+                      Uploaded! <a href={fileUrl} target="_blank" rel="noopener noreferrer" className="underline text-cyan-300">View File</a>
+                    </span>
+                  )}
+                </div>
+                <p className="text-xs text-cyan-400 mt-2 text-center">You must attach a screenshot of your payment receipt for final submission.</p>
               </div>
             </div>
           </div>
           <div className="flex justify-center mt-8">
             <button
-              onClick={() => scrollToSection(4)}
-              className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-medium rounded-lg shadow-lg"
+              onClick={() => scrollToSection(3)}
+              className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-cyan-400/40 hover:scale-105 transition-all duration-200 tracking-wide border border-cyan-400/40"
             >
               Continue to Review Order
             </button>
@@ -413,11 +561,12 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
 
         {/* Summary Section */}
         <section className="form-section min-h-screen py-16 flex flex-col justify-center">
-          <div className="bg-white bg-opacity-70 backdrop-blur-md rounded-2xl shadow-xl p-8 mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6 border-b border-gray-200 pb-4">
+          <div className="bg-gradient-to-br from-[#1e293b]/80 to-[#0f172a]/90 border border-fuchsia-400/30 shadow-[0_8px_32px_0_#a21caf33] rounded-3xl backdrop-blur-xl p-8 mb-8 relative overflow-hidden">
+            <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-fuchsia-400 opacity-10 rounded-full blur-2xl animate-pulse" />
+            <h2 className="text-2xl md:text-3xl font-extrabold text-fuchsia-300 mb-6 border-b border-fuchsia-700 pb-4 tracking-wide drop-shadow-lg">
               Order Summary
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-4 text-fuchsia-100">
               <p>
                 <b>Name:</b> {formData.name}
               </p>
@@ -458,7 +607,7 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9
             <div className="flex justify-center pt-6">
               <button
                 onClick={handleSubmit}
-                className="px-10 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-lg font-bold rounded-lg shadow-lg"
+                className="px-10 py-4 bg-gradient-to-r from-fuchsia-400 to-cyan-400 text-white text-lg font-extrabold rounded-xl shadow-lg hover:shadow-fuchsia-400/40 hover:scale-105 transition-all duration-200 tracking-wide border border-fuchsia-400/40 animate-pulse"
               >
                 Submit Order
               </button>

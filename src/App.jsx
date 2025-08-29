@@ -12,9 +12,8 @@ import Error from "./Pages/Error/Error";
 import LoadingAnimation from "./components/Loader/Loader"; 
 import Merch from "./Pages/Merch/Merch";
 import MerchPay from "./Pages/Merch/MerchPay";
-import Merch_form_ui from "./Pages/Merch/Merch_form_ui";
-import FormToSheet from "./Pages/Merch/FormToSheets";
-import DriveUpload from "./Pages/Merch/DriveUpload";
+
+
 
 // ScrollToTop Component
 const ScrollToTop = () => {
@@ -54,10 +53,7 @@ function App() {
                 <Route path="/team" element={<Team />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/merch" element={<Merch />} />
-                <Route path="/merchPay" element={<MerchPay />} /> {/* NEW */}
-                <Route path="/merch_details" element={<Merch_form_ui/>} />
-                <Route path="/testPay" element={<FormToSheet/>} />
-                <Route path="/testDrive" element={<DriveUpload/>} />
+                <Route path="/merchPay" element={<MerchPay />} /> 
                 {/* Catch-all route for 404 page */}
                 <Route path="*" element={<Error />} />
               </Routes>
