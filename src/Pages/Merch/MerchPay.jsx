@@ -22,6 +22,7 @@ function MerchPay() {
   else if (formData.type === "Hoodie" && formData.wantName === "No") upiAmount = 479;
   else if (formData.type === "T-Shirt" && formData.wantName === "Yes") upiAmount = 409;
   else if (formData.type === "T-Shirt" && formData.wantName === "No") upiAmount = 399;
+  else if (formData.type === "T-Shirt" && formData.fromNITSilchar === "No") upiAmount = 649;
   // UPI link
   const upiLink = `upi://pay?pa=swarupchanda1963-1@okhdfcbank&pn=Swarup%20Chanda&am=${upiAmount}&cu=INR`;
   const [fileUrl, setFileUrl] = useState("");
@@ -551,6 +552,11 @@ function MerchPay() {
                     <td className="py-1 px-2 font-semibold">Over-sized T-shirt</td>
                     <td className="py-1 px-2">₹489</td>
                     <td className="py-1 px-2">₹479</td>
+                  </tr>
+                  <tr className="border-t border-cyan-400/20">
+                    <td className="py-1 px-2 font-semibold">Non-nitians</td>
+                    <td className="py-1 px-2">₹649</td>
+                    <td className="py-1 px-2">₹639</td>
                   </tr>
                 </tbody>
               </table>
