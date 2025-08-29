@@ -8,6 +8,7 @@ const links = [
   { name: 'Team', path: '/team' },
   { name: 'Merch', path: '/merch' },
   { name: 'Contact', path: '/contact' },
+  { name: 'Giveaway', path: '/giveaway'},
 ];
 
 const Navbar = () => {

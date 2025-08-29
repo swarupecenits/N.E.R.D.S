@@ -15,6 +15,7 @@
         "@react-three/fiber": "^8.18.0",
         "@tailwindcss/line-clamp": "^0.4.4",
         "carousel": "^0.0.3",
+        "firebase": "^12.1.0",
         "framer-motion": "^11.18.2",
         "list": "^2.0.19",
         "maath": "^0.10.8",
