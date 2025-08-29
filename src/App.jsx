@@ -12,6 +12,7 @@ import Error from "./Pages/Error/Error";
 import LoadingAnimation from "./components/Loader/Loader"; 
 import Merch from "./Pages/Merch/Merch";
 import MerchPay from "./Pages/Merch/MerchPay";
+import Giveaway from './Pages/Giveaway/Giveaway';
 
 
 
@@ -53,7 +54,8 @@ function App() {
                 <Route path="/team" element={<Team />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/merch" element={<Merch />} />
-                <Route path="/merchPay" element={<MerchPay />} /> 
+                <Route path="/merchPay" element={<MerchPay />} />
+                <Route path="/giveaway" element={<Giveaway />} /> 
                 {/* Catch-all route for 404 page */}
                 <Route path="*" element={<Error />} />
               </Routes>
