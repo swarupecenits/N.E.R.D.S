@@ -3,7 +3,7 @@ import { useState } from 'react';
 import RegistrationPage from '/src/components/Giveaway/RegistrationPage.jsx';
 import RiddlePage from '/src/components/Giveaway/RiddlePage.jsx';
 import SuccessPage from '/src/components/Giveaway/SuccessPage.jsx';
-import { Header, Footer } from '/src/components/Giveaway/HeaderAndFooter.jsx';
+import { Header, Footer } from '/src/components/Giveaway/HeaderandFooter.jsx';
 
 
 export default function Giveaway() {

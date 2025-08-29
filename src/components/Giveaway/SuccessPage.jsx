@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { utils } from '/src/config/firebase.js';
 
 export default function SuccessPage({ user }) {
