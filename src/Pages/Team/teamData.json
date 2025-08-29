@@ -172,17 +172,17 @@
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/pbhpx7qnmv656drwfzck",
     "year": "2025"
   },
-  {
-    "id": 2013,
-    "name": "Uddhav Saikia",
+    {
+    "id": 2022,
+    "name": "Chaman Laguri",
     "team": "3rd Year",
-    "designation": "Event Management Head",
+    "designation": "IoT Head",
     "developer_team": "No",
-    "email": "uddhav_ug_23@ece.nits.ac.in",
-    "social": "https://www.instagram.com/inspiral_40mg?igsh=ZHI4b2VnN2lpbHQ=",
-    "github": "https://github.com/uddhav-saikia",
-    "linkedin": "https://www.linkedin.com/in/uddhav-saikia",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/k2yomc69l9anp0dxcnyu",
+    "email": "",
+    "social": "https://www.instagram.com/chamanlaguri",
+    "github": "https://github.com/Chaman25-design",
+    "linkedin": "https://www.linkedin.com/in/chaman-laguri-84853028b",
+    "image_id": "https://res.cloudinary.com/diabjuzqc/image/upload/v1749237795/IMG_20250606_002628_h4ujyb.jpg",
     "year": "2025"
   },
   {
@@ -277,19 +277,7 @@
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/e7y4mcm0izibxucgrx2p",
     "year": "2025"
   },
-  {
-    "id": 2022,
-    "name": "Chaman Laguri",
-    "team": "3rd Year",
-    "designation": "Iot Head",
-    "developer_team": "No",
-    "email": "",
-    "social": "https://www.instagram.com/chamanlaguri",
-    "github": "https://github.com/Chaman25-design",
-    "linkedin": "https://www.linkedin.com/in/chaman-laguri-84853028b",
-    "image_id": "https://res.cloudinary.com/diabjuzqc/image/upload/v1749237795/IMG_20250606_002628_h4ujyb.jpg",
-    "year": "2025"
-  },
+
   {
     "id": 2023,
     "name": "Hrishikesh Kashyap",
