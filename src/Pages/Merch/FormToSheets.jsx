@@ -3,17 +3,51 @@ import React, { useState } from 'react';
 function FormToSheet() {
   const [isNITS, setIsNITS] = useState("Yes");
   const [wantName, setWantName] = useState("Yes");
+  const [fileUrl, setFileUrl] = useState("");
+  const [uploading, setUploading] = useState(false);
 
   const url = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9kL0ruKR4lyjxhwWhnw9VG42O-ts8-SxYk-sjMVycqKV0vU3gw/exec";
 
+  // File upload logic (from DriveUpload)
+  function uploader(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    setUploading(true);
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+      const rawLog = reader.result.split(",")[1];
+      const dataSend = {
+        dataReq: { data: rawLog, name: file.name, type: file.type },
+        fname: "uploadFilesToGoogleDrive",
+      };
+      fetch(
+        "https://script.google.com/macros/s/AKfycbyhMyvbLwGEqCjVGC0gJCwvAOS_KyJnfVleU4h3iUUG88VeUXoWyujKKjRxMSuzT9AoHA/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(dataSend),
+        }
+      )
+        .then((res) => res.json())
+        .then((a) => {
+          setFileUrl(a.url || a.fileUrl || "");
+          setUploading(false);
+        })
+        .catch((err) => {
+          setUploading(false);
+          alert("Upload error");
+        });
+    };
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    if (!fileUrl) {
+      alert("Please upload payment proof before submitting.");
+      return;
+    }
     const form = e.target;
-
-    // Create a timestamp (you can customize format)
-    const timestamp = new Date().toISOString(); // e.g., "2025-08-29T12:34:56.789Z"
-
+    const timestamp = new Date().toISOString();
     const formData = new URLSearchParams();
     formData.append("Timestamp", timestamp);
     formData.append("Name", form.name.value);
@@ -25,8 +59,7 @@ function FormToSheet() {
     formData.append("NameOnTShirt", wantName === "Yes" ? form.nameOnTShirt.value : "");
     formData.append("Address", form.address.value);
     formData.append("Phone", form.phone.value);
-    formData.append("ScreenshotLink", form.screenshotLink.value);
-
+    formData.append("ScreenshotLink", fileUrl);
     fetch(url, {
       method: "POST",
       headers: {
@@ -35,7 +68,10 @@ function FormToSheet() {
       body: formData.toString()
     })
       .then(res => res.text())
-      .then(response => alert(response))
+      .then(response => {
+        alert(response);
+        setFileUrl("");
+      })
       .catch(err => alert("Error submitting form"));
   };
 
@@ -74,7 +110,19 @@ function FormToSheet() {
 
         <input name="address" placeholder="Address" required /><br />
         <input name="phone" placeholder="Phone Number" required /><br />
-        <input name="screenshotLink" placeholder="Screenshot Drive Link" required /><br />
+        <label>Upload Payment Proof:</label><br />
+        <input
+          type="file"
+          accept="application/pdf,image/*"
+          onChange={uploader}
+          required={!fileUrl}
+        /><br />
+        {uploading && <span style={{ color: 'blue' }}>Uploading...</span>}
+        {fileUrl && (
+          <span style={{ color: 'green' }}>
+            Uploaded! <a href={fileUrl} target="_blank" rel="noopener noreferrer">View File</a>
+          </span>
+        )}<br />
 
         <button type="submit">Add</button>
       </form>
