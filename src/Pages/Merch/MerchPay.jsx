@@ -16,6 +16,14 @@ function MerchPay() {
     phone: "",
     paymentProofLink: "",
   });
+  // Dynamically determine UPI amount based on selection
+  let upiAmount = 0;
+  if (formData.type === "Hoodie" && formData.wantName === "Yes") upiAmount = 500;
+  else if (formData.type === "Hoodie" && formData.wantName === "No") upiAmount = 450;
+  else if (formData.type === "T-Shirt" && formData.wantName === "Yes") upiAmount = 400;
+  else if (formData.type === "T-Shirt" && formData.wantName === "No") upiAmount = 350;
+  // UPI link
+  const upiLink = `upi://pay?pa=swarupchanda1963-1@okhdfcbank&pn=Swarup%20Chanda&am=${upiAmount}&cu=INR`;
   const [fileUrl, setFileUrl] = useState("");
   const [uploading, setUploading] = useState(false);
 
@@ -531,7 +539,7 @@ function MerchPay() {
                 />
                 <p className="text-cyan-200 text-sm mb-2 text-center">Scan this QR code to pay via any UPI app</p>
                 <a
-                  href="upi://pay?pa=nerds@upi&pn=N.E.R.D.S.&am=499&cu=INR"
+                  href={upiLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex flex-col items-center w-full"
