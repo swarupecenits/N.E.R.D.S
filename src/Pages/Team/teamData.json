@@ -9,7 +9,7 @@
     "email": "swarupchanda1963@gmail.com",
     "social": "https://www.instagram.com/this_is_swarup_?igsh=MXA4MzE4bnJ3YWs0Mg==",
     "github": "https://github.com/swarupecenits",
-    "linkedin": "https://www.linkedin.com/in/swarup-chanda-23053724a/",
+    "linkedin": "https://www.linkedin.com/in/swarup-chanda",
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/ucr0cfbfdfdytnm9hhrh",
     "year": "2025"
   },
@@ -34,14 +34,14 @@
     "developer_team": "Yes",
     "developer_domain": "Web",
     "email": "himdfayzan1735@gmail.com",
-    "social": "https://www.instagram.com/md_fayjan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    "social": "https://www.instagram.com/md_fayjan?igsh=MTlpNHh3bGthbTBidQ==",
     "github": "https://github.com/fayjan",
     "linkedin": "https://www.linkedin.com/in/md-fayjan-1ba784256/",
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/fl7s9efn5nrfilh30rrl.webp",
     "year": "2025"
   },
   {
-    "id": 2003,
+    "id": 2000,
     "name": "Hraday Sadrani",
     "team": "4th Year",
     "designation": "Board Member",
@@ -54,7 +54,7 @@
     "year": "2025"
   },
   {
-    "id": 2003,
+    "id": 2000.5,
     "name": "MD Rakibul Islam Midul",
     "team": "4th Year",
     "designation": "Board Member",
@@ -172,30 +172,17 @@
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/pbhpx7qnmv656drwfzck",
     "year": "2025"
   },
-    {
-    "id": 2022,
-    "name": "Chaman Laguri",
+  {
+    "id": 2013,
+    "name": "Uddhav Saikia",
     "team": "3rd Year",
-    "designation": "IoT Head",
+    "designation": "Event Management Head",
     "developer_team": "No",
-    "email": "",
-    "social": "https://www.instagram.com/chamanlaguri",
-    "github": "https://github.com/Chaman25-design",
-    "linkedin": "https://www.linkedin.com/in/chaman-laguri-84853028b",
-    "image_id": "https://res.cloudinary.com/diabjuzqc/image/upload/v1749237795/IMG_20250606_002628_h4ujyb.jpg",
-    "year": "2025"
-  },
-    {
-    "id": 2020,
-    "name": "Abhishek Kumar",
-    "team": "3rd Year",
-    "designation": "Aero Head",
-    "developer_team": "No",
-    "email": "abhishekkr_ug_23@ee.nits.ac.in",
-    "social": "https://www.instagram.com/abhi31an?igsh=aGdrem9wNjJ2ZTNm&utm_source=qr",
-    "github": "https://github.com/Abhishek31an",
-    "linkedin": "https://www.linkedin.com/in/abhishek-kumar-422704292",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726866/jwabhaur1wszlv9vjx5h.webp",
+    "email": "uddhav_ug_23@ece.nits.ac.in",
+    "social": "https://www.instagram.com/inspiral_40mg?igsh=ZHI4b2VnN2lpbHQ=",
+    "github": "https://github.com/uddhav-saikia",
+    "linkedin": "https://www.linkedin.com/in/uddhav-saikia",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/k2yomc69l9anp0dxcnyu",
     "year": "2025"
   },
   {
@@ -264,7 +251,19 @@
     "image_id": "https://res.cloudinary.com/dmhbmurzw/image/upload/v1728361507/IMG_20241001_101916_-_Prantic_Dev_Nath_rkgqvn.jpg",
     "year": "2025"
   },
-
+  {
+    "id": 2020,
+    "name": "Abhishek Kumar",
+    "team": "3rd Year",
+    "designation": "Aero Head",
+    "developer_team": "No",
+    "email": "abhishekkr_ug_23@ee.nits.ac.in",
+    "social": "https://www.instagram.com/abhi31an?igsh=aGdrem9wNjJ2ZTNm&utm_source=qr",
+    "github": "https://github.com/Abhishek31an",
+    "linkedin": "https://www.linkedin.com/in/abhishek-kumar-422704292",
+    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726866/jwabhaur1wszlv9vjx5h.webp",
+    "year": "2025"
+  },
   {
     "id": 2021,
     "name": "Sunidhi Chetri",
@@ -278,7 +277,19 @@
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/f_auto,q_auto/e7y4mcm0izibxucgrx2p",
     "year": "2025"
   },
-
+  {
+    "id": 2022,
+    "name": "Chaman Laguri",
+    "team": "3rd Year",
+    "designation": "Iot Head",
+    "developer_team": "No",
+    "email": "",
+    "social": "https://www.instagram.com/chamanlaguri",
+    "github": "https://github.com/Chaman25-design",
+    "linkedin": "https://www.linkedin.com/in/chaman-laguri-84853028b",
+    "image_id": "https://res.cloudinary.com/diabjuzqc/image/upload/v1749237795/IMG_20250606_002628_h4ujyb.jpg",
+    "year": "2025"
+  },
   {
     "id": 2023,
     "name": "Hrishikesh Kashyap",
@@ -354,7 +365,7 @@
     "developer_team": "Yes",
     "developer_domain": "Web",
     "email": "himdfayzan1735@gmail.com",
-    "social": "https://www.facebook.com/md.fayzan.79/",
+    "social": "https://www.instagram.com/md_fayjan?igsh=MTlpNHh3bGthbTBidQ==",
     "github": "https://github.com/fayjan",
     "linkedin": "https://www.linkedin.com/in/md-fayjan-1ba784256/",
     "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/fl7s9efn5nrfilh30rrl.webp",
@@ -364,7 +375,7 @@
     "id": 3,
     "name": "Hraday Sadrani",
     "team": "3rd Year",
-    "designation": "Technical Head",
+    "designation": "Board Member",
     "developer_team": "No",
     "email": "sadranih_ug_22@ee.nits.ac.in",
     "social": "https://www.instagram.com/hraday_sadrani/",
@@ -390,7 +401,7 @@
     "id": 34,
     "name": "MD Rakibul Islam Midul",
     "team": "3rd Year",
-    "designation": "ML Head",
+    "designation": "Board Member",
     "developer_team": "No",
     "email": "",
     "social": "",
@@ -919,6 +930,19 @@
    "image_id": "https://res.cloudinary.com/dedqvx9kn/image/upload/v1756209259/AbhiudayNarayan_2413161_ldmcjd.jpg",
    "year": "2025"
  },
+ {
+    "id": 8340,
+    "name": "Anshuman Upadhyay",
+    "team": "2nd Year",
+    "designation": "Junior Member",
+    "developer_team": "No",
+    "email": "cosmosmagic11@gmail.com",
+    "social": "https://www.instagram.com/_.nshuman/",
+    "github": "https://github.com/Anshuman1-collab",
+    "linkedin": "https://www.linkedin.com/in/anshuman-upadhyay-8aa76a378/",
+    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756397453/anshuman_oaqwgm.webp",
+    "year": "2025"
+  },
    {
     "id": 8309,
     "name": "Nibir Deka",
@@ -942,7 +966,7 @@
     "social": "https://www.instagram.com/tinkaldas00/",
     "github": "https://github.com/Tinkal62",
     "linkedin": "https://www.linkedin.com/in/tinkal-das-734aa8325/",
-    "image_id": "https://res.cloudinary.com/dpurdbgrx/image/upload/v1756215770/Picsart_25-08-26_19-04-32-014_fr3uni.jpg",
+    "image_id": "https://res.cloudinary.com/dpurdbgrx/image/upload/v1756395150/Tinkal_Pic_y8jrfl.webp",
     "year": "2025"
   },
   {
@@ -955,7 +979,7 @@
     "social": "https://www.instagram.com/kabyasreehazarika/",
     "github": "https://github.com/cheri-zone",
     "linkedin": "https://www.linkedin.com/in/kabyasree-hazarika-750008295/",
-    "image_id": "https://collection.cloudinary.com/duiaafygf/f0b00b39e5a2770ae5c544fc1932d253",
+    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756397668/kavyasree_rhvrra.webp",
     "year": "2025"
   },
   {
@@ -994,7 +1018,7 @@
     "social": "https://www.instagram.com/_arcadia_09/",
     "github": "https://github.com/antariksa09",
     "linkedin": "https://www.linkedin.com/in/antariksa-chetia-099ab3314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "image_id": "https://res.cloudinary.com/dqmktpekh/image/upload/v1727726868/fq5es2m3mo5shev4eygz.webp",
+    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756396627/antariksa_jhsnan.webp",
     "year": "2025"
   },
   {
@@ -1017,10 +1041,10 @@
     "designation": "Junior Member",
     "developer_team": "No",
     "email": "lichagogoi2005@gmail.com",
-    "social": "https://www.instagram.com/_m.liesel?igsh=MWVmZGFscjZ4cHo1dA==",
+    "social": "",
     "github": "https://github.com/lichaa25",
     "linkedin": "https://www.linkedin.com/in/licha-gogoi-ab90152a4?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "image_id": "https://res.cloudinary.com/doquewmbh/image/upload/v1756199717/rahul-ag_hfoafo.jpg",
+    "image_id": "https://res.cloudinary.com/dcxdvlzqd/image/upload/v1756283198/WhatsApp_Image_2025-08-27_at_13.54.40_ea58dc35_eojmuq.jpg",
     "year": "2025"
   },
   {
@@ -1033,7 +1057,7 @@
     "social": "https://www.instagram.com/evander_eddie/",
     "github": "https://github.com/EvanderEddie",
     "linkedin": "",
-    "image_id": "",
+    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756398489/adhya_huuneh.webp",
     "year": "2025"
   },
   {
@@ -1059,7 +1083,7 @@
     "social": "https://www.instagram.com/its_adarsh_raj_01?igsh=MmMzdDRrbzdsbTVh",
     "github": "https://github.com/adarshrajug24-hash",
     "linkedin": "https://www.linkedin.com/in/adarsh-raj-449b0835b?",
-    "image_id": "https://res.cloudinary.com/dcys6jytf/image/upload/v1756228074/adarsh11111_lgwg94.jpg",
+    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756397363/adarsh_ovetox.webp",
     "year": "2025"
   },
   {
@@ -1072,7 +1096,7 @@
     "social": "https://www.instagram.com/maniwhatt._?igsh=NG8yMnZibXJtbGlx",
     "github": "https://github.com/guggillaug24-ui",
     "linkedin": "https://www.linkedin.com/in/mani-kanta-90ba26361",
-    "image_id": "https://drive.google.com/file/d/19IwhYiHg-Wo49FsSeo7Q_ADP9ybVVJmh/view?usp=drivesdk",
+    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756400025/manikanta_m6nikx.webp",
     "year": "2025"
   },
   {
@@ -1111,7 +1135,7 @@
     "social": "https://www.instagram.com/tiwari.abhi15?igsh=bnZpaTh2MWs3cm84",
     "github": "https://github.com/Abhi-code15",
     "linkedin": "www.linkedin.com/in/abhishek015",
-    "image_id": "https://drive.google.com/file/d/1ZZhkdX85xNdOVrhjdFYI29-YeXRzyjez/view?usp=sharing",
+    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756396334/abhishek_tiwari_hf1fdw.webp",
     "year": "2025"
   },
   {
@@ -1124,7 +1148,7 @@
     "social": "https://www.instagram.com/_umj_06/",
     "github": "https://github.com/Utpal1906",
     "linkedin": "https://www.linkedin.com/in/utpal-majumder-89a726325/",
-    "image_id": "Utpal Majumder_2413061.jpg",
+    "image_id": "https://res.cloudinary.com/dqanxcvxj/image/upload/v1756396826/Utpal_Majumder_2413061_vgrjwo.webp",
     "year": "2025"
   },
   {
@@ -1150,7 +1174,7 @@
     "social": "https://www.instagram.com/vaibhavsinghrajput6666?igsh=bmR0eHQ3NWRhZDBo",
     "github": "https://github.com/vaibhavsingh2222",
     "linkedin": "https://www.linkedin.com/in/vaibhav-singh-40b60b312",
-    "image_id": "https://res.cloudinary.com/drb6tjhx6/image/upload/v1756231143/vaibhavprofile_rxwmiq.jpg",
+    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756399628/vaibhav_zydlvb.webp",
     "year": "2025"
   },
   {
@@ -1176,7 +1200,7 @@
     "social": "https://www.instagram.com/adibp.13",
     "github": "https://github.com/AdityaBP13",
     "linkedin": "https://www.linkedin.com/in/aditya-b-pillai-bb5417349",
-    "image_id": "https://collection.cloudinary.com/du8iun4fb/9c01463a32955735050dafd372fa4c30",
+    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756396333/aditya_b_pilani_ezpdqt.webp",
     "year": "2025"
   },
   {
@@ -1202,7 +1226,7 @@
     "social": "https://www.instagram.com/aryan_kumar7369/?igsh=bWp1enk0cmpnbGg3",
     "github": "https://github.com/Aryan-Kumar7369",
     "linkedin": "https://www.linkedin.com/in/aryan-kumar-ak/",
-    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756230408/AryanKumar_2413138_rvxlcr.jpg",
+    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756394479/WhatsApp_Image_2025-08-28_at_8.46.21_PM_oqdor4.webp",
     "year": "2025"
   },
   {
@@ -1215,7 +1239,7 @@
     "social": "https://www.instagram.com/bittu_das6622/",
     "github": "https://github.com/bd9296393-gif",
     "linkedin": "https://www.linkedin.com/in/bittu-das-90924b324/",
-    "image_id": "Bittu Das 2414033 - Google Drive",
+    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756396847/Bittu_nerds_flgktl.webp",
     "year": "2025"
   },
   {
@@ -1254,7 +1278,7 @@
     "social": "https://www.instagram.com/_shraddha081?igsh=MTFtdmhsbzhsejRwdQ==",
     "github": "",
     "linkedin": "https://www.linkedin.com/in/shraddha-yadav-15aa89341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    "image_id": "https://drive.google.com/file/d/1uIG-DZ4G1XJ-__G_TUIelEwBicYpaFou/view?usp=drivesdk",
+    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756396335/shradha_qyircm.webp",
     "year": "2025"
   },
   {
@@ -1280,7 +1304,7 @@
     "social": "https://www.instagram.com/_d_mounas_",
     "github": "https://github.com/DMounas",
     "linkedin": "https://www.linkedin.com/in/debangshu-mounas-3b273b317",
-    "image_id": "https://collection.cloudinary.com/dirprhshv/5940cd45012c4f2e4214922e2976d863",
+    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756399414/debangshu_cgmuqy.webp",
     "year": "2025"
   },
   {
@@ -1322,19 +1346,7 @@
     "image_id": "https://res.cloudinary.com/dummqziqm/image/upload/v1756236044/WhatsApp_Image_2025-08-27_at_00.40.55_1bc237d3_gbjsdk.jpg",
     "year": "2025"
   },
-  {
-    "id": 8340,
-    "name": "Anshuman Upadhyay",
-    "team": "2nd Year",
-    "designation": "Junior Member",
-    "developer_team": "No",
-    "email": "cosmosmagic11@gmail.com",
-    "social": "https://www.instagram.com/_.nshuman/",
-    "github": "https://github.com/Anshuman1-collab",
-    "linkedin": "https://www.linkedin.com/in/anshuman-upadhyay-8aa76a378/",
-    "image_id": "https://res.cloudinary.com/dy66qucmz/image/upload/v1756233589/IMG_2052_xmkqw7.heic",
-    "year": "2025"
-  },
+  
   {
     "id": 8341,
     "name": "Jubayer Abeadin Shafin",
@@ -1384,12 +1396,12 @@
     "social": "https://www.instagram.com/bed._anta",
     "github": "https://github.com/HilariousSoupXD",
     "linkedin": "https://www.linkedin.com/in/piyush-aditya-kar-20a961233/",
-    "image_id": "https://res.cloudinary.com/dui4pzkc2/image/upload/v1756231650/BedantaPrakashBarman_2415015_brsd6t.png",
+    "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756401575/IMG-20250828-WA0033_hzuxqs.webp",
     "year": "2025"
   },
   {
-  "id": 4345,
-  "name": "Syed Ashhar Abbas",
+  "id": 8345,
+  "name": "Krishna Mahato",
   "team": "2nd Year",
   "designation": "Junior Member",
   "developer_team": "No",
@@ -1397,12 +1409,12 @@
   "social": "https://www.instagram.com/myself_krishna10?igsh=MWU2bGVrY290bm10NQ==",
   "github": "https://github.com/Krishna-2415070",
   "linkedin": "www.linkedin.com/in/krishna-mahato-2b646a318",
-  "image_id": "https://res.cloudinary.com/drb6tjhx6/image/upload/v1756227711/krishnaprofile_vmggb1.jpg",
+  "image_id": "https://res.cloudinary.com/dkxcqf5as/image/upload/v1756399725/krishna_y9jagd.webp",
   "year": "2025"
 },
   {
-  "id": 4346,
-  "name": "Krishna Mahato",
+  "id": 8346,
+  "name": "Syed Ashhar Abbas",
   "team": "2nd Year",
   "designation": "Junior Member",
   "developer_team": "No",
@@ -1412,6 +1424,49 @@
   "linkedin": "https://www.linkedin.com/in/syed-ashhar-abbas-840a86332",
   "image_id": "https://res.cloudinary.com/drb6tjhx6/image/upload/v1756210831/ppppp_iuowaj.jpg",
   "year": "2025"
+},
+{
+  "id": 8347,
+  "name": "Shayan Bakshi",
+  "team": "2nd Year",
+  "designation": "Junior Core Member",
+  "developer_team": "No",
+  "Email": "shayanbakshi54@gmail.com",
+  "social": "https://www.instagram.com/shayan_981_",
+  "github": "https://github.com/sohum812",
+  "linkedin": "https://www.linkedin.com/in/shayan~",
+  "image_id": "https://res.cloudinary.com/db5oavrze/image/upload/v1756282561/ShayanBakshi_2416034_acjvxr.jpg",
+  "year": "2025"
+},
+{
+  "id": 8348,
+  "name": "Subhro kr Mandal",
+  "team": "2nd Year",
+  "designation": "Junior Member",
+  "developer_team": "No",
+  "email": "subhromandal816@gmail.com",
+  "social": "https://www.instagram.com/", 
+  "github": "https://github.com/SubhrokrMandal",
+  "linkedin": "https://www.linkedin.com/in/subhro-mandal",
+  "image_id": "https://res.cloudinary.com/dh1jfafrf/image/upload/v1756395807/WhatsApp_Image_2025-08-09_at_20.33.04_b69ac897_v2s469.webp",
+  "year": "2025"
+},
+{
+  "id": 8349,
+  "name": "Sankalp Gupta",
+  "team": "2nd Year",
+  "designation": "Junior Member",
+  "developer_team": "No",
+  "email": "sankalp_ug_24@mech.nits.ac.in",
+  "social": "https://www.instagram.com/gupta_sankalp_?igsh=MWc5djltbTQ5N3VpNw==",
+  "github": "https://github.com/sankalp4543-debug",
+  "linkedin": "https://www.linkedin.com/in/sankalp-gupta-171933332/",
+  "image_id": "https://res.cloudinary.com/dlwao9fis/image/upload/v1756243012/_PPP5034_lrclr7.jpg",
+  "year": "2025"
 }
+
+
+
+
 
 ]

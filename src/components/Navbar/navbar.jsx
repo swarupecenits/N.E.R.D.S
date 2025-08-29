@@ -7,6 +7,7 @@ const links = [
   { name: 'Gallery', path: '/gallery' },
   { name: 'Team', path: '/team' },
   { name: 'Merch', path: '/merch' },
+  { name: 'Giveaway', path: '/giveaway'},
   { name: 'Contact', path: '/contact' },
 ];
 

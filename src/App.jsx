@@ -9,10 +9,14 @@ import Contact from "./Pages/Contact/Contact";
 import Navbar from "./components/Navbar/navbar";
 import Footer from "./components/Footer/footer";
 import Error from "./Pages/Error/Error";
-import LoadingAnimation from "./components/Loader/Loader"; // Adjust the path as necessary
+import LoadingAnimation from "./components/Loader/Loader"; 
 import Merch from "./Pages/Merch/Merch";
+import MerchPay from "./Pages/Merch/MerchPay";
+import Giveaway from './Pages/Giveaway/Giveaway';
 
-// ScrollToTop Component to ensure navigation starts from the top
+
+
+// ScrollToTop Component
 const ScrollToTop = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,19 +28,17 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading delay (e.g., fetching data)
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust the delay as needed (3000ms = 3 seconds)
-
-    return () => clearTimeout(timer); // Cleanup timeout on component unmount
+    }, 3000);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       <Router>
         <ScrollToTop />
-        {loading ? ( // Conditional rendering for loading animation
+        {loading ? (
           <LoadingAnimation />
         ) : (
           <>
@@ -52,6 +54,8 @@ function App() {
                 <Route path="/team" element={<Team />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/merch" element={<Merch />} />
+                <Route path="/merchPay" element={<MerchPay />} />
+                <Route path="/giveaway" element={<Giveaway />} /> 
                 {/* Catch-all route for 404 page */}
                 <Route path="*" element={<Error />} />
               </Routes>

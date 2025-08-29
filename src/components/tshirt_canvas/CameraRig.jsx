@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import  { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { easing } from 'maath';
 import { useSnapshot } from 'valtio';
@@ -14,10 +14,10 @@ const CameraRig = ({ children }) => {
     const isMobile = window.innerWidth <= 600;
 
     // set the initial position of the model
-    let targetPosition = [0, 0, 2];
+    let targetPosition = [-0.2, -0.8, 5];
     if (snap.intro) {
       if (isBreakpoint) targetPosition = [0, 0, 2];
-      if (isMobile) targetPosition = [0, 0, 1.7];
+      if (isMobile) targetPosition = [-0.1, -1, 3];
     } else {
       if (isMobile) targetPosition = [0, 0, 3]
       else targetPosition = [0, 0, 2];
