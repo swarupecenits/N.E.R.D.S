@@ -12,7 +12,7 @@ function MerchPay() {
     nameInTShirt: "",
     address: "",
     phone: "",
-    paymentScreenshot: null,
+  paymentProofLink: "",
   });
 
   const [currentSection, setCurrentSection] = useState(0);
@@ -27,41 +27,39 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxm00d8wdRwX_LqEptIl
     }));
   };
 
-  const handleFileChange = (e) => {
-    const { name, files } = e.target;
-    if (files && files[0]) {
-      setFormData((prev) => ({
-        ...prev,
-        [name]: files[0],
-      }));
-    }
-  };
+
+  // No file upload logic needed; using payment proof link instead
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const data = new FormData();
-      Object.keys(formData).forEach((key) => {
-        if (formData[key]) {
-          data.append(key, formData[key]);
-        }
-      });
-
+      // Map React keys → Apps Script keys (use keys from FormToSheets.jsx)
+      data.append("name", formData.name);
+      data.append("fromNITSilchar", formData.fromNITSilchar);
+      data.append("scholarId", formData.fromNITSilchar === "Yes" ? formData.scholarId : "0000000");
+      data.append("type", formData.type);
+      data.append("size", formData.size);
+      data.append("wantName", formData.wantName);
+      data.append("nameInTShirt", formData.wantName === "Yes" ? formData.nameInTShirt : "");
+      data.append("address", formData.address);
+      data.append("phone", formData.phone);
+      // Instead of file, send payment proof link
+      if (formData.paymentProofLink) {
+        data.append("screenshot", formData.paymentProofLink);
+      }
       const response = await fetch(SCRIPT_URL, {
         method: "POST",
         body: data,
       });
-
       const text = await response.text();
-      console.log("RAW RESPONSE:", text); // <-- Debug log
       let result;
       try {
         result = JSON.parse(text);
-      } catch (err) {
-        alert("❌ Submission failed: Invalid response from server");
+      } catch (jsonErr) {
+        alert(`Server response: ${text}`);
         return;
       }
-
       if (result.status === "success") {
         alert("✅ Order submitted successfully!");
         setFormData({
@@ -75,6 +73,7 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxm00d8wdRwX_LqEptIl
           address: "",
           phone: "",
           paymentScreenshot: null,
+          fileUrl: "",
         });
       } else {
         alert("❌ Submission failed: " + result.message);
@@ -84,6 +83,7 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxm00d8wdRwX_LqEptIl
       alert("⚠️ Error submitting form. Check console.");
     }
   };
+
 
   const scrollToSection = (index) => {
     setCurrentSection(index);
@@ -353,34 +353,20 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxm00d8wdRwX_LqEptIl
             </h2>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-3">
-                Upload Payment Screenshot
+                Paste Payment Proof Link
               </label>
               <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
                 <input
-                  type="file"
-                  id="paymentScreenshot"
-                  name="paymentScreenshot"
-                  accept="image/*"
-                  onChange={handleFileChange}
-                  className="hidden"
+                  type="url"
+                  name="paymentProofLink"
+                  value={formData.paymentProofLink}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"
+                  placeholder="Paste your payment proof link here (Google Drive, Imgur, etc.)"
+                  required
                 />
-                <label htmlFor="paymentScreenshot" className="cursor-pointer">
-                  <div className="space-y-2">
-                    <div className="mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-blue-50 text-blue-500">
-                      +
-                    </div>
-                    <div className="text-gray-600">
-                      <span className="font-medium text-blue-500">
-                        Click to upload
-                      </span>{" "}
-                      screenshot
-                    </div>
-                  </div>
-                </label>
-                {formData.paymentScreenshot && (
-                  <p className="mt-2 text-sm text-green-600">
-                    File selected: {formData.paymentScreenshot.name}
-                  </p>
+                {formData.paymentProofLink && (
+                  <p className="mt-2 text-xs text-blue-600 break-all">Link: {formData.paymentProofLink}</p>
                 )}
               </div>
             </div>
@@ -434,8 +420,9 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxm00d8wdRwX_LqEptIl
                 </p>
               )}
               <p>
-                <b>Payment:</b>{" "}
-                {formData.paymentScreenshot ? "Uploaded" : "Pending"}
+                <b>Payment Proof Link:</b> {formData.paymentProofLink ? (
+                  <a href={formData.paymentProofLink} className="text-blue-600 underline break-all" target="_blank" rel="noopener noreferrer">{formData.paymentProofLink}</a>
+                ) : "Pending"}
               </p>
             </div>
             <div className="flex justify-center pt-6">
