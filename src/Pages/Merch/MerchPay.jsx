@@ -12,13 +12,15 @@ function MerchPay() {
     nameInTShirt: "",
     address: "",
     phone: "",
-  paymentProofLink: "",
+    paymentProofLink: "",
   });
+  const [fileUrl, setFileUrl] = useState("");
+  const [uploading, setUploading] = useState(false);
 
   const [currentSection, setCurrentSection] = useState(0);
 
   // Change this to your actual deployed Apps Script Web App URL
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxm00d8wdRwX_LqEptIlzcyA0xx2zTOn6eHWRg7XMmwFpgB71Ja7UJQ-6scVfXBCfE/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw5p3omtAO6t1MPeTFP9kL0ruKR4lyjxhwWhnw9VG42O-ts8-SxYk-sjMVycqKV0vU3gw/exec";
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -28,40 +30,70 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxm00d8wdRwX_LqEptIl
   };
 
 
-  // No file upload logic needed; using payment proof link instead
 
-  const handleSubmit = async (e) => {
+  // File upload logic (from FormToSheets/DriveUpload)
+  function uploader(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    setUploading(true);
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+      const rawLog = reader.result.split(",")[1];
+      const dataSend = {
+        dataReq: { data: rawLog, name: file.name, type: file.type },
+        fname: "uploadFilesToGoogleDrive",
+      };
+      fetch(
+        "https://script.google.com/macros/s/AKfycbyhMyvbLwGEqCjVGC0gJCwvAOS_KyJnfVleU4h3iUUG88VeUXoWyujKKjRxMSuzT9AoHA/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(dataSend),
+        }
+      )
+        .then((res) => res.json())
+        .then((a) => {
+          const url = a.url || a.fileUrl || "";
+          setFileUrl(url);
+          setFormData((prev) => ({ ...prev, paymentProofLink: url }));
+          setUploading(false);
+        })
+        .catch((err) => {
+          setUploading(false);
+          alert("Upload error");
+        });
+    };
+  }
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const data = new FormData();
-      // Map React keys → Apps Script keys (use keys from FormToSheets.jsx)
-      data.append("name", formData.name);
-      data.append("fromNITSilchar", formData.fromNITSilchar);
-      data.append("scholarId", formData.fromNITSilchar === "Yes" ? formData.scholarId : "0000000");
-      data.append("type", formData.type);
-      data.append("size", formData.size);
-      data.append("wantName", formData.wantName);
-      data.append("nameInTShirt", formData.wantName === "Yes" ? formData.nameInTShirt : "");
-      data.append("address", formData.address);
-      data.append("phone", formData.phone);
-      // Instead of file, send payment proof link
-      if (formData.paymentProofLink) {
-        data.append("screenshot", formData.paymentProofLink);
-      }
-      const response = await fetch(SCRIPT_URL, {
-        method: "POST",
-        body: data,
-      });
-      const text = await response.text();
-      let result;
-      try {
-        result = JSON.parse(text);
-      } catch (jsonErr) {
-        alert(`Server response: ${text}`);
-        return;
-      }
-      if (result.status === "success") {
-        alert("✅ Order submitted successfully!");
+    if (!formData.paymentProofLink) {
+      alert("Please upload payment proof before submitting.");
+      return;
+    }
+    const timestamp = new Date().toISOString();
+    const params = new URLSearchParams();
+    params.append("Timestamp", timestamp);
+    params.append("Name", formData.name);
+    params.append("IsNITS", formData.fromNITSilchar);
+    params.append("ScholarId", formData.fromNITSilchar === "Yes" ? formData.scholarId : "0000000");
+    params.append("Type", formData.type);
+    params.append("Size", formData.size);
+    params.append("WantName", formData.wantName);
+    params.append("NameOnTShirt", formData.wantName === "Yes" ? formData.nameInTShirt : "");
+    params.append("Address", formData.address);
+    params.append("Phone", formData.phone);
+    params.append("ScreenshotLink", formData.paymentProofLink);
+    fetch(SCRIPT_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: params.toString()
+    })
+      .then(res => res.text())
+      .then(response => {
+        alert(response);
         setFormData({
           name: "",
           fromNITSilchar: "No",
@@ -72,16 +104,14 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxm00d8wdRwX_LqEptIl
           nameInTShirt: "",
           address: "",
           phone: "",
-          paymentScreenshot: null,
-          fileUrl: "",
+          paymentProofLink: "",
         });
-      } else {
-        alert("❌ Submission failed: " + result.message);
-      }
-    } catch (err) {
-      console.error("Error submitting form:", err);
-      alert("⚠️ Error submitting form. Check console.");
-    }
+        setFileUrl("");
+      })
+      .catch(err => {
+        alert("Error submitting form.");
+        console.error(err);
+      });
   };
 
 
@@ -353,20 +383,20 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxm00d8wdRwX_LqEptIl
             </h2>
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-3">
-                Paste Payment Proof Link
+                Upload Payment Proof
               </label>
               <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
                 <input
-                  type="url"
-                  name="paymentProofLink"
-                  value={formData.paymentProofLink}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500"
-                  placeholder="Paste your payment proof link here (Google Drive, Imgur, etc.)"
-                  required
+                  type="file"
+                  accept="application/pdf,image/*"
+                  onChange={uploader}
+                  required={!fileUrl}
                 />
-                {formData.paymentProofLink && (
-                  <p className="mt-2 text-xs text-blue-600 break-all">Link: {formData.paymentProofLink}</p>
+                {uploading && <span className="text-blue-600">Uploading...</span>}
+                {fileUrl && (
+                  <span className="text-green-600">
+                    Uploaded! <a href={fileUrl} target="_blank" rel="noopener noreferrer" className="underline text-blue-500">View File</a>
+                  </span>
                 )}
               </div>
             </div>
@@ -420,8 +450,8 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxm00d8wdRwX_LqEptIl
                 </p>
               )}
               <p>
-                <b>Payment Proof Link:</b> {formData.paymentProofLink ? (
-                  <a href={formData.paymentProofLink} className="text-blue-600 underline break-all" target="_blank" rel="noopener noreferrer">{formData.paymentProofLink}</a>
+                <b>Payment Proof:</b> {formData.paymentProofLink ? (
+                  <a href={formData.paymentProofLink} className="text-blue-600 underline break-all" target="_blank" rel="noopener noreferrer">View File</a>
                 ) : "Pending"}
               </p>
             </div>
