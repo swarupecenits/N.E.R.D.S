@@ -133,10 +133,10 @@ function MerchPay() {
     <div className="bg-black min-h-screen w-full font-sans relative overflow-x-hidden">
       {/* Modal for alerts */}
       {modal.open && (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/60 backdrop-blur-sm">
-          <div className={`max-w-md w-full rounded-2xl shadow-2xl p-8 border-2 ${modal.success ? 'border-cyan-400 bg-gradient-to-br from-cyan-900/90 to-cyan-700/80' : 'border-fuchsia-400 bg-gradient-to-br from-fuchsia-900/90 to-fuchsia-700/80'} animate-fade-in`}>
+        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-black/60 backdrop-blur-sm px-2">
+          <div className={`w-full max-w-md md:max-w-md sm:max-w-xs rounded-2xl shadow-2xl p-6 sm:p-4 border-2 ${modal.success ? 'border-cyan-400 bg-gradient-to-br from-cyan-900/90 to-cyan-700/80' : 'border-fuchsia-400 bg-gradient-to-br from-fuchsia-900/90 to-fuchsia-700/80'} animate-fade-in`}>
             <div className="flex flex-col items-center gap-4">
-              <div className={`rounded-full p-3 ${modal.success ? 'bg-cyan-400/20' : 'bg-fuchsia-400/20'}`}> 
+              <div className={`rounded-full p-3 ${modal.success ? 'bg-cyan-400/20' : 'bg-fuchsia-400/20'}`}>
                 {modal.success ? (
                   <svg className="w-10 h-10 text-cyan-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
                 ) : (
@@ -144,12 +144,12 @@ function MerchPay() {
                 )}
               </div>
               <div className="text-center">
-                <h3 className={`text-xl font-bold mb-2 ${modal.success ? 'text-cyan-200' : 'text-fuchsia-200'}`}>{modal.success ? 'Order Status' : 'Error'}</h3>
-                <p className="text-base text-white whitespace-pre-line">{modal.message}</p>
+                <h3 className={`text-xl sm:text-lg font-bold mb-2 ${modal.success ? 'text-cyan-200' : 'text-fuchsia-200'}`}>{modal.success ? 'Order Status' : 'Error'}</h3>
+                <p className="text-base sm:text-sm text-white whitespace-pre-line break-words">{modal.message}</p>
               </div>
               <button
                 onClick={() => setModal({ ...modal, open: false })}
-                className={`mt-4 px-6 py-2 rounded-lg font-semibold shadow transition-all duration-200 ${modal.success ? 'bg-cyan-400 text-cyan-900 hover:bg-cyan-300' : 'bg-fuchsia-400 text-fuchsia-900 hover:bg-fuchsia-300'}`}
+                className={`mt-4 px-6 py-2 rounded-lg font-semibold shadow transition-all duration-200 w-full max-w-[200px] ${modal.success ? 'bg-cyan-400 text-cyan-900 hover:bg-cyan-300' : 'bg-fuchsia-400 text-fuchsia-900 hover:bg-fuchsia-300'}`}
               >
                 Close
               </button>
@@ -178,8 +178,8 @@ function MerchPay() {
             key={index}
             onClick={() => scrollToSection(index)}
             className={`w-3 h-3 rounded-full border-2 border-cyan-400 shadow-[0_0_8px_2px_#22d3ee] transition-all duration-300 ${currentSection === index
-                ? "bg-cyan-400 scale-150 shadow-[0_0_16px_4px_#22d3ee]"
-                : "bg-slate-700 hover:bg-cyan-500"
+              ? "bg-cyan-400 scale-150 shadow-[0_0_16px_4px_#22d3ee]"
+              : "bg-slate-700 hover:bg-cyan-500"
               }`}
             aria-label={`Navigate to section ${index + 1}`}
           />
@@ -192,7 +192,7 @@ function MerchPay() {
         <section className="form-section min-h-screen py-16 flex flex-col justify-center">
           <div className="bg-gradient-to-br from-[#1e293b]/80 to-[#0f172a]/90 border border-cyan-400/30 shadow-[0_8px_32px_0_#22d3ee33] rounded-3xl backdrop-blur-xl p-8 mb-8 relative overflow-hidden">
             <div className="absolute -top-8 -right-8 w-32 h-32 bg-cyan-400 opacity-10 rounded-full blur-2xl animate-pulse" />
-            <h2 className="text-2xl md:text-3xl font-extrabold text-cyan-300 mb-6 border-b border-cyan-700 pb-4 tracking-wide drop-shadow-lg">
+            <h2 className="text-2xl font-spaced md:text-3xl font-extrabold text-cyan-300 mb-6 border-b border-cyan-700 pb-4 tracking-wide drop-shadow-lg">
               Personal Details
             </h2>
             <div className="space-y-6">
@@ -281,9 +281,17 @@ function MerchPay() {
           <div className="flex justify-center mt-8">
             <button
               onClick={() => scrollToSection(1)}
-              className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-cyan-400/40 hover:scale-105 transition-all duration-200 tracking-wide border border-cyan-400/40"
+              className="relative inline-flex h-12 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none"
             >
-              Continue to Merchandise Selection
+              <span
+                className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"
+              >
+              </span>
+              <span
+                className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2 undefined"
+              >
+                Continue to Merchandise Selection
+              </span>
             </button>
           </div>
         </section>
@@ -292,7 +300,7 @@ function MerchPay() {
         <section className="form-section min-h-screen py-16 flex flex-col justify-center">
           <div className="bg-gradient-to-br from-[#1e293b]/80 to-[#0f172a]/90 border border-fuchsia-400/30 shadow-[0_8px_32px_0_#a21caf33] rounded-3xl backdrop-blur-xl p-8 mb-8 relative overflow-hidden">
             <div className="absolute -top-8 -left-8 w-32 h-32 bg-fuchsia-400 opacity-10 rounded-full blur-2xl animate-pulse" />
-            <h2 className="text-2xl md:text-3xl font-extrabold text-fuchsia-300 mb-6 border-b border-fuchsia-700 pb-4 tracking-wide drop-shadow-lg">
+            <h2 className="text-2xl font-spaced md:text-3xl font-extrabold text-fuchsia-300 mb-6 border-b border-fuchsia-700 pb-4 tracking-wide drop-shadow-lg">
               Merchandise Selection
             </h2>
             <div className="space-y-6">
@@ -438,14 +446,14 @@ function MerchPay() {
                       />
                       <div
                         className={`flex items-center justify-center p-4 rounded-xl border-2 transition-all duration-200 shadow-inner ${formData.size === size
-                            ? (formData.type === "T-Shirt" ? "border-fuchsia-400 bg-fuchsia-900/30 shadow-[0_0_16px_2px_#a21caf55] scale-105" : "border-cyan-400 bg-cyan-900/30 shadow-[0_0_16px_2px_#22d3ee55] scale-105")
-                            : (formData.type === "T-Shirt" ? "border-fuchsia-900 bg-[#0f172a]/60 hover:border-fuchsia-400" : "border-cyan-900 bg-[#0f172a]/60 hover:border-cyan-400")
+                          ? (formData.type === "T-Shirt" ? "border-fuchsia-400 bg-fuchsia-900/30 shadow-[0_0_16px_2px_#a21caf55] scale-105" : "border-cyan-400 bg-cyan-900/30 shadow-[0_0_16px_2px_#22d3ee55] scale-105")
+                          : (formData.type === "T-Shirt" ? "border-fuchsia-900 bg-[#0f172a]/60 hover:border-fuchsia-400" : "border-cyan-900 bg-[#0f172a]/60 hover:border-cyan-400")
                           }`}
                       >
                         <span
                           className={`font-bold text-lg tracking-wider ${formData.size === size
-                              ? (formData.type === "T-Shirt" ? "text-fuchsia-200" : "text-cyan-200")
-                              : (formData.type === "T-Shirt" ? "text-fuchsia-400/70" : "text-cyan-400/70")
+                            ? (formData.type === "T-Shirt" ? "text-fuchsia-200" : "text-cyan-200")
+                            : (formData.type === "T-Shirt" ? "text-fuchsia-400/70" : "text-cyan-400/70")
                             }`}
                         >
                           {size}
@@ -491,9 +499,17 @@ function MerchPay() {
           <div className="flex justify-center mt-8">
             <button
               onClick={() => scrollToSection(2)}
-              className="px-8 py-3 bg-gradient-to-r from-fuchsia-400 to-cyan-400 text-white font-semibold rounded-xl shadow-lg hover:shadow-fuchsia-400/40 hover:scale-105 transition-all duration-200 tracking-wide border border-fuchsia-400/40"
+              className="relative inline-flex h-12 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none"
             >
-              Continue to Payment
+              <span
+                className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"
+              >
+              </span>
+              <span
+                className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2 undefined"
+              >
+                Continue to Payment
+              </span>
             </button>
           </div>
         </section>
@@ -502,7 +518,7 @@ function MerchPay() {
         <section className="form-section min-h-screen py-16 flex flex-col justify-center">
           <div className="bg-gradient-to-br from-[#1e293b]/80 to-[#0f172a]/90 border border-cyan-400/30 shadow-[0_8px_32px_0_#22d3ee33] rounded-3xl backdrop-blur-xl p-8 mb-8 relative overflow-hidden">
             <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-cyan-400 opacity-10 rounded-full blur-2xl animate-pulse" />
-            <h2 className="text-2xl md:text-3xl font-extrabold text-cyan-300 mb-6 border-b border-cyan-700 pb-4 tracking-wide drop-shadow-lg">
+            <h2 className="text-2xl font-spaced md:text-3xl font-extrabold text-cyan-300 mb-6 border-b border-cyan-700 pb-4 tracking-wide drop-shadow-lg">
               Payment
             </h2>
             <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
@@ -518,12 +534,18 @@ function MerchPay() {
                   href="upi://pay?pa=nerds@upi&pn=N.E.R.D.S.&am=499&cu=INR"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-cyan-400/40 hover:scale-105 transition-all duration-200 border border-cyan-400/40 mb-2"
-                >Pay Now
-                  <img src="/tshirt/UPI-Logo-vector.svg" alt="UPI Logo" className="w-8 h-8 bg-transparent rounded p-1" />
-
+                  className="flex flex-col items-center w-full"
+                >
+                  <button
+                    type="button"
+                    className="flex items-center gap-3 px-5 py-1 bg-gradient-to-r from-[#00897B] to-[#4DD0E1] text-white font-bold rounded-2xl shadow-lg border-2 border-[#00897B]/60 hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 w-9/12 max-w-xs justify-center"
+                  >
+                    <img src="/tshirt/UPI-Logo-vector.svg" alt="BHIM UPI Logo" className="w-11 h-11 bg-transparent rounded p-1 " />
+                    <span className="text-md font-bold tracking-wide">Pay with UPI</span>
+                  </button>
+                  <span className="text-xs text-cyan-100 mt-2 text-center"></span>
                 </a>
-                <p className="text-xs text-cyan-400 text-center">Or click Pay Now to pay via any UPI app</p>
+                <p className="text-sm text-cyan-400 text-center mt-2">Click to pay via any UPI app (GPay.)</p>
               </div>
               {/* Upload Section */}
               <div className="flex-1 flex flex-col items-center justify-center mt-6 md:mt-0">
@@ -552,9 +574,17 @@ function MerchPay() {
           <div className="flex justify-center mt-8">
             <button
               onClick={() => scrollToSection(3)}
-              className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-cyan-400/40 hover:scale-105 transition-all duration-200 tracking-wide border border-cyan-400/40"
+              className="relative inline-flex h-12 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none"
             >
-              Continue to Review Order
+              <span
+                className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"
+              >
+              </span>
+              <span
+                className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-sm font-medium text-white backdrop-blur-3xl gap-2 undefined"
+              >
+                Continue to Review Order
+              </span>
             </button>
           </div>
         </section>
@@ -563,7 +593,7 @@ function MerchPay() {
         <section className="form-section min-h-screen py-16 flex flex-col justify-center">
           <div className="bg-gradient-to-br from-[#1e293b]/80 to-[#0f172a]/90 border border-fuchsia-400/30 shadow-[0_8px_32px_0_#a21caf33] rounded-3xl backdrop-blur-xl p-8 mb-8 relative overflow-hidden">
             <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-fuchsia-400 opacity-10 rounded-full blur-2xl animate-pulse" />
-            <h2 className="text-2xl md:text-3xl font-extrabold text-fuchsia-300 mb-6 border-b border-fuchsia-700 pb-4 tracking-wide drop-shadow-lg">
+            <h2 className="text-2xl font-spaced md:text-3xl font-extrabold text-fuchsia-300 mb-6 border-b border-fuchsia-700 pb-4 tracking-wide drop-shadow-lg">
               Order Summary
             </h2>
             <div className="space-y-4 text-fuchsia-100">
@@ -607,9 +637,17 @@ function MerchPay() {
             <div className="flex justify-center pt-6">
               <button
                 onClick={handleSubmit}
-                className="px-10 py-4 bg-gradient-to-r from-fuchsia-400 to-cyan-400 text-white text-lg font-extrabold rounded-xl shadow-lg hover:shadow-fuchsia-400/40 hover:scale-105 transition-all duration-200 tracking-wide border border-fuchsia-400/40 animate-pulse"
+                className="relative inline-flex h-12 active:scale-95 transistion overflow-hidden rounded-lg p-[1px] focus:outline-none"
               >
-                Submit Order
+                <span
+                  className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#e7029a_0%,#f472b6_50%,#bd5fff_100%)]"
+                >
+                </span>
+                <span
+                  className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-7 text-md font-medium text-white backdrop-blur-3xl gap-2 undefined"
+                >
+                  Submit Order
+                </span>
               </button>
             </div>
           </div>
