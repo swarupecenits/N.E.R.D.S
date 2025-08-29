@@ -549,25 +549,30 @@ function MerchPay() {
               </div>
               {/* Upload Section */}
               <div className="flex-1 flex flex-col items-center justify-center mt-6 md:mt-0">
-                <label className="block text-sm font-medium text-cyan-200 mb-3 text-center">
-                  Upload Payment Receipt Screenshot <span className="text-cyan-400">*</span>
-                </label>
-                <div className="border-2 border-dashed border-cyan-400/40 rounded-xl text-cyan-200 p-6 text-center bg-[#0f172a]/40 shadow-inner">
-                  <input
-                    type="file"
-                    accept="application/pdf,image/*"
-                    onChange={uploader}
-                    required={!fileUrl}
-                    className="mb-2"
-                  />
-                  {uploading && <span className="text-cyan-400 animate-pulse">Uploading...</span>}
-                  {fileUrl && (
-                    <span className="text-green-400">
-                      Uploaded! <a href={fileUrl} target="_blank" rel="noopener noreferrer" className="underline text-cyan-300">View File</a>
-                    </span>
-                  )}
+                <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm flex flex-col items-center">
+                  <label className="block text-base font-semibold text-cyan-200 mb-3 text-center tracking-wide">
+                    Upload Payment Receipt <span className="text-cyan-400">*</span>
+                  </label>
+                  <div className="relative w-full rounded-2xl border-2 border-dashed border-cyan-400/60 bg-gradient-to-br from-[#0f172a]/70 to-[#1e293b]/80 shadow-lg p-4 sm:p-6 flex flex-col items-center transition-all duration-300 hover:border-cyan-300">
+                    <input
+                      type="file"
+                      accept="application/pdf,image/*"
+                      onChange={uploader}
+                      required={!fileUrl}
+                      className="block w-full text-sm text-cyan-200 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-cyan-900/80 file:text-cyan-300 hover:file:bg-cyan-800/80 focus:outline-none focus:ring-2 focus:ring-cyan-400 mb-2 cursor-pointer"
+                    />
+                    {uploading && (
+                      <span className="text-cyan-400 animate-pulse mt-2">Uploading...</span>
+                    )}
+                    {fileUrl && (
+                      <span className="text-green-400 mt-2 flex flex-col items-center">
+                        <svg className="w-7 h-7 mb-1 text-green-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                        Uploaded! <a href={fileUrl} target="_blank" rel="noopener noreferrer" className="underline text-cyan-300 break-all">View File</a>
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-xs text-cyan-400 mt-3 text-center leading-snug">Attach a screenshot or PDF of your payment receipt.<br/>Accepted: JPG, PNG, PDF. Max size: 5MB.</p>
                 </div>
-                <p className="text-xs text-cyan-400 mt-2 text-center">You must attach a screenshot of your payment receipt for final submission.</p>
               </div>
             </div>
           </div>
