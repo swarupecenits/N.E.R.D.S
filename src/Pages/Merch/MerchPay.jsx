@@ -199,6 +199,7 @@ function MerchPay() {
         {/* Personal Details Section */}
         <section className="form-section min-h-screen py-16 flex flex-col justify-center">
           <div className="bg-gradient-to-br from-[#1e293b]/80 to-[#0f172a]/90 border border-cyan-400/30 shadow-[0_8px_32px_0_#22d3ee33] rounded-3xl backdrop-blur-xl p-8 mb-8 relative overflow-hidden">
+            
             <div className="absolute -top-8 -right-8 w-32 h-32 bg-cyan-400 opacity-10 rounded-full blur-2xl animate-pulse" />
             <h2 className="text-2xl font-spaced md:text-3xl font-extrabold text-cyan-300 mb-6 border-b border-cyan-700 pb-4 tracking-wide drop-shadow-lg">
               Personal Details
@@ -529,6 +530,32 @@ function MerchPay() {
             <h2 className="text-2xl font-spaced md:text-3xl font-extrabold text-cyan-300 mb-6 border-b border-cyan-700 pb-4 tracking-wide drop-shadow-lg">
               Payment
             </h2>
+            {/* Pricing Details */}
+            <div className="mb-8 w-full max-w-lg mx-auto bg-cyan-900/30 border border-cyan-400/40 rounded-xl p-4 shadow-md animate-fade-in">
+              <h3 className="text-lg font-bold text-cyan-200 mb-2 text-center">T-Shirt Pricing</h3>
+              <table className="w-full text-sm text-cyan-100">
+                <thead>
+                  <tr>
+                    <th className="py-1 px-2 text-left">Variant</th>
+                    <th className="py-1 px-2 text-left">With Name</th>
+                    <th className="py-1 px-2 text-left">Without Name</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-t border-cyan-400/20">
+                    <td className="py-1 px-2 font-semibold">Regular-sized T-Shirt</td>
+                    <td className="py-1 px-2">₹409</td>
+                    <td className="py-1 px-2">₹399</td>
+                  </tr>
+                  <tr className="border-t border-cyan-400/20">
+                    <td className="py-1 px-2 font-semibold">Over-sized T-shirt</td>
+                    <td className="py-1 px-2">₹489</td>
+                    <td className="py-1 px-2">₹479</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className="text-xs text-cyan-300 mt-2 text-center">Please pay the exact amount as per your selection below.</p>
+            </div>
             <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
               {/* QR Code and UPI Pay */}
               <div className="flex-1 flex flex-col items-center justify-center">
