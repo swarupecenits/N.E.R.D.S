@@ -586,7 +586,7 @@ function MerchPay() {
                   </button>
                   <span className="text-xs text-cyan-100 mt-2 text-center"></span>
                 </a>
-                <p className="text-sm text-cyan-400 text-center mt-2">Click to pay via any UPI app (GPay.)</p>
+                <p className="text-sm text-cyan-400 text-center mt-2">Click to pay via any UPI app (GPay/Phonepe/Paytm.)</p>
               </div>
               {/* Upload Section */}
               <div className="flex-1 flex flex-col items-center justify-center mt-6 md:mt-0">
