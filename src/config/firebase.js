@@ -5,7 +5,7 @@ import { getDatabase } from 'firebase/database';
 const firebaseConfig = {
   apiKey: "AIzaSyCu1OOzIz6I8yNY8mvnos1biAYo_7Lh4LA",
   authDomain: "nerds-orientation-giveaway.firebaseapp.com",
-  databaseURL: "https://nerd    s-orientation-giveaway-default-rtdb.asia-southeast1.firebasedatabase.app",
+  databaseURL: "https://nerds-orientation-giveaway-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "nerds-orientation-giveaway",
   storageBucket: "nerds-orientation-giveaway.firebasestorage.app",
   messagingSenderId: "622357660139",
