@@ -84,7 +84,7 @@ export default function RiddlePage({ user, onSolve }) {
       }
     } else {
       setTimeout(() => {
-        setError(`Incorrect answer. The correct answer was "${currentRiddle.answer}". Try again later!`);
+        setError('Incorrect answer. Try again later!');
         setIsLoading(false);
       }, 1000);
     }
