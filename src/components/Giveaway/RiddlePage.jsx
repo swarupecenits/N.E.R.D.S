@@ -1,6 +1,8 @@
+
 import React, { useState, useEffect } from 'react';
 import { db, sampleRiddles, utils } from '/src/config/firebase.js';
 import { ref, get, set, query, orderByChild, equalTo } from 'firebase/database';
+import Tshirt_Loader from '../../components/Merch_components/Tshirt_Loader.jsx';
 
 const LoadingSpinner = () => (
     <div className="w-6 h-6 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
@@ -82,14 +84,18 @@ export default function RiddlePage({ user, onSolve }) {
       }
     } else {
       setTimeout(() => {
-        setError(`Incorrect answer. The correct answer was "${currentRiddle.answer}". Try again later!`);
+        setError('Incorrect answer. Try again later!');
         setIsLoading(false);
       }, 1000);
     }
   };
 
   if (!currentRiddle) {
-    return <div className="text-center text-white/80"><p>Loading riddle...</p></div>;
+    return (
+      <div className="flex items-center justify-center w-full h-64">
+        <Tshirt_Loader />
+      </div>
+    );
   }
 
   return (
