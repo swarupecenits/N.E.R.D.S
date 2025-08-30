@@ -1,15 +1,15 @@
 import { initializeApp } from 'firebase/app';
 import { getDatabase } from 'firebase/database';
 
-// --- Firebase Configuration ---
+// --- Firebase Configuration from Environment Variables ---
 const firebaseConfig = {
-  apiKey: "AIzaSyCu1OOzIz6I8yNY8mvnos1biAYo_7Lh4LA",
-  authDomain: "nerds-orientation-giveaway.firebaseapp.com",
-  databaseURL: "https://nerds-orientation-giveaway-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "nerds-orientation-giveaway",
-  storageBucket: "nerds-orientation-giveaway.firebasestorage.app",
-  messagingSenderId: "622357660139",
-  appId: "1:622357660139:web:6da3c1bf43568c641699ae",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // --- Initialize Firebase ---
