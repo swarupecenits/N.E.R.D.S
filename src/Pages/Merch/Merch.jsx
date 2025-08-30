@@ -35,7 +35,7 @@ const Merch = () => {
     const handlePointerLeave = () => setIsDragging(false);
 
     return (
-        <div className="app transition-all ease-in main flex flex-col md:mt-[-5rem] md:flex-row min-h-0 h-auto md:h-screen relative">
+        <div className="app transition-all ease-in main flex flex-col md:mt-[-5rem] md:flex-row min-h-screen h-auto md:h-screen relative">
             {/* Gradient Background */}
             <div className="absolute inset-0 tshirt_gradient z-0"></div>
 
@@ -76,13 +76,12 @@ const Merch = () => {
                 </AnimatePresence>
             </div>
 
-            {/* Right Side Coming Soon */}
-            <div className="w-full md:w-1/2 z-10 min-h-[300px] h-[50vh] md:h-full flex items-center justify-center">
-                <div className="flex flex-col items-center justify-center w-full h-full">
+            {/* Right Side 3D Model or Loader */}
+            <div className="flex flex-col items-center justify-center w-full h-full">
                     <span className="text-3xl md:text-5xl font-bold text-cyan-400 mb-4 animate-pulse">Coming Soon</span>
-                    
+                   
                 </div>
-            </div>
+
         </div>
     );
 };
