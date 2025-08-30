@@ -77,50 +77,10 @@ const Merch = () => {
             </div>
 
             {/* Right Side 3D Model or Loader */}
-            <div className="w-full md:w-1/2 z-10 min-h-[300px] h-[50vh] md:h-full flex items-center justify-center">
-                {loading ? (
-                    <Tshirt_Loader />
-                ) : null}
-                {!loading && (
-                    <Canvas
-                        ref={canvasRef}
-                        shadows
-                        camera={{ position: [0, 0, 2.2], fov: 25 }}
-                        gl={{ preserveDrawingBuffer: true }}
-                        className="w-full h-full min-h-[300px] max-w-full transition-all ease-in"
-                        onPointerDown={handlePointerDown}
-                        onPointerUp={handlePointerUp}
-                        onPointerLeave={handlePointerLeave}
-                    >
-                        <ambientLight intensity={0.5} />
-                        <Environment preset="city" />
-                        {/* OrbitControls only enabled while dragging */}
-                        <OrbitControls
-                            makeDefault
-                            enableZoom={false}
-                            enablePan={false}
-                            minPolarAngle={Math.PI / 2}
-                            maxPolarAngle={Math.PI / 2}
-                            minDistance={5.2}
-                            maxDistance={5.2}
-                            enableDamping={true}
-                            dampingFactor={0.15}
-                        />
-                        {/* CameraRig only enabled when not dragging */}
-                        {!isDragging ? (
-                            <CameraRig>
-                                <Center>
-                                    <Shirt />
-                                </Center>
-                            </CameraRig>
-                        ) : (
-                            <Center>
-                                <Shirt />
-                            </Center>
-                        )}
-                    </Canvas>
-                )}
-            </div>
+            <div className="flex flex-col items-center justify-center w-full h-full">
+                    <span className="text-3xl md:text-5xl font-bold text-cyan-400 mb-4 animate-pulse">Coming Soon</span>
+                   
+                </div>
 
         </div>
     );
